@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#0b5c46">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icon.svg">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Rubik:wght@500;700;800&display=swap" rel="stylesheet">
@@ -20,7 +21,7 @@
   <!-- ===== Header ===== -->
   <header class="topbar">
     <div class="brand">
-      <img src="icon.svg" alt="M3AK AI" class="brand-logo">
+      <img src="icon-192.png" alt="M3AK AI" class="brand-logo">
       <div class="brand-text">
         <strong>M3AK <span>AI</span></strong>
         <small data-i18n="slogan">معاك، خطوة بخطوة</small>
@@ -38,7 +39,8 @@
     <!-- ===== HOME ===== -->
     <section class="view active" id="view-home">
       <div class="hero card">
-        <h1 id="greeting">أهلا وسهلا بيك 🌿</h1>
+        <img src="hero.jpg" alt="" class="hero-img">
+        <h1 id="greeting">أهلا وسهلا بيك ✨</h1>
         <p id="heroSub">أنا معاك، رفيقك الذكي المغربي. نهضر معاك بالدارجة، نسمع ليك، ونعاونك تنظم نهارك وتحل مشاكلك خطوة بخطوة.</p>
         <form id="quickChatForm" class="quick-chat">
           <input id="quickChatInput" type="text" autocomplete="off" data-i18n-ph="quickPh" placeholder="كتب أي حاجة... أنا نسمع ليك">
@@ -51,7 +53,7 @@
         <button class="svc card" data-goto="vent"><span class="svc-ic">💚</span><strong data-i18n="svcVent">فضفض معايا</strong><small data-i18n="svcVentSub">مساحة آمنة للهضرة والاستماع</small></button>
         <button class="svc card" data-goto="solve"><span class="svc-ic">🧩</span><strong data-i18n="svcSolve">حل مشكلتي</strong><small data-i18n="svcSolveSub">نحلل المشكل ونلقاو حل عملي</small></button>
         <button class="svc card" data-goto="day"><span class="svc-ic">📅</span><strong data-i18n="svcDay">نظم نهاري</strong><small data-i18n="svcDaySub">مهامي وخطة النهار</small></button>
-        <button class="svc card" data-goto="progress"><span class="svc-ic">📈</span><strong data-i18n="svcProg">تقدم ديالي</strong><small data-i18n="svcProgSub">أهدافي وعاداتي وإنجازاتي</small></button>
+        <button class="svc card" data-goto="progress"><span class="svc-ic">🚀</span><strong data-i18n="svcProg">تقدم ديالي</strong><small data-i18n="svcProgSub">أهدافي وعاداتي وإنجازاتي</small></button>
         <button class="svc card wide" data-goto="ask"><span class="svc-ic">💬</span><strong data-i18n="svcAsk">سول معاك</strong><small data-i18n="svcAskSub">أسئلة يومية ومساعدة عامة</small></button>
       </div>
 
@@ -59,6 +61,13 @@
         <div class="card-head"><h2 data-i18n="todayTitle">نهارك اليوم</h2><button class="link-btn" data-goto="day" data-i18n="openDay">افتح نظم نهاري</button></div>
         <div id="todaySummary" class="today-summary"></div>
         <div class="progress-track"><div id="todayBar" class="progress-fill" style="width:0%"></div></div>
+      </div>
+
+      <div class="card install-card" id="installCard">
+        <h2>📲 <span data-i18n="installTitle">ثبّت معاك على تيليفونك</span></h2>
+        <p data-i18n="installText">زيد «معاك» للواجهة الرئيسية ديال تيليفونك وافتحو بحال أي تطبيق عادي — بلا ما تدخل للمتصفح كل مرة.</p>
+        <button class="btn primary install-big" id="installBtnHome" hidden data-i18n="install">تثبيت التطبيق على الهاتف 📲</button>
+        <p class="soft-note" data-i18n="installSteps">إلا ما بانش ليك زر التثبيت: افتح قائمة Chrome (⋮) من الفوق وختار «تثبيت التطبيق» ولا «إضافة إلى الشاشة الرئيسية»، وغادي يظهر ليك الأيقونة في الواجهة.</p>
       </div>
 
       <div class="card tip-card">
@@ -165,7 +174,7 @@
     <!-- ===== PROGRESS (تقدم ديالي) ===== -->
     <section class="view" id="view-progress">
       <div class="card">
-        <div class="card-head"><h2>📈 <span data-i18n="svcProg">تقدم ديالي</span></h2></div>
+        <div class="card-head"><h2>🚀 <span data-i18n="svcProg">تقدم ديالي</span></h2></div>
         <div id="weekSummary" class="week-summary"></div>
       </div>
       <div class="card">
@@ -267,7 +276,7 @@
     <button data-goto="ask" class="nav-btn"><span>💬</span><small data-i18n="navAsk">سول معاك</small></button>
     <button data-goto="vent" class="nav-btn"><span>💚</span><small data-i18n="navVent">فضفض</small></button>
     <button data-goto="day" class="nav-btn"><span>📅</span><small data-i18n="navDay">نهاري</small></button>
-    <button data-goto="progress" class="nav-btn"><span>📈</span><small data-i18n="navProg">تقدمي</small></button>
+    <button data-goto="progress" class="nav-btn"><span>🚀</span><small data-i18n="navProg">تقدمي</small></button>
   </nav>
 </div>
 
