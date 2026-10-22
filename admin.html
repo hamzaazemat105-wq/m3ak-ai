@@ -91,7 +91,7 @@ const OWNER_EMAIL = "hamzaazemat105@gmail.com";
 firebase.initializeApp(FIREBASE_CONFIG);
 const db = firebase.firestore();
 const $ = (s) => document.querySelector(s);
-const fmt = (ts) => { try { return ts && ts.toDate ? ts.toDate().toLocaleString("ar-MA") : "—"; } catch (e) { return "—"; } };
+const fmt = (ts) => { try { if (!ts) return "—"; const d = ts.toDate ? ts.toDate() : (ts instanceof Date ? ts : null); return d ? d.toLocaleString("ar-MA") : "—"; } catch (e) { return "—"; } };
 
 firebase.auth().onAuthStateChanged((u) => {
   $("#loginCard").hidden = !!u;
