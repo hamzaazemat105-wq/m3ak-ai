@@ -12,8 +12,8 @@ const LS_DATA = "m3ak_data_v1";
 const load = (k, d) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } };
 const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 
-const DEFAULT_AI_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions";
-const DEFAULT_AI_MODEL = "llama-3.3-70b-versatile";
+const DEFAULT_AI_ENDPOINT = "https://text.pollinations.ai/openai";
+const DEFAULT_AI_MODEL = "openai";
 const settings = Object.assign({
   name: "", lang: "darija", dark: false, voiceOut: false, memory: false,
   ai: { endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: false, enabled: false }
@@ -21,6 +21,16 @@ const settings = Object.assign({
 settings.ai = Object.assign({ endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: false, enabled: false }, settings.ai || {});
 if (!settings.ai.endpoint) settings.ai.endpoint = DEFAULT_AI_ENDPOINT;
 if (!settings.ai.model) settings.ai.model = DEFAULT_AI_MODEL;
+/* Migration: the Groq route proved unreachable for the owner (login walls on
+   Google/GitHub/magic-link, 2026-10-22). Switch stored Groq defaults to the
+   keyless free provider and enable real AI — the owner explicitly ordered
+   real-AI activation. Personal keys, if ever added, are left untouched. */
+if (settings.ai.endpoint === "https://api.groq.com/openai/v1/chat/completions" && !settings.ai.key) {
+  settings.ai.endpoint = DEFAULT_AI_ENDPOINT;
+  if (settings.ai.model === "llama-3.3-70b-versatile") settings.ai.model = DEFAULT_AI_MODEL;
+  settings.ai.consent = true;
+  settings.ai.enabled = true;
+}
 save(LS_SETTINGS, settings);
 
 let data = Object.assign({ tasks: [], goals: [], habits: [] }, load(LS_DATA, {}));
@@ -69,11 +79,11 @@ const I18N = {
     setMemory: "الذاكرة: خلي معاك يتذكر الاسم والأهداف ديالي على هاد الجهاز",
     memoryTitle: "شنو حافظ عليا",
     aiTitle: "ربط ذكاء اصطناعي حقيقي",
-    aiExplain: "بشكل افتراضي، معاك خدام بوضع تجريبي محلي (ردود مبرمجة بعناية، ماشي ذكاء اصطناعي حقيقي). تقدر تربطو بنموذج حقيقي عبر خدمة متوافقة مع OpenAI API (مثال: Groq عندو رتبة مجانية). المفتاح كيبقى محفوظ غير في جهازك.",
+    aiExplain: "معاك مربوط بمزود ذكاء اصطناعي مجاني (Pollinations) بلا حساب وبلا مفتاح — ملي كيكون مفعّل، رسائل المحادثة كتصيفط لهاد المزود باش تجاوبك بنموذج حقيقي. تقدر تطفيه في أي وقت وترجع للوضع التجريبي المحلي، ولا تربط مفتاحك الخاص (Groq مثلاً) لحدود أحسن.",
     aiEndpoint: "رابط الخدمة (Endpoint)", aiModel: "الموديل", aiKey: "مفتاح API",
     aiConsent: "كنوافق نصيفط رسائل المحادثة لهاد الخدمة الخارجية باش تجاوبني",
     aiEnable: "تفعيل الذكاء الاصطناعي الحقيقي",
-    aiGetKey: "إنشاء مفتاح Groq مجاني",
+    aiGetKey: "المزود المجاني: Pollinations",
     aiTest: "اختبار الاتصال",
     aiWarn: "تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائلك كتخرج لخادم المزود. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.",
     privacyTitle: "الخصوصية والأمان", exportData: "تصدير بياناتي (JSON)", deleteAll: "مسح جميع بياناتي",
@@ -112,11 +122,11 @@ const I18N = {
     setMemory: "Mémoire : laisser M3AK retenir mon nom et mes objectifs sur cet appareil",
     memoryTitle: "Ce que M3AK retient de moi",
     aiTitle: "Connecter une vraie IA",
-    aiExplain: "Par défaut, M3AK fonctionne en mode démo local (réponses programmées avec soin, pas une vraie IA). Tu peux le connecter à un vrai modèle via un service compatible OpenAI API (ex : Groq, offre gratuite). La clé reste uniquement sur ton appareil.",
+    aiExplain: "M3AK est connecté à un fournisseur d'IA gratuit (Pollinations), sans compte ni clé — quand il est activé, tes messages lui sont envoyés pour générer de vraies réponses. Tu peux le désactiver à tout moment ou brancher ta propre clé (ex : Groq).",
     aiEndpoint: "Endpoint du service", aiModel: "Modèle", aiKey: "Clé API",
     aiConsent: "J'accepte d'envoyer mes messages à ce service externe pour obtenir des réponses",
     aiEnable: "Activer la vraie IA",
-    aiGetKey: "Créer une clé Groq gratuite",
+    aiGetKey: "Fournisseur gratuit : Pollinations",
     aiTest: "Tester la connexion",
     aiWarn: "Attention : avec la vraie IA activée, tes messages partent vers le serveur du fournisseur. Évite les infos très sensibles en mode « Parle-moi ».",
     privacyTitle: "Confidentialité et sécurité", exportData: "Exporter mes données (JSON)", deleteAll: "Effacer toutes mes données",
@@ -600,7 +610,7 @@ function updateAiChip() {
 }
 function aiReady() {
   const a = settings.ai;
-  return !!(a.enabled && a.consent && a.endpoint && a.key);
+  return !!(a.enabled && a.consent && a.endpoint && (a.key || a.endpoint.includes("pollinations.ai")));
 }
 
 function speak(text) {
@@ -645,8 +655,8 @@ async function aiChat(mode, ctx, userText) {
   const messages = [{ role: "system", content: SYSTEM_PROMPT + modeNote }, ...ctx.history.slice(-12)];
   const res = await fetch(settings.ai.endpoint, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "Authorization": "Bearer " + settings.ai.key },
-    body: JSON.stringify({ model: settings.ai.model || "llama-3.3-70b-versatile", messages, temperature: 0.7 })
+    headers: { "Content-Type": "application/json", ...(settings.ai.key ? { "Authorization": "Bearer " + settings.ai.key } : {}) },
+    body: JSON.stringify({ model: settings.ai.model || DEFAULT_AI_MODEL, messages, temperature: 0.7 })
   });
   if (!res.ok) throw new Error("AI HTTP " + res.status);
   const j = await res.json();
@@ -1104,7 +1114,7 @@ function renderSettings() {
   const aiLine = $("#aiTestStatus");
   if (aiLine) aiLine.textContent = aiReady()
     ? (settings.lang === "fr" ? "La vraie IA est active ✅" : "الذكاء الحقيقي مفعّل ✅")
-    : (settings.lang === "fr" ? "Endpoint et modèle Groq sont pré-remplis — il ne manque que ta clé gratuite." : "الرابط والموديل واجدين افتراضياً (Groq) — خاصك غير المفتاح المجاني ديالك.");
+    : (settings.lang === "fr" ? "Le fournisseur gratuit Pollinations est prêt — aucune clé requise." : "المزود المجاني (Pollinations) مربوط واجد — الذكاء الحقيقي خدام بلا مفتاح.");
 }
 function renderMemoryBox() {
   const box = $("#memoryBox");
@@ -1146,17 +1156,17 @@ if (aiTestBtn) aiTestBtn.addEventListener("click", async () => {
   settings.ai.model = $("#aiModel").value.trim() || DEFAULT_AI_MODEL;
   settings.ai.key = $("#aiKey").value.trim();
   persistSettings(); updateAiChip();
-  if (!settings.ai.key) {
-    setStatus(fr ? "Ajoute d'abord ta clé Groq gratuite." : "زيد مفتاح Groq المجاني ديالك أولاً.");
+  if (!settings.ai.key && !settings.ai.endpoint.includes("pollinations.ai")) {
+    setStatus(fr ? "Ajoute d'abord ta clé API." : "زيد مفتاح API ديالك أولاً.");
     toast(fr ? "Clé manquante" : "المفتاح ناقص");
     return;
   }
   aiTestBtn.disabled = true;
-  setStatus(fr ? "Test de connexion en cours..." : "كنختبر الاتصال بـGroq...");
+  setStatus(fr ? "Test de connexion en cours..." : "كنختبر الاتصال بالمزود...");
   try {
     const res = await fetch(settings.ai.endpoint, {
       method: "POST",
-      headers: { "Content-Type": "application/json", "Authorization": "Bearer " + settings.ai.key },
+      headers: { "Content-Type": "application/json", ...(settings.ai.key ? { "Authorization": "Bearer " + settings.ai.key } : {}) },
       body: JSON.stringify({ model: settings.ai.model, messages: [{ role: "user", content: "Reply with OK" }], temperature: 0, max_tokens: 5 })
     });
     if (!res.ok) throw new Error("HTTP " + res.status);
