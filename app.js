@@ -35,7 +35,7 @@ save(LS_SETTINGS, settings);
 
 let data = Object.assign({ tasks: [], goals: [], habits: [] }, load(LS_DATA, {}));
 const persistSettings = () => save(LS_SETTINGS, settings);
-const persistData = () => save(LS_DATA, data);
+const persistData = () => { save(LS_DATA, data); if (window.__queueSync) window.__queueSync(); };
 
 /* ---------- Helpers ---------- */
 const $ = (s, r = document) => r.querySelector(s);
@@ -102,7 +102,10 @@ const I18N = {
     topicIdeas: "أفكار جديدة", topicIdeasSub: "إلهام وإبداع",
     topicCalm: "الراحة النفسية", topicCalmSub: "دعم يومي",
     topicSelf: "التطوير الذاتي", topicSelfSub: "خطوات بسيطة",
-    topicFocus: "تحسين الإنتاجية", topicFocusSub: "نصائح عملية"
+    topicFocus: "تحسين الإنتاجية", topicFocusSub: "نصائح عملية",
+    acctTitle: "حسابي", acctText: "الحساب اختياري: كيحفظ المهام والأهداف والعادات في السحابة باش تلقاهم في أي جهاز. محادثات الفضفضة كتبقى غير في هاد الجهاز دائماً.",
+    acctEmail: "البريد الإلكتروني", acctPass: "كلمة السر", acctIn: "دخول", acctUp: "إنشاء حساب",
+    acctGoogleBtn: "الدخول بـ Google", acctHello: "مسجل بـ:", acctSyncNow: "مزامنة الآن", acctOut: "تسجيل الخروج"
   },
   fr: {
     slogan: "Avec toi, pas à pas", start: "Go", quickPh: "Écris ce que tu veux... je t'écoute",
@@ -155,7 +158,10 @@ const I18N = {
     topicIdeas: "Idées nouvelles", topicIdeasSub: "Inspiration",
     topicCalm: "Bien-être mental", topicCalmSub: "Soutien quotidien",
     topicSelf: "Développement personnel", topicSelfSub: "Petits pas",
-    topicFocus: "Productivité", topicFocusSub: "Conseils pratiques"
+    topicFocus: "Productivité", topicFocusSub: "Conseils pratiques",
+    acctTitle: "Mon compte", acctText: "Le compte est optionnel : il garde tes tâches, objectifs et habitudes dans le cloud pour les retrouver sur tous tes appareils. Les conversations « Parle-moi » restent toujours sur cet appareil.",
+    acctEmail: "E-mail", acctPass: "Mot de passe", acctIn: "Se connecter", acctUp: "Créer un compte",
+    acctGoogleBtn: "Continuer avec Google", acctHello: "Connecté :", acctSyncNow: "Synchroniser", acctOut: "Se déconnecter"
   }
 };
 function applyI18n() {
