@@ -673,11 +673,17 @@ function showTyping(chatId) {
 async function aiChat(mode, ctx, userText) {
   const modeNote = mode === "vent" ? "\nالوضع الحالي: فضفض معايا (استماع ودعم)." : mode === "solve" ? "\nالوضع الحالي: حل مشكلتي (تحليل وخطوات)." : "\nالوضع الحالي: سول معاك (مساعدة عامة).";
   const messages = [{ role: "system", content: SYSTEM_PROMPT + modeNote }, ...ctx.history.slice(-12)];
-  const res = await fetch(settings.ai.endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", ...(settings.ai.key ? { "Authorization": "Bearer " + settings.ai.key } : {}) },
-    body: JSON.stringify({ model: settings.ai.model || DEFAULT_AI_MODEL, messages, temperature: 0.7 })
-  });
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 75000);
+  let res;
+  try {
+    res = await fetch(settings.ai.endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...(settings.ai.key ? { "Authorization": "Bearer " + settings.ai.key } : {}) },
+      body: JSON.stringify({ model: settings.ai.model || DEFAULT_AI_MODEL, messages, temperature: 0.7 }),
+      signal: ctrl.signal
+    });
+  } finally { clearTimeout(timer); }
   if (!res.ok) throw new Error("AI HTTP " + res.status);
   const j = await res.json();
   const out = j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
@@ -697,11 +703,14 @@ async function botRespond(chatId, userText) {
     ctx.history.push({ role: "assistant", content: text });
   };
   if (aiReady()) {
+    const slowTimer = setTimeout(() => { typing.textContent = settings.lang === "fr" ? "M3AK écrit... (le service gratuit peut être lent 🌿)" : "معاك كيكتب... (المزود المجاني يقدر يتعطل شوية 🌿)"; }, 25000);
     try {
       const out = await aiChat(chatId, ctx, userText);
+      clearTimeout(slowTimer);
       finish(out);
       return;
     } catch (e) {
+      clearTimeout(slowTimer);
       typing.remove();
       addMsg(chatId, "system", settings.lang === "fr" ? "La connexion IA a échoué — retour au mode démo local." : "الاتصال بالذكاء الاصطناعي ما خدامش دابا — رجعنا للوضع التجريبي المحلي.");
       const r = engineReply(chatId, userText, ctx);
