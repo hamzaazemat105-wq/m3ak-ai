@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>M3AK AI — معاك | رفيقك الذكي المغربي</title>
+<meta name="description" content="معاك — مساعد شخصي مغربي: فضفضة ودعم، حل المشاكل، تنظيم النهار ومتابعة التقدم. بالدارجة المغربية.">
+<meta name="theme-color" content="#0b5c46">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Rubik:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ===== Header ===== -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="icon.svg" alt="M3AK AI" class="brand-logo">
+      <div class="brand-text">
+        <strong>M3AK <span>AI</span></strong>
+        <small data-i18n="slogan">معاك، خطوة بخطوة</small>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span id="aiStatus" class="ai-chip demo" title="">وضع تجريبي</span>
+      <button id="themeToggle" class="icon-btn" aria-label="الوضع الداكن / الفاتح">🌙</button>
+      <button id="settingsBtn" class="icon-btn" aria-label="الإعدادات">⚙️</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HOME ===== -->
+    <section class="view active" id="view-home">
+      <div class="hero card">
+        <h1 id="greeting">أهلا وسهلا بيك 🌿</h1>
+        <p id="heroSub">أنا معاك، رفيقك الذكي المغربي. نهضر معاك بالدارجة، نسمع ليك، ونعاونك تنظم نهارك وتحل مشاكلك خطوة بخطوة.</p>
+        <form id="quickChatForm" class="quick-chat">
+          <input id="quickChatInput" type="text" autocomplete="off" data-i18n-ph="quickPh" placeholder="كتب أي حاجة... أنا نسمع ليك">
+          <button type="submit" class="btn primary" data-i18n="start">بدا</button>
+        </form>
+        <p class="hero-note" data-i18n="heroNote">أنا مساعد ذكاء اصطناعي، ماشي إنسان ولا معالج نفسي.</p>
+      </div>
+
+      <div class="grid services">
+        <button class="svc card" data-goto="vent"><span class="svc-ic">💚</span><strong data-i18n="svcVent">فضفض معايا</strong><small data-i18n="svcVentSub">مساحة آمنة للهضرة والاستماع</small></button>
+        <button class="svc card" data-goto="solve"><span class="svc-ic">🧩</span><strong data-i18n="svcSolve">حل مشكلتي</strong><small data-i18n="svcSolveSub">نحلل المشكل ونلقاو حل عملي</small></button>
+        <button class="svc card" data-goto="day"><span class="svc-ic">📅</span><strong data-i18n="svcDay">نظم نهاري</strong><small data-i18n="svcDaySub">مهامي وخطة النهار</small></button>
+        <button class="svc card" data-goto="progress"><span class="svc-ic">📈</span><strong data-i18n="svcProg">تقدم ديالي</strong><small data-i18n="svcProgSub">أهدافي وعاداتي وإنجازاتي</small></button>
+        <button class="svc card wide" data-goto="ask"><span class="svc-ic">💬</span><strong data-i18n="svcAsk">سول معاك</strong><small data-i18n="svcAskSub">أسئلة يومية ومساعدة عامة</small></button>
+      </div>
+
+      <div class="card" id="todayCard">
+        <div class="card-head"><h2 data-i18n="todayTitle">نهارك اليوم</h2><button class="link-btn" data-goto="day" data-i18n="openDay">افتح نظم نهاري</button></div>
+        <div id="todaySummary" class="today-summary"></div>
+        <div class="progress-track"><div id="todayBar" class="progress-fill" style="width:0%"></div></div>
+      </div>
+
+      <div class="card tip-card">
+        <h2 data-i18n="tipTitle">اقتراح هاد الساعة</h2>
+        <p id="timeTip"></p>
+      </div>
+    </section>
+
+    <!-- ===== ASK (سول معاك) ===== -->
+    <section class="view" id="view-ask">
+      <div class="chat-head card">
+        <h2>💬 <span data-i18n="svcAsk">سول معاك</span></h2>
+        <p data-i18n="askSub">سولني على أي حاجة من حياتك اليومية — خدمة، دراسة، تنظيم، أفكار... ونجاوبك بالدارجة.</p>
+      </div>
+      <div class="chat-box card">
+        <div class="messages" id="askMessages" aria-live="polite"></div>
+        <div class="chips" id="askChips"></div>
+        <form class="composer" data-chat="ask">
+          <button type="button" class="icon-btn mic-btn" data-mic="ask" aria-label="إدخال صوتي" hidden>🎤</button>
+          <input type="text" class="chat-input" autocomplete="off" data-i18n-ph="chatPh" placeholder="كتب رسالتك هنا...">
+          <button type="submit" class="btn primary send-btn" data-i18n="send">صيفط</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== VENT (فضفض معايا) ===== -->
+    <section class="view" id="view-vent">
+      <div class="chat-head card vent-head">
+        <h2>💚 <span data-i18n="svcVent">فضفض معايا</span></h2>
+        <p data-i18n="ventSub">هنا تقدر تهضر براحتك، بلا حكم وبلا ضغط. أنا نسمع ليك أولاً.</p>
+        <p class="disclaimer" data-i18n="ventDisclaimer">هاد المساحة للدعم والاستماع فقط — ماشي علاج نفسي. إلا كنتي في خطر ولا أزمة حادة، تواصل مع شخص كتثق فيه ولا مع الإسعاف 15 / الشرطة 19.</p>
+        <div class="help-types" id="helpTypes">
+          <span data-i18n="helpTypeQ">كيفاش بغيتي نعاونك؟</span>
+          <div class="chips">
+            <button class="chip" data-help="listen" data-i18n="helpListen">سمعني غير</button>
+            <button class="chip" data-help="feelings" data-i18n="helpFeelings">عاوني نفهم مشاعري</button>
+            <button class="chip" data-help="solution" data-i18n="helpSolution">بغيت نفكر في حل عملي</button>
+          </div>
+        </div>
+        <p class="privacy-mini" data-i18n="ventPrivacy">محادثات الفضفضة ما كتتحفظش تلقائياً — كتبقى غير في هاد الجلسة.</p>
+      </div>
+      <div class="chat-box card">
+        <div class="messages" id="ventMessages" aria-live="polite"></div>
+        <div class="chips" id="ventChips"></div>
+        <form class="composer" data-chat="vent">
+          <button type="button" class="icon-btn mic-btn" data-mic="vent" aria-label="إدخال صوتي" hidden>🎤</button>
+          <input type="text" class="chat-input" autocomplete="off" data-i18n-ph="ventPh" placeholder="هضر براحتك... أنا نسمع">
+          <button type="submit" class="btn primary send-btn" data-i18n="send">صيفط</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== SOLVE (حل مشكلتي) ===== -->
+    <section class="view" id="view-solve">
+      <div class="chat-head card">
+        <h2>🧩 <span data-i18n="svcSolve">حل مشكلتي</span></h2>
+        <p data-i18n="solveSub">شرح ليا المشكل بكلامك، وغادي نفهموه بجوج، نشوفو الخيارات، ونحولو الحل لخطة عملية.</p>
+      </div>
+      <div class="chat-box card">
+        <div class="messages" id="solveMessages" aria-live="polite"></div>
+        <div id="solvePlanArea"></div>
+        <div class="chips" id="solveChips"></div>
+        <form class="composer" data-chat="solve">
+          <button type="button" class="icon-btn mic-btn" data-mic="solve" aria-label="إدخال صوتي" hidden>🎤</button>
+          <input type="text" class="chat-input" autocomplete="off" data-i18n-ph="solvePh" placeholder="مثال: عندي مشكل في الخدمة...">
+          <button type="submit" class="btn primary send-btn" data-i18n="send">صيفط</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== DAY (نظم نهاري) ===== -->
+    <section class="view" id="view-day">
+      <div class="card">
+        <div class="card-head"><h2>📅 <span data-i18n="svcDay">نظم نهاري</span></h2></div>
+        <form id="taskForm" class="task-form">
+          <input id="taskTitle" type="text" required data-i18n-ph="taskPh" placeholder="شنو هي المهمة؟">
+          <div class="form-row">
+            <input id="taskDate" type="date">
+            <input id="taskTime" type="time">
+            <select id="taskPrio">
+              <option value="high" data-i18n="prioHigh">أولوية عالية</option>
+              <option value="med" selected data-i18n="prioMed">متوسطة</option>
+              <option value="low" data-i18n="prioLow">منخفضة</option>
+            </select>
+          </div>
+          <button type="submit" class="btn primary" id="taskSubmit" data-i18n="addTask">زيد المهمة</button>
+          <button type="button" class="btn ghost" id="taskCancelEdit" hidden data-i18n="cancel">إلغاء</button>
+        </form>
+        <div class="tabs" id="taskTabs">
+          <button class="tab active" data-filter="today" data-i18n="tabToday">اليوم</button>
+          <button class="tab" data-filter="week" data-i18n="tabWeek">هاد الأسبوع</button>
+          <button class="tab" data-filter="all" data-i18n="tabAll">الكل</button>
+        </div>
+        <div id="taskList" class="task-list"></div>
+        <div class="day-actions">
+          <button class="btn soft" id="suggestPlanBtn" data-i18n="suggestPlan">اقترح عليا خطة النهار</button>
+          <button class="btn soft" id="dayReviewBtn" data-i18n="dayReview">مراجعة نهاية النهار</button>
+        </div>
+        <div id="planSuggestion" class="plan-box" hidden></div>
+        <div id="dayReview" class="plan-box" hidden></div>
+      </div>
+    </section>
+
+    <!-- ===== PROGRESS (تقدم ديالي) ===== -->
+    <section class="view" id="view-progress">
+      <div class="card">
+        <div class="card-head"><h2>📈 <span data-i18n="svcProg">تقدم ديالي</span></h2></div>
+        <div id="weekSummary" class="week-summary"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3 data-i18n="goalsTitle">أهدافي</h3></div>
+        <form id="goalForm" class="inline-form">
+          <input id="goalTitle" type="text" required data-i18n-ph="goalPh" placeholder="هدف جديد... مثال: نتعلم الإنجليزية">
+          <button type="submit" class="btn primary" data-i18n="add">زيد</button>
+        </form>
+        <div id="goalList" class="goal-list"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3 data-i18n="habitsTitle">عاداتي اليومية</h3></div>
+        <form id="habitForm" class="inline-form">
+          <input id="habitTitle" type="text" required data-i18n-ph="habitPh" placeholder="عادة جديدة... مثال: رياضة 20 دقيقة">
+          <button type="submit" class="btn primary" data-i18n="add">زيد</button>
+        </form>
+        <div id="habitList" class="habit-list"></div>
+        <p class="soft-note" data-i18n="habitNote">نهار فاتك ماشي مشكل — المهم هو ترجع غدا. التقدم كيتبنى بشوية بشوية 🌿</p>
+      </div>
+    </section>
+
+    <!-- ===== SETTINGS & PRIVACY ===== -->
+    <section class="view" id="view-settings">
+      <div class="card">
+        <h2>⚙️ <span data-i18n="settingsTitle">الإعدادات والتخصيص</span></h2>
+        <label class="field"><span data-i18n="setName">بغيت نعيط ليك بـ</span>
+          <input id="setName" type="text" data-i18n-ph="setNamePh" placeholder="الاسم ديالك (اختياري)">
+        </label>
+        <label class="field"><span data-i18n="setLang">لغة المساعد</span>
+          <select id="setLang">
+            <option value="darija">الدارجة المغربية</option>
+            <option value="ar">العربية</option>
+            <option value="fr">Français</option>
+          </select>
+        </label>
+        <label class="switch-row"><span data-i18n="setDark">الوضع الداكن</span><input type="checkbox" id="setDark"></label>
+        <label class="switch-row"><span data-i18n="setVoice">الردود الصوتية (قراءة الأجوبة بصوت عالٍ)</span><input type="checkbox" id="setVoice"></label>
+        <label class="switch-row"><span data-i18n="setMemory">الذاكرة: خلي معاك يتذكر الاسم والأهداف ديالي على هاد الجهاز</span><input type="checkbox" id="setMemory"></label>
+        <div id="memoryBox" class="memory-box" hidden>
+          <h3 data-i18n="memoryTitle">شنو حافظ عليا</h3>
+          <div id="memoryContent"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>🤖 <span data-i18n="aiTitle">ربط ذكاء اصطناعي حقيقي</span></h2>
+        <p class="soft-note" data-i18n="aiExplain">بشكل افتراضي، معاك خدام بوضع تجريبي محلي (ردود مبرمجة بعناية، ماشي ذكاء اصطناعي حقيقي). تقدر تربطو بنموذج حقيقي عبر خدمة متوافقة مع OpenAI API (مثال: Groq عندو رتبة مجانية). المفتاح كيبقى محفوظ غير في جهازك.</p>
+        <label class="field"><span data-i18n="aiEndpoint">رابط الخدمة (Endpoint)</span>
+          <input id="aiEndpoint" type="url" dir="ltr" placeholder="https://api.groq.com/openai/v1/chat/completions">
+        </label>
+        <label class="field"><span data-i18n="aiModel">الموديل</span>
+          <input id="aiModel" type="text" dir="ltr" placeholder="llama-3.3-70b-versatile">
+        </label>
+        <label class="field"><span data-i18n="aiKey">مفتاح API</span>
+          <input id="aiKey" type="password" dir="ltr" placeholder="••••••••••••">
+        </label>
+        <label class="switch-row"><span data-i18n="aiConsent">كنوافق نصيفط رسائل المحادثة لهاد الخدمة الخارجية باش تجاوبني</span><input type="checkbox" id="aiConsent"></label>
+        <label class="switch-row"><span data-i18n="aiEnable">تفعيل الذكاء الاصطناعي الحقيقي</span><input type="checkbox" id="aiEnable"></label>
+        <p class="soft-note" data-i18n="aiWarn">تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائلك كتخرج لخادم المزود. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.</p>
+      </div>
+
+      <div class="card">
+        <h2>🔒 <span data-i18n="privacyTitle">الخصوصية والأمان</span></h2>
+        <div class="privacy-text">
+          <p><strong>شنو كيتحفظ؟</strong> المهام والأهداف والعادات والإعدادات كيتحفظو <strong>غير في هاد الجهاز</strong> (متصفحك). ما عندنا حتى خادم وما كنبيعو حتى معلومة.</p>
+          <p><strong>الفضفضة:</strong> محادثات «فضفض معايا» ما كتتحفظش تلقائياً، وكتتمسح ملي كتسد الصفحة.</p>
+          <p><strong>الذاكرة اختيارية:</strong> إلا فعّلتيها، كنحفظو غير الاسم والأهداف اللي دخلتي بنفسك، وتقدر تشوفها وتبدلها وتمسحها في أي وقت.</p>
+          <p><strong>الذكاء الاصطناعي الخارجي:</strong> ما كيتصيفط حتى حرف لأي خدمة خارجية إلا إذا ربطتي مفتاحك بنفسك ووافقتي صراحة.</p>
+          <p><strong>حدود المساعد:</strong> معاك مساعد ذكاء اصطناعي للدعم والتنظيم — ماشي طبيب ولا معالج نفسي، وما كيعطيش تشخيصات. في الأزمات: الإسعاف <strong>15</strong>، الشرطة <strong>19</strong>.</p>
+          <p><strong>القانون:</strong> هاد التطبيق مصمم باحترام مبادئ القانون المغربي 09-08 المتعلق بحماية المعطيات الشخصية.</p>
+        </div>
+        <div class="danger-zone">
+          <button class="btn danger" id="exportData" data-i18n="exportData">تصدير بياناتي (JSON)</button>
+          <button class="btn danger" id="deleteAll" data-i18n="deleteAll">مسح جميع بياناتي</button>
+        </div>
+        <button class="btn soft" id="installBtn" hidden data-i18n="install">تثبيت التطبيق على الهاتف 📲</button>
+      </div>
+
+      <div class="card plans-card">
+        <h2 data-i18n="plansTitle">الباقات (قريباً)</h2>
+        <div class="plans">
+          <div class="plan"><strong>M3AK Free</strong><span data-i18n="planFree">الوظائف الأساسية — مجاني دائماً</span></div>
+          <div class="plan"><strong>M3AK Plus</strong><span data-i18n="planPlus">ذكاء اصطناعي أوسع وأدوات تنظيم متقدمة</span></div>
+          <div class="plan"><strong>M3AK Business</strong><span data-i18n="planBiz">إنتاجية للفرق — بلا أي وصول لمحادثات الموظفين الشخصية</span></div>
+        </div>
+        <p class="soft-note" data-i18n="plansNote">الدفع غير مفعّل في هاد النسخة.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Bottom Nav ===== -->
+  <nav class="bottom-nav">
+    <button data-goto="home" class="nav-btn active"><span>🏠</span><small data-i18n="navHome">الرئيسية</small></button>
+    <button data-goto="ask" class="nav-btn"><span>💬</span><small data-i18n="navAsk">سول معاك</small></button>
+    <button data-goto="vent" class="nav-btn"><span>💚</span><small data-i18n="navVent">فضفض</small></button>
+    <button data-goto="day" class="nav-btn"><span>📅</span><small data-i18n="navDay">نهاري</small></button>
+    <button data-goto="progress" class="nav-btn"><span>📈</span><small data-i18n="navProg">تقدمي</small></button>
+  </nav>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
