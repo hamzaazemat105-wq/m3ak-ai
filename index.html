@@ -46,6 +46,13 @@
           <input id="quickChatInput" type="text" autocomplete="off" data-i18n-ph="quickPh" placeholder="كتب أي حاجة... أنا نسمع ليك">
           <button type="submit" class="btn primary" data-i18n="start">بدا</button>
         </form>
+        <div class="quick-actions">
+          <button type="button" class="qa-chip" data-goto="day">📅 <span data-i18n="qaPlan">نظم لي</span></button>
+          <button type="button" class="qa-chip" data-ask="ساعدني ننظم نهاري ونرتب أولوياتي">🎯 <span data-i18n="qaHelp">ساعدني في</span></button>
+          <button type="button" class="qa-chip" data-prefill="اشرح لي ">📖 <span data-i18n="qaExplain">اشرح لي</span></button>
+          <button type="button" class="qa-chip" data-goto="solve">🧩 <span data-i18n="qaSolve">حل مشكلتي</span></button>
+          <button type="button" class="qa-chip" data-ask="أعطني فكرة جديدة ملهمة لنهاري">💡 <span data-i18n="qaIdea">أعطني فكرة</span></button>
+        </div>
         <p class="hero-note" data-i18n="heroNote">أنا مساعد ذكاء اصطناعي، ماشي إنسان ولا معالج نفسي.</p>
       </div>
 
@@ -56,12 +63,30 @@
         <p class="soft-note" data-i18n="installSteps">إلا ما بانش ليك زر التثبيت: تأكد بلي فاتح الرابط في متصفح Chrome (ماشي من داخل واتساب)، ومن بعد افتح قائمة Chrome (⋮) وختار «تثبيت التطبيق» ولا «إضافة إلى الشاشة الرئيسية».</p>
       </div>
 
+      <div class="sec-head"><h2>⚡ <span data-i18n="toolsTitle">أدوات سريعة</span></h2></div>
       <div class="grid services">
-        <button class="svc card" data-goto="vent"><span class="svc-ic">💚</span><strong data-i18n="svcVent">فضفض معايا</strong><small data-i18n="svcVentSub">مساحة آمنة للهضرة والاستماع</small></button>
-        <button class="svc card" data-goto="solve"><span class="svc-ic">🧩</span><strong data-i18n="svcSolve">حل مشكلتي</strong><small data-i18n="svcSolveSub">نحلل المشكل ونلقاو حل عملي</small></button>
-        <button class="svc card" data-goto="day"><span class="svc-ic">📅</span><strong data-i18n="svcDay">نظم نهاري</strong><small data-i18n="svcDaySub">مهامي وخطة النهار</small></button>
-        <button class="svc card" data-goto="progress"><span class="svc-ic">🚀</span><strong data-i18n="svcProg">تقدم ديالي</strong><small data-i18n="svcProgSub">أهدافي وعاداتي وإنجازاتي</small></button>
-        <button class="svc card wide" data-goto="ask"><span class="svc-ic">💬</span><strong data-i18n="svcAsk">سول معاك</strong><small data-i18n="svcAskSub">أسئلة يومية ومساعدة عامة</small></button>
+        <button class="svc card t-pink" data-goto="vent"><span class="svc-ic">💚</span><strong data-i18n="svcVent">فضفض معايا</strong><small data-i18n="svcVentSub">مساحة آمنة للهضرة والاستماع</small></button>
+        <button class="svc card t-green" data-goto="solve"><span class="svc-ic">🧩</span><strong data-i18n="svcSolve">حل مشكلتي</strong><small data-i18n="svcSolveSub">نحلل المشكل ونلقاو حل عملي</small></button>
+        <button class="svc card t-blue" data-goto="day"><span class="svc-ic">📅</span><strong data-i18n="svcDay">نظم نهاري</strong><small data-i18n="svcDaySub">مهامي وخطة النهار</small></button>
+        <button class="svc card t-purple" data-goto="progress"><span class="svc-ic">🚀</span><strong data-i18n="svcProg">تقدم ديالي</strong><small data-i18n="svcProgSub">أهدافي وعاداتي وإنجازاتي</small></button>
+        <button class="svc card wide t-amber" data-goto="ask"><span class="svc-ic">💬</span><strong data-i18n="svcAsk">سول معاك</strong><small data-i18n="svcAskSub">أسئلة يومية ومساعدة عامة</small></button>
+      </div>
+
+      <div class="sec-head"><h2>🤖 <span data-i18n="catsTitle">مساعدك الذكي</span></h2></div>
+      <div class="hscroll cats">
+        <button type="button" class="cat t-amber" data-ask="بغيت نصائح على العلاقات والحياة الاجتماعية"><span class="cat-ic">👥</span><strong data-i18n="catRelations">العلاقات والحياة</strong><small data-i18n="catRelationsSub">دعم ونصائح</small></button>
+        <button type="button" class="cat t-green" data-ask="بغيت أفكار إبداعية في التصميم وصناعة المحتوى"><span class="cat-ic">💡</span><strong data-i18n="catCreate">الإبداع والتصميم</strong><small data-i18n="catCreateSub">أفكار مبتكرة</small></button>
+        <button type="button" class="cat t-blue" data-ask="بغيت نصائح يومية للصحة والراحة"><span class="cat-ic">🩵</span><strong data-i18n="catHealth">الصحة والراحة</strong><small data-i18n="catHealthSub">نصائح يومية</small></button>
+        <button type="button" class="cat t-pink" data-ask="بغيت أفكار وخطة لمشروع صغير"><span class="cat-ic">💼</span><strong data-i18n="catWork">العمل والمشاريع</strong><small data-i18n="catWorkSub">أفكار وخطط</small></button>
+        <button type="button" class="cat t-purple" data-ask="بغيت نصائح وتمارين للدراسة والتعلم"><span class="cat-ic">🎓</span><strong data-i18n="catStudy">الدراسة والتعلم</strong><small data-i18n="catStudySub">شروحات وتمارين</small></button>
+      </div>
+
+      <div class="sec-head"><h2>🔥 <span data-i18n="topicsTitle">مواضيع مقترحة لك</span></h2></div>
+      <div class="hscroll topics">
+        <button type="button" class="topic" data-ask="أعطني أفكار جديدة ملهمة"><img src="topic-1.jpg" alt="" loading="lazy"><strong data-i18n="topicIdeas">أفكار جديدة</strong><small data-i18n="topicIdeasSub">إلهام وإبداع</small></button>
+        <button type="button" class="topic" data-ask="بغيت دعم ونصائح للراحة النفسية"><img src="topic-2.jpg" alt="" loading="lazy"><strong data-i18n="topicCalm">الراحة النفسية</strong><small data-i18n="topicCalmSub">دعم يومي</small></button>
+        <button type="button" class="topic" data-ask="بغيت خطوات بسيطة للتطوير الذاتي"><img src="topic-3.jpg" alt="" loading="lazy"><strong data-i18n="topicSelf">التطوير الذاتي</strong><small data-i18n="topicSelfSub">خطوات بسيطة</small></button>
+        <button type="button" class="topic" data-ask="بغيت نصائح عملية لتحسين الإنتاجية"><img src="topic-4.jpg" alt="" loading="lazy"><strong data-i18n="topicFocus">تحسين الإنتاجية</strong><small data-i18n="topicFocusSub">نصائح عملية</small></button>
       </div>
 
       <div class="card" id="todayCard">
@@ -259,7 +284,7 @@
   <!-- ===== Bottom Nav ===== -->
   <nav class="bottom-nav">
     <button data-goto="home" class="nav-btn active"><span>🏠</span><small data-i18n="navHome">الرئيسية</small></button>
-    <button data-goto="ask" class="nav-btn"><span>💬</span><small data-i18n="navAsk">سول معاك</small></button>
+    <button data-goto="ask" class="nav-btn center"><span>💬</span><small data-i18n="navAsk">سول معاك</small></button>
     <button data-goto="vent" class="nav-btn"><span>💚</span><small data-i18n="navVent">فضفض</small></button>
     <button data-goto="day" class="nav-btn"><span>📅</span><small data-i18n="navDay">نهاري</small></button>
     <button data-goto="progress" class="nav-btn"><span>🚀</span><small data-i18n="navProg">تقدمي</small></button>
