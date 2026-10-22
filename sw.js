@@ -1,6 +1,6 @@
 /* M3AK AI service worker — network-first for fresh code, cache fallback offline */
-const CACHE = "m3ak-v4";
-const SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./icon.svg"];
+const CACHE = "m3ak-v5";
+const SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png", "./hero.jpg"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
