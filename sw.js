@@ -1,5 +1,5 @@
 /* M3AK AI service worker — network-first for fresh code, cache fallback offline */
-const CACHE = "m3ak-v5";
+const CACHE = "m3ak-v6";
 const SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png", "./hero.jpg"];
 
 self.addEventListener("install", (e) => {
