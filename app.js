@@ -239,9 +239,9 @@ const INTENTS = [
   {
     id: "stressed", keys: ["مضغوط", "ضغط", "مخنوق", "stress", "ضاغط", "راسي غادي ينفجر", "daght", "mkhnou9", "stressé"],
     replies: {
-      d: ["سمعتك... الضغط كيخلي حتى الحوايج الصغار يبانو كبار. أنا هنا معاك، بشوية بشوية 💚", "مفهوم عليك — ملي كيتجمع الضغط، الواحد كيحس براسو مخنوق. خد نفس عميق، أنا سامع ليك."],
-      l: ["Same3 lik... stress kaykhali hta lhwaij sghar ybanou kbar. Ana hna m3ak, b chwiya b chwiya 💚", "Mfhoum 3lik — mli kaytjama3 stress, lwahed kayhess b rasso mkhnou9. Khod nafas 3ami9, ana same3 lik."],
-      f: ["Je t'entends... la pression rend même les petites choses énormes. Je suis là, on y va doucement 💚", "Je comprends — quand tout s'accumule, on étouffe. Respire un bon coup, je t'écoute."]
+      d: ["سمعتك... الضغط كيخلي حتى الحوايج الصغار يبانو كبار. أنا هنا معاك، بشوية بشوية 💚", "مفهوم عليك — ملي كيتجمع الضغط، الواحد كيحس براسو مخنوق. أنا سامع ليك، هضر براحتك."],
+      l: ["Same3 lik... stress kaykhali hta lhwaij sghar ybanou kbar. Ana hna m3ak, b chwiya b chwiya 💚", "Mfhoum 3lik — mli kaytjama3 stress, lwahed kayhess b rasso mkhnou9. Ana same3 lik, hdar b ra7tek."],
+      f: ["Je t'entends... la pression rend même les petites choses énormes. Je suis là, on y va doucement 💚", "Je comprends — quand tout s'accumule, on étouffe. Je t'écoute, parle à ton rythme."]
     },
     questions: {
       d: ["شنو أكثر حاجة ضاغطة عليك دابا بالضبط؟", "واش هاد الضغط جاي من الخدمة، القراية، ولا شي حاجة أخرى؟", "من إمتى ونتا حاس بهاد الضغط؟"],
