@@ -250,6 +250,33 @@
         </div>
       </div>
 
+      <div class="card" id="accountCard">
+        <h2>👤 <span data-i18n="acctTitle">حسابي</span></h2>
+        <div id="acctSignedOut">
+          <p class="soft-note" data-i18n="acctText">الحساب اختياري: كيحفظ المهام والأهداف والعادات في السحابة باش تلقاهم في أي جهاز. محادثات الفضفضة كتبقى غير في هاد الجهاز دائماً.</p>
+          <label class="field"><span data-i18n="acctEmail">البريد الإلكتروني</span>
+            <input id="acctEmail" type="email" dir="ltr" autocomplete="email" placeholder="email@example.com">
+          </label>
+          <label class="field"><span data-i18n="acctPass">كلمة السر</span>
+            <input id="acctPass" type="password" dir="ltr" autocomplete="current-password" placeholder="••••••••">
+          </label>
+          <div class="day-actions">
+            <button type="button" class="btn primary" id="acctSignIn" data-i18n="acctIn">دخول</button>
+            <button type="button" class="btn soft" id="acctSignUp" data-i18n="acctUp">إنشاء حساب</button>
+          </div>
+          <button type="button" class="btn ghost" id="acctGoogle" style="width:100%;margin-top:8px" data-i18n="acctGoogleBtn">الدخول بـ Google</button>
+          <p class="soft-note" id="acctMsg"></p>
+        </div>
+        <div id="acctSignedIn" hidden>
+          <p><span data-i18n="acctHello">مسجل بـ:</span> <strong id="acctUserEmail" dir="ltr"></strong></p>
+          <p class="soft-note" id="syncNote">المزامنة مفعّلة ☁️</p>
+          <div class="day-actions">
+            <button type="button" class="btn soft" id="acctSyncNow" data-i18n="acctSyncNow">مزامنة الآن</button>
+            <button type="button" class="btn danger" id="acctSignOut" data-i18n="acctOut">تسجيل الخروج</button>
+          </div>
+        </div>
+      </div>
+
       <div class="card">
         <h2>🤖 <span data-i18n="aiTitle">الذكاء الاصطناعي</span></h2>
         <p class="soft-note" id="aiStatusLine">الذكاء الحقيقي مفعّل ✅ — معاك كيجاوبك بنموذج ذكاء اصطناعي حقيقي.</p>
@@ -265,6 +292,7 @@
           <p><strong>الفضفضة:</strong> محادثات «فضفض معايا» ما كتتحفظش تلقائياً، وكتتمسح ملي كتسد الصفحة.</p>
           <p><strong>الذاكرة اختيارية:</strong> إلا فعّلتيها، كنحفظو غير الاسم والأهداف اللي دخلتي بنفسك، وتقدر تشوفها وتبدلها وتمسحها في أي وقت.</p>
           <p><strong>الذكاء الاصطناعي الحقيقي:</strong> ملي كيكون مفعّل (هو الافتراضي)، رسائل المحادثة كتصيفط لخدمة ذكاء اصطناعي خارجية باش تتولد الأجوبة بنموذج حقيقي — وما عندنا حتى خادم كيحفظها. تقدر تطفيه من الإعدادات في أي وقت وترجع للوضع التجريبي المحلي اللي ما كيصيفط حتى حرف.</p>
+          <p><strong>الحساب والمزامنة (اختياري):</strong> إلا أنشأتي حساباً، المهام والأهداف والعادات كتحفظ في قاعدة بيانات آمنة باش تلقاهم في جميع أجهزتك. المحادثات — وخصوصاً الفضفضة — ما كتصيفط حتى لبلاصة وكتبقى في جهازك فقط.</p>
           <p><strong>حدود المساعد:</strong> معاك مساعد ذكاء اصطناعي للدعم والتنظيم — ماشي طبيب ولا معالج نفسي، وما كيعطيش تشخيصات. في الأزمات: الإسعاف <strong>15</strong>، الشرطة <strong>19</strong>.</p>
           <p><strong>القانون:</strong> هاد التطبيق مصمم باحترام مبادئ القانون المغربي 09-08 المتعلق بحماية المعطيات الشخصية.</p>
         </div>
@@ -298,6 +326,10 @@
 </div>
 
 <div id="toast" class="toast" hidden></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="app.js"></script>
+<script src="cloud.js"></script>
 </body>
 </html>
