@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لوحة إدارة معاك — M3AK Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="icon-192.png?v=2" type="image/png">
+<style>
+  :root{ --green:#0d7a5f; --green-deep:#0b5c46; --amber:#e8a33d; --ink:#182420; --muted:#5d6f68; --bg:#f6f3ec; --card:#fff; --line:#e5e0d2; }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:"IBM Plex Sans Arabic",system-ui,Tahoma,sans-serif; background:var(--bg); color:var(--ink)}
+  header{background:linear-gradient(135deg,var(--green-deep),var(--green)); color:#fff; padding:18px 16px; display:flex; align-items:center; gap:12px}
+  header img{width:44px; height:44px; border-radius:12px}
+  header h1{font-size:19px; margin:0}
+  header small{opacity:.85}
+  main{max-width:860px; margin:0 auto; padding:16px}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; margin-bottom:14px; box-shadow:0 6px 24px rgba(11,60,46,.08)}
+  .btn{border:0; border-radius:12px; padding:11px 16px; font-size:15px; font-weight:700; cursor:pointer; font-family:inherit}
+  .btn.primary{background:var(--green); color:#fff}
+  .btn.soft{background:#e3f2ec; color:var(--green-deep)}
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px}
+  .stat{background:var(--bg); border:1px solid var(--line); border-radius:14px; padding:14px; text-align:center}
+  .stat b{display:block; font-size:28px; color:var(--green-deep)}
+  .stat span{font-size:13px; color:var(--muted)}
+  table{width:100%; border-collapse:collapse; font-size:13.5px}
+  th,td{padding:9px 8px; border-bottom:1px solid var(--line); text-align:start; vertical-align:top}
+  th{color:var(--muted); font-size:12px}
+  .muted{color:var(--muted); font-size:13px; line-height:1.7}
+  .denied{background:#fdecea; color:#c0392b; border-radius:12px; padding:12px; font-weight:700}
+  [dir="ltr"]{direction:ltr; unicode-bidi:embed}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <img src="icon-192.png?v=2" alt="">
+  <div><h1>لوحة إدارة معاك 🔐</h1><small>M3AK Admin — خاص بالمالك فقط</small></div>
+</header>
+<main>
+  <div class="card" id="loginCard">
+    <p class="muted">هاد الصفحة خاصة بمالك التطبيق. سجّل الدخول بحساب Google ديال المالك باش تشوف الإحصائيات.</p>
+    <button class="btn primary" id="googleBtn">الدخول بـ Google</button>
+    <p class="muted" id="loginMsg"></p>
+  </div>
+
+  <div class="card" id="deniedCard" hidden>
+    <p class="denied">⛔ هاد الحساب ماشي هو حساب المالك — ما عندكش صلاحية تشوف هاد اللوحة.</p>
+    <button class="btn soft" id="deniedOut">تسجيل الخروج</button>
+  </div>
+
+  <div id="dash" hidden>
+    <div class="card">
+      <div class="stats">
+        <div class="stat"><b id="stTotal">–</b><span>إجمالي المستخدمين</span></div>
+        <div class="stat"><b id="stWeek">–</b><span>جدد هاد الأسبوع</span></div>
+        <div class="stat"><b id="stToday">–</b><span>نشطين اليوم</span></div>
+        <div class="stat"><b id="stTasks">–</b><span>مجموع المهام</span></div>
+      </div>
+      <p class="muted" id="dashMsg"></p>
+      <button class="btn soft" id="refreshBtn">تحديث 🔄</button>
+      <button class="btn soft" id="signOutBtn">تسجيل الخروج</button>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">المستخدمون</h3>
+      <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>البريد</th><th>الباقة</th><th>تاريخ التسجيل</th><th>آخر نشاط</th><th>مهام</th><th>أهداف</th><th>عادات</th></tr></thead>
+        <tbody id="usersBody"><tr><td colspan="7" class="muted">كنحمّل...</td></tr></tbody>
+      </table>
+      </div>
+      <p class="muted">اللوحة كتعرض غير الإحصائيات والأعداد — محادثات المستخدمين ومحتواهم الخاص ما كيوصلش لهنا أبداً، بالتصميم.</p>
+    </div>
+  </div>
+  <p class="muted" style="text-align:center"><a href="./index.html">→ الرجوع لتطبيق معاك</a></p>
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyClpZvM3bHhrzsuL35uydDcrTPw8Nz88VY",
+  authDomain: "m3ak-ai.firebaseapp.com",
+  projectId: "m3ak-ai",
+  storageBucket: "m3ak-ai.firebasestorage.app",
+  messagingSenderId: "595033477051",
+  appId: "1:595033477051:web:2f1788626be26659d8be9e"
+};
+const OWNER_EMAIL = "hamzaazemat105@gmail.com";
+firebase.initializeApp(FIREBASE_CONFIG);
+const db = firebase.firestore();
+const $ = (s) => document.querySelector(s);
+const fmt = (ts) => { try { return ts && ts.toDate ? ts.toDate().toLocaleString("ar-MA") : "—"; } catch (e) { return "—"; } };
+
+firebase.auth().onAuthStateChanged((u) => {
+  $("#loginCard").hidden = !!u;
+  $("#deniedCard").hidden = !(u && u.email !== OWNER_EMAIL);
+  $("#dash").hidden = !(u && u.email === OWNER_EMAIL);
+  if (u && u.email === OWNER_EMAIL) loadUsers();
+});
+$("#googleBtn").addEventListener("click", async () => {
+  $("#loginMsg").textContent = "";
+  try { await firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()); }
+  catch (e) { $("#loginMsg").textContent = "فشل الدخول: " + (e.message || e.code || ""); }
+});
+$("#deniedOut").addEventListener("click", () => firebase.auth().signOut());
+$("#signOutBtn").addEventListener("click", () => firebase.auth().signOut());
+$("#refreshBtn").addEventListener("click", loadUsers);
+
+async function loadUsers() {
+  $("#dashMsg").textContent = "كنحمّل الإحصائيات...";
+  try {
+    const snap = await db.collection("users").limit(300).get();
+    const now = new Date(); const dayAgo = new Date(now - 864e5); const weekAgo = new Date(now - 7 * 864e5);
+    let total = 0, wk = 0, td = 0, tasks = 0;
+    const rows = [];
+    snap.forEach((doc) => {
+      const d = doc.data() || {}; total++;
+      const created = d.createdAt && d.createdAt.toDate ? d.createdAt.toDate() : null;
+      const seen = d.lastSeen && d.lastSeen.toDate ? d.lastSeen.toDate() : null;
+      if (created && created > weekAgo) wk++;
+      if (seen && seen > dayAgo) td++;
+      const c = d.counts || {}; tasks += c.tasks || 0;
+      rows.push({ email: d.email || doc.id, plan: d.plan || "free", created, seen, c });
+    });
+    rows.sort((a, b) => (b.seen || 0) - (a.seen || 0));
+    $("#stTotal").textContent = total; $("#stWeek").textContent = wk; $("#stToday").textContent = td; $("#stTasks").textContent = tasks;
+    $("#usersBody").innerHTML = rows.length ? rows.map((r) =>
+      "<tr><td dir='ltr'>" + String(r.email).replace(/</g, "&lt;") + "</td><td>" + r.plan + "</td><td>" + fmt(r.created) + "</td><td>" + fmt(r.seen) + "</td><td>" + (r.c.tasks || 0) + "</td><td>" + (r.c.goals || 0) + "</td><td>" + (r.c.habits || 0) + "</td></tr>"
+    ).join("") : "<tr><td colspan='7' class='muted'>ما كاين حتى مستخدم مسجل بعد — اللوحة غادي تعمر ملي يبداو الناس ينشئو حسابات.</td></tr>";
+    $("#dashMsg").textContent = "آخر تحديث: " + now.toLocaleString("ar-MA");
+  } catch (e) {
+    $("#dashMsg").textContent = "وقع مشكل في التحميل: " + (e.message || e.code || "");
+  }
+}
+</script>
+</body>
+</html>
