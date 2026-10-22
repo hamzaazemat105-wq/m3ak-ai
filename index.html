@@ -220,25 +220,11 @@
       </div>
 
       <div class="card">
-        <h2>🤖 <span data-i18n="aiTitle">ربط ذكاء اصطناعي حقيقي</span></h2>
-        <p class="soft-note" data-i18n="aiExplain">معاك مربوط بمزود ذكاء اصطناعي مجاني (Pollinations) بلا حساب وبلا مفتاح — ملي كيكون مفعّل، رسائل المحادثة كتصيفط لهاد المزود باش تجاوبك بنموذج حقيقي. تقدر تطفيه في أي وقت وترجع للوضع التجريبي المحلي، ولا تربط مفتاحك الخاص (Groq مثلاً) لحدود أحسن.</p>
-        <label class="field"><span data-i18n="aiEndpoint">رابط الخدمة (Endpoint)</span>
-          <input id="aiEndpoint" type="url" dir="ltr" placeholder="https://text.pollinations.ai/openai">
-        </label>
-        <label class="field"><span data-i18n="aiModel">الموديل</span>
-          <input id="aiModel" type="text" dir="ltr" placeholder="openai">
-        </label>
-        <label class="field"><span data-i18n="aiKey">مفتاح API</span>
-          <input id="aiKey" type="password" dir="ltr" placeholder="gsk_... (يُحفظ في جهازك فقط)">
-        </label>
-        <div class="day-actions">
-          <a class="btn soft" href="https://pollinations.ai" target="_blank" rel="noopener" data-i18n="aiGetKey">المزود المجاني: Pollinations</a>
-          <button type="button" class="btn primary" id="aiTest" data-i18n="aiTest">اختبار الاتصال</button>
-        </div>
-        <p class="soft-note" id="aiTestStatus">المزود المجاني (Pollinations) مربوط واجد — الذكاء الحقيقي خدام بلا مفتاح.</p>
+        <h2>🤖 <span data-i18n="aiTitle">الذكاء الاصطناعي</span></h2>
+        <p class="soft-note" id="aiStatusLine">الذكاء الحقيقي مفعّل ✅ — معاك كيجاوبك بنموذج ذكاء اصطناعي حقيقي.</p>
         <label class="switch-row"><span data-i18n="aiConsent">كنوافق نصيفط رسائل المحادثة لهاد الخدمة الخارجية باش تجاوبني</span><input type="checkbox" id="aiConsent"></label>
         <label class="switch-row"><span data-i18n="aiEnable">تفعيل الذكاء الاصطناعي الحقيقي</span><input type="checkbox" id="aiEnable"></label>
-        <p class="soft-note" data-i18n="aiWarn">تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائلك كتخرج لخادم المزود. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.</p>
+        <p class="soft-note" data-i18n="aiWarn">تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائل المحادثة كتصيفط لخدمة ذكاء اصطناعي خارجية باش تجاوبك. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.</p>
       </div>
 
       <div class="card">
@@ -247,12 +233,12 @@
           <p><strong>شنو كيتحفظ؟</strong> المهام والأهداف والعادات والإعدادات كيتحفظو <strong>غير في هاد الجهاز</strong> (متصفحك). ما عندنا حتى خادم وما كنبيعو حتى معلومة.</p>
           <p><strong>الفضفضة:</strong> محادثات «فضفض معايا» ما كتتحفظش تلقائياً، وكتتمسح ملي كتسد الصفحة.</p>
           <p><strong>الذاكرة اختيارية:</strong> إلا فعّلتيها، كنحفظو غير الاسم والأهداف اللي دخلتي بنفسك، وتقدر تشوفها وتبدلها وتمسحها في أي وقت.</p>
-          <p><strong>الذكاء الاصطناعي الحقيقي:</strong> ملي كيكون مفعّل (هو الافتراضي)، رسائل المحادثة كتصيفط لمزود خارجي مجاني (Pollinations) باش تتولد الأجوبة بنموذج حقيقي — وما عندنا حتى خادم كيحفظها. تقدر تطفيه من الإعدادات في أي وقت وترجع للوضع التجريبي المحلي اللي ما كيصيفط حتى حرف.</p>
+          <p><strong>الذكاء الاصطناعي الحقيقي:</strong> ملي كيكون مفعّل (هو الافتراضي)، رسائل المحادثة كتصيفط لخدمة ذكاء اصطناعي خارجية باش تتولد الأجوبة بنموذج حقيقي — وما عندنا حتى خادم كيحفظها. تقدر تطفيه من الإعدادات في أي وقت وترجع للوضع التجريبي المحلي اللي ما كيصيفط حتى حرف.</p>
           <p><strong>حدود المساعد:</strong> معاك مساعد ذكاء اصطناعي للدعم والتنظيم — ماشي طبيب ولا معالج نفسي، وما كيعطيش تشخيصات. في الأزمات: الإسعاف <strong>15</strong>، الشرطة <strong>19</strong>.</p>
           <p><strong>القانون:</strong> هاد التطبيق مصمم باحترام مبادئ القانون المغربي 09-08 المتعلق بحماية المعطيات الشخصية.</p>
         </div>
         <div class="danger-zone">
-          <button class="btn danger" id="exportData" data-i18n="exportData">تصدير بياناتي (JSON)</button>
+          <button class="btn danger" id="exportData" data-i18n="exportData">تصدير بياناتي</button>
           <button class="btn danger" id="deleteAll" data-i18n="deleteAll">مسح جميع بياناتي</button>
         </div>
         <button class="btn soft" id="installBtn" hidden data-i18n="install">تثبيت التطبيق على الهاتف 📲</button>
