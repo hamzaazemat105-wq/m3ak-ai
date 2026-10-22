@@ -16,9 +16,9 @@ const DEFAULT_AI_ENDPOINT = "https://text.pollinations.ai/openai";
 const DEFAULT_AI_MODEL = "openai";
 const settings = Object.assign({
   name: "", lang: "darija", dark: false, voiceOut: false, memory: false,
-  ai: { endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: false, enabled: false }
+  ai: { endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: true, enabled: true }
 }, load(LS_SETTINGS, {}));
-settings.ai = Object.assign({ endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: false, enabled: false }, settings.ai || {});
+settings.ai = Object.assign({ endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: true, enabled: true }, settings.ai || {});
 if (!settings.ai.endpoint) settings.ai.endpoint = DEFAULT_AI_ENDPOINT;
 if (!settings.ai.model) settings.ai.model = DEFAULT_AI_MODEL;
 /* Migration: the Groq route proved unreachable for the owner (login walls on
