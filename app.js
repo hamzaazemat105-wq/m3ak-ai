@@ -88,6 +88,9 @@ const I18N = {
     aiWarn: "تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائلك كتخرج لخادم المزود. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.",
     privacyTitle: "الخصوصية والأمان", exportData: "تصدير بياناتي (JSON)", deleteAll: "مسح جميع بياناتي",
     install: "تثبيت التطبيق على الهاتف 📲",
+    installTitle: "ثبّت معاك على تيليفونك",
+    installText: "زيد «معاك» للواجهة الرئيسية ديال تيليفونك وافتحو بحال أي تطبيق عادي — بلا ما تدخل للمتصفح كل مرة.",
+    installSteps: "إلا ما بانش ليك زر التثبيت: افتح قائمة Chrome (⋮) من الفوق وختار «تثبيت التطبيق» ولا «إضافة إلى الشاشة الرئيسية»، وغادي يظهر ليك الأيقونة في الواجهة.",
     plansTitle: "الباقات (قريباً)", planFree: "الوظائف الأساسية — مجاني دائماً",
     planPlus: "ذكاء اصطناعي أوسع وأدوات تنظيم متقدمة",
     planBiz: "إنتاجية للفرق — بلا أي وصول لمحادثات الموظفين الشخصية",
@@ -131,6 +134,9 @@ const I18N = {
     aiWarn: "Attention : avec la vraie IA activée, tes messages partent vers le serveur du fournisseur. Évite les infos très sensibles en mode « Parle-moi ».",
     privacyTitle: "Confidentialité et sécurité", exportData: "Exporter mes données (JSON)", deleteAll: "Effacer toutes mes données",
     install: "Installer l'app sur le téléphone 📲",
+    installTitle: "Installe M3AK sur ton téléphone",
+    installText: "Ajoute « M3AK » à ton écran d'accueil et ouvre-le comme une vraie application — sans passer par le navigateur à chaque fois.",
+    installSteps: "Si le bouton d'installation n'apparaît pas : ouvre le menu Chrome (⋮) en haut et choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
     plansTitle: "Formules (bientôt)", planFree: "Fonctions de base — gratuit pour toujours",
     planPlus: "IA étendue et outils d'organisation avancés",
     planBiz: "Productivité pour équipes — sans aucun accès aux conversations personnelles",
@@ -178,8 +184,8 @@ function timeBucket() { const h = new Date().getHours(); return h < 12 ? "mornin
 function greetingText() {
   const h = new Date().getHours();
   const name = settings.memory && settings.name ? " " + settings.name : "";
-  if (settings.lang === "fr") return (h < 12 ? "Bonjour" : h < 18 ? "Bel après-midi" : "Bonsoir") + name + " 🌿";
-  return (h < 5 ? "ليلة سعيدة" : h < 12 ? "صباح الخير" : h < 18 ? "نهارك سعيد" : "مساء الخير") + name + " 🌿";
+  if (settings.lang === "fr") return (h < 12 ? "Bonjour" : h < 18 ? "Bel après-midi" : "Bonsoir") + name + " ✨";
+  return (h < 5 ? "ليلة سعيدة" : h < 12 ? "صباح الخير" : h < 18 ? "نهارك سعيد" : "مساء الخير") + name + " ✨";
 }
 function renderHome() {
   $("#greeting").textContent = greetingText();
@@ -1207,18 +1213,32 @@ $("#deleteAll").addEventListener("click", () => {
 
 /* ----- PWA install ----- */
 let deferredPrompt = null;
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  $("#installBtn").hidden = false;
-});
-$("#installBtn").addEventListener("click", async () => {
+function showInstallBtns(show) {
+  ["#installBtn", "#installBtnHome"].forEach((s) => { const b = $(s); if (b) b.hidden = !show; });
+}
+async function promptInstall() {
   if (!deferredPrompt) return;
   deferredPrompt.prompt();
   await deferredPrompt.userChoice;
   deferredPrompt = null;
-  $("#installBtn").hidden = true;
+  showInstallBtns(false);
+}
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  showInstallBtns(true);
 });
+window.addEventListener("appinstalled", () => {
+  deferredPrompt = null;
+  showInstallBtns(false);
+  const c = $("#installCard"); if (c) c.hidden = true;
+});
+$("#installBtn").addEventListener("click", promptInstall);
+const installHomeBtn = $("#installBtnHome");
+if (installHomeBtn) installHomeBtn.addEventListener("click", promptInstall);
+if (window.matchMedia("(display-mode: standalone)").matches) {
+  const c = $("#installCard"); if (c) c.hidden = true;
+}
 
 /* ----- Init ----- */
 applyTheme();
