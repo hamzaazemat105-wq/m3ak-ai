@@ -91,7 +91,18 @@ const I18N = {
     planPlus: "ذكاء اصطناعي أوسع وأدوات تنظيم متقدمة",
     planBiz: "إنتاجية للفرق — بلا أي وصول لمحادثات الموظفين الشخصية",
     plansNote: "الدفع غير مفعّل في هاد النسخة.",
-    navHome: "الرئيسية", navAsk: "سول معاك", navVent: "فضفض", navDay: "نهاري", navProg: "تقدمي"
+    navHome: "الرئيسية", navAsk: "سول معاك", navVent: "فضفض", navDay: "نهاري", navProg: "تقدمي",
+    qaPlan: "نظم لي", qaHelp: "ساعدني في", qaExplain: "اشرح لي", qaSolve: "حل مشكلتي", qaIdea: "أعطني فكرة",
+    toolsTitle: "أدوات سريعة", catsTitle: "مساعدك الذكي", topicsTitle: "مواضيع مقترحة لك",
+    catRelations: "العلاقات والحياة", catRelationsSub: "دعم ونصائح",
+    catCreate: "الإبداع والتصميم", catCreateSub: "أفكار مبتكرة",
+    catHealth: "الصحة والراحة", catHealthSub: "نصائح يومية",
+    catWork: "العمل والمشاريع", catWorkSub: "أفكار وخطط",
+    catStudy: "الدراسة والتعلم", catStudySub: "شروحات وتمارين",
+    topicIdeas: "أفكار جديدة", topicIdeasSub: "إلهام وإبداع",
+    topicCalm: "الراحة النفسية", topicCalmSub: "دعم يومي",
+    topicSelf: "التطوير الذاتي", topicSelfSub: "خطوات بسيطة",
+    topicFocus: "تحسين الإنتاجية", topicFocusSub: "نصائح عملية"
   },
   fr: {
     slogan: "Avec toi, pas à pas", start: "Go", quickPh: "Écris ce que tu veux... je t'écoute",
@@ -133,7 +144,18 @@ const I18N = {
     planPlus: "IA étendue et outils d'organisation avancés",
     planBiz: "Productivité pour équipes — sans aucun accès aux conversations personnelles",
     plansNote: "Le paiement n'est pas activé dans cette version.",
-    navHome: "Accueil", navAsk: "Demander", navVent: "Parler", navDay: "Journée", navProg: "Progrès"
+    navHome: "Accueil", navAsk: "Demander", navVent: "Parler", navDay: "Journée", navProg: "Progrès",
+    qaPlan: "Organise", qaHelp: "Aide-moi", qaExplain: "Explique-moi", qaSolve: "Mon problème", qaIdea: "Une idée",
+    toolsTitle: "Outils rapides", catsTitle: "Ton assistant intelligent", topicsTitle: "Sujets pour toi",
+    catRelations: "Relations et vie", catRelationsSub: "Soutien et conseils",
+    catCreate: "Créativité et design", catCreateSub: "Idées innovantes",
+    catHealth: "Santé et bien-être", catHealthSub: "Conseils quotidiens",
+    catWork: "Travail et projets", catWorkSub: "Idées et plans",
+    catStudy: "Études et apprentissage", catStudySub: "Explications et exercices",
+    topicIdeas: "Idées nouvelles", topicIdeasSub: "Inspiration",
+    topicCalm: "Bien-être mental", topicCalmSub: "Soutien quotidien",
+    topicSelf: "Développement personnel", topicSelfSub: "Petits pas",
+    topicFocus: "Productivité", topicFocusSub: "Conseils pratiques"
   }
 };
 function applyI18n() {
@@ -813,6 +835,19 @@ $("#quickChatForm").addEventListener("submit", (e) => {
   goto("ask");
   sendToChat("ask", v);
 });
+
+/* Home quick starters: categories, topics and idea chips ask the assistant directly */
+$$("[data-ask]").forEach((b) => b.addEventListener("click", () => {
+  const t = (b.dataset.ask || "").trim();
+  if (!t) return;
+  goto("ask");
+  sendToChat("ask", settings.lang === "fr" && b.dataset.askFr ? b.dataset.askFr : t);
+}));
+$$("[data-prefill]").forEach((b) => b.addEventListener("click", () => {
+  goto("ask");
+  const inp = document.querySelector("#view-ask .chat-input");
+  if (inp) { inp.value = b.dataset.prefill || ""; inp.focus(); }
+}));
 
 /* Vent help-type selection */
 $$("#helpTypes .chip").forEach((b) => b.addEventListener("click", () => {
