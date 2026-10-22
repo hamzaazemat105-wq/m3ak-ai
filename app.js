@@ -78,15 +78,11 @@ const I18N = {
     setLang: "لغة المساعد", setDark: "الوضع الداكن", setVoice: "الردود الصوتية (قراءة الأجوبة بصوت عالٍ)",
     setMemory: "الذاكرة: خلي معاك يتذكر الاسم والأهداف ديالي على هاد الجهاز",
     memoryTitle: "شنو حافظ عليا",
-    aiTitle: "ربط ذكاء اصطناعي حقيقي",
-    aiExplain: "معاك مربوط بمزود ذكاء اصطناعي مجاني (Pollinations) بلا حساب وبلا مفتاح — ملي كيكون مفعّل، رسائل المحادثة كتصيفط لهاد المزود باش تجاوبك بنموذج حقيقي. تقدر تطفيه في أي وقت وترجع للوضع التجريبي المحلي، ولا تربط مفتاحك الخاص (Groq مثلاً) لحدود أحسن.",
-    aiEndpoint: "رابط الخدمة (Endpoint)", aiModel: "الموديل", aiKey: "مفتاح API",
+    aiTitle: "الذكاء الاصطناعي",
     aiConsent: "كنوافق نصيفط رسائل المحادثة لهاد الخدمة الخارجية باش تجاوبني",
     aiEnable: "تفعيل الذكاء الاصطناعي الحقيقي",
-    aiGetKey: "المزود المجاني: Pollinations",
-    aiTest: "اختبار الاتصال",
-    aiWarn: "تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائلك كتخرج لخادم المزود. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.",
-    privacyTitle: "الخصوصية والأمان", exportData: "تصدير بياناتي (JSON)", deleteAll: "مسح جميع بياناتي",
+    aiWarn: "تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائل المحادثة كتصيفط لخدمة ذكاء اصطناعي خارجية باش تجاوبك. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.",
+    privacyTitle: "الخصوصية والأمان", exportData: "تصدير بياناتي", deleteAll: "مسح جميع بياناتي",
     install: "تثبيت التطبيق على الهاتف 📲",
     installTitle: "ثبّت معاك على تيليفونك",
     installText: "زيد «معاك» للواجهة الرئيسية ديال تيليفونك وافتحو بحال أي تطبيق عادي — بلا ما تدخل للمتصفح كل مرة.",
@@ -124,15 +120,11 @@ const I18N = {
     setLang: "Langue de l'assistant", setDark: "Mode sombre", setVoice: "Réponses vocales (lecture à voix haute)",
     setMemory: "Mémoire : laisser M3AK retenir mon nom et mes objectifs sur cet appareil",
     memoryTitle: "Ce que M3AK retient de moi",
-    aiTitle: "Connecter une vraie IA",
-    aiExplain: "M3AK est connecté à un fournisseur d'IA gratuit (Pollinations), sans compte ni clé — quand il est activé, tes messages lui sont envoyés pour générer de vraies réponses. Tu peux le désactiver à tout moment ou brancher ta propre clé (ex : Groq).",
-    aiEndpoint: "Endpoint du service", aiModel: "Modèle", aiKey: "Clé API",
+    aiTitle: "Intelligence artificielle",
     aiConsent: "J'accepte d'envoyer mes messages à ce service externe pour obtenir des réponses",
     aiEnable: "Activer la vraie IA",
-    aiGetKey: "Fournisseur gratuit : Pollinations",
-    aiTest: "Tester la connexion",
-    aiWarn: "Attention : avec la vraie IA activée, tes messages partent vers le serveur du fournisseur. Évite les infos très sensibles en mode « Parle-moi ».",
-    privacyTitle: "Confidentialité et sécurité", exportData: "Exporter mes données (JSON)", deleteAll: "Effacer toutes mes données",
+    aiWarn: "Attention : avec la vraie IA activée, tes messages sont envoyés à un service d'IA externe pour te répondre. Évite les infos très sensibles en mode « Parle-moi ».",
+    privacyTitle: "Confidentialité et sécurité", exportData: "Exporter mes données", deleteAll: "Effacer toutes mes données",
     install: "Installer l'app sur le téléphone 📲",
     installTitle: "Installe M3AK sur ton téléphone",
     installText: "Ajoute « M3AK » à ton écran d'accueil et ouvre-le comme une vraie application — sans passer par le navigateur à chaque fois.",
@@ -1110,17 +1102,14 @@ function renderSettings() {
   $("#setDark").checked = !!settings.dark;
   $("#setVoice").checked = !!settings.voiceOut;
   $("#setMemory").checked = !!settings.memory;
-  $("#aiEndpoint").value = settings.ai.endpoint || "";
-  $("#aiModel").value = settings.ai.model || "";
-  $("#aiKey").value = settings.ai.key || "";
   $("#aiConsent").checked = !!settings.ai.consent;
   $("#aiEnable").checked = !!settings.ai.enabled;
   renderMemoryBox();
   updateAiChip();
-  const aiLine = $("#aiTestStatus");
+  const aiLine = $("#aiStatusLine");
   if (aiLine) aiLine.textContent = aiReady()
-    ? (settings.lang === "fr" ? "La vraie IA est active ✅" : "الذكاء الحقيقي مفعّل ✅")
-    : (settings.lang === "fr" ? "Le fournisseur gratuit Pollinations est prêt — aucune clé requise." : "المزود المجاني (Pollinations) مربوط واجد — الذكاء الحقيقي خدام بلا مفتاح.");
+    ? (settings.lang === "fr" ? "La vraie IA est activée ✅ — M3AK te répond avec un vrai modèle d'IA." : "الذكاء الحقيقي مفعّل ✅ — معاك كيجاوبك بنموذج ذكاء اصطناعي حقيقي.")
+    : (settings.lang === "fr" ? "La vraie IA est désactivée — mode local simplifié." : "الذكاء الحقيقي مطفي — الوضع المحلي المبسّط خدام.");
 }
 function renderMemoryBox() {
   const box = $("#memoryBox");
@@ -1130,7 +1119,7 @@ function renderMemoryBox() {
   const goals = data.goals.map((g) => "<li>🎯 " + esc(g.title) + " (" + (g.progress || 0) + "%)</li>").join("");
   $("#memoryContent").innerHTML =
     "<p><strong>" + (fr ? "Prénom" : "الاسم") + ":</strong> " + (settings.name ? esc(settings.name) : "—") + "</p>" +
-    "<p><strong>" + (fr ? "Langue" : "اللغة") + ":</strong> " + settings.lang + "</p>" +
+    "<p><strong>" + (fr ? "Langue" : "اللغة") + ":</strong> " + (settings.lang === "fr" ? "Français" : settings.lang === "ar" ? "العربية" : "الدارجة المغربية") + "</p>" +
     (goals ? "<p><strong>" + (fr ? "Objectifs" : "الأهداف") + ":</strong></p><ul>" + goals + "</ul>" : "<p>" + (fr ? "Aucun objectif enregistré." : "ما كاين حتى هدف مسجل.") + "</p>") +
     '<p class="soft-note">' + (fr ? "Tout est stocké uniquement sur cet appareil. Les conversations ne sont jamais enregistrées automatiquement." : "كلشي محفوظ غير في هاد الجهاز. المحادثات ما كتتحفظش تلقائياً أبداً.") + "</p>";
 }
@@ -1139,62 +1128,11 @@ $("#setLang").addEventListener("change", (e) => { settings.lang = e.target.value
 $("#setDark").addEventListener("change", (e) => { settings.dark = e.target.checked; persistSettings(); applyTheme(); });
 $("#setVoice").addEventListener("change", (e) => { settings.voiceOut = e.target.checked; persistSettings(); if (settings.voiceOut) toast(settings.lang === "fr" ? "Réponses vocales activées 🔊" : "الردود الصوتية تفعّلات 🔊"); });
 $("#setMemory").addEventListener("change", (e) => { settings.memory = e.target.checked; persistSettings(); renderMemoryBox(); });
-["aiEndpoint", "aiModel", "aiKey"].forEach((id) => $("#" + id).addEventListener("change", (e) => {
-  const k = id.replace("ai", "").toLowerCase();
-  settings.ai[k] = e.target.value.trim();
-  persistSettings(); updateAiChip();
-}));
-$("#aiConsent").addEventListener("change", (e) => { settings.ai.consent = e.target.checked; persistSettings(); updateAiChip(); });
+$("#aiConsent").addEventListener("change", (e) => { settings.ai.consent = e.target.checked; persistSettings(); updateAiChip(); renderSettings(); });
 $("#aiEnable").addEventListener("change", (e) => {
-  settings.ai.endpoint = $("#aiEndpoint").value.trim() || DEFAULT_AI_ENDPOINT;
-  settings.ai.model = $("#aiModel").value.trim() || DEFAULT_AI_MODEL;
-  settings.ai.key = $("#aiKey").value.trim();
-  settings.ai.enabled = e.target.checked; persistSettings(); updateAiChip();
-  if (e.target.checked && !aiReady()) toast(settings.lang === "fr" ? "Complète l'endpoint, la clé et le consentement pour activer" : "كمل رابط الخدمة والمفتاح والموافقة باش يتفعّل");
+  settings.ai.enabled = e.target.checked; persistSettings(); updateAiChip(); renderSettings();
   if (e.target.checked && aiReady()) toast(settings.lang === "fr" ? "Vraie IA activée 🤖" : "الذكاء الحقيقي تفعّل 🤖");
 });
-const aiTestBtn = $("#aiTest");
-if (aiTestBtn) aiTestBtn.addEventListener("click", async () => {
-  const fr = settings.lang === "fr";
-  const status = $("#aiTestStatus");
-  const setStatus = (msg) => { if (status) status.textContent = msg; };
-  settings.ai.endpoint = $("#aiEndpoint").value.trim() || DEFAULT_AI_ENDPOINT;
-  settings.ai.model = $("#aiModel").value.trim() || DEFAULT_AI_MODEL;
-  settings.ai.key = $("#aiKey").value.trim();
-  persistSettings(); updateAiChip();
-  if (!settings.ai.key && !settings.ai.endpoint.includes("pollinations.ai")) {
-    setStatus(fr ? "Ajoute d'abord ta clé API." : "زيد مفتاح API ديالك أولاً.");
-    toast(fr ? "Clé manquante" : "المفتاح ناقص");
-    return;
-  }
-  aiTestBtn.disabled = true;
-  setStatus(fr ? "Test de connexion en cours..." : "كنختبر الاتصال بالمزود...");
-  try {
-    const res = await fetch(settings.ai.endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", ...(settings.ai.key ? { "Authorization": "Bearer " + settings.ai.key } : {}) },
-      body: JSON.stringify({ model: settings.ai.model, messages: [{ role: "user", content: "Reply with OK" }], temperature: 0, max_tokens: 5 })
-    });
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const j = await res.json();
-    const out = j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
-    if (!out) throw new Error("empty response");
-    if (settings.ai.consent) {
-      settings.ai.enabled = true;
-      $("#aiEnable").checked = true;
-      persistSettings(); updateAiChip();
-      setStatus(fr ? "Connexion réussie ✅ La vraie IA est activée." : "الاتصال ناجح ✅ الذكاء الحقيقي تفعّل.");
-      toast(fr ? "Vraie IA activée 🤖" : "الذكاء الحقيقي تفعّل 🤖");
-    } else {
-      setStatus(fr ? "Connexion réussie ✅ Coche le consentement, puis active la vraie IA." : "الاتصال ناجح ✅ علّم على الموافقة، ومن بعد فعّل الذكاء الحقيقي.");
-    }
-  } catch (err) {
-    setStatus((fr ? "Échec du test : " : "فشل الاختبار: ") + err.message + (fr ? ". Vérifie la clé et le modèle." : ". تأكد من المفتاح والموديل."));
-  } finally {
-    aiTestBtn.disabled = false;
-  }
-});
-
 $("#exportData").addEventListener("click", () => {
   const out = { exportedAt: new Date().toISOString(), settings: Object.assign({}, settings, { ai: Object.assign({}, settings.ai, { key: undefined }) }), data };
   const blob = new Blob([JSON.stringify(out, null, 2)], { type: "application/json" });
