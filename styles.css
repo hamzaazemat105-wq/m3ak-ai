@@ -63,6 +63,7 @@ p{margin:6px 0; line-height:1.7}
   border:0; border-radius:12px; padding:11px 16px; font-size:15px; font-weight:600;
   background:var(--green-soft); color:var(--green-deep); transition:.15s;
 }
+a.btn{text-decoration:none; display:inline-flex; align-items:center; justify-content:center}
 .btn.primary{background:var(--green); color:#fff}
 .btn.primary:active{background:var(--green-deep)}
 .btn.soft{background:var(--green-soft); color:var(--green-deep)}
