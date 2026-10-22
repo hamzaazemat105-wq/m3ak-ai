@@ -1,5 +1,5 @@
 /* M3AK AI service worker — app shell cache for offline use */
-const CACHE = "m3ak-v2";
+const CACHE = "m3ak-v3";
 const SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (e) => {
