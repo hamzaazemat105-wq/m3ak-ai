@@ -222,6 +222,11 @@
         <label class="field"><span data-i18n="aiKey">مفتاح API</span>
           <input id="aiKey" type="password" dir="ltr" placeholder="gsk_... (يُحفظ في جهازك فقط)">
         </label>
+        <div class="day-actions">
+          <a class="btn soft" href="https://console.groq.com/keys" target="_blank" rel="noopener" data-i18n="aiGetKey">إنشاء مفتاح Groq مجاني</a>
+          <button type="button" class="btn primary" id="aiTest" data-i18n="aiTest">اختبار الاتصال</button>
+        </div>
+        <p class="soft-note" id="aiTestStatus">الرابط والموديل واجدين افتراضياً (Groq) — خاصك غير المفتاح المجاني ديالك.</p>
         <label class="switch-row"><span data-i18n="aiConsent">كنوافق نصيفط رسائل المحادثة لهاد الخدمة الخارجية باش تجاوبني</span><input type="checkbox" id="aiConsent"></label>
         <label class="switch-row"><span data-i18n="aiEnable">تفعيل الذكاء الاصطناعي الحقيقي</span><input type="checkbox" id="aiEnable"></label>
         <p class="soft-note" data-i18n="aiWarn">تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائلك كتخرج لخادم المزود. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.</p>
