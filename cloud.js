@@ -20,9 +20,9 @@ function acctMsg(text, ok) {
 function setSyncNote(state) {
   const el = document.getElementById("syncNote");
   if (!el) return;
-  el.textContent = state === "synced" ? "المزامنة تمت ☁️✅"
-    : state === "error" ? "فشلت المزامنة — عاود المحاولة."
-    : "المزامنة مفعّلة ☁️";
+  el.textContent = state === "synced" ? window.t("syncSynced")
+    : state === "error" ? window.t("syncError")
+    : window.t("syncOn");
 }
 function renderAccount() {
   const out = document.getElementById("acctSignedOut");
@@ -36,10 +36,10 @@ function renderAccount() {
     setSyncNote("on");
     if (window.__hideGate) window.__hideGate();
     try { localStorage.setItem("radar.gate.v1", "user"); } catch {}
-    if (st) st.textContent = "مسجل الدخول: " + (cloudUser.email || "");
+    if (st) st.textContent = window.t("settingsSignedIn") + (cloudUser.email || "");
   } else {
     out.hidden = false; inn.hidden = true;
-    if (st) st.textContent = "غير مسجل الدخول — بياناتك محفوظة في هاد الجهاز فقط.";
+    if (st) st.textContent = window.t("settingsSignedOut");
   }
 }
 function profilePayload(withCreated) {
@@ -87,19 +87,19 @@ async function syncOnSignIn() {
       if (a && data.profile.age) a.value = data.profile.age;
       if (dp && data.profile.rank) dp.value = data.profile.rank;
       renderHome(); renderMine();
-      toast("ترجعات بياناتك من السحابة ☁️");
+      toast(window.t("cloudRestored"));
     }
     await pushCloud(false);
   } catch (e) { setSyncNote("error"); }
 }
 function authError(e) {
   const code = (e && e.code) || "";
-  if (code.includes("email-already-in-use")) return "هاد الإيميل مسجل من قبل — جرب تسجيل الدخول.";
-  if (code.includes("weak-password")) return "كلمة السر قصيرة — خاصها 6 حروف على الأقل.";
-  if (code.includes("invalid-email")) return "الإيميل ما صحيحش.";
-  if (code.includes("network")) return "ما كايناش إنترنت — تحقق من الاتصال.";
-  if (code.includes("popup")) return "تسدّات نافذة Google — عاود المحاولة.";
-  return "الإيميل ولا كلمة السر غلاطة — عاود المحاولة.";
+  if (code.includes("email-already-in-use")) return window.t("errInUse");
+  if (code.includes("weak-password")) return window.t("errWeak");
+  if (code.includes("invalid-email")) return window.t("errEmail");
+  if (code.includes("network")) return window.t("errNetwork");
+  if (code.includes("popup")) return window.t("errPopup");
+  return window.t("errGeneric");
 }
 (function initCloud() {
   const card = document.getElementById("accountCard");
@@ -111,7 +111,7 @@ function authError(e) {
       cloudUser = u || null;
       renderAccount();
       const ab2 = document.getElementById("openGateBtn");
-      if (ab2) ab2.textContent = u ? "👤 تبديل الحساب" : "👤 تسجيل الدخول / إنشاء حساب";
+      if (ab2) ab2.textContent = u ? window.t("switchAccount") : window.t("signInUp");
       if (u) syncOnSignIn();
     });
   } catch (e) { if (card) card.hidden = true; return; }
@@ -124,7 +124,7 @@ function authError(e) {
     document.getElementById("tabSignIn").classList.toggle("on", m === "in");
     document.getElementById("tabSignUp").classList.toggle("on", m === "up");
     document.getElementById("pass2Wrap").hidden = m !== "up";
-    document.getElementById("acctMainBtn").textContent = m === "in" ? "تسجيل الدخول" : "إنشاء حساب";
+    document.getElementById("acctMainBtn").textContent = m === "in" ? window.t("tabIn") : window.t("tabUp");
     document.getElementById("acctPass").setAttribute("autocomplete", m === "in" ? "current-password" : "new-password");
     acctMsg("");
   };
@@ -141,16 +141,16 @@ function authError(e) {
   document.getElementById("acctMainBtn").addEventListener("click", async () => {
     acctMsg("");
     const em = email(), pw = pass();
-    if (!em || !em.includes("@")) { acctMsg("⚠️ الإيميل ما صحيحش — تأكد منو وعاود."); return; }
+    if (!em || !em.includes("@")) { acctMsg(window.t("errBadEmail")); return; }
     if (authMode === "up") {
       const pw2 = document.getElementById("acctPass2").value || "";
-      if (pw.length < 6) { acctMsg("⚠️ كلمة السر قصيرة — خاصها تكون 6 حروف أو أرقام على الأقل."); return; }
-      if (pw !== pw2) { acctMsg("⚠️ كلمتا السر ما متطابقينش — كتب نفس كلمة السر في الخانتين."); return; }
-      try { await firebase.auth().createUserWithEmailAndPassword(em, pw); toast("تنشأ الحساب 🎉"); }
+      if (pw.length < 6) { acctMsg(window.t("errShortPass")); return; }
+      if (pw !== pw2) { acctMsg(window.t("errMismatch")); return; }
+      try { await firebase.auth().createUserWithEmailAndPassword(em, pw); toast(window.t("toastCreated")); }
       catch (e) { acctMsg(authError(e)); }
     } else {
-      if (!pw) { acctMsg("⚠️ كتب كلمة السر."); return; }
-      try { await firebase.auth().signInWithEmailAndPassword(em, pw); toast("مرحبا بيك 👋"); }
+      if (!pw) { acctMsg(window.t("errNoPass")); return; }
+      try { await firebase.auth().signInWithEmailAndPassword(em, pw); toast(window.t("toastWelcome")); }
       catch (e) { acctMsg(authError(e)); }
     }
   });
@@ -161,4 +161,10 @@ function authError(e) {
   });
   document.getElementById("acctSyncNow").addEventListener("click", () => pushCloud(false));
   document.getElementById("acctSignOut").addEventListener("click", async () => { await firebase.auth().signOut(); });
+  window.__onLang = () => {
+    setMode(authMode);
+    renderAccount();
+    const ab3 = document.getElementById("openGateBtn");
+    if (ab3) ab3.textContent = cloudUser ? window.t("switchAccount") : window.t("signInUp");
+  };
 })();
