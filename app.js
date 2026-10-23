@@ -1,5 +1,5 @@
 /* ============================================================
-   رادار المباريات 🎯 — Moroccan public-sector concours radar.
+   Work 🎯 — Moroccan concours & jobs radar (public + private).
    Data: concours.json (verified daily against official sources).
    Local-first: tracking/checklists live on the device; optional
    account sync via cloud.js (Firebase). No ads, no tracking.
@@ -109,6 +109,7 @@ function cardHTML(it) {
   return `<article class="ccard" data-id="${it.id}">
     <div class="ccard-top">
       <span class="sector">${esc(it.sector)}</span>
+      ${it.type === "private" ? `<span class="ptype">🏢 قطاع خاص</span>` : ""}
       <span class="count ${dl.cls}">${dl.txt}</span>
     </div>
     <h3>${esc(it.title)}</h3>
@@ -147,7 +148,13 @@ function updateBadge() {
 
 /* ---------- Home ---------- */
 let activeSector = "الكل";
+let activeType = "all";
 let searchTerm = "";
+$$("#typeSeg button").forEach((b) => b.addEventListener("click", () => {
+  activeType = b.dataset.type;
+  $$("#typeSeg button").forEach((x) => x.classList.toggle("on", x === b));
+  renderHome();
+}));
 function renderHome() {
   $("#updatedAt").textContent = UPDATED_AT ? fmtDateShort(UPDATED_AT) + " 2026" : "—";
   const open = openItems();
@@ -171,6 +178,7 @@ function renderHome() {
 
   const term = searchTerm.trim();
   const list = open.filter((it) =>
+    (activeType === "all" || (it.type || "public") === activeType) &&
     (activeSector === "الكل" || it.sector === activeSector) &&
     (!term || (it.title + " " + it.org + " " + it.diploma + " " + it.region).includes(term))
   );
@@ -203,7 +211,7 @@ function openDetail(id) {
   const shareTxt = encodeURIComponent(`🎯 مباراة: ${it.title}\n🏛️ ${it.org}\n🗓️ آخر أجل: ${fmtDate(it.deadline)}\nالتفاصيل في رادار المباريات: https://hamzaazemat105-wq.github.io/m3ak-ai/`);
   $("#detailBox").innerHTML = `
   <article class="detail">
-    <div class="ccard-top"><span class="sector">${esc(it.sector)}</span><span class="count ${dl.cls}">${dl.txt}</span></div>
+    <div class="ccard-top"><span class="sector">${esc(it.sector)}</span>${it.type === "private" ? `<span class="ptype">🏢 قطاع خاص</span>` : ""}<span class="count ${dl.cls}">${dl.txt}</span></div>
     <h2>${esc(it.title)}</h2>
     <p class="org">🏛️ ${esc(it.org)}</p>
     <div class="meta">
@@ -219,10 +227,11 @@ function openDetail(id) {
     <h3>📌 الشروط</h3>
     <ul class="ticks">${(it.conditions || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
 
+    ${(it.docs || []).length ? `
     <h3>🗂️ الوثائق المطلوبة <small class="muted">(علّم على اللي وجدتي — التقدم: <span id="docPct">${checkProgress(it)}</span>%)</small></h3>
     <div class="docs">
       ${(it.docs || []).map((doc, i) => `<label class="doc"><input type="checkbox" data-doc="${i}" ${checks.includes(i) ? "checked" : ""}><span>${esc(doc)}</span></label>`).join("")}
-    </div>
+    </div>` : `<h3>🗂️ ملف الترشيح</h3><p class="muted">📎 جهّز سيرتك الذاتية محدثة — تفاصيل ملف الترشيح وطريقته في نص العرض أسفله.</p>`}
 
     <h3>🧭 مراحل المباراة</h3>
     <ol class="steps">${(it.stages || []).map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
@@ -230,7 +239,7 @@ function openDetail(id) {
     ${it.applyNote ? `<div class="alert soft">💡 ${esc(it.applyNote)}</div>` : ""}
 
     <div class="detail-actions">
-      <a class="btn primary" href="${esc(it.applyUrl)}" target="_blank" rel="noopener">🌐 بوابة الترشيح الرسمية</a>
+      <a class="btn primary" href="${esc(it.applyUrl)}" target="_blank" rel="noopener">${it.type === "private" ? "🌐 الترشيح عند الشركة" : "🌐 بوابة الترشيح الرسمية"}</a>
       <a class="btn" href="${esc(it.detailsUrl)}" target="_blank" rel="noopener">📄 نص الإعلان الكامل</a>
       <a class="btn" href="${gcalLink(it)}" target="_blank" rel="noopener">📅 أضف الأجل لتقويمك</a>
       <button class="btn star ${isT ? "on" : ""}" type="button" id="detailTrack">${isT ? "⭐ متتبعة" : "☆ تتبّع هاد المباراة"}</button>
@@ -319,8 +328,19 @@ $("#installBtn").addEventListener("click", async () => {
 });
 if (!window.matchMedia("(display-mode: standalone)").matches) showInstall();
 
+/* ---------- Auth gate (first entry) ---------- */
+const GATE_KEY = "radar.gate.v1";
+function showGate() { const g = $("#authGate"); if (g) g.hidden = false; }
+function hideGate() { const g = $("#authGate"); if (g) g.hidden = true; }
+window.__hideGate = hideGate;
+$("#gateSkip").addEventListener("click", () => { try { localStorage.setItem(GATE_KEY, "skip"); } catch {} hideGate(); });
+$("#openGateBtn").addEventListener("click", showGate);
+
 /* ---------- Boot ---------- */
 async function boot() {
+  let gateSeen = "";
+  try { gateSeen = localStorage.getItem(GATE_KEY) || ""; } catch {}
+  if (!gateSeen) showGate();
   applyTheme();
   if (data.profile.age) $("#chkAge").value = data.profile.age;
   if (data.profile.rank) $("#chkDiploma").value = data.profile.rank;
