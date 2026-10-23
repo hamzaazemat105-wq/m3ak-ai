@@ -3,332 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>M3AK AI — معاك | رفيقك الذكي المغربي</title>
-<meta name="description" content="معاك — مساعد شخصي مغربي: فضفضة ودعم، حل المشاكل، تنظيم النهار ومتابعة التقدم. بالدارجة المغربية.">
+<title>رادار المباريات — كل مباريات الوظيفة العمومية في المغرب</title>
+<meta name="description" content="رادار المباريات: كل مباريات التوظيف في القطاع العمومي المغربي في بلاصة وحدة — آجال حقيقية، عدّاد تنازلي، تحقق من الأهلية، ولائحة وثائق. ما تفوتك حتى مباراة.">
+<meta name="theme-color" content="#0b7a5c">
 <meta property="og:type" content="website">
-<meta property="og:title" content="M3AK AI — معاك | رفيقك الذكي المغربي">
-<meta property="og:description" content="مساعد شخصي مغربي بالدارجة: فضفضة ودعم، حل المشاكل، تنظيم النهار ومتابعة التقدم.">
-<meta property="og:image" content="https://hamzaazemat105-wq.github.io/m3ak-ai/icon-512.png">
+<meta property="og:site_name" content="رادار المباريات">
+<meta property="og:title" content="رادار المباريات 🎯 — ما تفوتك حتى مباراة">
+<meta property="og:description" content="كل مباريات الوظيفة العمومية في المغرب: آجال موثقة بروابط رسمية، عدّاد تنازلي، واش مؤهل؟، ولائحة وثائق لكل مباراة.">
 <meta property="og:url" content="https://hamzaazemat105-wq.github.io/m3ak-ai/">
+<meta property="og:image" content="https://hamzaazemat105-wq.github.io/m3ak-ai/icon-512.png">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#0b5c46">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="icon" href="icon-192.png?v=2" type="image/png" sizes="192x192">
-<link rel="apple-touch-icon" href="icon-192.png?v=2">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Rubik:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="icon-192.png?v=3" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png?v=3">
 <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div id="app">
-
-  <!-- ===== Header ===== -->
-  <header class="topbar">
-    <div class="brand">
-      <img src="icon-192.png?v=2" alt="M3AK AI" class="brand-logo">
-      <div class="brand-text">
-        <strong>M3AK <span>AI</span></strong>
-        <small data-i18n="slogan">معاك، خطوة بخطوة</small>
-      </div>
-    </div>
-    <div class="top-actions">
-      <span id="aiStatus" class="ai-chip demo" title="">وضع تجريبي</span>
-      <button id="themeToggle" class="icon-btn" aria-label="الوضع الداكن / الفاتح">🌙</button>
-      <button id="settingsBtn" class="icon-btn" aria-label="الإعدادات">⚙️</button>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <!-- ===== HOME ===== -->
-    <section class="view active" id="view-home">
-      <div class="hero card">
-        <img src="hero.jpg" alt="" class="hero-img">
-        <h1 id="greeting">أهلا وسهلا بيك ✨</h1>
-        <p id="heroSub">أنا معاك، رفيقك الذكي المغربي. نهضر معاك بالدارجة، نسمع ليك، ونعاونك تنظم نهارك وتحل مشاكلك خطوة بخطوة.</p>
-        <form id="quickChatForm" class="quick-chat">
-          <input id="quickChatInput" type="text" autocomplete="off" data-i18n-ph="quickPh" placeholder="كتب أي حاجة... أنا نسمع ليك">
-          <button type="submit" class="btn primary" data-i18n="start">بدا</button>
-        </form>
-        <div class="quick-actions">
-          <button type="button" class="qa-chip" data-goto="day">📅 <span data-i18n="qaPlan">نظم لي</span></button>
-          <button type="button" class="qa-chip" data-ask="ساعدني ننظم نهاري ونرتب أولوياتي">🎯 <span data-i18n="qaHelp">ساعدني في</span></button>
-          <button type="button" class="qa-chip" data-prefill="اشرح لي ">📖 <span data-i18n="qaExplain">اشرح لي</span></button>
-          <button type="button" class="qa-chip" data-goto="solve">🧩 <span data-i18n="qaSolve">حل مشكلتي</span></button>
-          <button type="button" class="qa-chip" data-ask="أعطني فكرة جديدة ملهمة لنهاري">💡 <span data-i18n="qaIdea">أعطني فكرة</span></button>
-        </div>
-        <p class="hero-note" data-i18n="heroNote">أنا مساعد ذكاء اصطناعي، ماشي إنسان ولا معالج نفسي.</p>
-      </div>
-
-      <div class="card install-card" id="installCard">
-        <h2>📲 <span data-i18n="installTitle">ثبّت معاك على تيليفونك</span></h2>
-        <p data-i18n="installText">زيد «معاك» للواجهة الرئيسية ديال تيليفونك وافتحو بحال أي تطبيق عادي — بلا ما تدخل للمتصفح كل مرة.</p>
-        <button class="btn primary install-big" id="installBtnHome" hidden data-i18n="install">تثبيت التطبيق على الهاتف 📲</button>
-        <p class="soft-note" data-i18n="installSteps">إلا ما بانش ليك زر التثبيت: تأكد بلي فاتح الرابط في متصفح Chrome (ماشي من داخل واتساب)، ومن بعد افتح قائمة Chrome (⋮) وختار «تثبيت التطبيق» ولا «إضافة إلى الشاشة الرئيسية».</p>
-      </div>
-
-      <div class="sec-head"><h2>⚡ <span data-i18n="toolsTitle">أدوات سريعة</span></h2></div>
-      <div class="grid services">
-        <button class="svc card t-pink" data-goto="vent"><span class="svc-ic">💚</span><strong data-i18n="svcVent">فضفض معايا</strong><small data-i18n="svcVentSub">مساحة آمنة للهضرة والاستماع</small></button>
-        <button class="svc card t-green" data-goto="solve"><span class="svc-ic">🧩</span><strong data-i18n="svcSolve">حل مشكلتي</strong><small data-i18n="svcSolveSub">نحلل المشكل ونلقاو حل عملي</small></button>
-        <button class="svc card t-blue" data-goto="day"><span class="svc-ic">📅</span><strong data-i18n="svcDay">نظم نهاري</strong><small data-i18n="svcDaySub">مهامي وخطة النهار</small></button>
-        <button class="svc card t-purple" data-goto="progress"><span class="svc-ic">🚀</span><strong data-i18n="svcProg">تقدم ديالي</strong><small data-i18n="svcProgSub">أهدافي وعاداتي وإنجازاتي</small></button>
-        <button class="svc card wide t-amber" data-goto="ask"><span class="svc-ic">💬</span><strong data-i18n="svcAsk">سول معاك</strong><small data-i18n="svcAskSub">أسئلة يومية ومساعدة عامة</small></button>
-      </div>
-
-      <div class="sec-head"><h2>🤖 <span data-i18n="catsTitle">مساعدك الذكي</span></h2></div>
-      <div class="hscroll cats">
-        <button type="button" class="cat t-amber" data-ask="بغيت نصائح على العلاقات والحياة الاجتماعية"><span class="cat-ic">👥</span><strong data-i18n="catRelations">العلاقات والحياة</strong><small data-i18n="catRelationsSub">دعم ونصائح</small></button>
-        <button type="button" class="cat t-green" data-ask="بغيت أفكار إبداعية في التصميم وصناعة المحتوى"><span class="cat-ic">💡</span><strong data-i18n="catCreate">الإبداع والتصميم</strong><small data-i18n="catCreateSub">أفكار مبتكرة</small></button>
-        <button type="button" class="cat t-blue" data-ask="بغيت نصائح يومية للصحة والراحة"><span class="cat-ic">🩵</span><strong data-i18n="catHealth">الصحة والراحة</strong><small data-i18n="catHealthSub">نصائح يومية</small></button>
-        <button type="button" class="cat t-pink" data-ask="بغيت أفكار وخطة لمشروع صغير"><span class="cat-ic">💼</span><strong data-i18n="catWork">العمل والمشاريع</strong><small data-i18n="catWorkSub">أفكار وخطط</small></button>
-        <button type="button" class="cat t-purple" data-ask="بغيت نصائح وتمارين للدراسة والتعلم"><span class="cat-ic">🎓</span><strong data-i18n="catStudy">الدراسة والتعلم</strong><small data-i18n="catStudySub">شروحات وتمارين</small></button>
-      </div>
-
-      <div class="sec-head"><h2>🔥 <span data-i18n="topicsTitle">مواضيع مقترحة لك</span></h2></div>
-      <div class="hscroll topics">
-        <button type="button" class="topic" data-ask="أعطني أفكار جديدة ملهمة"><img src="topic-1.jpg" alt="" loading="lazy"><strong data-i18n="topicIdeas">أفكار جديدة</strong><small data-i18n="topicIdeasSub">إلهام وإبداع</small></button>
-        <button type="button" class="topic" data-ask="بغيت دعم ونصائح للراحة النفسية"><img src="topic-2.jpg" alt="" loading="lazy"><strong data-i18n="topicCalm">الراحة النفسية</strong><small data-i18n="topicCalmSub">دعم يومي</small></button>
-        <button type="button" class="topic" data-ask="بغيت خطوات بسيطة للتطوير الذاتي"><img src="topic-3.jpg" alt="" loading="lazy"><strong data-i18n="topicSelf">التطوير الذاتي</strong><small data-i18n="topicSelfSub">خطوات بسيطة</small></button>
-        <button type="button" class="topic" data-ask="بغيت نصائح عملية لتحسين الإنتاجية"><img src="topic-4.jpg" alt="" loading="lazy"><strong data-i18n="topicFocus">تحسين الإنتاجية</strong><small data-i18n="topicFocusSub">نصائح عملية</small></button>
-      </div>
-
-      <div class="card" id="todayCard">
-        <div class="card-head"><h2 data-i18n="todayTitle">نهارك اليوم</h2><button class="link-btn" data-goto="day" data-i18n="openDay">افتح نظم نهاري</button></div>
-        <div id="todaySummary" class="today-summary"></div>
-        <div class="progress-track"><div id="todayBar" class="progress-fill" style="width:0%"></div></div>
-      </div>
-
-      <div class="card tip-card">
-        <h2 data-i18n="tipTitle">اقتراح هاد الساعة</h2>
-        <p id="timeTip"></p>
-      </div>
-    </section>
-
-    <!-- ===== ASK (سول معاك) ===== -->
-    <section class="view" id="view-ask">
-      <div class="chat-head card">
-        <h2>💬 <span data-i18n="svcAsk">سول معاك</span></h2>
-        <p data-i18n="askSub">سولني على أي حاجة من حياتك اليومية — خدمة، دراسة، تنظيم، أفكار... ونجاوبك بالدارجة.</p>
-      </div>
-      <div class="chat-box card">
-        <div class="messages" id="askMessages" aria-live="polite"></div>
-        <div class="chips" id="askChips"></div>
-        <form class="composer" data-chat="ask">
-          <button type="button" class="icon-btn mic-btn" data-mic="ask" aria-label="إدخال صوتي" hidden>🎤</button>
-          <input type="text" class="chat-input" autocomplete="off" data-i18n-ph="chatPh" placeholder="كتب رسالتك هنا...">
-          <button type="submit" class="btn primary send-btn" data-i18n="send">صيفط</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== VENT (فضفض معايا) ===== -->
-    <section class="view" id="view-vent">
-      <div class="chat-head card vent-head">
-        <h2>💚 <span data-i18n="svcVent">فضفض معايا</span></h2>
-        <p data-i18n="ventSub">هنا تقدر تهضر براحتك، بلا حكم وبلا ضغط. أنا نسمع ليك أولاً.</p>
-        <p class="disclaimer" data-i18n="ventDisclaimer">هاد المساحة للدعم والاستماع فقط — ماشي علاج نفسي. إلا كنتي في خطر ولا أزمة حادة، تواصل مع شخص كتثق فيه ولا مع الإسعاف 15 / الشرطة 19.</p>
-        <div class="help-types" id="helpTypes">
-          <span data-i18n="helpTypeQ">كيفاش بغيتي نعاونك؟</span>
-          <div class="chips">
-            <button class="chip" data-help="listen" data-i18n="helpListen">سمعني غير</button>
-            <button class="chip" data-help="feelings" data-i18n="helpFeelings">عاوني نفهم مشاعري</button>
-            <button class="chip" data-help="solution" data-i18n="helpSolution">بغيت نفكر في حل عملي</button>
-          </div>
-        </div>
-        <p class="privacy-mini" data-i18n="ventPrivacy">محادثات الفضفضة ما كتتحفظش تلقائياً — كتبقى غير في هاد الجلسة.</p>
-      </div>
-      <div class="chat-box card">
-        <div class="messages" id="ventMessages" aria-live="polite"></div>
-        <div class="chips" id="ventChips"></div>
-        <form class="composer" data-chat="vent">
-          <button type="button" class="icon-btn mic-btn" data-mic="vent" aria-label="إدخال صوتي" hidden>🎤</button>
-          <input type="text" class="chat-input" autocomplete="off" data-i18n-ph="ventPh" placeholder="هضر براحتك... أنا نسمع">
-          <button type="submit" class="btn primary send-btn" data-i18n="send">صيفط</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== SOLVE (حل مشكلتي) ===== -->
-    <section class="view" id="view-solve">
-      <div class="chat-head card">
-        <h2>🧩 <span data-i18n="svcSolve">حل مشكلتي</span></h2>
-        <p data-i18n="solveSub">شرح ليا المشكل بكلامك، وغادي نفهموه بجوج، نشوفو الخيارات، ونحولو الحل لخطة عملية.</p>
-      </div>
-      <div class="chat-box card">
-        <div class="messages" id="solveMessages" aria-live="polite"></div>
-        <div id="solvePlanArea"></div>
-        <div class="chips" id="solveChips"></div>
-        <form class="composer" data-chat="solve">
-          <button type="button" class="icon-btn mic-btn" data-mic="solve" aria-label="إدخال صوتي" hidden>🎤</button>
-          <input type="text" class="chat-input" autocomplete="off" data-i18n-ph="solvePh" placeholder="مثال: عندي مشكل في الخدمة...">
-          <button type="submit" class="btn primary send-btn" data-i18n="send">صيفط</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- ===== DAY (نظم نهاري) ===== -->
-    <section class="view" id="view-day">
-      <div class="card">
-        <div class="card-head"><h2>📅 <span data-i18n="svcDay">نظم نهاري</span></h2></div>
-        <form id="taskForm" class="task-form">
-          <input id="taskTitle" type="text" required data-i18n-ph="taskPh" placeholder="شنو هي المهمة؟">
-          <div class="form-row">
-            <input id="taskDate" type="date">
-            <input id="taskTime" type="time">
-            <select id="taskPrio">
-              <option value="high" data-i18n="prioHigh">أولوية عالية</option>
-              <option value="med" selected data-i18n="prioMed">متوسطة</option>
-              <option value="low" data-i18n="prioLow">منخفضة</option>
-            </select>
-          </div>
-          <button type="submit" class="btn primary" id="taskSubmit" data-i18n="addTask">زيد المهمة</button>
-          <button type="button" class="btn ghost" id="taskCancelEdit" hidden data-i18n="cancel">إلغاء</button>
-        </form>
-        <div class="tabs" id="taskTabs">
-          <button class="tab active" data-filter="today" data-i18n="tabToday">اليوم</button>
-          <button class="tab" data-filter="week" data-i18n="tabWeek">هاد الأسبوع</button>
-          <button class="tab" data-filter="all" data-i18n="tabAll">الكل</button>
-        </div>
-        <div id="taskList" class="task-list"></div>
-        <div class="day-actions">
-          <button class="btn soft" id="suggestPlanBtn" data-i18n="suggestPlan">اقترح عليا خطة النهار</button>
-          <button class="btn soft" id="dayReviewBtn" data-i18n="dayReview">مراجعة نهاية النهار</button>
-        </div>
-        <div id="planSuggestion" class="plan-box" hidden></div>
-        <div id="dayReview" class="plan-box" hidden></div>
-      </div>
-    </section>
-
-    <!-- ===== PROGRESS (تقدم ديالي) ===== -->
-    <section class="view" id="view-progress">
-      <div class="card">
-        <div class="card-head"><h2>🚀 <span data-i18n="svcProg">تقدم ديالي</span></h2></div>
-        <div id="weekSummary" class="week-summary"></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h3 data-i18n="goalsTitle">أهدافي</h3></div>
-        <form id="goalForm" class="inline-form">
-          <input id="goalTitle" type="text" required data-i18n-ph="goalPh" placeholder="هدف جديد... مثال: نتعلم الإنجليزية">
-          <button type="submit" class="btn primary" data-i18n="add">زيد</button>
-        </form>
-        <div id="goalList" class="goal-list"></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h3 data-i18n="habitsTitle">عاداتي اليومية</h3></div>
-        <form id="habitForm" class="inline-form">
-          <input id="habitTitle" type="text" required data-i18n-ph="habitPh" placeholder="عادة جديدة... مثال: رياضة 20 دقيقة">
-          <button type="submit" class="btn primary" data-i18n="add">زيد</button>
-        </form>
-        <div id="habitList" class="habit-list"></div>
-        <p class="soft-note" data-i18n="habitNote">نهار فاتك ماشي مشكل — المهم هو ترجع غدا. التقدم كيتبنى بشوية بشوية 🌿</p>
-      </div>
-    </section>
-
-    <!-- ===== SETTINGS & PRIVACY ===== -->
-    <section class="view" id="view-settings">
-      <div class="card">
-        <h2>⚙️ <span data-i18n="settingsTitle">الإعدادات والتخصيص</span></h2>
-        <label class="field"><span data-i18n="setName">بغيت نعيط ليك بـ</span>
-          <input id="setName" type="text" data-i18n-ph="setNamePh" placeholder="الاسم ديالك (اختياري)">
-        </label>
-        <label class="field"><span data-i18n="setLang">لغة المساعد</span>
-          <select id="setLang">
-            <option value="darija">الدارجة المغربية</option>
-            <option value="ar">العربية</option>
-            <option value="fr">Français</option>
-          </select>
-        </label>
-        <label class="switch-row"><span data-i18n="setDark">الوضع الداكن</span><input type="checkbox" id="setDark"></label>
-        <label class="switch-row"><span data-i18n="setVoice">الردود الصوتية (قراءة الأجوبة بصوت عالٍ)</span><input type="checkbox" id="setVoice"></label>
-        <label class="switch-row"><span data-i18n="setMemory">الذاكرة: خلي معاك يتذكر الاسم والأهداف ديالي على هاد الجهاز</span><input type="checkbox" id="setMemory"></label>
-        <div id="memoryBox" class="memory-box" hidden>
-          <h3 data-i18n="memoryTitle">شنو حافظ عليا</h3>
-          <div id="memoryContent"></div>
-        </div>
-      </div>
-
-      <div class="card" id="accountCard">
-        <h2>👤 <span data-i18n="acctTitle">حسابي</span></h2>
-        <div id="acctSignedOut">
-          <p class="soft-note" data-i18n="acctText">الحساب اختياري: كيحفظ المهام والأهداف والعادات في السحابة باش تلقاهم في أي جهاز. محادثات الفضفضة كتبقى غير في هاد الجهاز دائماً.</p>
-          <label class="field"><span data-i18n="acctEmail">البريد الإلكتروني</span>
-            <input id="acctEmail" type="email" dir="ltr" autocomplete="email" placeholder="email@example.com">
-          </label>
-          <label class="field"><span data-i18n="acctPass">كلمة السر</span>
-            <input id="acctPass" type="password" dir="ltr" autocomplete="current-password" placeholder="••••••••">
-          </label>
-          <div class="day-actions">
-            <button type="button" class="btn primary" id="acctSignIn" data-i18n="acctIn">دخول</button>
-            <button type="button" class="btn soft" id="acctSignUp" data-i18n="acctUp">إنشاء حساب</button>
-          </div>
-          <button type="button" class="btn ghost" id="acctGoogle" style="width:100%;margin-top:8px" data-i18n="acctGoogleBtn">الدخول بـ Google</button>
-          <p class="soft-note" id="acctMsg"></p>
-        </div>
-        <div id="acctSignedIn" hidden>
-          <p><span data-i18n="acctHello">مسجل بـ:</span> <strong id="acctUserEmail" dir="ltr"></strong></p>
-          <p class="soft-note" id="syncNote">المزامنة مفعّلة ☁️</p>
-          <div class="day-actions">
-            <button type="button" class="btn soft" id="acctSyncNow" data-i18n="acctSyncNow">مزامنة الآن</button>
-            <button type="button" class="btn danger" id="acctSignOut" data-i18n="acctOut">تسجيل الخروج</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>🤖 <span data-i18n="aiTitle">الذكاء الاصطناعي</span></h2>
-        <p class="soft-note" id="aiStatusLine">الذكاء الحقيقي مفعّل ✅ — معاك كيجاوبك بنموذج ذكاء اصطناعي حقيقي.</p>
-        <label class="switch-row"><span data-i18n="aiConsent">كنوافق نصيفط رسائل المحادثة لهاد الخدمة الخارجية باش تجاوبني</span><input type="checkbox" id="aiConsent"></label>
-        <label class="switch-row"><span data-i18n="aiEnable">تفعيل الذكاء الاصطناعي الحقيقي</span><input type="checkbox" id="aiEnable"></label>
-        <p class="soft-note" data-i18n="aiWarn">تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائل المحادثة كتصيفط لخدمة ذكاء اصطناعي خارجية باش تجاوبك. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.</p>
-      </div>
-
-      <div class="card">
-        <h2>🔒 <span data-i18n="privacyTitle">الخصوصية والأمان</span></h2>
-        <div class="privacy-text">
-          <p><strong>شنو كيتحفظ؟</strong> المهام والأهداف والعادات والإعدادات كيتحفظو <strong>غير في هاد الجهاز</strong> (متصفحك). ما عندنا حتى خادم وما كنبيعو حتى معلومة.</p>
-          <p><strong>الفضفضة:</strong> محادثات «فضفض معايا» ما كتتحفظش تلقائياً، وكتتمسح ملي كتسد الصفحة.</p>
-          <p><strong>الذاكرة اختيارية:</strong> إلا فعّلتيها، كنحفظو غير الاسم والأهداف اللي دخلتي بنفسك، وتقدر تشوفها وتبدلها وتمسحها في أي وقت.</p>
-          <p><strong>الذكاء الاصطناعي الحقيقي:</strong> ملي كيكون مفعّل (هو الافتراضي)، رسائل المحادثة كتصيفط لخدمة ذكاء اصطناعي خارجية باش تتولد الأجوبة بنموذج حقيقي — وما عندنا حتى خادم كيحفظها. تقدر تطفيه من الإعدادات في أي وقت وترجع للوضع التجريبي المحلي اللي ما كيصيفط حتى حرف.</p>
-          <p><strong>الحساب والمزامنة (اختياري):</strong> إلا أنشأتي حساباً، المهام والأهداف والعادات كتحفظ في قاعدة بيانات آمنة باش تلقاهم في جميع أجهزتك. المحادثات — وخصوصاً الفضفضة — ما كتصيفط حتى لبلاصة وكتبقى في جهازك فقط.</p>
-          <p><strong>حدود المساعد:</strong> معاك مساعد ذكاء اصطناعي للدعم والتنظيم — ماشي طبيب ولا معالج نفسي، وما كيعطيش تشخيصات. في الأزمات: الإسعاف <strong>15</strong>، الشرطة <strong>19</strong>.</p>
-          <p><strong>القانون:</strong> هاد التطبيق مصمم باحترام مبادئ القانون المغربي 09-08 المتعلق بحماية المعطيات الشخصية.</p>
-        </div>
-        <div class="danger-zone">
-          <button class="btn danger" id="exportData" data-i18n="exportData">تصدير بياناتي</button>
-          <button class="btn danger" id="deleteAll" data-i18n="deleteAll">مسح جميع بياناتي</button>
-        </div>
-        <button class="btn soft" id="installBtn" hidden data-i18n="install">تثبيت التطبيق على الهاتف 📲</button>
-      </div>
-
-      <div class="card plans-card">
-        <h2 data-i18n="plansTitle">الباقات (قريباً)</h2>
-        <div class="plans">
-          <div class="plan"><strong>M3AK Free</strong><span data-i18n="planFree">الوظائف الأساسية — مجاني دائماً</span></div>
-          <div class="plan"><strong>M3AK Plus</strong><span data-i18n="planPlus">ذكاء اصطناعي أوسع وأدوات تنظيم متقدمة</span></div>
-          <div class="plan"><strong>M3AK Business</strong><span data-i18n="planBiz">إنتاجية للفرق — بلا أي وصول لمحادثات الموظفين الشخصية</span></div>
-        </div>
-        <p class="soft-note" data-i18n="plansNote">الدفع غير مفعّل في هاد النسخة.</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- ===== Bottom Nav ===== -->
-  <nav class="bottom-nav">
-    <button data-goto="home" class="nav-btn active"><span>🏠</span><small data-i18n="navHome">الرئيسية</small></button>
-    <button data-goto="ask" class="nav-btn center"><span>💬</span><small data-i18n="navAsk">سول معاك</small></button>
-    <button data-goto="vent" class="nav-btn"><span>💚</span><small data-i18n="navVent">فضفض</small></button>
-    <button data-goto="day" class="nav-btn"><span>📅</span><small data-i18n="navDay">نهاري</small></button>
-    <button data-goto="progress" class="nav-btn"><span>🚀</span><small data-i18n="navProg">تقدمي</small></button>
-  </nav>
-</div>
-
-<div id="toast" class="toast" hidden></div>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img class="brand-logo" src="icon-192.png?v=3" alt="رادار المباريات">
+    <div>
+      <strong>رادار المباريات</strong>
+      <small>ما تفوتك حتى مباراة 🎯</small>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button id="themeToggle" class="icon-btn" type="button" aria-label="الوضع الليلي">🌙</button>
+    <button class="icon-btn" type="button" data-goto="settings" aria-label="الإعدادات">⚙️</button>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HOME / RADAR ===== -->
+  <section id="view-home" class="view active">
+    <div class="hero">
+      <h1>كل مباريات الوظيفة العمومية، في بلاصة وحدة 🇲🇦</h1>
+      <p>آجال حقيقية موثقة من الإعلانات الرسمية، عدّاد تنازلي لكل مباراة، وتنبيه قبل ما يسالي الأجل.</p>
+      <p class="updated">آخر تحديث للبيانات: <span id="updatedAt">…</span> • المصدر: بوابة التشغيل العمومي والجهات المنظمة</p>
+    </div>
+
+    <div id="installCard" class="card install" hidden>
+      <div class="install-txt">
+        <strong>📲 ثبّت التطبيق في تيليفونك</strong>
+        <span>باش تفتح الرادار بسرعة وبلا ما تدور في المتصفح كل مرة.</span>
+      </div>
+      <button id="installBtn" class="btn primary" type="button">تثبيت التطبيق</button>
+      <p id="installHint" class="hint"></p>
+    </div>
+
+    <div id="alertBox"></div>
+
+    <div class="stats" id="statsStrip"></div>
+
+    <div class="tools">
+      <input id="searchInput" class="field" type="search" placeholder="قلب على مباراة، جهة، تخصص…">
+      <div class="chips" id="sectorChips"></div>
+    </div>
+
+    <div id="concoursList" class="list"></div>
+    <p id="listEmpty" class="empty" hidden>ما كاينة حتى مباراة مطابقة للبحث. جرّب كلمة أخرى أو بدّل القطاع.</p>
+
+    <div class="card note">
+      <h3>ℹ️ كيفاش خدام الرادار؟</h3>
+      <p>كنراجعو بوابة التشغيل العمومي <strong>emploi-public.ma</strong> ومواقع الجهات المنظمة كل يوم، وكننشرو غير المباريات الموثقة بروابطها الرسمية. التغطية خاصة بـ<strong>القطاع العمومي</strong> فقط.</p>
+      <p><strong>المرجع النهائي دائماً هو الإعلان الرسمي</strong>، والتسجيل يتم في موقع الجهة المنظمة — الرادار كيعاونك تلقى وتتبع، ما كيسجّلكش.</p>
+    </div>
+  </section>
+
+  <!-- ===== DETAIL ===== -->
+  <section id="view-detail" class="view">
+    <button class="btn ghost back" type="button" data-goto="home">→ رجوع للقائمة</button>
+    <div id="detailBox"></div>
+  </section>
+
+  <!-- ===== ELIGIBILITY ===== -->
+  <section id="view-check" class="view">
+    <div class="card">
+      <h2>✅ واش مؤهل؟</h2>
+      <p class="muted">عمر المعلومات، وغادي نقولو ليك شنو هي المباريات المفتوحة اللي تستوفي شروطها الأساسية (الديبلوم والسن). التخصص الدقيق كيبقى في الإعلان الرسمي.</p>
+      <label class="lbl">العمر
+        <input id="chkAge" class="field" type="number" min="16" max="70" placeholder="مثال: 26">
+      </label>
+      <label class="lbl">الديبلوم
+        <select id="chkDiploma" class="field">
+          <option value="">— اختر الديبلوم —</option>
+          <option value="1">البكالوريا</option>
+          <option value="2">باك+2 (تقني متخصص / DEUG / ما يعادلها)</option>
+          <option value="3">إجازة (باك+3)</option>
+          <option value="4">ماستر (باك+5)</option>
+          <option value="5">مهندس دولة / دكتوراه</option>
+        </select>
+      </label>
+      <label class="lbl">القطاع اللي مهتم بيه (اختياري)
+        <select id="chkSector" class="field"><option value="">كل القطاعات</option></select>
+      </label>
+      <button id="chkBtn" class="btn primary wide" type="button">شوف شنو يناسبني</button>
+    </div>
+    <div id="chkResults"></div>
+  </section>
+
+  <!-- ===== MY TRACKED ===== -->
+  <section id="view-mine" class="view">
+    <h2 class="page-title">⭐ مبارياتي</h2>
+    <p class="muted">المباريات اللي كتتبعها، مرتبة حسب قرب الأجل — مع تقدم تجهيز الوثائق ديالك.</p>
+    <div id="mineList" class="list"></div>
+    <p id="mineEmpty" class="empty">ما زال ما كتتبع حتى مباراة. من القائمة، ضغط على ⭐ في أي مباراة باش تتبعها هنا.</p>
+  </section>
+
+  <!-- ===== SETTINGS ===== -->
+  <section id="view-settings" class="view">
+    <h2 class="page-title">⚙️ الإعدادات</h2>
+
+    <div class="card" id="accountCard">
+      <h3>👤 حسابي</h3>
+      <p class="muted">الحساب اختياري: كيخلي مبارياتي المتتبعة ولوائح الوثائق تتزامن بين الأجهزة ديالك. بلا حساب، كلشي كيبقى محفوظ في هاد الجهاز.</p>
+      <div id="acctSignedOut">
+        <input id="acctEmail" class="field" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
+        <input id="acctPass" class="field" type="password" placeholder="كلمة السر" autocomplete="current-password">
+        <div class="row">
+          <button id="acctSignIn" class="btn primary" type="button">تسجيل الدخول</button>
+          <button id="acctSignUp" class="btn" type="button">إنشاء حساب</button>
+        </div>
+        <button id="acctGoogle" class="btn wide" type="button">الدخول بـ Google</button>
+      </div>
+      <div id="acctSignedIn" hidden>
+        <p>مسجل الدخول: <strong id="acctUserEmail"></strong></p>
+        <p id="syncNote" class="muted"></p>
+        <div class="row">
+          <button id="acctSyncNow" class="btn" type="button">مزامنة الآن</button>
+          <button id="acctSignOut" class="btn danger" type="button">تسجيل الخروج</button>
+        </div>
+      </div>
+      <p id="acctMsg" class="acct-msg"></p>
+    </div>
+
+    <div class="card">
+      <h3>🔒 الخصوصية</h3>
+      <p class="muted">بيانات التتبع ديالك (المباريات والوثائق والملف ديالك) كتحفظ في جهازك، وكتتزامن في حسابك غير إلا سجلتي الدخول. ما كنبيعو حتى بيانات وما كاين حتى تتبع إعلاني.</p>
+      <button id="wipeBtn" class="btn danger" type="button">مسح كل بياناتي من هاد الجهاز</button>
+    </div>
+
+    <div class="card">
+      <h3>🎯 على رادار المباريات</h3>
+      <p class="muted">رادار المباريات كيجمع مباريات التوظيف في القطاع العمومي المغربي من بوابة التشغيل العمومي ومواقع الجهات المنظمة، وكيعرضها بالدارجة مع الآجال والوثائق والروابط الرسمية. المرجع النهائي هو دائماً الإعلان الرسمي، والتسجيل كيتم عند الجهة المنظمة.</p>
+    </div>
+  </section>
+</main>
+
+<nav class="bottomnav">
+  <button type="button" data-goto="home" class="nav-btn active"><span>🎯</span>الرادار</button>
+  <button type="button" data-goto="check" class="nav-btn"><span>✅</span>واش مؤهل؟</button>
+  <button type="button" data-goto="mine" class="nav-btn"><span>⭐</span>مبارياتي<em id="mineBadge" class="badge" hidden>0</em></button>
+  <button type="button" data-goto="settings" class="nav-btn"><span>⚙️</span>الإعدادات</button>
+</nav>
+
+<div id="toast" class="toast" hidden></div>
+
 <script src="app.js"></script>
 <script src="cloud.js"></script>
 </body>
