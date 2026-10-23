@@ -1,6 +1,6 @@
-/* رادار المباريات — service worker (network-first) */
-const CACHE = "work-v6";
-const SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./cloud.js", "./manifest.webmanifest", "./concours.json", "./icon.svg", "./icon-192.png", "./icon-512.png"];
+/* Work — service worker (network-first, versioned shell) */
+const CACHE = "work-v7";
+const SHELL = ["./", "./index.html", "./styles.css?v=7", "./i18n.js?v=7", "./app.js?v=7", "./cloud.js?v=7", "./manifest.webmanifest", "./concours.json", "./icon-192.png", "./icon-512.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
