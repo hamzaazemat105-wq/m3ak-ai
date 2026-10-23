@@ -262,6 +262,23 @@ window.t = (k, vars) => {
   if (vars) for (const [a, b] of Object.entries(vars)) s = s.replaceAll("{" + a + "}", String(b));
   return s;
 };
+const SECTORS_I18N = {
+  fr: {
+    "مؤسسات عمومية": "Établissements publics", "وزارات": "Ministères",
+    "جماعات وتنمية محلية": "Collectivités & développement local", "غرف مهنية": "Chambres professionnelles",
+    "تعليم عالٍ": "Enseignement supérieur", "صناعة ولوجستيك": "Industrie & logistique",
+    "بنوك ومالية": "Banque & finance", "تجارة ومبيعات": "Commerce & ventes",
+    "مراكز النداء": "Centres d'appels", "خدمات": "Services"
+  },
+  en: {
+    "مؤسسات عمومية": "Public institutions", "وزارات": "Ministries",
+    "جماعات وتنمية محلية": "Local authorities & development", "غرف مهنية": "Professional chambers",
+    "تعليم عالٍ": "Higher education", "صناعة ولوجستيك": "Industry & logistics",
+    "بنوك ومالية": "Banking & finance", "تجارة ومبيعات": "Commerce & sales",
+    "مراكز النداء": "Call centers", "خدمات": "Services"
+  }
+};
+window.sectorName = (s) => (LANG === "ar" ? s : (SECTORS_I18N[LANG] && SECTORS_I18N[LANG][s]) || s);
 window.dateLocale = () => (LANG === "fr" ? "fr-FR" : LANG === "en" ? "en-GB" : "ar-MA");
 window.applyI18n = () => {
   document.documentElement.lang = LANG;
