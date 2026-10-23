@@ -28,49 +28,50 @@
     <img class="brand-logo" src="icon-192.png?v=5" alt="Work">
     <div>
       <strong>Work</strong>
-      <small>مباريات ووظائف المغرب 🎯</small>
+      <small data-i18n="brandTag">مباريات ووظائف المغرب 🎯</small>
     </div>
   </div>
   <div class="top-actions">
-    <button id="themeToggle" class="icon-btn" type="button" aria-label="الوضع الليلي">🌙</button>
-    <button class="icon-btn" type="button" data-goto="settings" aria-label="الإعدادات">⚙️</button>
+    <select id="langSel" class="langsel" aria-label="Language"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select>
+    <button id="themeToggle" class="icon-btn" type="button" aria-label="الوضع الليلي" data-i18n-aria="themeAria">🌙</button>
+    <button class="icon-btn" type="button" data-goto="settings" aria-label="الإعدادات" data-i18n-aria="settingsAria">⚙️</button>
   </div>
 </header>
 
 <div id="authGate" class="gate" hidden>
   <div class="gate-card">
     <img class="gate-logo" src="icon-192.png?v=5" alt="Work">
-    <h2>مرحباً بيك في Work 🎯</h2>
-    <p class="muted">باش تبدا: سجّل الدخول أو أنشئ حساباً — الحساب كيخليك تتبع المباريات والوظائف وتزامن بياناتك بين أجهزتك.</p>
+    <h2 data-i18n="gateH">مرحباً بيك في Work 🎯</h2>
+    <p class="muted" data-i18n="gateP">باش تبدا: سجّل الدخول أو أنشئ حساباً — الحساب كيخليك تتبع المباريات والوظائف وتزامن بياناتك بين أجهزتك.</p>
     <div id="accountCard">
       <div id="acctSignedOut">
         <div class="authtabs">
-          <button id="tabSignIn" type="button" class="on">تسجيل الدخول</button>
-          <button id="tabSignUp" type="button">إنشاء حساب</button>
+          <button id="tabSignIn" type="button" class="on" data-i18n="tabIn">تسجيل الدخول</button>
+          <button id="tabSignUp" type="button" data-i18n="tabUp">إنشاء حساب</button>
         </div>
-        <input id="acctEmail" class="field" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
+        <input id="acctEmail" class="field" type="email" placeholder="البريد الإلكتروني" data-i18n-ph="phEmail" autocomplete="email">
         <div class="passwrap">
-          <input id="acctPass" class="field" type="password" placeholder="كلمة السر" autocomplete="current-password">
-          <button class="eye" type="button" data-eye="acctPass" aria-label="إظهار أو إخفاء كلمة السر">👁️</button>
+          <input id="acctPass" class="field" type="password" placeholder="كلمة السر" data-i18n-ph="phPass" autocomplete="current-password">
+          <button class="eye" type="button" data-eye="acctPass" aria-label="إظهار أو إخفاء كلمة السر" data-i18n-aria="eyeAria">👁️</button>
         </div>
         <div class="passwrap" id="pass2Wrap" hidden>
-          <input id="acctPass2" class="field" type="password" placeholder="تأكيد كلمة السر" autocomplete="new-password">
-          <button class="eye" type="button" data-eye="acctPass2" aria-label="إظهار أو إخفاء كلمة السر">👁️</button>
+          <input id="acctPass2" class="field" type="password" placeholder="تأكيد كلمة السر" data-i18n-ph="phPass2" autocomplete="new-password">
+          <button class="eye" type="button" data-eye="acctPass2" aria-label="إظهار أو إخفاء كلمة السر" data-i18n-aria="eyeAria">👁️</button>
         </div>
-        <button id="acctMainBtn" class="btn primary wide" type="button">تسجيل الدخول</button>
-        <button id="acctGoogle" class="btn wide" type="button">الدخول بـ Google</button>
+        <button id="acctMainBtn" class="btn primary wide" type="button" data-i18n="tabIn">تسجيل الدخول</button>
+        <button id="acctGoogle" class="btn wide" type="button" data-i18n="googleBtn">الدخول بـ Google</button>
       </div>
       <div id="acctSignedIn" hidden>
-        <p>مسجل الدخول: <strong id="acctUserEmail"></strong></p>
+        <p><span data-i18n="signedInAs">مسجل الدخول:</span> <strong id="acctUserEmail"></strong></p>
         <p id="syncNote" class="muted"></p>
         <div class="row">
-          <button id="acctSyncNow" class="btn" type="button">مزامنة الآن</button>
-          <button id="acctSignOut" class="btn danger" type="button">تسجيل الخروج</button>
+          <button id="acctSyncNow" class="btn" type="button" data-i18n="syncNow">مزامنة الآن</button>
+          <button id="acctSignOut" class="btn danger" type="button" data-i18n="signOut">تسجيل الخروج</button>
         </div>
       </div>
       <p id="acctMsg" class="acct-msg"></p>
     </div>
-    <button id="gateSkip" class="btn ghost wide" type="button">المتابعة كزائر — بلا حساب</button>
+    <button id="gateSkip" class="btn ghost wide" type="button" data-i18n="gateSkip">المتابعة كزائر — بلا حساب</button>
   </div>
 </div>
 
@@ -78,17 +79,17 @@
   <!-- ===== HOME / RADAR ===== -->
   <section id="view-home" class="view active">
     <div class="hero">
-      <h1>كل مباريات ووظائف المغرب، في بلاصة وحدة 🇲🇦</h1>
-      <p>مباريات القطاع العمومي وعروض القطاع الخاص: آجال حقيقية موثقة من الإعلانات الرسمية، عدّاد تنازلي لكل فرصة، وتنبيه قبل ما يسالي الأجل.</p>
-      <p class="updated">آخر تحديث للبيانات: <span id="updatedAt">…</span> • المصدر: بوابة التشغيل العمومي والجهات المنظمة</p>
+      <h1 data-i18n="heroH">كل مباريات ووظائف المغرب، في بلاصة وحدة 🇲🇦</h1>
+      <p data-i18n="heroP">مباريات القطاع العمومي وعروض القطاع الخاص: آجال حقيقية موثقة من الإعلانات الرسمية، عدّاد تنازلي لكل فرصة، وتنبيه قبل ما يسالي الأجل.</p>
+      <p class="updated"><span data-i18n="lastUpdate">آخر تحديث للبيانات:</span> <span id="updatedAt">…</span> <span data-i18n="srcLine">• المصدر: بوابة التشغيل العمومي والجهات المنظمة</span></p>
     </div>
 
     <div id="installCard" class="card install" hidden>
       <div class="install-txt">
-        <strong>📲 ثبّت التطبيق في تيليفونك</strong>
-        <span>باش تفتح التطبيق بسرعة وبلا ما تدور في المتصفح كل مرة.</span>
+        <strong data-i18n="installT">📲 ثبّت التطبيق في تيليفونك</strong>
+        <span data-i18n="installS">باش تفتح التطبيق بسرعة وبلا ما تدور في المتصفح كل مرة.</span>
       </div>
-      <button id="installBtn" class="btn primary" type="button">تثبيت التطبيق</button>
+      <button id="installBtn" class="btn primary" type="button" data-i18n="installBtn">تثبيت التطبيق</button>
       <p id="installHint" class="hint"></p>
     </div>
 
@@ -98,96 +99,97 @@
 
     <div class="tools">
       <div class="seg" id="typeSeg">
-        <button type="button" data-type="all" class="on">الكل</button>
-        <button type="button" data-type="public">🏛️ عمومي</button>
-        <button type="button" data-type="private">🏢 خاص</button>
+        <button type="button" data-type="all" class="on" data-i18n="typeAll">الكل</button>
+        <button type="button" data-type="public" data-i18n="typePublic">🏛️ عمومي</button>
+        <button type="button" data-type="private" data-i18n="typePrivate">🏢 خاص</button>
       </div>
-      <input id="searchInput" class="field" type="search" placeholder="قلب على مباراة، شركة، جهة، تخصص…">
+      <input id="searchInput" class="field" type="search" placeholder="قلب على مباراة، شركة، جهة، تخصص…" data-i18n-ph="phSearch">
       <div class="chips" id="sectorChips"></div>
     </div>
 
     <div id="concoursList" class="list"></div>
-    <p id="listEmpty" class="empty" hidden>ما كاينة حتى مباراة مطابقة للبحث. جرّب كلمة أخرى أو بدّل القطاع.</p>
+    <p id="listEmpty" class="empty" hidden data-i18n="listEmpty">ما كاينة حتى مباراة مطابقة للبحث. جرّب كلمة أخرى أو بدّل القطاع.</p>
 
     <div class="card note">
-      <h3>ℹ️ كيفاش خدام Work؟</h3>
-      <p>كنراجعو بوابة التشغيل العمومي <strong>emploi-public.ma</strong> ومواقع الجهات المنظمة ومنصات التوظيف الخاصة كل يوم، وكننشرو غير الفرص الموثقة بروابطها الأصلية — مباريات عمومية وعروض شركات خاصة.</p>
-      <p><strong>المرجع النهائي دائماً هو الإعلان الأصلي</strong>، والترشيح يتم عند الجهة المنظمة أو الشركة مباشرة — Work كيعاونك تلقى وتتبع، ما كيسجّلكش. وعروض القطاع الخاص كتقدر تسد ملي يكتمل العدد، فلا تنتظر.</p>
+      <h3 data-i18n="noteH">ℹ️ كيفاش خدام Work؟</h3>
+      <p data-i18n-html="noteP1">كنراجعو بوابة التشغيل العمومي <strong>emploi-public.ma</strong> ومواقع الجهات المنظمة ومنصات التوظيف الخاصة كل يوم، وكننشرو غير الفرص الموثقة بروابطها الأصلية — مباريات عمومية وعروض شركات خاصة.</p>
+      <p data-i18n-html="noteP2"><strong>المرجع النهائي دائماً هو الإعلان الأصلي</strong>، والترشيح يتم عند الجهة المنظمة أو الشركة مباشرة — Work كيعاونك تلقى وتتبع، ما كيسجّلكش. وعروض القطاع الخاص كتقدر تسد ملي يكتمل العدد، فلا تنتظر.</p>
     </div>
   </section>
 
   <!-- ===== DETAIL ===== -->
   <section id="view-detail" class="view">
-    <button class="btn ghost back" type="button" data-goto="home">→ رجوع للقائمة</button>
+    <button class="btn ghost back" type="button" data-goto="home" data-i18n="backList">→ رجوع للقائمة</button>
     <div id="detailBox"></div>
   </section>
 
   <!-- ===== ELIGIBILITY ===== -->
   <section id="view-check" class="view">
     <div class="card">
-      <h2>✅ واش مؤهل؟</h2>
-      <p class="muted">عمر المعلومات، وغادي نقولو ليك شنو هي المباريات المفتوحة اللي تستوفي شروطها الأساسية (الديبلوم والسن). التخصص الدقيق كيبقى في الإعلان الرسمي.</p>
-      <label class="lbl">العمر
-        <input id="chkAge" class="field" type="number" min="16" max="70" placeholder="مثال: 26">
+      <h2 data-i18n="checkH">✅ واش مؤهل؟</h2>
+      <p class="muted" data-i18n="checkP">عمر المعلومات، وغادي نقولو ليك شنو هي المباريات المفتوحة اللي تستوفي شروطها الأساسية (الديبلوم والسن). التخصص الدقيق كيبقى في الإعلان الرسمي.</p>
+      <label class="lbl"><span data-i18n="lblAge">العمر</span>
+        <input id="chkAge" class="field" type="number" min="16" max="70" placeholder="مثال: 26" data-i18n-ph="phAge">
       </label>
-      <label class="lbl">الديبلوم
+      <label class="lbl"><span data-i18n="lblDiploma">الديبلوم</span>
         <select id="chkDiploma" class="field">
-          <option value="">— اختر الديبلوم —</option>
-          <option value="1">البكالوريا</option>
-          <option value="2">باك+2 (تقني متخصص / DEUG / ما يعادلها)</option>
-          <option value="3">إجازة (باك+3)</option>
-          <option value="4">ماستر (باك+5)</option>
-          <option value="5">مهندس دولة / دكتوراه</option>
+          <option value="" data-i18n="dip0">— اختر الديبلوم —</option>
+          <option value="1" data-i18n="dip1">البكالوريا</option>
+          <option value="2" data-i18n="dip2">باك+2 (تقني متخصص / DEUG / ما يعادلها)</option>
+          <option value="3" data-i18n="dip3">إجازة (باك+3)</option>
+          <option value="4" data-i18n="dip4">ماستر (باك+5)</option>
+          <option value="5" data-i18n="dip5">مهندس دولة / دكتوراه</option>
         </select>
       </label>
-      <label class="lbl">القطاع اللي مهتم بيه (اختياري)
-        <select id="chkSector" class="field"><option value="">كل القطاعات</option></select>
+      <label class="lbl"><span data-i18n="lblSector">القطاع اللي مهتم بيه (اختياري)</span>
+        <select id="chkSector" class="field"><option value="" data-i18n="allSectors">كل القطاعات</option></select>
       </label>
-      <button id="chkBtn" class="btn primary wide" type="button">شوف شنو يناسبني</button>
+      <button id="chkBtn" class="btn primary wide" type="button" data-i18n="chkBtn">شوف شنو يناسبني</button>
     </div>
     <div id="chkResults"></div>
   </section>
 
   <!-- ===== MY TRACKED ===== -->
   <section id="view-mine" class="view">
-    <h2 class="page-title">⭐ مبارياتي</h2>
-    <p class="muted">المباريات اللي كتتبعها، مرتبة حسب قرب الأجل — مع تقدم تجهيز الوثائق ديالك.</p>
+    <h2 class="page-title" data-i18n="mineH">⭐ مبارياتي</h2>
+    <p class="muted" data-i18n="mineP">المباريات اللي كتتبعها، مرتبة حسب قرب الأجل — مع تقدم تجهيز الوثائق ديالك.</p>
     <div id="mineList" class="list"></div>
-    <p id="mineEmpty" class="empty">ما زال ما كتتبع حتى مباراة. من القائمة، ضغط على ⭐ في أي مباراة باش تتبعها هنا.</p>
+    <p id="mineEmpty" class="empty" data-i18n="mineEmpty">ما زال ما كتتبع حتى مباراة. من القائمة، ضغط على ⭐ في أي مباراة باش تتبعها هنا.</p>
   </section>
 
   <!-- ===== SETTINGS ===== -->
   <section id="view-settings" class="view">
-    <h2 class="page-title">⚙️ الإعدادات</h2>
+    <h2 class="page-title" data-i18n="setH">⚙️ الإعدادات</h2>
 
     <div class="card">
-      <h3>👤 حسابي</h3>
-      <p class="muted" id="settingsAcctState">غير مسجل الدخول — بياناتك محفوظة في هاد الجهاز فقط.</p>
-      <button id="openGateBtn" class="btn primary wide" type="button">تسجيل الدخول / إنشاء حساب</button>
+      <h3 data-i18n="acctH">👤 حسابي</h3>
+      <p class="muted" id="settingsAcctState" data-i18n="settingsSignedOut">غير مسجل الدخول — بياناتك محفوظة في هاد الجهاز فقط.</p>
+      <button id="openGateBtn" class="btn primary wide" type="button" data-i18n="signInUp">تسجيل الدخول / إنشاء حساب</button>
     </div>
 
     <div class="card">
-      <h3>🔒 الخصوصية</h3>
-      <p class="muted">بيانات التتبع ديالك (المباريات والوثائق والملف ديالك) كتحفظ في جهازك، وكتتزامن في حسابك غير إلا سجلتي الدخول. ما كنبيعو حتى بيانات وما كاين حتى تتبع إعلاني.</p>
-      <button id="wipeBtn" class="btn danger" type="button">مسح كل بياناتي من هاد الجهاز</button>
+      <h3 data-i18n="privH">🔒 الخصوصية</h3>
+      <p class="muted" data-i18n="privP">بيانات التتبع ديالك (المباريات والوثائق والملف ديالك) كتحفظ في جهازك، وكتتزامن في حسابك غير إلا سجلتي الدخول. ما كنبيعو حتى بيانات وما كاين حتى تتبع إعلاني.</p>
+      <button id="wipeBtn" class="btn danger" type="button" data-i18n="wipeBtn">مسح كل بياناتي من هاد الجهاز</button>
     </div>
 
     <div class="card">
-      <h3>🎯 على Work</h3>
-      <p class="muted">Work كيجمع مباريات القطاع العمومي من بوابة التشغيل العمومي ومواقع الجهات المنظمة، وعروض القطاع الخاص من منصات التوظيف والشركات، وكيعرضهم بالدارجة مع الآجال والوثائق والروابط الأصلية. المرجع النهائي هو دائماً الإعلان الأصلي، والترشيح كيتم عند الجهة أو الشركة مباشرة.</p>
+      <h3 data-i18n="aboutH">🎯 على Work</h3>
+      <p class="muted" data-i18n="aboutP">Work كيجمع مباريات القطاع العمومي من بوابة التشغيل العمومي ومواقع الجهات المنظمة، وعروض القطاع الخاص من منصات التوظيف والشركات، وكيعرضهم بالدارجة مع الآجال والوثائق والروابط الأصلية. المرجع النهائي هو دائماً الإعلان الأصلي، والترشيح كيتم عند الجهة أو الشركة مباشرة.</p>
     </div>
   </section>
 </main>
 
 <nav class="bottomnav">
-  <button type="button" data-goto="home" class="nav-btn active"><span>🎯</span>الفرص</button>
-  <button type="button" data-goto="check" class="nav-btn"><span>✅</span>واش مؤهل؟</button>
-  <button type="button" data-goto="mine" class="nav-btn"><span>⭐</span>مبارياتي<em id="mineBadge" class="badge" hidden>0</em></button>
-  <button type="button" data-goto="settings" class="nav-btn"><span>⚙️</span>الإعدادات</button>
+  <button type="button" data-goto="home" class="nav-btn active"><span>🎯</span><span data-i18n="navHome">الفرص</span></button>
+  <button type="button" data-goto="check" class="nav-btn"><span>✅</span><span data-i18n="navCheck">واش مؤهل؟</span></button>
+  <button type="button" data-goto="mine" class="nav-btn"><span>⭐</span><span data-i18n="navMine">مبارياتي</span><em id="mineBadge" class="badge" hidden>0</em></button>
+  <button type="button" data-goto="settings" class="nav-btn"><span>⚙️</span><span data-i18n="navSettings">الإعدادات</span></button>
 </nav>
 
 <div id="toast" class="toast" hidden></div>
 
+<script src="i18n.js"></script>
 <script src="app.js"></script>
 <script src="cloud.js"></script>
 </body>
