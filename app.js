@@ -1,192 +1,92 @@
 /* ============================================================
-   M3AK AI — معاك 🇲🇦
-   Moroccan companion PWA. Local-first: no server, no tracking.
-   Chat runs a local demo engine unless the user connects their
-   own OpenAI-compatible AI endpoint in Settings.
+   رادار المباريات 🎯 — Moroccan public-sector concours radar.
+   Data: concours.json (verified daily against official sources).
+   Local-first: tracking/checklists live on the device; optional
+   account sync via cloud.js (Firebase). No ads, no tracking.
    ============================================================ */
 "use strict";
 
-/* ---------- Storage ---------- */
-const LS_SETTINGS = "m3ak_settings_v1";
-const LS_DATA = "m3ak_data_v1";
-const load = (k, d) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } };
+const LS_SETTINGS = "radar.settings.v1";
+const LS_DATA = "radar.data.v1";
+const LS_CACHE = "radar.concours.cache.v1";
+
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+const load = (k, fb) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; } catch { return fb; } };
 const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-const DEFAULT_AI_ENDPOINT = "https://text.pollinations.ai/openai";
-const DEFAULT_AI_MODEL = "openai-fast";
-const settings = Object.assign({
-  name: "", lang: "darija", dark: false, voiceOut: false, memory: false,
-  ai: { endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: true, enabled: true }
-}, load(LS_SETTINGS, {}));
-settings.ai = Object.assign({ endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: true, enabled: true }, settings.ai || {});
-if (!settings.ai.endpoint) settings.ai.endpoint = DEFAULT_AI_ENDPOINT;
-if (!settings.ai.model) settings.ai.model = DEFAULT_AI_MODEL;
-/* Migration: the Groq route proved unreachable for the owner (login walls on
-   Google/GitHub/magic-link, 2026-10-22). Switch stored Groq defaults to the
-   keyless free provider and enable real AI — the owner explicitly ordered
-   real-AI activation. Personal keys, if ever added, are left untouched. */
-if (settings.ai.endpoint === "https://api.groq.com/openai/v1/chat/completions" && !settings.ai.key) {
-  settings.ai.endpoint = DEFAULT_AI_ENDPOINT;
-  if (settings.ai.model === "llama-3.3-70b-versatile") settings.ai.model = DEFAULT_AI_MODEL;
-  settings.ai.consent = true;
-  settings.ai.enabled = true;
-}
-if (settings.ai.model === "openai" && settings.ai.endpoint.includes("pollinations.ai")) settings.ai.model = DEFAULT_AI_MODEL;
-save(LS_SETTINGS, settings);
+let settings = Object.assign({ dark: false }, load(LS_SETTINGS, {}));
+let data = Object.assign({ tracked: [], checks: {}, profile: { age: "", rank: "", sector: "" } }, load(LS_DATA, {}));
+data.tracked = Array.isArray(data.tracked) ? data.tracked : [];
+data.checks = data.checks || {};
+data.profile = Object.assign({ age: "", rank: "", sector: "" }, data.profile || {});
 
-let data = Object.assign({ tasks: [], goals: [], habits: [] }, load(LS_DATA, {}));
 const persistSettings = () => save(LS_SETTINGS, settings);
 const persistData = () => { save(LS_DATA, data); if (window.__queueSync) window.__queueSync(); };
 
-/* ---------- Helpers ---------- */
-const $ = (s, r = document) => r.querySelector(s);
-const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const todayStr = (d = new Date()) => d.toISOString().slice(0, 10);
-const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
-function toast(msg) {
-  const t = $("#toast"); t.textContent = msg; t.hidden = false;
-  clearTimeout(t._h); t._h = setTimeout(() => t.hidden = true, 2600);
-}
+/* ---------- Concours data ---------- */
+let CONCOURS = [];
+let UPDATED_AT = "";
+const RANK_LABEL = { 1: "بكالوريا", 2: "باك+2", 3: "إجازة", 4: "ماستر", 5: "مهندس دولة / دكتوراه" };
 
-/* ---------- i18n (UI chrome: Arabic default, French option) ---------- */
-const I18N = {
-  ar: {
-    slogan: "معاك، خطوة بخطوة", start: "بدا", quickPh: "كتب أي حاجة... أنا نسمع ليك",
-    heroNote: "أنا مساعد ذكاء اصطناعي، ماشي إنسان ولا معالج نفسي.",
-    svcVent: "فضفض معايا", svcVentSub: "مساحة آمنة للهضرة والاستماع",
-    svcSolve: "حل مشكلتي", svcSolveSub: "نحلل المشكل ونلقاو حل عملي",
-    svcDay: "نظم نهاري", svcDaySub: "مهامي وخطة النهار",
-    svcProg: "تقدم ديالي", svcProgSub: "أهدافي وعاداتي وإنجازاتي",
-    svcAsk: "سول معاك", svcAskSub: "أسئلة يومية ومساعدة عامة",
-    todayTitle: "نهارك اليوم", openDay: "افتح نظم نهاري", tipTitle: "اقتراح هاد الساعة",
-    askSub: "سولني على أي حاجة من حياتك اليومية — خدمة، دراسة، تنظيم، أفكار... ونجاوبك بالدارجة.",
-    ventSub: "هنا تقدر تهضر براحتك، بلا حكم وبلا ضغط. أنا نسمع ليك أولاً.",
-    ventDisclaimer: "هاد المساحة للدعم والاستماع فقط — ماشي علاج نفسي. إلا كنتي في خطر ولا أزمة حادة، تواصل مع شخص كتثق فيه ولا مع الإسعاف 15 / الشرطة 19.",
-    helpTypeQ: "كيفاش بغيتي نعاونك؟", helpListen: "سمعني غير", helpFeelings: "عاوني نفهم مشاعري", helpSolution: "بغيت نفكر في حل عملي",
-    ventPrivacy: "محادثات الفضفضة ما كتتحفظش تلقائياً — كتبقى غير في هاد الجلسة.",
-    solveSub: "شرح ليا المشكل بكلامك، وغادي نفهموه بجوج، نشوفو الخيارات، ونحولو الحل لخطة عملية.",
-    chatPh: "كتب رسالتك هنا...", ventPh: "هضر براحتك... أنا نسمع", solvePh: "مثال: عندي مشكل في الخدمة...",
-    send: "صيفط",
-    taskPh: "شنو هي المهمة؟", prioHigh: "أولوية عالية", prioMed: "متوسطة", prioLow: "منخفضة",
-    addTask: "زيد المهمة", cancel: "إلغاء", tabToday: "اليوم", tabWeek: "هاد الأسبوع", tabAll: "الكل",
-    suggestPlan: "اقترح عليا خطة النهار", dayReview: "مراجعة نهاية النهار",
-    goalsTitle: "أهدافي", goalPh: "هدف جديد... مثال: نتعلم الإنجليزية", add: "زيد",
-    habitsTitle: "عاداتي اليومية", habitPh: "عادة جديدة... مثال: رياضة 20 دقيقة",
-    habitNote: "نهار فاتك ماشي مشكل — المهم هو ترجع غدا. التقدم كيتبنى بشوية بشوية 🌿",
-    settingsTitle: "الإعدادات والتخصيص", setName: "بغيت نعيط ليك بـ", setNamePh: "الاسم ديالك (اختياري)",
-    setLang: "لغة المساعد", setDark: "الوضع الداكن", setVoice: "الردود الصوتية (قراءة الأجوبة بصوت عالٍ)",
-    setMemory: "الذاكرة: خلي معاك يتذكر الاسم والأهداف ديالي على هاد الجهاز",
-    memoryTitle: "شنو حافظ عليا",
-    aiTitle: "الذكاء الاصطناعي",
-    aiConsent: "كنوافق نصيفط رسائل المحادثة لهاد الخدمة الخارجية باش تجاوبني",
-    aiEnable: "تفعيل الذكاء الاصطناعي الحقيقي",
-    aiWarn: "تنبيه: ملي كيكون الذكاء الحقيقي مفعّل، رسائل المحادثة كتصيفط لخدمة ذكاء اصطناعي خارجية باش تجاوبك. ما تصيفطش معلومات حساسة بزاف في وضع الفضفضة.",
-    privacyTitle: "الخصوصية والأمان", exportData: "تصدير بياناتي", deleteAll: "مسح جميع بياناتي",
-    install: "تثبيت التطبيق على الهاتف 📲",
-    installTitle: "ثبّت معاك على تيليفونك",
-    installText: "زيد «معاك» للواجهة الرئيسية ديال تيليفونك وافتحو بحال أي تطبيق عادي — بلا ما تدخل للمتصفح كل مرة.",
-    installSteps: "إلا ما بانش ليك زر التثبيت: تأكد بلي فاتح الرابط في متصفح Chrome (ماشي من داخل واتساب)، ومن بعد افتح قائمة Chrome (⋮) وختار «تثبيت التطبيق» ولا «إضافة إلى الشاشة الرئيسية».",
-    plansTitle: "الباقات (قريباً)", planFree: "الوظائف الأساسية — مجاني دائماً",
-    planPlus: "ذكاء اصطناعي أوسع وأدوات تنظيم متقدمة",
-    planBiz: "إنتاجية للفرق — بلا أي وصول لمحادثات الموظفين الشخصية",
-    plansNote: "الدفع غير مفعّل في هاد النسخة.",
-    navHome: "الرئيسية", navAsk: "سول معاك", navVent: "فضفض", navDay: "نهاري", navProg: "تقدمي",
-    qaPlan: "نظم لي", qaHelp: "ساعدني في", qaExplain: "اشرح لي", qaSolve: "حل مشكلتي", qaIdea: "أعطني فكرة",
-    toolsTitle: "أدوات سريعة", catsTitle: "مساعدك الذكي", topicsTitle: "مواضيع مقترحة لك",
-    catRelations: "العلاقات والحياة", catRelationsSub: "دعم ونصائح",
-    catCreate: "الإبداع والتصميم", catCreateSub: "أفكار مبتكرة",
-    catHealth: "الصحة والراحة", catHealthSub: "نصائح يومية",
-    catWork: "العمل والمشاريع", catWorkSub: "أفكار وخطط",
-    catStudy: "الدراسة والتعلم", catStudySub: "شروحات وتمارين",
-    topicIdeas: "أفكار جديدة", topicIdeasSub: "إلهام وإبداع",
-    topicCalm: "الراحة النفسية", topicCalmSub: "دعم يومي",
-    topicSelf: "التطوير الذاتي", topicSelfSub: "خطوات بسيطة",
-    topicFocus: "تحسين الإنتاجية", topicFocusSub: "نصائح عملية",
-    acctTitle: "حسابي", acctText: "الحساب اختياري: كيحفظ المهام والأهداف والعادات في السحابة باش تلقاهم في أي جهاز. محادثات الفضفضة كتبقى غير في هاد الجهاز دائماً.",
-    acctEmail: "البريد الإلكتروني", acctPass: "كلمة السر", acctIn: "دخول", acctUp: "إنشاء حساب",
-    acctGoogleBtn: "الدخول بـ Google", acctHello: "مسجل بـ:", acctSyncNow: "مزامنة الآن", acctOut: "تسجيل الخروج"
-  },
-  fr: {
-    slogan: "Avec toi, pas à pas", start: "Go", quickPh: "Écris ce que tu veux... je t'écoute",
-    heroNote: "Je suis un assistant IA, pas un humain ni un thérapeute.",
-    svcVent: "Parle-moi", svcVentSub: "Un espace sûr pour parler et être écouté",
-    svcSolve: "Résous mon problème", svcSolveSub: "Analyser le problème et trouver une solution concrète",
-    svcDay: "Organise ma journée", svcDaySub: "Mes tâches et mon plan du jour",
-    svcProg: "Mon progrès", svcProgSub: "Mes objectifs, habitudes et réussites",
-    svcAsk: "Demande à M3AK", svcAskSub: "Questions du quotidien et aide générale",
-    todayTitle: "Ta journée", openDay: "Ouvrir l'organisateur", tipTitle: "Suggestion du moment",
-    askSub: "Pose-moi tes questions du quotidien — travail, études, organisation, idées...",
-    ventSub: "Ici, tu peux parler librement, sans jugement ni pression. Je t'écoute d'abord.",
-    ventDisclaimer: "Cet espace est fait pour l'écoute et le soutien — ce n'est pas une thérapie. En cas de danger ou de crise, contacte une personne de confiance, le SAMU 15 ou la police 19.",
-    helpTypeQ: "Comment veux-tu que je t'aide ?", helpListen: "Écoute-moi seulement", helpFeelings: "Aide-moi à comprendre mes émotions", helpSolution: "Je veux une solution pratique",
-    ventPrivacy: "Les conversations « Parle-moi » ne sont pas enregistrées automatiquement.",
-    solveSub: "Explique ton problème avec tes mots, on va le comprendre ensemble et le transformer en plan d'action.",
-    chatPh: "Écris ton message...", ventPh: "Parle librement... je t'écoute", solvePh: "Ex : j'ai un problème au travail...",
-    send: "Envoyer",
-    taskPh: "Quelle est la tâche ?", prioHigh: "Priorité haute", prioMed: "Moyenne", prioLow: "Basse",
-    addTask: "Ajouter la tâche", cancel: "Annuler", tabToday: "Aujourd'hui", tabWeek: "Cette semaine", tabAll: "Tout",
-    suggestPlan: "Propose-moi un plan de journée", dayReview: "Bilan de fin de journée",
-    goalsTitle: "Mes objectifs", goalPh: "Nouvel objectif... ex : apprendre l'anglais", add: "Ajouter",
-    habitsTitle: "Mes habitudes quotidiennes", habitPh: "Nouvelle habitude... ex : sport 20 min",
-    habitNote: "Un jour manqué, ce n'est pas grave — l'important c'est de revenir demain 🌿",
-    settingsTitle: "Paramètres et personnalisation", setName: "Appelle-moi", setNamePh: "Ton prénom (optionnel)",
-    setLang: "Langue de l'assistant", setDark: "Mode sombre", setVoice: "Réponses vocales (lecture à voix haute)",
-    setMemory: "Mémoire : laisser M3AK retenir mon nom et mes objectifs sur cet appareil",
-    memoryTitle: "Ce que M3AK retient de moi",
-    aiTitle: "Intelligence artificielle",
-    aiConsent: "J'accepte d'envoyer mes messages à ce service externe pour obtenir des réponses",
-    aiEnable: "Activer la vraie IA",
-    aiWarn: "Attention : avec la vraie IA activée, tes messages sont envoyés à un service d'IA externe pour te répondre. Évite les infos très sensibles en mode « Parle-moi ».",
-    privacyTitle: "Confidentialité et sécurité", exportData: "Exporter mes données", deleteAll: "Effacer toutes mes données",
-    install: "Installer l'app sur le téléphone 📲",
-    installTitle: "Installe M3AK sur ton téléphone",
-    installText: "Ajoute « M3AK » à ton écran d'accueil et ouvre-le comme une vraie application — sans passer par le navigateur à chaque fois.",
-    installSteps: "Si le bouton n'apparaît pas : ouvre d'abord le lien dans le navigateur Chrome (pas dans WhatsApp), puis le menu Chrome (⋮) → « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
-    plansTitle: "Formules (bientôt)", planFree: "Fonctions de base — gratuit pour toujours",
-    planPlus: "IA étendue et outils d'organisation avancés",
-    planBiz: "Productivité pour équipes — sans aucun accès aux conversations personnelles",
-    plansNote: "Le paiement n'est pas activé dans cette version.",
-    navHome: "Accueil", navAsk: "Demander", navVent: "Parler", navDay: "Journée", navProg: "Progrès",
-    qaPlan: "Organise", qaHelp: "Aide-moi", qaExplain: "Explique-moi", qaSolve: "Mon problème", qaIdea: "Une idée",
-    toolsTitle: "Outils rapides", catsTitle: "Ton assistant intelligent", topicsTitle: "Sujets pour toi",
-    catRelations: "Relations et vie", catRelationsSub: "Soutien et conseils",
-    catCreate: "Créativité et design", catCreateSub: "Idées innovantes",
-    catHealth: "Santé et bien-être", catHealthSub: "Conseils quotidiens",
-    catWork: "Travail et projets", catWorkSub: "Idées et plans",
-    catStudy: "Études et apprentissage", catStudySub: "Explications et exercices",
-    topicIdeas: "Idées nouvelles", topicIdeasSub: "Inspiration",
-    topicCalm: "Bien-être mental", topicCalmSub: "Soutien quotidien",
-    topicSelf: "Développement personnel", topicSelfSub: "Petits pas",
-    topicFocus: "Productivité", topicFocusSub: "Conseils pratiques",
-    acctTitle: "Mon compte", acctText: "Le compte est optionnel : il garde tes tâches, objectifs et habitudes dans le cloud pour les retrouver sur tous tes appareils. Les conversations « Parle-moi » restent toujours sur cet appareil.",
-    acctEmail: "E-mail", acctPass: "Mot de passe", acctIn: "Se connecter", acctUp: "Créer un compte",
-    acctGoogleBtn: "Continuer avec Google", acctHello: "Connecté :", acctSyncNow: "Synchroniser", acctOut: "Se déconnecter"
-  }
-};
-function applyI18n() {
-  const fr = settings.lang === "fr";
-  const dict = fr ? I18N.fr : I18N.ar;
-  document.documentElement.lang = fr ? "fr" : "ar";
-  document.documentElement.dir = fr ? "ltr" : "rtl";
-  $$("[data-i18n]").forEach((el) => { const k = el.dataset.i18n; if (dict[k]) el.textContent = dict[k]; });
-  $$("[data-i18n-ph]").forEach((el) => { const k = el.dataset.i18nPh; if (dict[k]) el.placeholder = dict[k]; });
+function deadlineDate(it) {
+  const d = new Date(it.deadline.length <= 10 ? it.deadline + "T23:59:59" : it.deadline);
+  return d;
+}
+function daysLeft(it) {
+  const now = new Date();
+  const end = deadlineDate(it);
+  const a = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const b = new Date(end.getFullYear(), end.getMonth(), end.getDate());
+  return Math.round((b - a) / 86400000);
+}
+function isOpen(it) { return deadlineDate(it) >= new Date(Date.now() - 60000); }
+function fmtDate(iso) {
+  try {
+    const d = new Date(iso.length <= 10 ? iso + "T12:00:00" : iso);
+    return d.toLocaleDateString("ar-MA", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  } catch { return iso; }
+}
+function fmtDateShort(iso) {
+  try {
+    const d = new Date(iso.length <= 10 ? iso + "T12:00:00" : iso);
+    return d.toLocaleDateString("ar-MA", { day: "numeric", month: "long" });
+  } catch { return iso; }
+}
+function deadlineLabel(it) {
+  const dl = daysLeft(it);
+  if (!isOpen(it)) return { txt: "سالا الأجل", cls: "closed" };
+  if (dl === 0) return { txt: "⏰ اليوم آخر أجل!", cls: "urgent" };
+  if (dl === 1) return { txt: "⏰ غداً آخر أجل!", cls: "urgent" };
+  if (dl <= 7) return { txt: "بقى " + dl + " أيام", cls: "soon" };
+  if (dl <= 14) return { txt: "بقى " + dl + " يوم", cls: "mid" };
+  return { txt: "بقى " + dl + " يوم", cls: "ok" };
+}
+const byDeadline = (a, b) => deadlineDate(a) - deadlineDate(b);
+const openItems = () => CONCOURS.filter(isOpen).sort(byDeadline);
+const findItem = (id) => CONCOURS.find((c) => c.id === id);
+
+/* ---------- Toast ---------- */
+let toastTimer = null;
+function toast(msg) {
+  const t = $("#toast");
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.hidden = true; }, 2600);
 }
 
 /* ---------- Navigation ---------- */
-const VIEWS = ["home", "ask", "vent", "solve", "day", "progress", "settings"];
+let currentView = "home";
 function goto(view) {
-  VIEWS.forEach((v) => $("#view-" + v)?.classList.toggle("active", v === view));
+  currentView = view;
+  $$(".view").forEach((v) => v.classList.toggle("active", v.id === "view-" + view));
   $$(".nav-btn").forEach((b) => b.classList.toggle("active", b.dataset.goto === view));
   window.scrollTo({ top: 0 });
+  if (view === "mine") renderMine();
   if (view === "home") renderHome();
-  if (view === "day") renderTasks();
-  if (view === "progress") renderProgress();
-  if (view === "settings") renderSettings();
 }
 $$("[data-goto]").forEach((b) => b.addEventListener("click", () => goto(b.dataset.goto)));
-$("#settingsBtn").addEventListener("click", () => goto("settings"));
 
 /* ---------- Theme ---------- */
 function applyTheme() {
@@ -195,1127 +95,247 @@ function applyTheme() {
 }
 $("#themeToggle").addEventListener("click", () => { settings.dark = !settings.dark; persistSettings(); applyTheme(); });
 
-/* ---------- Home ---------- */
-const TIPS = {
-  morning: ["ابدأ نهارك بأصعب مهمة — غادي تحس بالخفة من بعدها ☀️", "راجع مهام اليوم دابا واختار 3 أولويات فقط.", "كاس ديال الماء وشوية ديال الحركة قبل ما تبدا 📱"],
-  midday: ["خد استراحة قصيرة بعيد على التيليفون — عينيك وعقلك غادي يشكروك 🌿", "إلا بقات ليك غير مهمة وحدة صغيرة، ساليها دابا وغادي تحس بالتقدم.", "تنفس بعمق 4 مرات... يالله، كمل نهارك بهدوء."],
-  evening: ["راجع شنو ساليتي اليوم وافتخر بيه، وخلي الباقي لغدا بلا ضغط 🌙", "حضّر أول مهمة لغدا باش تبدا الصباح بلا تفكير.", "النهار سالا — وقت الراحة مهم بحال وقت الخدمة."]
-};
-function timeBucket() { const h = new Date().getHours(); return h < 12 ? "morning" : h < 18 ? "midday" : "evening"; }
-function greetingText() {
-  const h = new Date().getHours();
-  const name = settings.memory && settings.name ? " " + settings.name : "";
-  if (settings.lang === "fr") return (h < 12 ? "Bonjour" : h < 18 ? "Bel après-midi" : "Bonsoir") + name + " ✨";
-  return (h < 5 ? "ليلة سعيدة" : h < 12 ? "صباح الخير" : h < 18 ? "نهارك سعيد" : "مساء الخير") + name + " ✨";
+/* ---------- Rendering: cards ---------- */
+function tracked(id) { return data.tracked.includes(id); }
+function checkProgress(it) {
+  const total = (it.docs || []).length;
+  if (!total) return 0;
+  const done = (data.checks[it.id] || []).length;
+  return Math.round((done / total) * 100);
 }
-function renderHome() {
-  $("#greeting").textContent = greetingText();
-  const t = todayStr();
-  const todays = data.tasks.filter((x) => x.date === t);
-  const done = todays.filter((x) => x.done).length;
-  const openHabits = data.habits.length;
-  const doneHabits = data.habits.filter((h) => h.checks && h.checks[t]).length;
-  const avgGoal = data.goals.length ? Math.round(data.goals.reduce((a, g) => a + (g.progress || 0), 0) / data.goals.length) : 0;
-  const fr = settings.lang === "fr";
-  $("#todaySummary").innerHTML =
-    `<span class="stat">📅 ${fr ? "Tâches du jour" : "مهام اليوم"}: <b>${done}/${todays.length}</b></span>` +
-    `<span class="stat">📈 ${fr ? "Objectifs" : "الأهداف"}: <b>${data.goals.length}</b> (${avgGoal}%)</span>` +
-    `<span class="stat">🌱 ${fr ? "Habitudes" : "العادات"}: <b>${doneHabits}/${openHabits}</b></span>`;
-  $("#todayBar").style.width = (todays.length ? Math.round(done / todays.length * 100) : 0) + "%";
-  $("#timeTip").textContent = pick(TIPS[timeBucket()]);
+function cardHTML(it) {
+  const dl = deadlineLabel(it);
+  const isT = tracked(it.id);
+  return `<article class="ccard" data-id="${it.id}">
+    <div class="ccard-top">
+      <span class="sector">${esc(it.sector)}</span>
+      <span class="count ${dl.cls}">${dl.txt}</span>
+    </div>
+    <h3>${esc(it.title)}</h3>
+    <p class="org">🏛️ ${esc(it.org)}</p>
+    <div class="meta">
+      ${it.posts ? `<span>💼 ${it.posts} منصب</span>` : ""}
+      <span>🎓 ${esc(it.diploma)}</span>
+      <span>📍 ${esc(it.region)}</span>
+    </div>
+    <p class="deadline">🗓️ آخر أجل: <strong>${fmtDate(it.deadline)}</strong></p>
+    <div class="ccard-actions">
+      <button class="btn primary" type="button" data-act="open">التفاصيل والوثائق</button>
+      <button class="btn star ${isT ? "on" : ""}" type="button" data-act="track" aria-label="تتبع">${isT ? "⭐ متتبعة" : "☆ تتبّع"}</button>
+    </div>
+  </article>`;
 }
-
-/* ============================================================
-   CHAT ENGINE — local demo persona (NOT a real AI model).
-   Implements the M3AK personality: warm Moroccan Darija,
-   listens first, one useful question at a time, no canned loops.
-   ============================================================ */
-function detectLang(text) {
-  if (/[\u0600-\u06FF]/.test(text)) return "d";
-  const t = " " + text.toLowerCase().replace(/[^a-zàâäéèêëîïôöùûüç ]/g, " ") + " ";
-  const franco = [" ana ", " bghit ", " bghina ", " kifach ", " daba ", " bzzaf ", " bezaf ", " mzyan ", " wakha ", " safi ", " alach ", " ghadi ", " dyal ", " dyali ", " nta ", " nti ", " hna ", " walou ", " walo ", " choukran ", " labas ", " salam ", " khoya ", " khti ", " yallah ", " lyoum ", " gheda ", " zwin ", " sahbi ", " rani ", " kan ", " mazal ", " chwiya ", " kidayr ", " hamdoulah ", " hmdlh ", " ndir ", " nkamal ", " hass ", " hassit ", " mrid ", " skhft ", " taab ", " wahdi ", " bo7di ", " khayf ", " m9ala9 ", " hzin "];
-  if (franco.some((w) => t.includes(w))) return "l";
-  const fr = [" je ", " tu ", " merci ", " bonjour ", " probleme ", " problème ", " travail ", " fatigue ", " fatigué ", " stress ", " aide ", " veux ", " suis ", " avec ", " pour ", " dans ", " une ", " est ", " les ", " des ", " pas ", " mon ", " ma ", " mes ", " jour ", " soir "];
-  if (fr.some((w) => t.includes(w))) return "f";
-  return settings.lang === "fr" ? "f" : "l";
-}
-
-const CRISIS_KEYS = ["نقتل راسي", "نقتل نفسي", "ننهي حياتي", "الانتحار", "ننتحر", "ما بغيتش نعيش", "بغيت نموت", "suicide", "me tuer", "je veux mourir", "n9tal rassi", "bghit nmout", "نهاية حياتي", "نضر راسي", "نأذي نفسي"];
-function crisisReply(lang) {
-  if (lang === "f") return "Je t'entends, et ce que tu ressens compte énormément. Je suis une IA, je ne peux pas t'aider comme un humain le ferait — alors s'il te plaît, parle maintenant à une personne de confiance. Si tu es en danger immédiat, appelle le SAMU au 15 ou la police au 19. Tu n'as pas à traverser ça seul.";
-  if (lang === "l") return "Ana same3 lik, w li kat7ess bih mohim bzaf. Ana ghir IA, ma n9derch n3awnek kima insan — 3afak, hdar daba m3a chi wahed kat ti9 fih. Ila kounti f khatar daba, 3iyat l is3af 15 wla lbolis 19. Rak machi bo7dek.";
-  return "أنا سامع ليك، واللي كتحس بيه مهم بزاف. 💚\nأنا غير ذكاء اصطناعي، ما نقدرش نعاونك كيف إنسان — عفاك، هضر دابا مع شي شخص كتثق فيه (صاحب، فرد من العائلة...).\nإلا كنتي في خطر دابا، عيّط للإسعاف 15 ولا الشرطة 19.\nراك ماشي بوحدك، وهاد اللحظة الصعيبة غادي تدوز.";
-}
-
-const FEELINGS = [
-  { keys: ["مضغوط", "ضغط", "stress", "مخنوق", "ضاغط"], d: "الضغط", l: "stress w daght", f: "la pression" },
-  { keys: ["حزين", "حزن", "مهموم", "triste", "زعلان", "مكئب", "مكتئب", "hzin", "trist"], d: "الحزن والهم", l: "lhozn", f: "la tristesse" },
-  { keys: ["تعبان", "عييت", "مرهق", "fatigu", "تعب", "skhft", "taab", "3yit"], d: "التعب والإرهاق", l: "ta3ab", f: "la fatigue" },
-  { keys: ["بوحدي", "وحداني", "الوحدة", "seul", "lonely", "bo7di", "wahdi"], d: "حس الوحدة", l: "l wahda", f: "la solitude" },
-  { keys: ["خايف", "قلقان", "القلق", "متوتر", "anxieux", "peur", "khayf", "9la9"], d: "القلق والتوتر", l: "l9ala9", f: "l'anxiété" },
-  { keys: ["معصب", "غضبان", "تعصبت", "énervé", "m3asab", "ghadab"], d: "العصبية", l: "l3asabiya", f: "la colère" },
-  { keys: ["فرحان", "سعيد", "مبسوط", "heureux", "content", "farhan", "mabsout"], d: "الفرحة", l: "lfarha", f: "la joie" },
-  { keys: ["ضايع", "ما عارفش", "تايه", "perdu", "daye3", "ma3arafch"], d: "حس الضياع", l: "daye3", f: "le sentiment d'être perdu" }
-];
-function feelingOf(text) {
-  const t = text.toLowerCase();
-  return FEELINGS.find((f) => f.keys.some((k) => t.includes(k))) || null;
-}
-
-/* Intent banks — replies/questions in 3 registers: d (دارجة عربية), l (franco), f (français) */
-const INTENTS = [
-  {
-    id: "greeting", keys: ["سلام", "صباح الخير", "مساء الخير", "اهلا", "أهلا", "هاي", "bonjour", "salut", "hello", "salam", "labas", "kidayr"],
-    replies: {
-      d: ["أهلا وسهلا بيك 🌿 كيف داير اليوم؟", "سلام! مرحبا بيك في معاك 💚 كيفاش نقدر نعاونك اليوم؟", "أهلاً بيك! نهارك كيف دايز؟"],
-      l: ["Salam w marhba bik 🌿 Kidayr lyoum?", "Ahla bik! Kifach n9der n3awnek lyoum?", "Salam salam! Labas? Gol lia ach kayn."],
-      f: ["Bonjour et bienvenue 🌿 Comment se passe ta journée ?", "Salut ! Ravi de te voir. Comment puis-je t'aider aujourd'hui ?", "Bonjour ! Dis-moi ce qui t'amène."]
-    },
-    questions: { d: ["شنو جابك لعندنا اليوم؟"], l: ["Ach jabek lyoum?"], f: ["Qu'est-ce qui t'amène aujourd'hui ?"] }
-  },
-  {
-    id: "howareyou", keys: ["كيف داير", "لاباس", "شنو خبارك", "comment vas tu", "comment ça va", "ca va", "cv?", "kidayr", "labas"],
-    replies: {
-      d: ["أنا بخير، شكراً حيت سولتي 🌿 المهم هو نتا: كيف داير بصح؟", "تمام الحمد لله! ونتا، كيف دايز نهارك؟"],
-      l: ["Ana bikhir, choukran 🌿 L mohim howa nta: kidayr bsa7?", "Labas hamdoulah! W nta, kif dayez nharek?"],
-      f: ["Je vais bien, merci 🌿 L'important c'est toi : comment vas-tu, vraiment ?", "Très bien ! Et toi, comment se passe ta journée ?"]
-    },
-    questions: { d: ["شنو أحسن حاجة وقعات ليك اليوم؟", "واش كاين شي حاجة شاغلة بالك؟"], l: ["Ach hiya ahsan haja w93at lik lyoum?"], f: ["Quelle est la meilleure chose qui te soit arrivée aujourd'hui ?"] }
-  },
-  {
-    id: "stressed", keys: ["مضغوط", "ضغط", "مخنوق", "stress", "ضاغط", "راسي غادي ينفجر", "daght", "mkhnou9", "stressé"],
-    replies: {
-      d: ["سمعتك... الضغط كيخلي حتى الحوايج الصغار يبانو كبار. أنا هنا معاك، بشوية بشوية 💚", "مفهوم عليك — ملي كيتجمع الضغط، الواحد كيحس براسو مخنوق. أنا سامع ليك، هضر براحتك."],
-      l: ["Same3 lik... stress kaykhali hta lhwaij sghar ybanou kbar. Ana hna m3ak, b chwiya b chwiya 💚", "Mfhoum 3lik — mli kaytjama3 stress, lwahed kayhess b rasso mkhnou9. Ana same3 lik, hdar b ra7tek."],
-      f: ["Je t'entends... la pression rend même les petites choses énormes. Je suis là, on y va doucement 💚", "Je comprends — quand tout s'accumule, on étouffe. Je t'écoute, parle à ton rythme."]
-    },
-    questions: {
-      d: ["شنو أكثر حاجة ضاغطة عليك دابا بالضبط؟", "واش هاد الضغط جاي من الخدمة، القراية، ولا شي حاجة أخرى؟", "من إمتى ونتا حاس بهاد الضغط؟"],
-      l: ["Ach hiya aktar haja daghta 3lik daba b dabt?", "Had stress jay men lkhadma, l9raya, wla haja okhra?"],
-      f: ["Qu'est-ce qui te met le plus sous pression là, précisément ?", "Cette pression vient du travail, des études, ou d'autre chose ?"]
-    }
-  },
-  {
-    id: "sad", keys: ["حزين", "مهموم", "زعلان", "مكتئب", "مكئب", "triste", "hzin", "mhamoum", "قلبي تقيل", "نبكي", "كنبكي"],
-    replies: {
-      d: ["أنا هنا معاك... الحزن ماشي ضعف، هو إحساس إنساني عادي. هضر براحتك، أنا سامع 🌿", "سمعتك. أوقات الهم كتكون تقيلة على القلب، وما خاصكش تدوزها بوحدك."],
-      l: ["Ana hna m3ak... lhozn machi do3f, howa ihsas insani 3adi. Hdar b ra7tek, ana same3 🌿", "Same3 lik. Aw9at lham katkon t9ila 3la l9alb, w ma khasakch tdouzha bo7dek."],
-      f: ["Je suis là... la tristesse n'est pas une faiblesse, c'est une émotion humaine. Parle librement, je t'écoute 🌿", "Je t'entends. Les moments de peine sont lourds, tu n'as pas à les traverser seul."]
-    },
-    questions: {
-      d: ["واش وقعات شي حاجة معينة، ولا هاد الإحساس جاك بلا سبب واضح؟", "شنو أكثر حاجة شاغلة بالك في هاد اللحظة؟"],
-      l: ["Wach w93at chi haja mo3ayana, wla had l ihsas jak bla sabab wadeh?"],
-      f: ["Est-ce qu'il s'est passé quelque chose de précis, ou ce sentiment est venu sans raison claire ?"]
-    }
-  },
-  {
-    id: "tired", keys: ["تعبان", "عييت", "مرهق", "ما كنعسش", "النوم", "fatigu", "taab", "3yit", "skhft", "كنفيق تعبان"],
-    replies: {
-      d: ["التعب كيأثر على كلشي — المزاج والتركيز والطاقة. راحتك ماشي رفاهية، هي ضرورة 🌿", "مفهوم... ملي كيتراكم التعب، خاص الجسم والعقل يرتاحو بصح."],
-      l: ["Ta3ab kay2ater 3la kolchi — lmazaj w tarkiz w ta9a. Ra7tek machi rafahia, hiya daroura 🌿", "Mfhoum... mli kaytrakam ta3ab, khas ljism w l3a9l yerta7o bsa7."],
-      f: ["La fatigue affecte tout — l'humeur, la concentration, l'énergie. Le repos n'est pas un luxe, c'est une nécessité 🌿", "Je comprends... quand la fatigue s'accumule, le corps et l'esprit ont vraiment besoin de souffler."]
-    },
-    questions: {
-      d: ["واش التعب جسدي ولا حتى النوم ديالك ما بقاش منتظم؟", "شحال ونتا على هاد الحال؟"],
-      l: ["Wach ta3ab jasadi wla hta nnoum dyalek ma b9ach montadam?"],
-      f: ["C'est une fatigue physique, ou ton sommeil aussi est perturbé ?"]
-    }
-  },
-  {
-    id: "lonely", keys: ["بوحدي", "وحداني", "الوحدة", "seul", "bo7di", "wahdi", "ما عندي حد", "حتى واحد ما كيفهمني"],
-    replies: {
-      d: ["حس الوحدة صعيب، خصوصاً ملي كيكونو الناس حولك وما حاسش بيك حتى واحد. أنا هنا، هضر معايا براحتك 💚", "سمعتك... الوحدة ماشي ديما هي تكون بوحدك، مرات هي ما تلقى حتى واحد يفهمك."],
-      l: ["Hess l wahda s3ib, khososan mli kaykounou nass hawlek w ma has bik hta wahed. Ana hna, hdar m3aya b ra7tek 💚", "Same3 lik... l wahda machi dima hiya tkoun bo7dek, marrat hiya ma tal9a hta wahed yafhmek."],
-      f: ["La solitude est dure, surtout entouré de gens qui ne te comprennent pas. Je suis là, parle-moi librement 💚", "Je t'entends... être seul, ce n'est pas toujours être sans personne, c'est parfois ne trouver personne qui nous comprenne."]
-    },
-    questions: {
-      d: ["واش كاين شي شخص قريب ليك كنت كتهضر معاه قبل؟", "شنو أكثر لحظة كتحس فيها بالوحدة؟"],
-      l: ["Kayn chi shakhs 9rib lik kounti katehdar m3ah 9bal?"],
-      f: ["Y a-t-il une personne proche avec qui tu parlais avant ?"]
-    }
-  },
-  {
-    id: "family", keys: ["عائلة", "والديا", "والدي", "امي", "ابا", "بابا", "ماما", "خويا", "ختي", "famille", "parents", "3aila", "walidiya"],
-    replies: {
-      d: ["مشاكل العائلة كتكون حساسة حيت الناس اللي فيهم هما أقرب ناس لينا. أنا سامع ليك، حكي ليا شنو وقع 🌿", "مفهوم... الخلافات مع العائلة كتوجع بزاف. هضر براحتك."],
-      l: ["Machakil l3aila katkon hassasa hit nass li fiha homa a9rab nass lina. Ana same3 lik, 7ki lia ach w9a3 🌿", "Mfhoum... lkhilafat m3a l3aila katouja3 bzaf. Hdar b ra7tek."],
-      f: ["Les problèmes de famille sont sensibles parce que ce sont nos proches. Je t'écoute, raconte-moi ce qui s'est passé 🌿", "Je comprends... les conflits familiaux font particulièrement mal. Parle librement."]
-    },
-    questions: {
-      d: ["واش جربتي تهضر معاهم بهدوء على هاد الموضوع؟", "شنو النتيجة اللي تتمنى توصل ليها معاهم؟"],
-      l: ["Wach jarrabti tehdar m3ahom b hodou3 3la had lmawdou3?"],
-      f: ["As-tu essayé d'en parler calmement avec eux ?"]
-    }
-  },
-  {
-    id: "work", keys: ["الخدمة", "الشغل", "المدير", "الخدم", "العمل", "الوظيفة", "travail", "boulot", "lkhadma", "patron", "الشركة", "المكتب"],
-    replies: {
-      d: ["الخدمة كتاخد جزء كبير من نهارنا، فملي كتولي مصدر ضغط كتأثر على كلشي. حكي ليا شنو واقع 🌿", "مفهوم عليك — مشاكل الشغل كتتعب بصح. أنا سامع ليك."],
-      l: ["Lkhadma katakod juz2 kbir men nharna, f meli katwali masdar daght kat2ater 3la kolchi. 7ki lia ach wa9e3 🌿", "Mfhoum 3lik — machakil choghl katat3ab bsa7. Ana same3 lik."],
-      f: ["Le travail occupe une grande partie de nos journées, quand il devient une source de stress tout est affecté. Raconte-moi 🌿", "Je comprends — les problèmes au boulot épuisent vraiment. Je t'écoute."]
-    },
-    questions: {
-      d: ["شنو بالضبط اللي ما خدامش ليك في الخدمة دابا؟", "واش المشكل في ضغط الشغل، ولا في التعامل مع الناس؟"],
-      l: ["Ach b dabt li ma khdamch lik f lkhadma daba?"],
-      f: ["Qu'est-ce qui ne va pas exactement au travail en ce moment ?"]
-    }
-  },
-  {
-    id: "study", keys: ["القراية", "الدراسة", "امتحان", "الجامعة", "المدرسة", "examen", "études", "etudes", "l9raya", "imtihan", "كنقرا", "الباك", "bac"],
-    replies: {
-      d: ["القراية والامتحانات كيجيبو ضغط كبير، خصوصاً ملي كتحس بالوقت كيجري. بشوية بشوية، غادي نرتبو الأمور 🌿", "مفهوم... ضغط الدراسة حقيقي. أنا معاك نفكرو بهدوء."],
-      l: ["L9raya w limtihanat kayjibou daght kbir, khososan mli kat7ess b lwa9t kayjri. B chwiya b chwiya 🌿", "Mfhoum... daght dirassa ha9i9i. Ana m3ak nfakrou b hodou2."],
-      f: ["Les études et les examens amènent beaucoup de pression, surtout quand le temps file. Doucement, on va s'organiser 🌿", "Je comprends... la pression des études est bien réelle. On réfléchit calmement ensemble."]
-    },
-    questions: {
-      d: ["شنو هي المادة ولا الحاجة اللي مقلقاك أكثر؟", "شحال باقي ليك على الامتحان ولا التسليم؟"],
-      l: ["Ach hiya lmada wla lhaja li m9al9ak aktar?"],
-      f: ["Quelle matière ou échéance t'inquiète le plus ?"]
-    }
-  },
-  {
-    id: "money", keys: ["الفلوس", "المال", "الفلوس", "مديون", "الكرا", "argent", "floss", "flous", "المصاريف", "الراتب", "الصالير"],
-    replies: {
-      d: ["موضوع الفلوس كيقلق بزاف ديال الناس، وما فيه حتى عيب. نهدرو عليه بهدوء ونشوفو شنو ممكن يتبدل 🌿", "مفهوم عليك — الضغط المالي كيثقل على الواحد. أنا سامع ليك."],
-      l: ["Mawdou3 lflous kay9alla9 bzaf dyal nass, w ma fih hta 3ib. Nhadrou 3lih b hodou2 🌿", "Mfhoum 3lik — daght lmali kayt9al 3la lwahed. Ana same3 lik."],
-      f: ["L'argent inquiète beaucoup de gens, il n'y a aucune honte à ça. Parlons-en calmement 🌿", "Je comprends — la pression financière pèse lourd. Je t'écoute."]
-    },
-    questions: {
-      d: ["شنو هو أكبر مصروف كيضغط عليك هاد الشهر؟", "واش جربتي تدير قائمة بالمصاريف الأساسية وغير الأساسية؟"],
-      l: ["Ach howa akbar masrouf kaydaght 3lik had chhar?"],
-      f: ["Quelle est la plus grosse dépense qui te pèse ce mois-ci ?"]
-    }
-  },
-  {
-    id: "procrast", keys: ["كنأجل", "التسويف", "ما كنبداش", "الكسل", "procrastin", "kan2ajal", "ما عنديش الحماس", "motivation", "التحفيز"],
-    replies: {
-      d: ["التأجيل ماشي كسل بالضرورة — مرات هو غير الحاجة باينة كبيرة بزاف. الحل: نقسموها لخطوات صغار بزاف 🌿", "مفهوم... أصعب خطوة هي الأولى. إلا بديتي بـ5 دقائق غير، غادي تلقى راسك كملتي."],
-      l: ["Ta2jil machi kasal b daroura — marrat howa ghir lhaja bayna kbira bzaf. Lhal: n9asmouha l khotwat sghar 🌿", "Mfhoum... as3ab khotwa hiya lawla. Ila bditi b 5 d9aye9 ghir, ghadi tal9a rassek kamalti."],
-      f: ["Procrastiner n'est pas toujours de la paresse — souvent la tâche paraît juste trop grande. La solution : la découper en toutes petites étapes 🌿", "Je comprends... le plus dur c'est de commencer. Commence par 5 minutes seulement, tu verras."]
-    },
-    questions: {
-      d: ["شنو هي الحاجة اللي كتأجلها هاد الأيام؟", "شنو أصغر خطوة تقدر تديرها دابا في 5 دقائق؟"],
-      l: ["Ach hiya lhaja li kat2ajalha had lyam?"],
-      f: ["Qu'est-ce que tu repousses ces jours-ci ?"]
-    }
-  },
-  {
-    id: "happy", keys: ["فرحان", "سعيد", "مبسوط", "نجحت", "ربحت", "heureux", "content", "farhan", "najaht", "اخبار زوينة", "أخبار زوينة"],
-    replies: {
-      d: ["زوين نسمع هادشي! 🎉 فرحت ليك بصح. حكي ليا شنو وقع!", "ما أحلاها من أخبار 🌿 تستاهل تفرح بهاد اللحظة."],
-      l: ["Zwin nasma3 hadchi! 🎉 Fraht lik bsa7. 7ki lia ach w9a3!", "Ma ahlaha men akhbar 🌿 Tastahal tafrah b had lahda."],
-      f: ["Ça fait plaisir à entendre ! 🎉 Je suis content pour toi. Raconte-moi !", "Quelle belle nouvelle 🌿 Profite de ce moment, tu le mérites."]
-    },
-    questions: { d: ["شنو كان أصعب جزء قبل ما توصل لهاد النتيجة؟"], l: ["Ach kan as3ab juz2 9bal ma twassal l had natija?"], f: ["Quelle a été la partie la plus dure avant ce résultat ?"] }
-  },
-  {
-    id: "thanks", keys: ["شكرا", "شكراً", "بارك الله", "merci", "choukran", "thanks"],
-    replies: {
-      d: ["على الراس والعين 🌿 أنا هنا وقت ما احتجتيني.", "بكل فرح! هادا هو الدور ديالي — نكون معاك.", "الله يخليك 💚 ونتا كيف داير دابا؟"],
-      l: ["3la rass w l3in 🌿 Ana hna wa9t ma htajitini.", "B kol farah! Hada howa dor dyali — nkoun m3ak.", "Allah ykhalik 💚 W nta kidayr daba?"],
-      f: ["Avec grand plaisir 🌿 Je suis là dès que tu as besoin.", "C'est mon rôle — être avec toi.", "Merci à toi 💚 Et toi, comment tu te sens maintenant ?"]
-    },
-    questions: { d: [], l: [], f: [] }
-  },
-  {
-    id: "bye", keys: ["بسلامة", "تصبح على خير", "غادي نمشي", "au revoir", "bonne nuit", "bslama", "إلى اللقاء"],
-    replies: {
-      d: ["بسلامة 🌙 خد راحتك، وأنا هنا ملي ترجع.", "تصبح على خير 🌿 نتمنى ليك نهار/ليلة هادئة."],
-      l: ["Bslama 🌙 Khod ra7tek, w ana hna mli tarja3.", "Tasbah 3la khir 🌿 Natmana lik nhar/lila hadia."],
-      f: ["À bientôt 🌙 Prends soin de toi, je serai là à ton retour.", "Bonne continuation 🌿 Je te souhaite un moment paisible."]
-    },
-    questions: { d: [], l: [], f: [] }
-  },
-  {
-    id: "who", keys: ["شكون نتا", "من انت", "من أنت", "qui es tu", "qui es-tu", "chkon nta", "انت روبوت", "واش نتا انسان", "واش نتا إنسان"],
-    replies: {
-      d: ["أنا «معاك» — مساعد ذكاء اصطناعي مغربي 🌿 ماشي إنسان، ولكن مصمم باش نسمع ليك ونعاونك في التنظيم وحل المشاكل اليومية، بالدارجة وبلا أحكام.", "سميتي معاك (M3AK AI) 💚 أنا برنامج ذكاء اصطناعي، ماشي إنسان ولا معالج — دوري نسمع، نفهم، ونعاون بخطوات عملية."],
-      l: ["Ana «M3AK» — mosa3id AI maghribi 🌿 Machi insan, walakin mosamam bach nasma3 lik w n3awnek f tandim w hal machakil, b darija w bla ahkam.", "Smiti M3AK AI 💚 Ana programme AI, machi insan wla mo3alij — dori nasma3, nafham, w n3awen b khotwat 3amalia."],
-      f: ["Je suis « M3AK » — un assistant IA marocain 🌿 Je ne suis pas humain, mais je suis conçu pour t'écouter et t'aider au quotidien, en darija, sans jugement.", "Je m'appelle M3AK AI 💚 Je suis un programme d'IA, pas un humain ni un thérapeute — mon rôle : écouter, comprendre, aider concrètement."]
-    },
-    questions: { d: ["بغيتي نبداو بالفضفضة، ولا عندك مشكل معين نفكرو فيه؟"], l: ["Bghiti nabdaw b lfadfada, wla 3andek mochkil mo3ayan nfakrou fih?"], f: ["On commence par parler librement, ou tu as un problème précis en tête ?"] }
-  }
-];
-
-const FALLBACK = {
-  d: [
-    "سمعتك 🌿 زيد عاود ليا شوية، بغيت نفهمك مزيان.",
-    "مفهوم عليا... وشنو هي أكثر حاجة مضيقاك في هادشي كامل؟",
-    "أنا معاك، كمل — شنو وقع بالضبط؟",
-    "هادشي اللي قلتي مهم. واش بغيتي غير تفضفض عليه، ولا نفكرو في حل أنا وياك؟"
-  ],
-  l: [
-    "Same3 lik 🌿 Zid charah lia chwiya bach nafhmek mzyan.",
-    "Mfhoum... w ach aktar haja chaghla balek f had lmawdou3?",
-    "Ana m3ak, kamal — ach w9a3 b dabt?",
-    "Hadchi mohim. Wach bghiti ghir tehdar 3lih, wla nfakrou f hal bjouj?"
-  ],
-  f: [
-    "Je t'écoute 🌿 Explique-moi un peu plus pour bien te comprendre.",
-    "Je vois... et qu'est-ce qui te préoccupe le plus dans tout ça ?",
-    "Je suis là, continue — que s'est-il passé exactement ?",
-    "C'est important. Tu veux juste en parler, ou réfléchir à une solution ensemble ?"
-  ]
-};
-const REFLECT = {
-  d: ["بان ليا من كلامك أن ", "كنحس من هضرتك أن ", "اللي وصلني منك هو أن "],
-  l: ["Bayen lia men klamek ana ", "Kanhass men hadrtek ana ", "Li wsalni menak howa ana "],
-  f: ["J'entends dans tes mots que ", "Je ressens que ", "Ce que je comprends, c'est que "]
-};
-
-function matchIntent(text) {
-  const t = " " + text.toLowerCase() + " ";
-  let best = null, score = 0;
-  for (const it of INTENTS) {
-    let s = 0;
-    for (const k of it.keys) if (t.includes(k.toLowerCase())) s += k.length > 4 ? 2 : 1;
-    if (s > score) { score = s; best = it; }
-  }
-  return score > 0 ? best : null;
-}
-function freshPick(ctx, bankId, arr) {
-  if (!arr || !arr.length) return null;
-  ctx.used = ctx.used || {};
-  const used = ctx.used[bankId] = ctx.used[bankId] || [];
-  const fresh = arr.filter((_, i) => !used.includes(i));
-  const pool = fresh.length ? fresh : arr;
-  const idx = arr.indexOf(pick(pool));
-  used.push(idx);
-  if (used.length > arr.length) ctx.used[bankId] = [idx];
-  return arr[idx];
-}
-
-function engineReply(mode, text, ctx) {
-  const lang = detectLang(text);
-  if (CRISIS_KEYS.some((k) => text.toLowerCase().includes(k))) return { text: crisisReply(lang), crisis: true };
-
-  // Name capture
-  const nameMatch = text.match(/(?:اسمي|سميتي|كنعيط ليا|ana smiti|سميتي هي)\s+([^\s.,!؟?]+)/i) || text.match(/je m'appelle\s+([a-zàâäéèêëîïôöùûüç-]+)/i);
-  if (nameMatch && nameMatch[1]) {
-    const nm = nameMatch[1].trim();
-    ctx.sessionName = nm;
-    if (settings.memory) { settings.name = nm; persistSettings(); }
-    const r = lang === "f" ? `Enchanté, ${nm} 💚 Je retiendrai ton prénom${settings.memory ? "" : " pour cette conversation"}. Alors, dis-moi ce qui t'amène.`
-      : lang === "l" ? `Tcharrafna, ${nm} 💚 Ghadi ntfakar smiytek${settings.memory ? "" : " ghir f had lhdra"}. Yallah, gol lia ach kayn.`
-      : `تشرفنا، ${nm} 💚 غادي نتفكر سميتك${settings.memory ? "" : " غير في هاد الهضرة"}. يالله، قولي ليا شنو كاين.`;
-    return { text: r };
-  }
-
-  const intent = matchIntent(text);
-  const feel = feelingOf(text);
-  const L = lang;
-  let body, bankId;
-
-  if (intent) {
-    bankId = "i_" + intent.id;
-    body = freshPick(ctx, bankId, intent.replies[L]);
-  } else if (feel) {
-    bankId = "fb";
-    body = freshPick(ctx, bankId, FALLBACK[L]);
-    const refl = pick(REFLECT[L]) + feel[L === "d" ? "d" : L === "l" ? "l" : "f"];
-    body = (L === "f" ? refl + " te pèse en ce moment. " : refl + (L === "d" ? " كيضغط عليك هاد الأيام. " : " kaydaght 3lik had lyam. ")) + body;
-  } else {
-    bankId = "fb";
-    body = freshPick(ctx, bankId, FALLBACK[L]);
-  }
-
-  // Vent + "listen only": no advice, at most a soft prompt, no question every turn
-  const helpType = ctx.helpType || "listen";
-  let question = null;
-  if (intent && intent.questions) {
-    const qs = intent.questions[L] || [];
-    const unasked = qs.filter((q) => !(ctx.asked || []).includes(q));
-    if (unasked.length && (mode !== "vent" || helpType !== "listen" || ctx.turns % 2 === 1)) {
-      question = pick(unasked);
-      ctx.asked = ctx.asked || []; ctx.asked.push(question);
-    }
-  }
-  if (mode === "vent" && helpType === "solution" && ctx.turns >= 1 && intent && ["stressed", "sad", "work", "study", "money", "procrast"].includes(intent.id)) {
-    const sol = L === "f" ? "\n\nSi tu veux, on peut chercher ensemble une toute petite première étape — rien de grand, juste un début."
-      : L === "l" ? "\n\nIla bghiti, n9adrou n9albou bjوج 3la awel khotwa sgira — machi haja kbira, ghir bdاية."
-      : "\n\nإلا بغيتي، نقدرو نقلبو بجوج على أول خطوة صغيرة — ماشي حاجة كبيرة، غير بداية.";
-    body += sol;
-  }
-  return { text: question ? body + "\n\n" + question : body };
-}
-
-/* ---------- Solve-my-problem content ---------- */
-const SOLVE_CLARIFY = {
-  work: "باش نفهم مزيان: واش المشكل مع المدير/الزملاء، ولا في ضغط الخدمة نفسها؟",
-  study: "باش نفهم مزيان: شنو هي المادة/الحاجة الأصعب، وشحال باقي ليك من الوقت؟",
-  money: "باش نفهم مزيان: واش المشكل هو الدخل ما كافي، ولا المصاريف خارجة على السيطرة؟",
-  family: "باش نفهم مزيان: مع من في العائلة كاين المشكل، وواش جربتي تهضر معاه قبل؟",
-  time: "باش نفهم مزيان: شنو هي الحوايج اللي كتاكل ليك وقتك بزاف؟",
-  relation: "باش نفهم مزيان: شنو وقع بالضبط بيناتكم آخر مرة؟",
-  general: "باش نفهم مزيان: من إمتى بدا هاد المشكل، وشنو جربتي دير حتى دابا؟"
-};
-const SOLVE_CATS = [
-  {
-    id: "work", keys: ["خدمة", "شغل", "مدير", "خدم", "عمل", "شركة", "travail", "boulot", "khdma", "patron"],
-    options: [
-      { t: "نهضر ونوضح الأمور", steps: ["حدد بالضبط شنو هو المشكل في جملة وحدة", "اختار وقت هادئ وطلب اجتماع قصير مع المسؤول", "هضر على الوقائع والأثر، بلا اتهامات", "اقترح حل واحد واقعي واطلب رد واضح", "وثّق الاتفاق في رسالة قصيرة"] },
-      { t: "ننظم خدمتي ونخفف الضغط", steps: ["دير قائمة بمهامك اليومية ورتبها حسب الأهمية", "ابدأ النهار بأصعب مهمة", "قول «لا» بلباقة لمهام إضافية فوق طاقتك ووضح السبب", "خد استراحات قصيرة منتظمة", "راجع التقدم في آخر الأسبوع وعدّل الخطة"] },
-      { t: "نطور راسي ونحضر لفرصة أخرى", steps: ["حدد مهارة وحدة مطلوبة في سوق الشغل", "خصص 30 دقيقة يومياً للتعلم (دورات مجانية)", "حدّث سيرتك الذاتية كل أسبوعين", "تواصل مع ناس في مجالك ووسع شبكتك", "قدم على فرص جديدة بلا ما تترك خدمتك الحالية حتى تتوفر البديل"] }
-    ]
-  },
-  {
-    id: "study", keys: ["قراية", "دراسة", "امتحان", "جامعة", "مدرسة", "examen", "etudes", "9raya", "باك", "bac"],
-    options: [
-      { t: "خطة مراجعة واقعية", steps: ["قسم المنهج لوحدات صغيرة", "رتب الوحدات: الأصعب والأهم أولاً", "راجع بجلسات 25 دقيقة + 5 دقائق راحة", "اختبر راسك بأسئلة بدل غير القراءة", "خلي آخر نهار قبل الامتحان للمراجعة الخفيفة فقط"] },
-      { t: "نحارب التأجيل ونبدا دابا", steps: ["اختار أصغر درس وابدأ بيه في 10 دقائق", "بعد التيليفون في غرفة أخرى وقت المراجعة", "كافئ راسك بعد كل جلسة", "سجل تقدمك يومياً في ورقة/تطبيق", "راجع مع صديق مرة في الأسبوع"] }
-    ]
-  },
-  {
-    id: "money", keys: ["فلوس", "مال", "مديون", "كرا", "مصاريف", "argent", "flous", "راتب", "صالير"],
-    options: [
-      { t: "نرتب المصاريف ونوقف النزيف", steps: ["كتب جميع المصاريف ديال آخر شهر", "قسمها: ضروري / مهم / كمالي", "وقف ولا نقص مصروف كمالي واحد كبير", "حدد سقف أسبوعي للمصاريف المتغيرة", "راجع القائمة كل جمعة وعدّل"] },
-      { t: "نزيد الدخل بخطوات صغيرة", steps: ["حدد مهارة عندك تقدر تتباع (تصميم، كتابة، ترجمة...)", "اعرض خدمة صغيرة على معارفك/منصات العمل الحر", "بع حاجة ما كتستعملهاش في الدار", "خصص ساعتين في الأسبوع لهاد الدخل الإضافي", "اعتبر أول ربح كبداية وطور العرض ديالك"] }
-    ]
-  },
-  {
-    id: "family", keys: ["عائلة", "والديا", "والدي", "امي", "ابا", "بابا", "ماما", "خويا", "ختي", "famille", "3aila"],
-    options: [
-      { t: "حوار هادئ ومباشر", steps: ["اختار وقت ما يكون فيه حتى واحد معصب", "ابدأ بـ«أنا كنحس» بدل الاتهام", "اسمع للطرف الآخر حتى يكمل بلا مقاطعة", "اتفقا على حل وسط واحد محدد", "رجعوا للموضوع بعد أسبوع وشوفوا النتيجة"] },
-      { t: "نحط حدود بلا ما نقطع العلاقة", steps: ["حدد شنو هو السلوك اللي كيضرك بالضبط", "عبر على حدك بجملة قصيرة وواضحة ومحترمة", "كرر الحد بهدوء إلا تجاوز", "قلل الاحتكاك في المواضيع الحساسة مؤقتاً", "حافظ على المبادرات الطيبة الصغيرة"] }
-    ]
-  },
-  {
-    id: "time", keys: ["وقت", "تنظيم", "نهار", "كنضيع", "temps", "organisation", "wa9t", "ما كنلحقش"],
-    options: [
-      { t: "نظام النهار البسيط", steps: ["كل ليلة، كتب 3 مهام فقط لغدا", "حدد لكل مهمة وقت تقريبي", "ابدأ بالأهم قبل التيليفون", "خلي فترات فارغة للطوارئ", "راجع في آخر النهار: شنو سالا وشنو يتنقل لغدا"] },
-      { t: "نقص المشتتات", steps: ["حدد أكبر مشتت عندك (غالباً التيليفون)", "سكر الإشعارات غير الضرورية", "خدم بجلسات مركزة 25 دقيقة", "خصص وقت محدد للرسائل والسوشيال ميديا", "كافئ راسك بعد الجلسات المركزة"] }
-    ]
-  },
-  {
-    id: "relation", keys: ["علاقة", "صاحبي", "صاحبتي", "حبيبي", "خطيبي", "الزواج", "relation", "couple"],
-    options: [
-      { t: "نتواصل بوضوح", steps: ["فكر شنو بغيتي بالضبط قبل ما تهضر", "اختار وقت ومكان مناسبين للحوار", "عبر على مشاعرك بلا لوم ولا تعميم", "اسمع الرد حتى للآخر", "اتفقا على خطوة وحدة عملية"] },
-      { t: "نعطي مسافة ونراجع راسي", steps: ["خد يوم ولا يومين تفكر بهدوء", "كتب شنو كتحس بيه وشنو تحتاج", "راجع: واش هاد العلاقة كتزيدك ولا كتنقصك؟", "هضر مع شخص كتثق فيه", "قرر الخطوة الجاية بعقل هادئ ماشي في لحظة غضب"] }
-    ]
-  },
-  {
-    id: "general", keys: [],
-    options: [
-      { t: "نفكك المشكل ونبدا صغير", steps: ["كتب المشكل في جملة وحدة واضحة", "قسمو لأجزاء صغيرة", "اختار أسهل جزء وابدأ بيه اليوم", "حدد موعد تراجع فيه النتيجة", "عدّل الخطة حسب شنو تعلمتي"] },
-      { t: "نطلب مساعدة ونوسع الخيارات", steps: ["حدد شخص/جهة تقدر تعاون في هاد الموضوع", "حضر سؤالك بوضوح قبل ما تسول", "سجل جميع الأفكار بلا ما تحكم عليها", "اختار أفضل فكرة واقعية", "جربها على نطاق صغير أولاً"] }
-    ]
-  }
-];
-function solveCategory(text) {
-  const t = text.toLowerCase();
-  for (const c of SOLVE_CATS) if (c.keys.some((k) => t.includes(k))) return c;
-  return SOLVE_CATS[SOLVE_CATS.length - 1];
-}
-
-/* ============================================================
-   CHAT UI + real-AI bridge + voice
-   ============================================================ */
-const SYSTEM_PROMPT = `أنت «معاك» (M3AK AI)، مساعد شخصي مغربي ذكي ورفيق يومي. تتحدث بالدارجة المغربية الطبيعية (وتفهم العربية الفصحى، والفرنسية، والدارجة المكتوبة بالحروف اللاتينية/الأرقام، والمزج بين الدارجة والفرنسية). رد بنفس لغة المستخدم وروحه.
-
-قواعد صارمة:
-- كن دافئاً، محترماً، طبيعياً — ماشي روبوت رسمي. ردود قصيرة نسبياً ومناسبة للموقف.
-- استمع أولاً، لا تتسرع في النصائح. اطرح سؤالاً واحداً مفيداً فقط في كل رد.
-- إذا أراد المستخدم الفضفضة فقط، لا تفرض الحلول. إذا طلب حلاً، قدم خطوات بسيطة وواقعية.
-- استعمل الإيموجي باعتدال. تجنب الأحكام والتوبيخ والوعود غير الواقعية والعبارات الجاهزة المكررة.
-- تذكر سياق المحادثة ولا تكرر الأسئلة.
-- وضّح عند الحاجة أنك ذكاء اصطناعي داعم، لست إنساناً ولا معالجاً نفسياً. ممنوع التشخيصات والعلاجات الطبية.
-- في حالات الخطر أو الأفكار الانتحارية: تعاطف بقوة، وشجع المستخدم على التواصل فوراً مع شخص موثوق أو الإسعاف 15 أو الشرطة 19 (المغرب).
-- أوضاع المحادثة: «فضفض معايا» = استماع ودعم عاطفي غير علاجي. «حل مشكلتي» = تحليل منظم: فهم، أسئلة، خيارات، ثم خطوات عملية. «سول معاك» = مساعدة عامة يومية.
-- لا تشجع أبداً على التعلق العاطفي المفرط بك أو الاستغناء عن العلاقات الإنسانية.
-
-قواعد الدارجة (الأهم — صارمة جداً):
-- جاوب دائماً بالدارجة المغربية الأصيلة مكتوبة بالحروف العربية، حتى إلا كتب ليك المستخدم بالفصحى — إلا إلا طلب لغة أخرى بصريح العبارة.
-- كلماتك مغربية: بغيت، خاصني، عندي، دابا، بزاف، شوية، شحال، كيفاش، علاش، فين، غادي، راه، صافي، واخا، مزيان، بصح، والو، حتى حاجة، كنحس، كنبغي، ديالي، ديالك، سمح ليا، زعما، بحال، هاكا، تما، لهيا.
-- ممنوع فصحى الكتب والأخبار: ما تقولش «أشعر بالضغط الشديد» — قول «كنحس براسي مضغوط بزاف». ما تقولش «يجب أن تستريح» — قول «خاصك ترتاح». تجنب تماماً: لقد، سوف، إنّ، الآن، جداً، لذلك، عندما، أيضاً، للغاية، أشعر، عليك أن.
-- أمثلة على طريقتك:
-  • المستخدم: «راسي كيوجعني من الخدمة» → أنت: «الخدمة كتعبّق الواحد بصح… شنو أكثر حاجة كتقلقك فيها هاد الأيام؟»
-  • المستخدم: «ما كنعسش مزيان» → أنت: «النعاس إلا تخربق كيهلك النهار كامل. شحال من نهار ونتا هاكا؟»
-  • المستخدم: «شنو عاصمة أستراليا؟» → أنت: «عاصمة أستراليا هي كانبيرا، ماشي سيدني بحال ما كيظنو بزاف ديال الناس.»
-- هضر بحال صديق مغربي في القهوة: دافئ، طبيعي، بلا تكلف وبلا عبارات مترجمة.`;
-
-const chats = {
-  ask: { box: "askMessages", ctx: { used: {}, asked: [], turns: 0, history: [] }, opened: false },
-  vent: { box: "ventMessages", ctx: { used: {}, asked: [], turns: 0, history: [], helpType: null }, opened: false },
-  solve: { box: "solveMessages", ctx: { used: {}, asked: [], turns: 0, history: [] }, opened: false, stage: "describe", problem: "", cat: null }
-};
-
-function updateAiChip() {
-  const chip = $("#aiStatus");
-  const live = aiReady();
-  chip.textContent = live ? (settings.lang === "fr" ? "IA connectée" : "ذكاء حقيقي متصل") : (settings.lang === "fr" ? "Mode démo" : "وضع تجريبي");
-  chip.classList.toggle("live", live);
-}
-function aiReady() {
-  const a = settings.ai;
-  return !!(a.enabled && a.consent && a.endpoint && (a.key || a.endpoint.includes("pollinations.ai")));
-}
-
-function speak(text) {
-  if (!settings.voiceOut || !("speechSynthesis" in window)) return;
-  try {
-    speechSynthesis.cancel();
-    const clean = text.replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, "").slice(0, 400);
-    const u = new SpeechSynthesisUtterance(clean);
-    u.lang = "ar-SA"; u.rate = 1;
-    speechSynthesis.speak(u);
-  } catch {}
-}
-
-function addMsg(chatId, who, text, options) {
-  const box = $("#" + chats[chatId].box);
-  const div = document.createElement("div");
-  div.className = "msg " + who;
-  div.textContent = text;
-  if (options && options.length) {
-    options.forEach((o) => {
-      const b = document.createElement("button");
-      b.className = "opt-btn"; b.type = "button"; b.textContent = o.label;
-      b.addEventListener("click", () => { [...div.querySelectorAll(".opt-btn")].forEach((x) => x.disabled = true); o.onClick(); });
-      div.appendChild(b);
-    });
-  }
-  box.appendChild(div);
-  box.scrollTop = box.scrollHeight;
-  if (who === "bot") speak(text);
-  return div;
-}
-function showTyping(chatId) {
-  const box = $("#" + chats[chatId].box);
-  const t = document.createElement("div");
-  t.className = "typing"; t.textContent = settings.lang === "fr" ? "M3AK écrit..." : "معاك كيكتب...";
-  box.appendChild(t); box.scrollTop = box.scrollHeight;
-  return t;
-}
-
-function aiMessages(chatId, ctx) {
-  const modeNote = chatId === "vent" ? "\nالوضع الحالي: فضفض معايا (استماع ودعم)." : chatId === "solve" ? "\nالوضع الحالي: حل مشكلتي (تحليل وخطوات)." : "\nالوضع الحالي: سول معاك (مساعدة عامة).";
-  return [{ role: "system", content: SYSTEM_PROMPT + modeNote }, ...ctx.history.slice(-10)];
-}
-function aiHeaders() {
-  return { "Content-Type": "application/json", ...(settings.ai.key ? { "Authorization": "Bearer " + settings.ai.key } : {}) };
-}
-
-async function aiChat(mode, ctx, userText) {
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 60000);
-  let res;
-  try {
-    res = await fetch(settings.ai.endpoint, {
-      method: "POST",
-      headers: aiHeaders(),
-      body: JSON.stringify({ model: settings.ai.model || DEFAULT_AI_MODEL, messages: aiMessages(mode, ctx), temperature: 0.7, max_tokens: 600, reasoning_effort: "low" }),
-      signal: ctrl.signal
-    });
-  } finally { clearTimeout(timer); }
-  if (!res.ok) throw new Error("AI HTTP " + res.status);
-  const j = await res.json();
-  const out = j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
-  if (!out) throw new Error("AI empty");
-  return out.trim();
-}
-
-/* Streaming: the reply appears word-by-word as it is generated — the wait
-   feels seconds instead of the full generation time. Reasoning tokens from
-   the provider are skipped; only real content is shown. */
-async function aiChatStream(chatId, ctx, typing) {
-  const ctrl = new AbortController();
-  const killer = setTimeout(() => ctrl.abort(), 90000);
-  let bubble = null, full = "";
-  const firstTimer = setTimeout(() => { if (!bubble) ctrl.abort(); }, 45000);
-  try {
-    const res = await fetch(settings.ai.endpoint, {
-      method: "POST",
-      headers: aiHeaders(),
-      body: JSON.stringify({ model: settings.ai.model || DEFAULT_AI_MODEL, messages: aiMessages(chatId, ctx), temperature: 0.7, max_tokens: 600, reasoning_effort: "low", stream: true }),
-      signal: ctrl.signal
-    });
-    if (!res.ok || !res.body) throw new Error("AI stream " + res.status);
-    const reader = res.body.getReader();
-    const dec = new TextDecoder();
-    let buf = "";
-    for (;;) {
-      const got = await reader.read();
-      if (got.done) break;
-      buf += dec.decode(got.value, { stream: true });
-      let idx;
-      while ((idx = buf.indexOf("\n")) >= 0) {
-        const line = buf.slice(0, idx).trim(); buf = buf.slice(idx + 1);
-        if (!line.startsWith("data:")) continue;
-        const payload = line.slice(5).trim();
-        if (!payload || payload === "[DONE]") continue;
-        try {
-          const j = JSON.parse(payload);
-          const piece = (j.choices && j.choices[0] && j.choices[0].delta && j.choices[0].delta.content) || "";
-          if (piece) {
-            if (!bubble) { typing.remove(); bubble = addMsg(chatId, "bot", ""); }
-            full += piece;
-            bubble.textContent = full;
-            const box = $("#" + chats[chatId].box); box.scrollTop = box.scrollHeight;
-          }
-        } catch (e) { /* partial SSE line — ignore */ }
-      }
-    }
-  } catch (e) {
-    if (!full.trim()) throw e;
-  } finally { clearTimeout(killer); clearTimeout(firstTimer); }
-  if (!full.trim()) throw new Error("AI stream empty");
-  return full.trim();
-}
-
-async function botRespond(chatId, userText) {
-  const chat = chats[chatId];
-  const ctx = chat.ctx;
-  ctx.turns++;
-  ctx.history.push({ role: "user", content: userText });
-  const typing = showTyping(chatId);
-  const finish = (text) => {
-    typing.remove();
-    addMsg(chatId, "bot", text);
-    ctx.history.push({ role: "assistant", content: text });
-  };
-  if (aiReady()) {
-    const slowTimer = setTimeout(() => { typing.textContent = settings.lang === "fr" ? "M3AK écrit... (le service gratuit peut être lent 🌿)" : "معاك كيكتب... (المزود المجاني يقدر يتعطل شوية 🌿)"; }, 25000);
-    let out = null, streamed = false;
-    try { out = await aiChatStream(chatId, ctx, typing); streamed = true; }
-    catch (e1) { try { out = await aiChat(chatId, ctx, userText); } catch (e2) { out = null; } }
-    clearTimeout(slowTimer);
-    if (out !== null) {
-      if (streamed) { typing.remove(); ctx.history.push({ role: "assistant", content: out }); speak(out); }
-      else finish(out);
-      return;
-    }
-    typing.remove();
-    addMsg(chatId, "system", settings.lang === "fr" ? "La connexion IA a échoué — retour au mode démo local." : "الاتصال بالذكاء الاصطناعي ما خدامش دابا — رجعنا للوضع التجريبي المحلي.");
-    const r = engineReply(chatId, userText, ctx);
-    finish(r.text);
-    return;
-  }
-  const r = engineReply(chatId, userText, ctx);
-  setTimeout(() => finish(r.text), 450 + Math.random() * 450);
-}
-
-/* ----- Solve flow ----- */
-function solveHandle(userText) {
-  const chat = chats.solve;
-  const ctx = chat.ctx;
-  ctx.turns++;
-  if (CRISIS_KEYS.some((k) => userText.toLowerCase().includes(k))) {
-    addMsg("solve", "bot", crisisReply(detectLang(userText)));
-    return;
-  }
-  if (chat.stage === "describe") {
-    chat.problem = userText;
-    chat.cat = solveCategory(userText);
-    const typing = showTyping("solve");
-    setTimeout(() => {
-      typing.remove();
-      addMsg("solve", "bot", "فهمت عليك 🌿 هادا هو المشكل كيف ما شرحتيه:\n«" + userText + "»\n\n" + (SOLVE_CLARIFY[chat.cat.id] || SOLVE_CLARIFY.general));
-      chat.stage = "clarify";
-    }, 600);
-    return;
-  }
-  if (chat.stage === "clarify") {
-    const typing = showTyping("solve");
-    setTimeout(() => {
-      typing.remove();
-      const opts = chat.cat.options;
-      addMsg("solve", "bot", "تمام، دابا الصورة واضحة أكثر. هاهوما خيارات واقعية تقدر تختار منها — كليكي على اللي يناسبك:", opts.map((o, i) => ({
-        label: (i + 1) + ". " + o.t,
-        onClick: () => showPlan(i)
-      })));
-      chat.stage = "choose";
-    }, 600);
-    return;
-  }
-  if (chat.stage === "choose") {
-    const n = parseInt(userText.trim(), 10);
-    if (n >= 1 && n <= chat.cat.options.length) { showPlan(n - 1); return; }
-    addMsg("solve", "bot", "اختار رقم الخيار من القائمة اللي فوق، ولا كليكي عليه مباشرة 👆");
-    return;
-  }
-  if (chat.stage === "done") {
-    addMsg("solve", "bot", "إلا بغيتي نفكرو في مشكل آخر، كتبو ليا هنا ونبداو من جديد 🧩");
-    chat.stage = "describe";
-    return;
-  }
-}
-function showPlan(idx) {
-  const chat = chats.solve;
-  const opt = chat.cat.options[idx];
-  chat.stage = "done";
-  const area = $("#solvePlanArea");
-  area.innerHTML = "";
-  const box = document.createElement("div");
-  box.className = "plan-box";
-  box.innerHTML = "<h4>🧩 الخطة: " + esc(opt.t) + "</h4><ol>" + opt.steps.map((s) => "<li>" + esc(s) + "</li>").join("") + "</ol>";
-  const btn = document.createElement("button");
-  btn.className = "btn primary"; btn.textContent = "حوّل الحل إلى خطة في مهامي ✅";
-  btn.addEventListener("click", () => {
-    opt.steps.forEach((s) => data.tasks.push({ id: uid(), title: s, date: todayStr(), time: "", prio: "med", done: false, createdAt: todayStr() }));
-    persistData();
-    btn.disabled = true; btn.textContent = "تزادت في «نظم نهاري» ✅";
-    toast("تزادت الخطة في مهامك");
-    addMsg("solve", "bot", "صافي ✅ حولت الخطوات لمهام في «نظم نهاري» بتاريخ اليوم. تقدر تبدا بأول خطوة دابا، وتكمل الباقي بشوية بشوية. بالتوفيق 🌿");
-  });
-  const btn2 = document.createElement("button");
-  btn2.className = "btn ghost"; btn2.textContent = "رجوع للخيارات";
-  btn2.style.marginInlineStart = "8px";
-  btn2.addEventListener("click", () => { chat.stage = "choose"; addMsg("solve", "bot", "رجعنا للخيارات — كليكي على الخيار اللي يناسبك:", chat.cat.options.map((o, i) => ({ label: (i + 1) + ". " + o.t, onClick: () => showPlan(i) }))); });
-  box.appendChild(btn); box.appendChild(btn2);
-  area.appendChild(box);
-  area.scrollIntoView({ behavior: "smooth", block: "nearest" });
-}
-
-/* ----- Chat openers & chips ----- */
-const OPENERS = {
-  ask: () => settings.lang === "fr" ? "Bonjour 🌿 Je suis M3AK. Pose-moi ta question ou raconte-moi ce qui te préoccupe — travail, études, organisation, idées... Je réponds simplement et sans détour." : "أهلا وسهلا بيك في «سول معاك» 💬\nسولني على أي حاجة: تنظيم الوقت، القراية، الخدمة، أفكار مشاريع، ولا غير هضر معايا. أنا هنا.",
-  vent: () => settings.lang === "fr" ? "Bienvenue dans ton espace 💚\nIci tu peux parler librement, sans jugement. Je t'écoute d'abord — dis-moi, comment tu te sens aujourd'hui ?" : "أهلا وسهلا بيك 💚🌿\nمرحبا بيك في فضفض معايا — هنا تقدر تهضر براحتك وبلا ما تحس براسك محكوم عليك.\nأنا هنا نسمع ليك ونعاونك ترتب أفكارك، بشوية بشوية.\nقولي ليا، كيفاش حاس براسك اليوم؟",
-  solve: () => settings.lang === "fr" ? "On va démêler ton problème ensemble 🧩 Décris-le-moi avec tes mots, en une ou deux phrases." : "مرحبا بيك في «حل مشكلتي» 🧩\nشرح ليا المشكل بكلامك، في جملة ولا جوج — وغادي نفهموه بجوج ونلقاو خطوات عملية."
-};
-function openChat(chatId) {
-  const chat = chats[chatId];
-  if (chat.opened) return;
-  chat.opened = true;
-  addMsg(chatId, "bot", OPENERS[chatId]());
-}
-function setChips(elId, labels, onPick) {
-  const el = $("#" + elId);
-  el.innerHTML = "";
-  labels.forEach((l) => {
-    const b = document.createElement("button");
-    b.className = "chip"; b.type = "button"; b.textContent = l;
-    b.addEventListener("click", () => onPick(l));
-    el.appendChild(b);
+function bindCards(container) {
+  $$(".ccard", container).forEach((card) => {
+    const id = card.dataset.id;
+    $("[data-act='open']", card).addEventListener("click", () => openDetail(id));
+    $("[data-act='track']", card).addEventListener("click", () => toggleTrack(id));
   });
 }
-
-/* ----- Composers ----- */
-$$(".composer").forEach((form) => {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const chatId = form.dataset.chat;
-    const input = form.querySelector(".chat-input");
-    const text = input.value.trim();
-    if (!text) return;
-    input.value = "";
-    openChat(chatId);
-    addMsg(chatId, "user", text);
-    if (chatId === "solve") solveHandle(text); else botRespond(chatId, text);
-  });
-});
-function sendToChat(chatId, text) {
-  openChat(chatId);
-  addMsg(chatId, "user", text);
-  if (chatId === "solve") solveHandle(text); else botRespond(chatId, text);
-}
-$("#quickChatForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const v = $("#quickChatInput").value.trim();
-  if (!v) return;
-  $("#quickChatInput").value = "";
-  goto("ask");
-  sendToChat("ask", v);
-});
-
-/* Home quick starters: categories, topics and idea chips ask the assistant directly */
-$$("[data-ask]").forEach((b) => b.addEventListener("click", () => {
-  const t = (b.dataset.ask || "").trim();
-  if (!t) return;
-  goto("ask");
-  sendToChat("ask", settings.lang === "fr" && b.dataset.askFr ? b.dataset.askFr : t);
-}));
-$$("[data-prefill]").forEach((b) => b.addEventListener("click", () => {
-  goto("ask");
-  const inp = document.querySelector("#view-ask .chat-input");
-  if (inp) { inp.value = b.dataset.prefill || ""; inp.focus(); }
-}));
-
-/* Vent help-type selection */
-$$("#helpTypes .chip").forEach((b) => b.addEventListener("click", () => {
-  $$("#helpTypes .chip").forEach((x) => x.classList.remove("selected"));
-  b.classList.add("selected");
-  chats.vent.ctx.helpType = b.dataset.help;
-  openChat("vent");
-  const msgs = {
-    listen: "صافي، غادي نسمع ليك غير — بلا حلول وبلا نصائح حتى تطلبها نتا. هضر براحتك 💚",
-    feelings: "مزيان. غادي نعاونك تفهم شنو كتحس بيه بالضبط ونسميو المشاعر بأسمائها. شنو أكثر إحساس حاضر عندك دابا؟",
-    solution: "تمام. غادي نسمع ليك أولاً، ومن بعد نفكرو بجوج في خطوات عملية صغيرة. قولي ليا شنو واقع."
-  };
-  addMsg("vent", "bot", settings.lang === "fr" ? "C'est noté. Parle librement, je t'écoute 💚" : msgs[b.dataset.help]);
-}));
-
-/* Chips setup (after language known) */
-function setupChips() {
-  const fr = settings.lang === "fr";
-  setChips("askChips", fr ? ["Comment organiser mon temps ?", "Je suis stressé", "J'ai un examen bientôt", "Je veux progresser"] : ["كيفاش ننظم وقتي؟", "حاس براسي مضغوط", "عندي امتحان وقريب", "كنأجل كلشي"], (t) => sendToChat("ask", t));
-  setChips("ventChips", fr ? ["Aujourd'hui était dur", "Je me sens sous pression", "Je veux juste parler", "Je dors mal"] : ["اليوم كان صعيب", "حاس براسي مضغوط", "بغيت غير نهضر", "ما كنعسش مزيان"], (t) => sendToChat("vent", t));
-  setChips("solveChips", fr ? ["Problème au travail", "Je repousse tout", "Stress des examens"] : ["عندي مشكل في الخدمة", "كنأجل كلشي", "ضغط الامتحانات", "مشكل مع العائلة"], (t) => { goto("solve"); sendToChat("solve", t); });
-}
-
-/* ----- Voice (Web Speech API — free, browser-native) ----- */
-const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-if (SR) {
-  $$(".mic-btn").forEach((btn) => {
-    btn.hidden = false;
-    btn.addEventListener("click", () => startRec(btn, settings.lang === "fr" ? "fr-FR" : "ar-MA", true));
-  });
-}
-function startRec(btn, lang, canRetry) {
-  const fr = settings.lang === "fr";
-  try {
-    const rec = new SR();
-    rec.lang = lang;
-    rec.interimResults = false;
-    btn.classList.add("recording");
-    rec.onresult = (ev) => {
-      const text = ev.results[0][0].transcript;
-      const form = btn.closest("form");
-      form.querySelector(".chat-input").value = text;
-      btn.classList.remove("recording");
-      form.requestSubmit();
-    };
-    rec.onend = () => btn.classList.remove("recording");
-    rec.onerror = (e) => {
-      btn.classList.remove("recording");
-      const err = (e && e.error) || "";
-      if (err === "language-not-supported" && canRetry && lang !== "ar-SA") { startRec(btn, "ar-SA", false); return; }
-      const msgs = {
-        "not-allowed": fr ? "Autorise le micro dans les réglages du navigateur pour ce site" : "خاصك تفعّل إذن الميكروفون من إعدادات المتصفح لهاد الموقع",
-        "service-not-allowed": fr ? "Service vocal bloqué — essaie Chrome" : "خدمة الصوت محبوسة في هاد المتصفح — جرب تفتح في Chrome",
-        "network": fr ? "La reconnaissance vocale demande Internet" : "التعرف على الصوت خاصو إنترنت — تحقق من الاتصال ديالك",
-        "no-speech": fr ? "Je n'ai rien entendu — rapproche le téléphone et réessaie" : "ما سمعت والو — قرّب التيليفون من فمك وعاود",
-        "audio-capture": fr ? "Aucun micro détecté" : "ما تلقى حتى ميكروفون في الجهاز",
-        "language-not-supported": fr ? "Langue non supportée par ce navigateur" : "المتصفح ما كيدعمش التعرف بالعربية"
-      };
-      toast(msgs[err] || (fr ? "Le micro n'a pas marché — écris ton message" : "الميكرو ما خدامش — كتب رسالتك"));
-    };
-    rec.start();
-  } catch { toast(fr ? "Voix non supportée dans ce navigateur" : "الصوت غير مدعوم في هاد المتصفح"); }
-}
-
-/* Open chats when their view is shown */
-const _goto = goto;
-goto = function (view) {
-  _goto(view);
-  if (["ask", "vent", "solve"].includes(view)) openChat(view);
-};
-
-/* ============================================================
-   TASKS (نظم نهاري) / GOALS & HABITS (تقدم ديالي) / SETTINGS
-   ============================================================ */
-let editingTaskId = null;
-let taskFilter = "today";
-const PRIO_W = { high: 0, med: 1, low: 2 };
-const PRIO_LABEL = { high: () => settings.lang === "fr" ? "Haute" : "عالية", med: () => settings.lang === "fr" ? "Moyenne" : "متوسطة", low: () => settings.lang === "fr" ? "Basse" : "منخفضة" };
-
-function fmtDate(d) {
-  if (!d) return "";
-  const t = todayStr();
-  const tm = todayStr(new Date(Date.now() + 864e5));
-  if (d === t) return settings.lang === "fr" ? "Aujourd'hui" : "اليوم";
-  if (d === tm) return settings.lang === "fr" ? "Demain" : "غدا";
-  return d;
-}
-function inWeek(d) {
-  if (!d) return false;
-  const now = new Date(); now.setHours(0, 0, 0, 0);
-  const dt = new Date(d + "T00:00:00");
-  const diff = (dt - now) / 864e5;
-  return diff >= 0 && diff <= 6;
-}
-function renderTasks() {
-  const t = todayStr();
-  let list = data.tasks.slice();
-  if (taskFilter === "today") list = list.filter((x) => x.date === t || (x.date < t && !x.done));
-  if (taskFilter === "week") list = list.filter((x) => inWeek(x.date) || (x.date < t && !x.done));
-  list.sort((a, b) => (a.done - b.done) || (PRIO_W[a.prio] - PRIO_W[b.prio]) || String(a.date).localeCompare(String(b.date)) || String(a.time || "").localeCompare(String(b.time || "")));
-  const el = $("#taskList");
-  if (!list.length) {
-    el.innerHTML = '<div class="empty">' + (settings.lang === "fr" ? "Aucune tâche ici pour le moment 🌿 Ajoute ta première tâche ci-dessus." : "ما كاينة حتى مهمة هنا دابا 🌿 زيد أول مهمة من الفوق.") + "</div>";
-    return;
-  }
-  el.innerHTML = "";
-  list.forEach((task) => {
-    const row = document.createElement("div");
-    row.className = "task" + (task.done ? " done" : "");
-    const overdue = task.date < t && !task.done;
-    row.innerHTML =
-      '<input type="checkbox" class="task-check" ' + (task.done ? "checked" : "") + ">" +
-      '<div class="task-body"><div class="task-title">' + esc(task.title) + "</div>" +
-      '<div class="task-meta"><span>📅 ' + esc(fmtDate(task.date)) + (overdue ? (settings.lang === "fr" ? " (en retard)" : " (متأخرة)") : "") + "</span>" +
-      (task.time ? "<span>🕐 " + esc(task.time) + "</span>" : "") +
-      '<span class="prio ' + task.prio + '">' + PRIO_LABEL[task.prio]() + "</span></div></div>" +
-      '<div class="task-tools"><button class="mini-btn" data-act="edit" title="تعديل">✏️</button><button class="mini-btn" data-act="del" title="حذف">🗑️</button></div>';
-    row.querySelector(".task-check").addEventListener("change", (e) => {
-      task.done = e.target.checked;
-      task.doneAt = task.done ? todayStr() : null;
-      persistData(); renderTasks();
-      if (task.done) toast(settings.lang === "fr" ? "Bien joué ✅" : "أحسنت ✅ مهمة سالات");
-    });
-    row.querySelector('[data-act="edit"]').addEventListener("click", () => {
-      editingTaskId = task.id;
-      $("#taskTitle").value = task.title;
-      $("#taskDate").value = task.date || "";
-      $("#taskTime").value = task.time || "";
-      $("#taskPrio").value = task.prio;
-      $("#taskSubmit").textContent = settings.lang === "fr" ? "Enregistrer" : "حفظ التعديل";
-      $("#taskCancelEdit").hidden = false;
-      $("#taskTitle").focus();
-    });
-    row.querySelector('[data-act="del"]').addEventListener("click", () => {
-      if (!confirm(settings.lang === "fr" ? "Supprimer cette tâche ?" : "متأكد بغيتي تمسح هاد المهمة؟")) return;
-      data.tasks = data.tasks.filter((x) => x.id !== task.id);
-      persistData(); renderTasks();
-    });
-    el.appendChild(row);
-  });
-}
-$("#taskForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const title = $("#taskTitle").value.trim();
-  if (!title) return;
-  const fields = { title, date: $("#taskDate").value || todayStr(), time: $("#taskTime").value || "", prio: $("#taskPrio").value };
-  if (editingTaskId) {
-    const t = data.tasks.find((x) => x.id === editingTaskId);
-    if (t) Object.assign(t, fields);
-    editingTaskId = null;
-    $("#taskSubmit").textContent = I18N[settings.lang === "fr" ? "fr" : "ar"].addTask;
-    $("#taskCancelEdit").hidden = true;
-    toast(settings.lang === "fr" ? "Tâche modifiée ✅" : "تبدلات المهمة ✅");
-  } else {
-    data.tasks.push(Object.assign({ id: uid(), done: false, createdAt: todayStr(), doneAt: null }, fields));
-    toast(settings.lang === "fr" ? "Tâche ajoutée ✅" : "تزادت المهمة ✅");
-  }
+function toggleTrack(id) {
+  const i = data.tracked.indexOf(id);
+  if (i >= 0) { data.tracked.splice(i, 1); toast("تحيدات من مبارياتي"); }
+  else { data.tracked.push(id); toast("تزادت في مبارياتي ⭐"); }
   persistData();
-  e.target.reset();
-  $("#taskDate").value = todayStr();
-  renderTasks();
-});
-$("#taskCancelEdit").addEventListener("click", () => {
-  editingTaskId = null;
-  $("#taskForm").reset(); $("#taskDate").value = todayStr();
-  $("#taskSubmit").textContent = I18N[settings.lang === "fr" ? "fr" : "ar"].addTask;
-  $("#taskCancelEdit").hidden = true;
-});
-$$("#taskTabs .tab").forEach((tab) => tab.addEventListener("click", () => {
-  $$("#taskTabs .tab").forEach((x) => x.classList.remove("active"));
-  tab.classList.add("active");
-  taskFilter = tab.dataset.filter;
-  renderTasks();
-}));
+  renderHome(); renderMine(); updateBadge();
+}
+function updateBadge() {
+  const n = data.tracked.map(findItem).filter((it) => it && isOpen(it)).length;
+  const b = $("#mineBadge");
+  b.hidden = n === 0; b.textContent = n;
+}
 
-$("#suggestPlanBtn").addEventListener("click", () => {
-  const t = todayStr();
-  const open = data.tasks.filter((x) => !x.done && (x.date === t || x.date < t))
-    .sort((a, b) => PRIO_W[a.prio] - PRIO_W[b.prio]);
-  const box = $("#planSuggestion");
-  box.hidden = false;
-  $("#dayReview").hidden = true;
-  if (!open.length) {
-    box.innerHTML = "<h4>🌿 " + (settings.lang === "fr" ? "Journée libre" : "نهار خفيف") + "</h4><p>" + (settings.lang === "fr" ? "Aucune tâche ouverte pour aujourd'hui. Profite-en ou ajoute une petite tâche utile." : "ما عندك حتى مهمة مفتوحة اليوم. استمتع بنهارك ولا زيد مهمة صغيرة مفيدة.") + "</p>";
-    return;
+/* ---------- Home ---------- */
+let activeSector = "الكل";
+let searchTerm = "";
+function renderHome() {
+  $("#updatedAt").textContent = UPDATED_AT ? fmtDateShort(UPDATED_AT) + " 2026" : "—";
+  const open = openItems();
+  const totalPosts = open.reduce((s, it) => s + (it.posts || 0), 0);
+  const nearest = open[0];
+  $("#statsStrip").innerHTML =
+    `<div class="stat"><strong>${open.length}</strong><span>مباراة مفتوحة</span></div>` +
+    `<div class="stat"><strong>${totalPosts}</strong><span>منصب معلن</span></div>` +
+    `<div class="stat"><strong>${nearest ? daysLeft(nearest) : "—"}</strong><span>يوم لأقرب أجل</span></div>`;
+
+  /* sector chips */
+  const sectors = ["الكل", ...new Set(CONCOURS.map((c) => c.sector))];
+  $("#sectorChips").innerHTML = sectors.map((s) => `<button type="button" class="chip ${s === activeSector ? "on" : ""}" data-sector="${esc(s)}">${esc(s)}</button>`).join("");
+  $$("#sectorChips .chip").forEach((ch) => ch.addEventListener("click", () => { activeSector = ch.dataset.sector; renderHome(); }));
+
+  /* alerts for tracked items */
+  const urgent = data.tracked.map(findItem).filter((it) => it && isOpen(it) && daysLeft(it) <= 7).sort(byDeadline);
+  $("#alertBox").innerHTML = urgent.length
+    ? `<div class="alert">⏰ <strong>تنبيه أجل:</strong> ${urgent.map((it) => `${esc(it.org)} — ${deadlineLabel(it).txt}`).join(" • ")}</div>`
+    : "";
+
+  const term = searchTerm.trim();
+  const list = open.filter((it) =>
+    (activeSector === "الكل" || it.sector === activeSector) &&
+    (!term || (it.title + " " + it.org + " " + it.diploma + " " + it.region).includes(term))
+  );
+  $("#concoursList").innerHTML = list.map(cardHTML).join("");
+  $("#listEmpty").hidden = list.length > 0;
+  bindCards($("#concoursList"));
+  updateBadge();
+}
+$("#searchInput").addEventListener("input", (e) => { searchTerm = e.target.value; renderHome(); });
+
+/* ---------- Detail ---------- */
+let detailId = null;
+function gcalLink(it) {
+  const d = deadlineDate(it);
+  const p = (n) => String(n).padStart(2, "0");
+  const stamp = (x) => `${x.getFullYear()}${p(x.getMonth() + 1)}${p(x.getDate())}T${p(x.getHours())}${p(x.getMinutes())}00`;
+  const end = new Date(d.getTime() + 3600000);
+  return "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" +
+    encodeURIComponent("آخر أجل: " + it.title + " — " + it.org) +
+    "&dates=" + stamp(d) + "/" + stamp(end) +
+    "&details=" + encodeURIComponent("الترشيح عبر: " + it.applyUrl);
+}
+function openDetail(id) {
+  const it = findItem(id);
+  if (!it) return;
+  detailId = id;
+  const dl = deadlineLabel(it);
+  const isT = tracked(id);
+  const checks = data.checks[id] || [];
+  const shareTxt = encodeURIComponent(`🎯 مباراة: ${it.title}\n🏛️ ${it.org}\n🗓️ آخر أجل: ${fmtDate(it.deadline)}\nالتفاصيل في رادار المباريات: https://hamzaazemat105-wq.github.io/m3ak-ai/`);
+  $("#detailBox").innerHTML = `
+  <article class="detail">
+    <div class="ccard-top"><span class="sector">${esc(it.sector)}</span><span class="count ${dl.cls}">${dl.txt}</span></div>
+    <h2>${esc(it.title)}</h2>
+    <p class="org">🏛️ ${esc(it.org)}</p>
+    <div class="meta">
+      ${it.posts ? `<span>💼 ${it.posts} منصب</span>` : ""}
+      <span>📍 ${esc(it.region)}</span>
+      ${it.salary ? `<span>💰 ${esc(it.salary)}</span>` : ""}
+    </div>
+    <div class="kv"><span>🎓 الدبلوم المطلوب</span><strong>${esc(it.diploma)}</strong></div>
+    <div class="kv"><span>🗓️ آخر أجل للترشيح</span><strong>${fmtDate(it.deadline)}</strong></div>
+    ${it.exam ? `<div class="kv"><span>✍️ تاريخ المباراة</span><strong>${fmtDate(it.exam)}</strong></div>` : ""}
+    <div class="kv"><span>📣 تاريخ الإعلان</span><strong>${fmtDate(it.announced)}</strong></div>
+
+    <h3>📌 الشروط</h3>
+    <ul class="ticks">${(it.conditions || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
+
+    <h3>🗂️ الوثائق المطلوبة <small class="muted">(علّم على اللي وجدتي — التقدم: <span id="docPct">${checkProgress(it)}</span>%)</small></h3>
+    <div class="docs">
+      ${(it.docs || []).map((doc, i) => `<label class="doc"><input type="checkbox" data-doc="${i}" ${checks.includes(i) ? "checked" : ""}><span>${esc(doc)}</span></label>`).join("")}
+    </div>
+
+    <h3>🧭 مراحل المباراة</h3>
+    <ol class="steps">${(it.stages || []).map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
+
+    ${it.applyNote ? `<div class="alert soft">💡 ${esc(it.applyNote)}</div>` : ""}
+
+    <div class="detail-actions">
+      <a class="btn primary" href="${esc(it.applyUrl)}" target="_blank" rel="noopener">🌐 بوابة الترشيح الرسمية</a>
+      <a class="btn" href="${esc(it.detailsUrl)}" target="_blank" rel="noopener">📄 نص الإعلان الكامل</a>
+      <a class="btn" href="${gcalLink(it)}" target="_blank" rel="noopener">📅 أضف الأجل لتقويمك</a>
+      <button class="btn star ${isT ? "on" : ""}" type="button" id="detailTrack">${isT ? "⭐ متتبعة" : "☆ تتبّع هاد المباراة"}</button>
+      <a class="btn" href="https://wa.me/?text=${shareTxt}" target="_blank" rel="noopener">📤 شارك في واتساب</a>
+    </div>
+    <p class="muted small">المرجع النهائي هو الإعلان الرسمي المنشور من الجهة المنظمة. تحقق دائماً من الشروط والوثائق في نص الإعلان قبل الترشيح.</p>
+  </article>`;
+  $$("#detailBox [data-doc]").forEach((cb) => cb.addEventListener("change", () => {
+    const idx = Number(cb.dataset.doc);
+    const arr = data.checks[id] || (data.checks[id] = []);
+    const p = arr.indexOf(idx);
+    if (cb.checked && p < 0) arr.push(idx);
+    if (!cb.checked && p >= 0) arr.splice(p, 1);
+    persistData();
+    $("#docPct").textContent = checkProgress(it);
+  }));
+  $("#detailTrack").addEventListener("click", () => { toggleTrack(id); openDetail(id); });
+  goto("detail");
+}
+
+/* ---------- Eligibility ---------- */
+function fillSectors() {
+  const sel = $("#chkSector");
+  const sectors = [...new Set(CONCOURS.map((c) => c.sector))];
+  sel.innerHTML = `<option value="">كل القطاعات</option>` + sectors.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
+  if (data.profile.sector) sel.value = data.profile.sector;
+}
+function runCheck() {
+  const age = Number($("#chkAge").value || 0);
+  const rank = Number($("#chkDiploma").value || 0);
+  const sector = $("#chkSector").value;
+  if (!age || !rank) { toast("عمر العمر والديبلوم أولاً"); return; }
+  data.profile = { age, rank, sector };
+  persistData();
+  const open = openItems().filter((it) => !sector || it.sector === sector);
+  const ok = [], no = [];
+  for (const it of open) {
+    const reasons = [];
+    if (rank < (it.diplomaRank || 0)) reasons.push("خاصك " + (RANK_LABEL[it.diplomaRank] || "ديبلوم أعلى"));
+    if (it.maxAge && age > it.maxAge) reasons.push("السن الأقصى " + it.maxAge + " سنة");
+    (reasons.length ? no : ok).push({ it, reasons });
   }
-  const blocks = settings.lang === "fr" ? ["🌅 Matin — le plus important", "☀️ Après-midi", "🌙 Soir — le léger"] : ["🌅 الصباح — الأهم أولاً", "☀️ الظهر/العشية — المتوسط", "🌙 المساء — الخفيف"];
-  const groups = [[], [], []];
-  open.forEach((task, i) => groups[Math.min(2, Math.floor(i / Math.max(1, Math.ceil(open.length / 3))))].push(task));
-  box.innerHTML = "<h4>🗓️ " + (settings.lang === "fr" ? "Plan proposé (suggestion seulement — rien n'est modifié)" : "خطة مقترحة (اقتراح فقط — ما تبدل حتى حاجة في مهامك)") + "</h4>" +
-    groups.map((g, i) => g.length ? "<p><strong>" + blocks[i] + "</strong></p><ul>" + g.map((x) => "<li>" + esc(x.title) + "</li>").join("") + "</ul>" : "").join("") +
-    "<p>" + (settings.lang === "fr" ? "Commence par la première tâche du matin, le reste suivra 🌿" : "ابدأ بأول مهمة في الصباح، والباقي غادي يتبع 🌿") + "</p>";
+  $("#chkResults").innerHTML =
+    `<h3 class="page-title">يناسبوك: ${ok.length} مباراة ✅</h3>` +
+    (ok.length ? `<div class="list">${ok.map(({ it }) => cardHTML(it)).join("")}</div>` : `<p class="empty">حتى مباراة مفتوحة ما كتناسب هاد المعايير دابا — راجع من بعد، المباريات كتتجدد كل يوم.</p>`) +
+    (no.length ? `<h3 class="page-title">ما كتناسبكش دابا: ${no.length}</h3><div class="list">${no.map(({ it, reasons }) => cardHTML(it).replace("</article>", `<p class="why">🚧 ${reasons.join(" • ")}</p></article>`)).join("")}</div>` : "");
+  bindCards($("#chkResults"));
+  $("#chkResults").scrollIntoView({ behavior: "smooth" });
+}
+$("#chkBtn").addEventListener("click", runCheck);
+
+/* ---------- Mine ---------- */
+function renderMine() {
+  const items = data.tracked.map(findItem).filter(Boolean).sort(byDeadline);
+  const open = items.filter(isOpen);
+  const closed = items.filter((it) => !isOpen(it));
+  const render = (it) => cardHTML(it).replace("</article>", `<div class="prog"><div class="bar"><i style="width:${checkProgress(it)}%"></i></div><span>الوثائق: ${checkProgress(it)}%</span></div></article>`);
+  $("#mineList").innerHTML =
+    (open.length ? open.map(render).join("") : "") +
+    (closed.length ? `<h3 class="page-title">سالا أجلها</h3>` + closed.map(render).join("") : "");
+  $("#mineEmpty").hidden = items.length > 0;
+  bindCards($("#mineList"));
+  updateBadge();
+}
+
+/* ---------- Settings ---------- */
+$("#wipeBtn").addEventListener("click", () => {
+  if (!confirm("غادي يتمسح كلشي من هاد الجهاز: المباريات المتتبعة والوثائق والملف. متأكد؟")) return;
+  data = { tracked: [], checks: {}, profile: { age: "", rank: "", sector: "" } };
+  persistData();
+  renderHome(); renderMine();
+  toast("تمسح كلشي من هاد الجهاز");
 });
-$("#dayReviewBtn").addEventListener("click", () => {
-  const t = todayStr();
-  const todays = data.tasks.filter((x) => x.date === t || x.doneAt === t);
-  const done = todays.filter((x) => x.done);
-  const left = todays.filter((x) => !x.done);
-  const box = $("#dayReview");
-  box.hidden = false;
-  $("#planSuggestion").hidden = true;
-  box.innerHTML = "<h4>🌙 " + (settings.lang === "fr" ? "Bilan du jour" : "مراجعة نهاية النهار") + "</h4>" +
-    "<p>" + (settings.lang === "fr" ? `Tu as terminé <strong>${done.length}</strong> tâche(s) sur ${todays.length} aujourd'hui.` : `ساليتي <strong>${done.length}</strong> من ${todays.length} مهام اليوم.`) + "</p>" +
-    (done.length ? "<ul>" + done.map((x) => "<li>✅ " + esc(x.title) + "</li>").join("") + "</ul>" : "") +
-    "<p>" + (left.length
-      ? (settings.lang === "fr" ? "Ce qui reste peut passer à demain — sans culpabilité. L'important, c'est la continuité 🌿" : "اللي بقى يقدر يتنقل لغدا — بلا إحساس بالذنب. المهم هو الاستمرارية 🌿")
-      : (settings.lang === "fr" ? "Journée complète, bravo 🎉" : "نهار كامل سالا، برافو عليك 🎉")) + "</p>";
+
+/* ---------- Install (PWA) ---------- */
+let deferredInstall = null;
+window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferredInstall = e; showInstall(); });
+function showInstall() {
+  if (window.matchMedia("(display-mode: standalone)").matches) return;
+  $("#installCard").hidden = false;
+  $("#installHint").textContent = deferredInstall ? "" : "في Chrome: القائمة ⋮ ثم «تثبيت التطبيق». في فايرفوكس: القائمة ثم «تثبيت».";
+}
+$("#installBtn").addEventListener("click", async () => {
+  if (deferredInstall) { deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null; $("#installCard").hidden = true; }
+  else toast("استعمل قائمة المتصفح ⋮ ← تثبيت التطبيق");
 });
+if (!window.matchMedia("(display-mode: standalone)").matches) showInstall();
 
-/* ----- Goals & habits ----- */
-function renderProgress() {
-  // Weekly summary
-  const now = new Date(); now.setHours(0, 0, 0, 0);
-  const weekDates = Array.from({ length: 7 }, (_, i) => todayStr(new Date(now - i * 864e5)));
-  const doneWeek = data.tasks.filter((x) => x.doneAt && weekDates.includes(x.doneAt)).length;
-  const checksWeek = data.habits.reduce((a, h) => a + weekDates.filter((d) => h.checks && h.checks[d]).length, 0);
-  const avgGoal = data.goals.length ? Math.round(data.goals.reduce((a, g) => a + (g.progress || 0), 0) / data.goals.length) : 0;
-  const fr = settings.lang === "fr";
-  $("#weekSummary").innerHTML =
-    `<span class="stat">✅ ${fr ? "Tâches finies (7 j)" : "مهام سالات هاد الأسبوع"}: <b>${doneWeek}</b></span>` +
-    `<span class="stat">🌱 ${fr ? "Habitudes tenues" : "مرات التزمت بعاداتي"}: <b>${checksWeek}</b></span>` +
-    `<span class="stat">🎯 ${fr ? "Progrès moyen des objectifs" : "متوسط تقدم الأهداف"}: <b>${avgGoal}%</b></span>` +
-    `<p class="soft-note" style="flex-basis:100%">${fr ? "Chaque petit pas compte. On avance pas à pas 🌿" : "كل خطوة صغيرة كتحسب. كنتقدمو خطوة بخطوة 🌿"}</p>`;
-
-  // Goals
-  const gl = $("#goalList");
-  gl.innerHTML = data.goals.length ? "" : '<div class="empty">' + (fr ? "Pas encore d'objectifs 🎯 Ajoute ton premier objectif." : "ما كاين حتى هدف بعد 🎯 زيد أول هدف ديالك.") + "</div>";
-  data.goals.forEach((g) => {
-    const div = document.createElement("div");
-    div.className = "goal";
-    div.innerHTML = '<div class="goal-top"><span class="goal-title">' + esc(g.title) + '</span><button class="mini-btn" title="حذف">🗑️</button></div>' +
-      '<input type="range" min="0" max="100" step="5" value="' + (g.progress || 0) + '">' +
-      '<span class="goal-pct">' + (g.progress || 0) + "%</span>";
-    div.querySelector("input[type=range]").addEventListener("input", (e) => {
-      g.progress = +e.target.value;
-      div.querySelector(".goal-pct").textContent = g.progress + "%";
-      persistData();
-    });
-    div.querySelector(".mini-btn").addEventListener("click", () => {
-      if (!confirm(fr ? "Supprimer cet objectif ?" : "تمسح هاد الهدف؟")) return;
-      data.goals = data.goals.filter((x) => x.id !== g.id);
-      persistData(); renderProgress();
-    });
-    gl.appendChild(div);
-  });
-
-  // Habits
-  const hl = $("#habitList");
-  const t = todayStr();
-  hl.innerHTML = data.habits.length ? "" : '<div class="empty">' + (fr ? "Pas encore d'habitudes 🌱 Commence par une seule, toute petite." : "ما كاينة حتى عادة بعد 🌱 بدا بوحدة صغيرة غير.") + "</div>";
-  data.habits.forEach((h) => {
-    h.checks = h.checks || {};
-    let streak = 0;
-    const startOffset = h.checks[t] ? 0 : 1;
-    for (let i = startOffset; ; i++) {
-      const d = todayStr(new Date(Date.now() - i * 864e5));
-      if (h.checks[d]) streak++; else break;
+/* ---------- Boot ---------- */
+async function boot() {
+  applyTheme();
+  if (data.profile.age) $("#chkAge").value = data.profile.age;
+  if (data.profile.rank) $("#chkDiploma").value = data.profile.rank;
+  const cached = load(LS_CACHE, null);
+  if (cached && Array.isArray(cached.items)) { CONCOURS = cached.items; UPDATED_AT = cached.updatedAt || ""; fillSectors(); renderHome(); }
+  try {
+    const r = await fetch("concours.json", { cache: "no-store" });
+    if (r.ok) {
+      const j = await r.json();
+      if (j && Array.isArray(j.items)) { CONCOURS = j.items; UPDATED_AT = j.updatedAt || ""; save(LS_CACHE, j); }
     }
-    const div = document.createElement("div");
-    div.className = "habit";
-    div.innerHTML = '<div class="habit-body"><div class="habit-title">' + esc(h.title) + '</div><div class="habit-streak">🔥 ' + streak + " " + (fr ? "jour(s) d'affilée" : "يوم متتالي") + "</div></div>";
-    const btn = document.createElement("button");
-    btn.className = "habit-check" + (h.checks[t] ? " done" : "");
-    btn.textContent = h.checks[t] ? "✅ " + (fr ? "Fait" : "ساليتها") : (fr ? "Fait aujourd'hui" : "درتها اليوم");
-    btn.addEventListener("click", () => {
-      h.checks[t] = !h.checks[t];
-      if (!h.checks[t]) delete h.checks[t];
-      persistData(); renderProgress();
-    });
-    const del = document.createElement("button");
-    del.className = "mini-btn"; del.textContent = "🗑️";
-    del.addEventListener("click", () => {
-      if (!confirm(fr ? "Supprimer cette habitude ?" : "تمسح هاد العادة؟")) return;
-      data.habits = data.habits.filter((x) => x.id !== h.id);
-      persistData(); renderProgress();
-    });
-    div.appendChild(btn); div.appendChild(del);
-    hl.appendChild(div);
-  });
+  } catch {}
+  fillSectors();
+  if (data.profile.rank) $("#chkDiploma").value = data.profile.rank;
+  renderHome();
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 }
-$("#goalForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const v = $("#goalTitle").value.trim();
-  if (!v) return;
-  data.goals.push({ id: uid(), title: v, progress: 0, createdAt: todayStr() });
-  persistData(); e.target.reset(); renderProgress();
-  toast(settings.lang === "fr" ? "Objectif ajouté 🎯" : "تزاد الهدف 🎯");
-});
-$("#habitForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const v = $("#habitTitle").value.trim();
-  if (!v) return;
-  data.habits.push({ id: uid(), title: v, checks: {} });
-  persistData(); e.target.reset(); renderProgress();
-  toast(settings.lang === "fr" ? "Habitude ajoutée 🌱" : "تزادت العادة 🌱");
-});
-
-/* ----- Settings ----- */
-function renderSettings() {
-  $("#setName").value = settings.name || "";
-  $("#setLang").value = settings.lang;
-  $("#setDark").checked = !!settings.dark;
-  $("#setVoice").checked = !!settings.voiceOut;
-  $("#setMemory").checked = !!settings.memory;
-  $("#aiConsent").checked = !!settings.ai.consent;
-  $("#aiEnable").checked = !!settings.ai.enabled;
-  renderMemoryBox();
-  updateAiChip();
-  const aiLine = $("#aiStatusLine");
-  if (aiLine) aiLine.textContent = aiReady()
-    ? (settings.lang === "fr" ? "La vraie IA est activée ✅ — M3AK te répond avec un vrai modèle d'IA." : "الذكاء الحقيقي مفعّل ✅ — معاك كيجاوبك بنموذج ذكاء اصطناعي حقيقي.")
-    : (settings.lang === "fr" ? "La vraie IA est désactivée — mode local simplifié." : "الذكاء الحقيقي مطفي — الوضع المحلي المبسّط خدام.");
-}
-function renderMemoryBox() {
-  const box = $("#memoryBox");
-  if (!settings.memory) { box.hidden = true; return; }
-  box.hidden = false;
-  const fr = settings.lang === "fr";
-  const goals = data.goals.map((g) => "<li>🎯 " + esc(g.title) + " (" + (g.progress || 0) + "%)</li>").join("");
-  $("#memoryContent").innerHTML =
-    "<p><strong>" + (fr ? "Prénom" : "الاسم") + ":</strong> " + (settings.name ? esc(settings.name) : "—") + "</p>" +
-    "<p><strong>" + (fr ? "Langue" : "اللغة") + ":</strong> " + (settings.lang === "fr" ? "Français" : settings.lang === "ar" ? "العربية" : "الدارجة المغربية") + "</p>" +
-    (goals ? "<p><strong>" + (fr ? "Objectifs" : "الأهداف") + ":</strong></p><ul>" + goals + "</ul>" : "<p>" + (fr ? "Aucun objectif enregistré." : "ما كاين حتى هدف مسجل.") + "</p>") +
-    '<p class="soft-note">' + (fr ? "Tout est stocké uniquement sur cet appareil. Les conversations ne sont jamais enregistrées automatiquement." : "كلشي محفوظ غير في هاد الجهاز. المحادثات ما كتتحفظش تلقائياً أبداً.") + "</p>";
-}
-$("#setName").addEventListener("change", (e) => { settings.name = e.target.value.trim(); persistSettings(); renderMemoryBox(); });
-$("#setLang").addEventListener("change", (e) => { settings.lang = e.target.value; persistSettings(); applyI18n(); setupChips(); updateAiChip(); renderHome(); });
-$("#setDark").addEventListener("change", (e) => { settings.dark = e.target.checked; persistSettings(); applyTheme(); });
-$("#setVoice").addEventListener("change", (e) => { settings.voiceOut = e.target.checked; persistSettings(); if (settings.voiceOut) toast(settings.lang === "fr" ? "Réponses vocales activées 🔊" : "الردود الصوتية تفعّلات 🔊"); });
-$("#setMemory").addEventListener("change", (e) => { settings.memory = e.target.checked; persistSettings(); renderMemoryBox(); });
-$("#aiConsent").addEventListener("change", (e) => { settings.ai.consent = e.target.checked; persistSettings(); updateAiChip(); renderSettings(); });
-$("#aiEnable").addEventListener("change", (e) => {
-  settings.ai.enabled = e.target.checked; persistSettings(); updateAiChip(); renderSettings();
-  if (e.target.checked && aiReady()) toast(settings.lang === "fr" ? "Vraie IA activée 🤖" : "الذكاء الحقيقي تفعّل 🤖");
-});
-$("#exportData").addEventListener("click", () => {
-  const out = { exportedAt: new Date().toISOString(), settings: Object.assign({}, settings, { ai: Object.assign({}, settings.ai, { key: undefined }) }), data };
-  const blob = new Blob([JSON.stringify(out, null, 2)], { type: "application/json" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "m3ak-data.json";
-  a.click();
-  URL.revokeObjectURL(a.href);
-});
-$("#deleteAll").addEventListener("click", () => {
-  if (!confirm(settings.lang === "fr" ? "Tout effacer définitivement (tâches, objectifs, habitudes, réglages) ?" : "غادي يتمسح كلشي نهائياً (المهام، الأهداف، العادات، الإعدادات). متأكد؟")) return;
-  localStorage.removeItem(LS_SETTINGS);
-  localStorage.removeItem(LS_DATA);
-  location.reload();
-});
-
-/* ----- PWA install ----- */
-let deferredPrompt = null;
-function showInstallBtns(show) {
-  ["#installBtn", "#installBtnHome"].forEach((s) => { const b = $(s); if (b) b.hidden = !show; });
-}
-async function promptInstall() {
-  if (!deferredPrompt) return;
-  deferredPrompt.prompt();
-  await deferredPrompt.userChoice;
-  deferredPrompt = null;
-  showInstallBtns(false);
-}
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  showInstallBtns(true);
-});
-window.addEventListener("appinstalled", () => {
-  deferredPrompt = null;
-  showInstallBtns(false);
-  const c = $("#installCard"); if (c) c.hidden = true;
-});
-$("#installBtn").addEventListener("click", promptInstall);
-const installHomeBtn = $("#installBtnHome");
-if (installHomeBtn) installHomeBtn.addEventListener("click", promptInstall);
-if (window.matchMedia("(display-mode: standalone)").matches) {
-  const c = $("#installCard"); if (c) c.hidden = true;
-}
-
-/* ----- Init ----- */
-applyTheme();
-applyI18n();
-setupChips();
-updateAiChip();
-$("#taskDate").value = todayStr();
-renderHome();
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js").catch(() => {});
-}
+boot();
