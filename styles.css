@@ -215,3 +215,21 @@ main{max-width:760px; margin:0 auto; padding:14px 12px 10px}
   background:var(--amber-soft); color:#8a5d00; font-size:12px; font-weight:700;
   padding:3px 10px; border-radius:999px;
 }
+
+/* auth tabs + password visibility */
+.authtabs{
+  display:flex; background:var(--bg); border:1.5px solid var(--line);
+  border-radius:999px; padding:4px; gap:4px; margin-bottom:12px;
+}
+.authtabs button{
+  flex:1; border:0; background:transparent; color:var(--muted); padding:9px 4px;
+  border-radius:999px; font-size:14.5px; font-weight:700; cursor:pointer;
+}
+.authtabs button.on{background:var(--green); color:#fff}
+.passwrap{position:relative; margin-bottom:10px}
+.passwrap .field{margin-bottom:0; width:100%; padding-inline-end:46px}
+.eye{
+  position:absolute; inset-inline-end:4px; top:50%; transform:translateY(-50%);
+  background:transparent; border:0; font-size:18px; cursor:pointer; padding:8px; line-height:1;
+}
+#acctMainBtn{margin-bottom:10px}
