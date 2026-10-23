@@ -28,13 +28,18 @@ function renderAccount() {
   const out = document.getElementById("acctSignedOut");
   const inn = document.getElementById("acctSignedIn");
   if (!out || !inn) return;
+  const st = document.getElementById("settingsAcctState");
   if (cloudUser) {
     out.hidden = true; inn.hidden = false;
     const em = document.getElementById("acctUserEmail");
     if (em) em.textContent = cloudUser.email || "";
     setSyncNote("on");
+    if (window.__hideGate) window.__hideGate();
+    try { localStorage.setItem("radar.gate.v1", "user"); } catch {}
+    if (st) st.textContent = "مسجل الدخول: " + (cloudUser.email || "");
   } else {
     out.hidden = false; inn.hidden = true;
+    if (st) st.textContent = "غير مسجل الدخول — بياناتك محفوظة في هاد الجهاز فقط.";
   }
 }
 function profilePayload(withCreated) {
