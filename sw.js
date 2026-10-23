@@ -1,5 +1,5 @@
 /* رادار المباريات — service worker (network-first) */
-const CACHE = "work-v4";
+const CACHE = "work-v5";
 const SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./cloud.js", "./manifest.webmanifest", "./concours.json", "./icon.svg", "./icon-192.png", "./icon-512.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
