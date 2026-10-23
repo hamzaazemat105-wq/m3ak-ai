@@ -44,12 +44,20 @@
     <p class="muted">باش تبدا: سجّل الدخول أو أنشئ حساباً — الحساب كيخليك تتبع المباريات والوظائف وتزامن بياناتك بين أجهزتك.</p>
     <div id="accountCard">
       <div id="acctSignedOut">
-        <input id="acctEmail" class="field" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
-        <input id="acctPass" class="field" type="password" placeholder="كلمة السر" autocomplete="current-password">
-        <div class="row">
-          <button id="acctSignIn" class="btn primary" type="button">تسجيل الدخول</button>
-          <button id="acctSignUp" class="btn" type="button">إنشاء حساب</button>
+        <div class="authtabs">
+          <button id="tabSignIn" type="button" class="on">تسجيل الدخول</button>
+          <button id="tabSignUp" type="button">إنشاء حساب</button>
         </div>
+        <input id="acctEmail" class="field" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
+        <div class="passwrap">
+          <input id="acctPass" class="field" type="password" placeholder="كلمة السر" autocomplete="current-password">
+          <button class="eye" type="button" data-eye="acctPass" aria-label="إظهار أو إخفاء كلمة السر">👁️</button>
+        </div>
+        <div class="passwrap" id="pass2Wrap" hidden>
+          <input id="acctPass2" class="field" type="password" placeholder="تأكيد كلمة السر" autocomplete="new-password">
+          <button class="eye" type="button" data-eye="acctPass2" aria-label="إظهار أو إخفاء كلمة السر">👁️</button>
+        </div>
+        <button id="acctMainBtn" class="btn primary wide" type="button">تسجيل الدخول</button>
         <button id="acctGoogle" class="btn wide" type="button">الدخول بـ Google</button>
       </div>
       <div id="acctSignedIn" hidden>
