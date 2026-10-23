@@ -109,7 +109,7 @@ function cardHTML(it) {
   const isT = tracked(it.id);
   return `<article class="ccard" data-id="${it.id}">
     <div class="ccard-top">
-      <span class="sector">${esc(it.sector)}</span>
+      <span class="sector">${esc(window.sectorName(it.sector))}</span>
       ${it.type === "private" ? `<span class="ptype">${t("privateBadge")}</span>` : ""}
       <span class="count ${dl.cls}">${dl.txt}</span>
     </div>
@@ -168,7 +168,7 @@ function renderHome() {
 
   /* sector chips */
   const sectors = ["all", ...new Set(CONCOURS.map((c) => c.sector))];
-  $("#sectorChips").innerHTML = sectors.map((s) => `<button type="button" class="chip ${s === activeSector ? "on" : ""}" data-sector="${esc(s)}">${s === "all" ? t("all") : esc(s)}</button>`).join("");
+  $("#sectorChips").innerHTML = sectors.map((s) => `<button type="button" class="chip ${s === activeSector ? "on" : ""}" data-sector="${esc(s)}">${s === "all" ? t("all") : esc(window.sectorName(s))}</button>`).join("");
   $$("#sectorChips .chip").forEach((ch) => ch.addEventListener("click", () => { activeSector = ch.dataset.sector; renderHome(); }));
 
   /* alerts for tracked items */
@@ -212,7 +212,7 @@ function openDetail(id) {
   const shareTxt = encodeURIComponent(`${t("shareWhat")} ${it.title}\n🏛️ ${it.org}\n${t("shareDl")} ${fmtDate(it.deadline)}\n${t("shareInApp")} https://hamzaazemat105-wq.github.io/m3ak-ai/`);
   $("#detailBox").innerHTML = `
   <article class="detail">
-    <div class="ccard-top"><span class="sector">${esc(it.sector)}</span>${it.type === "private" ? `<span class="ptype">${t("privateBadge")}</span>` : ""}<span class="count ${dl.cls}">${dl.txt}</span></div>
+    <div class="ccard-top"><span class="sector">${esc(window.sectorName(it.sector))}</span>${it.type === "private" ? `<span class="ptype">${t("privateBadge")}</span>` : ""}<span class="count ${dl.cls}">${dl.txt}</span></div>
     <h2>${esc(it.title)}</h2>
     <p class="org">🏛️ ${esc(it.org)}</p>
     <div class="meta">
@@ -265,7 +265,7 @@ function openDetail(id) {
 function fillSectors() {
   const sel = $("#chkSector");
   const sectors = [...new Set(CONCOURS.map((c) => c.sector))];
-  sel.innerHTML = `<option value="">${t("allSectors")}</option>` + sectors.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
+  sel.innerHTML = `<option value="">${t("allSectors")}</option>` + sectors.map((s) => `<option value="${esc(s)}">${esc(window.sectorName(s))}</option>`).join("");
   if (data.profile.sector) sel.value = data.profile.sector;
 }
 function runCheck() {
@@ -360,6 +360,8 @@ async function boot() {
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 }
 window.__rerender = () => {
+  const ih = $("#installHint");
+  if (ih) ih.textContent = deferredInstall ? "" : t("installHint");
   if (!CONCOURS.length) return;
   fillSectors();
   renderHome();
