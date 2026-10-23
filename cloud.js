@@ -1,6 +1,7 @@
-/* ===== M3AK Cloud — optional accounts + sync (Firebase) =====
-   Syncs ONLY tasks / goals / habits + profile counts.
-   Chats (ask / vent / solve) NEVER leave the device — by design. */
+/* ===== Radar Cloud — optional accounts + sync (Firebase) =====
+   Syncs ONLY the user's tracking data: tracked concours, document
+   checklists and the eligibility profile. Nothing else leaves the
+   device. */
 const FIREBASE_CONFIG = {
   apiKey: "AIzaSyClpZvM3bHhrzsuL35uydDcrTPw8Nz88VY",
   authDomain: "m3ak-ai.firebaseapp.com",
@@ -19,10 +20,9 @@ function acctMsg(text, ok) {
 function setSyncNote(state) {
   const el = document.getElementById("syncNote");
   if (!el) return;
-  const fr = settings.lang === "fr";
-  el.textContent = state === "synced" ? (fr ? "Synchronisé ☁️✅" : "المزامنة تمت ☁️✅")
-    : state === "error" ? (fr ? "Échec de synchro — réessaie." : "فشلت المزامنة — عاود المحاولة.")
-    : (fr ? "Synchronisation activée ☁️" : "المزامنة مفعّلة ☁️");
+  el.textContent = state === "synced" ? "المزامنة تمت ☁️✅"
+    : state === "error" ? "فشلت المزامنة — عاود المحاولة."
+    : "المزامنة مفعّلة ☁️";
 }
 function renderAccount() {
   const out = document.getElementById("acctSignedOut");
@@ -40,10 +40,12 @@ function renderAccount() {
 function profilePayload(withCreated) {
   const p = {
     email: cloudUser.email || "",
-    name: settings.name || "",
+    name: "",
     plan: "free",
-    counts: { tasks: data.tasks.length, goals: data.goals.length, habits: data.habits.length },
-    data: { tasks: data.tasks, goals: data.goals, habits: data.habits },
+    app: "radar",
+    trackedCount: (data.tracked || []).length,
+    counts: { tracked: (data.tracked || []).length },
+    data: { tracked: data.tracked, checks: data.checks, profile: data.profile },
     updatedAt: Date.now(),
     lastSeen: firebase.firestore.FieldValue.serverTimestamp()
   };
@@ -70,25 +72,29 @@ async function syncOnSignIn() {
     const snap = await cloudDb.collection("users").doc(cloudUser.uid).get();
     if (!snap.exists) { await pushCloud(true); return; }
     const d = snap.data() || {};
-    const localEmpty = !data.tasks.length && !data.goals.length && !data.habits.length;
-    if (localEmpty && d.data && (d.data.tasks || d.data.goals || d.data.habits)) {
-      data.tasks = d.data.tasks || []; data.goals = d.data.goals || []; data.habits = d.data.habits || [];
+    const localEmpty = !(data.tracked || []).length && !Object.keys(data.checks || {}).length;
+    if (localEmpty && d.data && (d.data.tracked || d.data.checks || d.data.profile)) {
+      data.tracked = d.data.tracked || [];
+      data.checks = d.data.checks || {};
+      data.profile = Object.assign({ age: "", rank: "", sector: "" }, d.data.profile || {});
       persistData();
-      renderHome(); renderTasks(); renderProgress();
-      toast(settings.lang === "fr" ? "Données restaurées ☁️" : "ترجعات بياناتك من السحابة ☁️");
+      const a = document.getElementById("chkAge"), dp = document.getElementById("chkDiploma");
+      if (a && data.profile.age) a.value = data.profile.age;
+      if (dp && data.profile.rank) dp.value = data.profile.rank;
+      renderHome(); renderMine();
+      toast("ترجعات بياناتك من السحابة ☁️");
     }
     await pushCloud(false);
   } catch (e) { setSyncNote("error"); }
 }
 function authError(e) {
-  const fr = settings.lang === "fr";
   const code = (e && e.code) || "";
-  if (code.includes("email-already-in-use")) return fr ? "Cet e-mail est déjà inscrit — connecte-toi." : "هاد الإيميل مسجل من قبل — جرب تسجيل الدخول.";
-  if (code.includes("weak-password")) return fr ? "Mot de passe trop court (6 caractères min)." : "كلمة السر قصيرة — خاصها 6 حروف على الأقل.";
-  if (code.includes("invalid-email")) return fr ? "E-mail invalide." : "الإيميل ما صحيحش.";
-  if (code.includes("network")) return fr ? "Pas de connexion internet." : "ما كايناش إنترنت — تحقق من الاتصال.";
-  if (code.includes("popup")) return fr ? "La fenêtre Google a été fermée." : "تسدّات نافذة Google — عاود المحاولة.";
-  return fr ? "E-mail ou mot de passe incorrect." : "الإيميل ولا كلمة السر غلاطة — عاود المحاولة.";
+  if (code.includes("email-already-in-use")) return "هاد الإيميل مسجل من قبل — جرب تسجيل الدخول.";
+  if (code.includes("weak-password")) return "كلمة السر قصيرة — خاصها 6 حروف على الأقل.";
+  if (code.includes("invalid-email")) return "الإيميل ما صحيحش.";
+  if (code.includes("network")) return "ما كايناش إنترنت — تحقق من الاتصال.";
+  if (code.includes("popup")) return "تسدّات نافذة Google — عاود المحاولة.";
+  return "الإيميل ولا كلمة السر غلاطة — عاود المحاولة.";
 }
 (function initCloud() {
   const card = document.getElementById("accountCard");
@@ -107,12 +113,12 @@ function authError(e) {
   const pass = () => document.getElementById("acctPass").value || "";
   document.getElementById("acctSignUp").addEventListener("click", async () => {
     acctMsg("");
-    try { await firebase.auth().createUserWithEmailAndPassword(email(), pass()); toast(settings.lang === "fr" ? "Compte créé 🎉" : "تنشأ الحساب 🎉"); }
+    try { await firebase.auth().createUserWithEmailAndPassword(email(), pass()); toast("تنشأ الحساب 🎉"); }
     catch (e) { acctMsg(authError(e)); }
   });
   document.getElementById("acctSignIn").addEventListener("click", async () => {
     acctMsg("");
-    try { await firebase.auth().signInWithEmailAndPassword(email(), pass()); toast(settings.lang === "fr" ? "Bienvenue 👋" : "مرحبا بيك 👋"); }
+    try { await firebase.auth().signInWithEmailAndPassword(email(), pass()); toast("مرحبا بيك 👋"); }
     catch (e) { acctMsg(authError(e)); }
   });
   document.getElementById("acctGoogle").addEventListener("click", async () => {
