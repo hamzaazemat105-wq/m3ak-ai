@@ -244,7 +244,7 @@
     "الجنسية المغربية",
     "الدبلوم المطلوب حسب المنصب"
    ],
-   "deadline": "2026-10-30",
+   "deadline": "2026-10-30T16:30",
    "detailsUrl": "https://alwadifa.ma/%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-25-%D9%85%D9%86%D8%B5%D8%A8%D8%A7%D9%8B-%D8%A8%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7/",
    "diploma": "دبلوم تقني متخصص (هندسة مدنية أو معلوميات)",
    "diplomaRank": 2,
@@ -276,7 +276,7 @@
     "الجنسية المغربية",
     "الدبلوم المطلوب حسب المنصب"
    ],
-   "deadline": "2026-10-23",
+   "deadline": "2026-10-23T16:30",
    "detailsUrl": "https://alwadifa.ma/%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-25-%D9%85%D9%86%D8%B5%D8%A8%D8%A7%D9%8B-%D8%A8%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7/",
    "diploma": "دبلوم تقني متخصص (التنمية المعلوماتية أو الأنظمة والشبكات)",
    "diplomaRank": 2,
@@ -308,7 +308,7 @@
     "الجنسية المغربية",
     "الدبلوم المطلوب حسب المنصب"
    ],
-   "deadline": "2026-10-23",
+   "deadline": "2026-10-23T16:30",
    "detailsUrl": "https://alwadifa.ma/%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-25-%D9%85%D9%86%D8%B5%D8%A8%D8%A7%D9%8B-%D8%A8%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7/",
    "diploma": "دبلوم تقني متخصص (هندسة مدنية أو أشغال عمومية)",
    "diplomaRank": 2,
@@ -340,7 +340,7 @@
     "الجنسية المغربية",
     "دكتوراه في الطب العام"
    ],
-   "deadline": "2026-10-23",
+   "deadline": "2026-10-23T16:30",
    "detailsUrl": "https://alwadifa.ma/%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-25-%D9%85%D9%86%D8%B5%D8%A8%D8%A7%D9%8B-%D8%A8%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7/",
    "diploma": "دكتوراه في الطب العام",
    "diplomaRank": 5,
@@ -362,6 +362,207 @@
     "اختبارات كتابية وشفوية"
    ],
    "title": "طبيب من الدرجة الأولى — تخصص الطب العام",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "الترشيح حصرياً عبر المنصة الرسمية — منصب واحد وتوجيه واحد لكل مترشح. الدبلوم المطلوب بالضبط (الدبلوم الأعلى غير مقبول).",
+   "applyUrl": "https://econcours.brainman.ma/cmp/SRM_ORI_2026",
+   "conditions": [
+    "الجنسية المغربية",
+    "التمتع بالحقوق المدنية",
+    "السن الأقصى 40 سنة للأعوان و45 سنة للمهندسين إلى غاية 31/12/2026",
+    "الدبلوم المطلوب بالضبط حسب المنصب",
+    "دبلومات المؤسسات العمومية المغربية أو المعادلة"
+   ],
+   "deadline": "2026-11-05T23:00",
+   "detailsUrl": "https://econcours.brainman.ma/cmp/SRM_ORI_2026",
+   "diploma": "مهندس دولة (للمهندسين) / باك+3 حقوق عمومية أو تقني متخصص باك+2 / باك + دبلوم تقني حسب المنصب",
+   "diplomaRank": 2,
+   "docs": [
+    "سيرة ذاتية بصورة",
+    "شهادة مدرسية حديثة (أقل من 3 أشهر)",
+    "نسخة من الباك عند الاقتضاء",
+    "بطاقة التعريف الوطنية (الوجهان)",
+    "نسخة مصادق عليها من الدبلوم",
+    "رخص السياقة B/C/D للسائقين",
+    "قرار المعادلة عند الاقتضاء"
+   ],
+   "exam": null,
+   "id": "srm-ori-2026-32",
+   "maxAge": 45,
+   "org": "الشركة الجهوية متعددة الخدمات لجهة الشرق (SRM-ORI)",
+   "posts": 32,
+   "region": "وجدة — جهة الشرق",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "اختبار كتابي",
+    "اختبار شفوي (التاريخ والمكان يُعلنان لاحقاً)"
+   ],
+   "title": "32 منصباً: 8 أعوان تنفيذ + 14 عون إتقان + 10 مهندسي دولة",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "عبر بوابة التشغيل العمومي — مرجع المباراة C44188/26. توظيف بموجب عقد.",
+   "applyUrl": "https://www.emploi-public.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن من 18 إلى 45 سنة",
+    "خبرة مهنية 3 سنوات فأكثر"
+   ],
+   "deadline": "2026-11-04",
+   "detailsUrl": "https://www.manasseb.com/%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%AA%D9%86%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D8%A3%D8%B7%D9%84%D8%B3-%D8%A7%D9%84%D9%83%D8%A8%D9%8A%D8%B1-%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA/",
+   "diploma": "مهندس دولة في الهندسة المدنية",
+   "diplomaRank": 5,
+   "docs": [
+    "طلب مكتوب بخط اليد وموقع (+ رأي التسلسل الإداري للموظفين)",
+    "سيرة ذاتية مفصلة",
+    "نسخ الدبلومات",
+    "قرار المعادلة عند الاقتضاء",
+    "بطاقة التعريف الوطنية",
+    "وثائق إثبات الخبرة"
+   ],
+   "exam": null,
+   "id": "adha-2026-5",
+   "maxAge": 45,
+   "org": "وكالة تنمية الأطلس الكبير (ADHA)",
+   "posts": 5,
+   "region": "المغرب",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "دراسة ملفات الترشيح",
+    "مقابلة شفوية للمقبولين"
+   ],
+   "title": "مهندسو دولة في الهندسة المدنية (بموجب عقد) — 5 مناصب",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "تُرسل الملفات إلى البريد الإلكتروني recrutement@fnm.ma — مرجع المباراة C44186/26. الاختبارات يوم 22 نونبر 2026 بثانوية للا عائشة بالرباط.",
+   "applyUrl": "https://www.manasseb.com/%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9-%D9%84%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D9%81-%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%88/",
+   "conditions": [
+    "الجنسية المغربية",
+    "دبلوم مؤسسة مغربية معتمدة",
+    "إتقان المعلوميات",
+    "التحرير بالعربية والفرنسية",
+    "منصب التواصل: إتقان الأدوات الرقمية + سنتا خبرة"
+   ],
+   "deadline": "2026-11-11T16:30",
+   "detailsUrl": "https://www.manasseb.com/%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A9-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9-%D9%84%D9%84%D9%85%D8%AA%D8%A7%D8%AD%D9%81-%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%88/",
+   "diploma": "باك+5 تواصل (منصب COM) / ماستر وساطة ثقافية (منصب PC)",
+   "diplomaRank": 4,
+   "docs": [],
+   "exam": "2026-11-22",
+   "id": "fnm-2026-2",
+   "maxAge": 45,
+   "org": "المؤسسة الوطنية للمتاحف",
+   "posts": 2,
+   "region": "الرباط",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "اختبار كتابي عام 3 ساعات (معامل 2)",
+    "اختبار كتابي في التخصص 3 ساعات (معامل 3)",
+    "اختبار شفوي 15-30 دقيقة (معامل 3)"
+   ],
+   "title": "متصرفان من الدرجة الثانية (تواصل وتسويق / وساطة ثقافية) — منصبان",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "الترشيح حصرياً عبر recrutement.enssup.gov.ma — مرجعا المباراة C44172/26 وC44173/26. شهادة النجاح غير مقبولة. الاختبارات 15 نونبر 2026.",
+   "applyUrl": "https://recrutement.enssup.gov.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن القانوني",
+    "الدبلوم المطلوب (شهادة النجاح غير مقبولة)"
+   ],
+   "deadline": "2026-11-05",
+   "detailsUrl": "https://www.tawjihweb.com/ar/concours/universite-ibn-tofail-kenitra-recrutement/",
+   "diploma": "ماستر / ماستر متخصص (متصرف) — تقني متخصص (تقني)",
+   "diplomaRank": 4,
+   "docs": [
+    "طلب موقع",
+    "سيرة ذاتية بصورة",
+    "البطاقة الوطنية",
+    "الدبلوم (+ قرار المعادلة)",
+    "ترخيص الإدارة للموظفين"
+   ],
+   "exam": "2026-11-15",
+   "id": "uit-kenitra-2026-2",
+   "maxAge": 45,
+   "org": "جامعة ابن طفيل — القنيطرة",
+   "posts": 2,
+   "region": "القنيطرة",
+   "sector": "تعليم عالٍ",
+   "stages": [
+    "(متصرف) كتابي عام 3 ساعات معامل 2 + كتابي تخصص 3 ساعات معامل 3 + شفوي 15-30 دقيقة معامل 3",
+    "(تقني) كتابي عام معامل 4 + كتابي تخصص معامل 6 + شفوي معامل 3"
+   ],
+   "title": "متصرف من الدرجة الثانية (معلوميات) + تقني من الدرجة الثالثة (تطوير معلوميات) — منصبان",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "الإيداع إلكترونياً عبر recrutement.enssup.gov.ma — مرجع المباراة C44177/26. الاختبارات 15 نونبر 2026.",
+   "applyUrl": "https://recrutement.enssup.gov.ma/accueil",
+   "conditions": [
+    "الجنسية المغربية",
+    "دبلوم تقني (تدبير المقاولات)"
+   ],
+   "deadline": "2026-11-06",
+   "detailsUrl": "https://www.manasseb.com/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D8%A8%D9%86-%D8%B2%D9%87%D8%B1-%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D8%B1-%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%88%D8%B8%D9%8A%D9%81-28/",
+   "diploma": "دبلوم تقني",
+   "diplomaRank": 2,
+   "docs": [],
+   "exam": "2026-11-15",
+   "id": "uiz-agadir-2026-1",
+   "maxAge": null,
+   "org": "جامعة ابن زهر — أكادير",
+   "posts": 1,
+   "region": "العيون",
+   "sector": "تعليم عالٍ",
+   "stages": [
+    "دراسة ملفات الترشيح",
+    "اختبارات كتابية وشفوية — 15 نونبر 2026"
+   ],
+   "title": "تقني من الدرجة الثالثة — كلية الطب والصيدلة بالعيون (تدبير المقاولات)",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "الإيداع بالحضور الشخصي بمكتب الضبط بالمقر المركزي: 98 شارع محمد الخامس، الدار البيضاء — قرار 2026/02 بتاريخ 22/10.",
+   "applyUrl": "https://alwadifa-maroc.com/offre/show/id/23736",
+   "conditions": [
+    "الجنسية المغربية",
+    "18 سنة فأكثر",
+    "الدبلوم والتخصص المطلوبان بالضبط"
+   ],
+   "deadline": "2026-11-09T15:00",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-chambre-de-commerce-dindustrie-et-de-services-casablanca-settat-2026-2-postes/",
+   "diploma": "ماستر / ماستر متخصص اقتصاد وتدبير (متصرف) — دبلوم معلوميات OFPPT (تقني)",
+   "diplomaRank": 4,
+   "docs": [
+    "طلب",
+    "نسخة الدبلوم",
+    "البطاقة الوطنية",
+    "سيرة ذاتية",
+    "ترخيص الإدارة للموظفين"
+   ],
+   "exam": null,
+   "id": "cciscs-2026-2",
+   "maxAge": 45,
+   "org": "غرفة التجارة والصناعة والخدمات لجهة الدار البيضاء سطات",
+   "posts": 2,
+   "region": "الدار البيضاء",
+   "sector": "غرف مهنية",
+   "stages": [
+    "اختبار كتابي 3 ساعات (معامل 3)",
+    "اختبار شفوي/تطبيقي 15-30 دقيقة (معامل 3)",
+    "(التقني: الكتابي 19 نونبر والشفوي 24 نونبر 2026 بالمقر)"
+   ],
+   "title": "متصرف من الدرجة الثانية + تقني من الدرجة الثالثة (معلوميات) — منصبان",
    "type": "public"
   },
   {
@@ -512,8 +713,346 @@
    ],
    "title": "توظيف بعدة مطارات — تقنيون وإداريون ومتدربون",
    "type": "private"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "عقد CDI من اليوم الأول — 09:00 إلى 17:00، نهاية الأسبوع عطلة. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/vcall-boostez-votre-carriere-a-casablanca-commerciaux-experimentes-package-attractif-12000-dhs-168184",
+   "conditions": [
+    "خبرة في الطاقات المتجددة مطلوبة",
+    "إتقان الفرنسية"
+   ],
+   "deadline": "2026-11-20",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/vcall-boostez-votre-carriere-a-casablanca-commerciaux-experimentes-package-attractif-12000-dhs-168184",
+   "diploma": "باك فما فوق",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "vcall-2026",
+   "maxAge": null,
+   "org": "VCall",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "salary": "5.000 درهم صافي + تحفيزات (حسب الإعلان)",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "تجاريون ذوو خبرة (إصدار — طاقات متجددة)",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "عقد CDI — نقل مؤمَّن. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/onvousassure-com-coach-d-equipe-commercial-h-f-formation-fixe-prime-integration-asap-168856",
+   "conditions": [
+    "خبرة أولى في التسيير إجبارية",
+    "إتقان الفرنسية"
+   ],
+   "deadline": "2026-11-20",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/onvousassure-com-coach-d-equipe-commercial-h-f-formation-fixe-prime-integration-asap-168856",
+   "diploma": "باك+5 ماستر",
+   "diplomaRank": 5,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "onvousassure-2026",
+   "maxAge": null,
+   "org": "Onvousassure.com",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "salary": "أجر ثابت 7.000 درهم (8.000 بعد التكوين) + منحة",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "مدرب(ة) فريق تجاري (H/F)",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "المبتدئون مقبولون — تكوين مدفوع. عقد CDI + CNSS + AMO — الاثنين إلى الجمعة 08:00-17:30. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/next-cx-commercial-sedentaire-parfaitement-francophone-rabat-169107",
+   "conditions": [
+    "إتقان تام للفرنسية"
+   ],
+   "deadline": "2026-11-20",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/next-cx-commercial-sedentaire-parfaitement-francophone-rabat-169107",
+   "diploma": "فرنسية ممتازة — المبتدئون مقبولون",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "nextcx-2026",
+   "maxAge": null,
+   "org": "Next CX",
+   "posts": null,
+   "region": "الرباط (أكدال)",
+   "salary": "ابتداءً من 5.000 درهم + منح",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "تجاري سيدنتير ناطق بالفرنسية — الرباط أكدال",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "تكوين عند الالتحاق — 09:00 إلى 19:00، نهاية الأسبوع عطلة. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/seza-shore-televendeurs-experimentes-votre-prochain-challenge-est-chez-seza-shore-166122",
+   "conditions": [
+    "إتقان الفرنسية",
+    "خبرة في البيع عبر الهاتف"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/seza-shore-televendeurs-experimentes-votre-prochain-challenge-est-chez-seza-shore-166122",
+   "diploma": "باك فما فوق",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "seza-shore-2026",
+   "maxAge": null,
+   "org": "Seza Shore",
+   "posts": null,
+   "region": "فاس",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "بائعون عبر الهاتف ذوو خبرة (السوق البلجيكية) — فاس",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "أسبوع تكوين أولي غير مؤدى (حسب الإعلان)، ثم عقد CDI. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/ldc-esthetique-internationale-televendeurs-et-coordinateurs-a-berrechid-salaire-attractif-et-primes-non-plafonnees-166745",
+   "conditions": [
+    "خبرة سنتين فأكثر في البيع عبر الهاتف"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/ldc-esthetique-internationale-televendeurs-et-coordinateurs-a-berrechid-salaire-attractif-et-primes-non-plafonnees-166745",
+   "diploma": "خبرة سنتين فأكثر في البيع عبر الهاتف",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "ldc-esthetique-2026",
+   "maxAge": null,
+   "org": "LDC Esthétique Internationale",
+   "posts": null,
+   "region": "برشيد",
+   "salary": "6.000 درهم بداية → 7.000 بعد 6 أشهر → 8.000 بعد 12 شهراً + منح غير محدودة السقف",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "بائعون عبر الهاتف ومنسقون — برشيد",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "عقد CDI من اليوم الأول — تأمين صحي خاص — الاثنين إلى الجمعة 08:30-18:30. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/ecg-pereire-assurances-casablanca-conseillers-commerciaux-experts-en-assurance-decennale-161187",
+   "conditions": [
+    "خبرة سنة فأكثر في تأمين العشرية"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/ecg-pereire-assurances-casablanca-conseillers-commerciaux-experts-en-assurance-decennale-161187",
+   "diploma": "خبرة سنة فأكثر في تأمين العشرية",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "ecg-pereire-2026",
+   "maxAge": null,
+   "org": "ECG Pereire Assurances",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "مستشارون تجاريون خبراء في تأمين العشرية — الدار البيضاء",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "CNSS + تغطية صحية خاصة — نهاية الأسبوع عطلة. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/07zr-buscamos-comerciales-hispanohablantes-en-casablanca-7-000-dh-primas-weekend-off-162942",
+   "conditions": [
+    "إتقان تام للإسبانية",
+    "خبرة تجارية B2B"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/07zr-buscamos-comerciales-hispanohablantes-en-casablanca-7-000-dh-primas-weekend-off-162942",
+   "diploma": "إسبانية ممتازة + خبرة تجارية B2B",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "07zr-2026",
+   "maxAge": null,
+   "org": "07zr",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "salary": "7.000 درهم + منح",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "تجاريون ناطقون بالإسبانية B2B (قطع السيارات) — الدار البيضاء",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "عقد CDI — الاثنين إلى الجمعة 08:00-18:00. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/adm-value-rabat-conseiller-ere-clientele-en-energie-emission-d-appels-cdi-167693",
+   "conditions": [
+    "إلقاء جيد بالفرنسية",
+    "غير مفتوح للطلبة"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/adm-value-rabat-conseiller-ere-clientele-en-energie-emission-d-appels-cdi-167693",
+   "diploma": "إلقاء جيد بالفرنسية",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "adm-value-2026",
+   "maxAge": null,
+   "org": "ADM Value",
+   "posts": null,
+   "region": "الرباط (أكدال)",
+   "salary": "أجر ثابت 4.901 درهم خام + منحة أهداف من 0 إلى 2.303 درهم خام غير محدودة",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "مستشار(ة) زبناء في الطاقة (إصدار) — الرباط أكدال",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "عقد CDI من الالتحاق — إصدار (تأمين صحي) — 09:00-12:00 / 13:30-19:00. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/teleactis-debutant-e-accepte-e-formation-payee-cdi-teleactis-call-center-agadir-169118",
+   "conditions": [
+    "إتقان الفرنسية تحدثاً"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/teleactis-debutant-e-accepte-e-formation-payee-cdi-teleactis-call-center-agadir-169118",
+   "diploma": "لا خبرة مطلوبة — الفرنسية المحكية",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "teleactis-2026",
+   "maxAge": null,
+   "org": "TELEACTIS",
+   "posts": null,
+   "region": "أكادير",
+   "salary": "3.500 درهم (بدون خبرة) / 4.500 (6 أشهر-سنة خبرة) / 5.000 (سنة فأكثر) + منح",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "مبتدئون مقبولون — تكوين مدفوع + CDI — أكادير",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "الراتب يُعلن في المقر — منح غير محدودة — تأمين صحي خاص (أسنان) — تقاعد — منحة العيد — تكوينات معتمدة. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/concentrix-commerciaux-a-kenitra-package-attractif-et-primes-deplafonnees-149054",
+   "conditions": [
+    "روح تجارية"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/concentrix-commerciaux-a-kenitra-package-attractif-et-primes-deplafonnees-149054",
+   "diploma": "مبتدئون وذوو خبرة",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "concentrix-2026",
+   "maxAge": null,
+   "org": "Concentrix",
+   "posts": null,
+   "region": "القنيطرة",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "تجاريون (اتصالات، طاقة، بنك/تأمين) — القنيطرة",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "الترشيح عبر LinkedIn. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://www.linkedin.com/jobs/view/4480130876/",
+   "conditions": [
+    "إتقان أدوات DOORS وRAMS",
+    "خبرة في الواجهات والاختبارات"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://www.jobhub.ma/segula-technologies-recrutement-ingenieurs-ferroviaires-casablanca/",
+   "diploma": "باك+5 أنظمة مدمجة / معلوميات صناعية / أتمتة / هندسة كهربائية",
+   "diplomaRank": 5,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "segula-2026",
+   "maxAge": null,
+   "org": "SEGULA Technologies",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "sector": "خدمات",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "مهندسو سكك حديدية (أنظمة مدمجة) — الدار البيضاء",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "عقد Intérim — الراتب لم يُحدد برقم موحد في العرض. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://offers.ma/offres-emploi-maroc/recrutement-magasiniers-et-cariste-chez-manpowergroup-maroc-a-casablanca-offre-demploi-10478089/",
+   "conditions": [
+    "خبرة في تدبير المخزون (مستحسنة)",
+    "رخصة CACES"
+   ],
+   "deadline": "2026-11-21",
+   "detailsUrl": "https://offers.ma/offres-emploi-maroc/recrutement-magasiniers-et-cariste-chez-manpowergroup-maroc-a-casablanca-offre-demploi-10478089/",
+   "diploma": "باك / مستوى باك",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية"
+   ],
+   "id": "manpower-2026",
+   "maxAge": null,
+   "org": "ManpowerGroup Maroc",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "sector": "صناعة ولوجستيك",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "عمال مخزن وسائق رافعة (Intérim) — الدار البيضاء",
+   "type": "private"
   }
  ],
- "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة",
+ "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
  "updatedAt": "2026-10-23"
 }
