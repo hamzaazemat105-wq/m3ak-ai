@@ -110,6 +110,8 @@ function authError(e) {
     firebase.auth().onAuthStateChanged((u) => {
       cloudUser = u || null;
       renderAccount();
+      const ab2 = document.getElementById("openGateBtn");
+      if (ab2) ab2.textContent = u ? "👤 تبديل الحساب" : "👤 تسجيل الدخول / إنشاء حساب";
       if (u) syncOnSignIn();
     });
   } catch (e) { if (card) card.hidden = true; return; }
