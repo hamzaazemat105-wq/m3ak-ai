@@ -30,6 +30,12 @@ let CONCOURS = [];
 let UPDATED_AT = "";
 const t = window.t;
 function rankLabel(r) { return t("rank" + r); }
+/* localized data field: falls back to the Arabic base value */
+function L(it, f) {
+  if (window.LANG === "ar") return it[f];
+  const tr = it.i18n && it.i18n[window.LANG];
+  return tr && tr[f] != null ? tr[f] : it[f];
+}
 
 function deadlineDate(it) {
   const d = new Date(it.deadline.length <= 10 ? it.deadline + "T23:59:59" : it.deadline);
@@ -99,7 +105,7 @@ $("#themeToggle").addEventListener("click", () => { settings.dark = !settings.da
 /* ---------- Rendering: cards ---------- */
 function tracked(id) { return data.tracked.includes(id); }
 function checkProgress(it) {
-  const total = (it.docs || []).length;
+  const total = (L(it, "docs") || []).length;
   if (!total) return 0;
   const done = (data.checks[it.id] || []).length;
   return Math.round((done / total) * 100);
@@ -113,12 +119,12 @@ function cardHTML(it) {
       ${it.type === "private" ? `<span class="ptype">${t("privateBadge")}</span>` : ""}
       <span class="count ${dl.cls}">${dl.txt}</span>
     </div>
-    <h3>${esc(it.title)}</h3>
-    <p class="org">🏛️ ${esc(it.org)}</p>
+    <h3>${esc(L(it, "title"))}</h3>
+    <p class="org">🏛️ ${esc(L(it, "org"))}</p>
     <div class="meta">
       ${it.posts ? `<span>💼 ${t("postsN", { n: it.posts })}</span>` : ""}
-      <span>🎓 ${esc(it.diploma)}</span>
-      <span>📍 ${esc(it.region)}</span>
+      <span>🎓 ${esc(L(it, "diploma"))}</span>
+      <span>📍 ${esc(L(it, "region"))}</span>
     </div>
     <p class="deadline">🗓️ ${t("deadlineL")} <strong>${fmtDate(it.deadline)}</strong></p>
     <div class="ccard-actions">
@@ -174,14 +180,14 @@ function renderHome() {
   /* alerts for tracked items */
   const urgent = data.tracked.map(findItem).filter((it) => it && isOpen(it) && daysLeft(it) <= 7).sort(byDeadline);
   $("#alertBox").innerHTML = urgent.length
-    ? `<div class="alert">⏰ <strong>${t("alertTitle")}</strong> ${urgent.map((it) => `${esc(it.org)} — ${deadlineLabel(it).txt}`).join(" • ")}</div>`
+    ? `<div class="alert">⏰ <strong>${t("alertTitle")}</strong> ${urgent.map((it) => `${esc(L(it, "org"))} — ${deadlineLabel(it).txt}`).join(" • ")}</div>`
     : "";
 
   const term = searchTerm.trim();
   const list = open.filter((it) =>
     (activeType === "all" || (it.type || "public") === activeType) &&
     (activeSector === "all" || it.sector === activeSector) &&
-    (!term || (it.title + " " + it.org + " " + it.diploma + " " + it.region).includes(term))
+    (!term || (it.title + " " + it.org + " " + it.diploma + " " + it.region + " " + L(it, "title") + " " + L(it, "org") + " " + L(it, "region")).includes(term))
   );
   $("#concoursList").innerHTML = list.map(cardHTML).join("");
   $("#listEmpty").hidden = list.length > 0;
@@ -198,7 +204,7 @@ function gcalLink(it) {
   const stamp = (x) => `${x.getFullYear()}${p(x.getMonth() + 1)}${p(x.getDate())}T${p(x.getHours())}${p(x.getMinutes())}00`;
   const end = new Date(d.getTime() + 3600000);
   return "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" +
-    encodeURIComponent(t("gcalPrefix") + " " + it.title + " — " + it.org) +
+    encodeURIComponent(t("gcalPrefix") + " " + L(it, "title") + " — " + L(it, "org")) +
     "&dates=" + stamp(d) + "/" + stamp(end) +
     "&details=" + encodeURIComponent(t("gcalDetails") + " " + it.applyUrl);
 }
@@ -209,35 +215,35 @@ function openDetail(id) {
   const dl = deadlineLabel(it);
   const isT = tracked(id);
   const checks = data.checks[id] || [];
-  const shareTxt = encodeURIComponent(`${t("shareWhat")} ${it.title}\n🏛️ ${it.org}\n${t("shareDl")} ${fmtDate(it.deadline)}\n${t("shareInApp")} https://hamzaazemat105-wq.github.io/m3ak-ai/`);
+  const shareTxt = encodeURIComponent(`${t("shareWhat")} ${L(it, "title")}\n🏛️ ${L(it, "org")}\n${t("shareDl")} ${fmtDate(it.deadline)}\n${t("shareInApp")} https://hamzaazemat105-wq.github.io/m3ak-ai/`);
   $("#detailBox").innerHTML = `
   <article class="detail">
     <div class="ccard-top"><span class="sector">${esc(window.sectorName(it.sector))}</span>${it.type === "private" ? `<span class="ptype">${t("privateBadge")}</span>` : ""}<span class="count ${dl.cls}">${dl.txt}</span></div>
-    <h2>${esc(it.title)}</h2>
-    <p class="org">🏛️ ${esc(it.org)}</p>
+    <h2>${esc(L(it, "title"))}</h2>
+    <p class="org">🏛️ ${esc(L(it, "org"))}</p>
     <div class="meta">
       ${it.posts ? `<span>💼 ${t("postsN", { n: it.posts })}</span>` : ""}
-      <span>📍 ${esc(it.region)}</span>
-      ${it.salary ? `<span>💰 ${esc(it.salary)}</span>` : ""}
+      <span>📍 ${esc(L(it, "region"))}</span>
+      ${it.salary ? `<span>💰 ${esc(L(it, "salary"))}</span>` : ""}
     </div>
-    <div class="kv"><span>${t("diplomaReq")}</span><strong>${esc(it.diploma)}</strong></div>
+    <div class="kv"><span>${t("diplomaReq")}</span><strong>${esc(L(it, "diploma"))}</strong></div>
     <div class="kv"><span>${t("deadlineApply")}</span><strong>${fmtDate(it.deadline)}</strong></div>
     ${it.exam ? `<div class="kv"><span>${t("examDate")}</span><strong>${fmtDate(it.exam)}</strong></div>` : ""}
     <div class="kv"><span>${t("announcedDate")}</span><strong>${fmtDate(it.announced)}</strong></div>
 
     <h3>${t("conditionsH")}</h3>
-    <ul class="ticks">${(it.conditions || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
+    <ul class="ticks">${(L(it, "conditions") || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
 
-    ${(it.docs || []).length ? `
+    ${(L(it, "docs") || []).length ? `
     <h3>${t("docsH")} <small class="muted">${t("docsHint", { p: "@@" }).replace("@@", `<span id="docPct">${checkProgress(it)}</span>`)}</small></h3>
     <div class="docs">
-      ${(it.docs || []).map((doc, i) => `<label class="doc"><input type="checkbox" data-doc="${i}" ${checks.includes(i) ? "checked" : ""}><span>${esc(doc)}</span></label>`).join("")}
+      ${(L(it, "docs") || []).map((doc, i) => `<label class="doc"><input type="checkbox" data-doc="${i}" ${checks.includes(i) ? "checked" : ""}><span>${esc(doc)}</span></label>`).join("")}
     </div>` : `<h3>${t("docsFallbackH")}</h3><p class="muted">${t("docsFallbackP")}</p>`}
 
     <h3>${t("stagesH")}</h3>
-    <ol class="steps">${(it.stages || []).map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
+    <ol class="steps">${(L(it, "stages") || []).map((x) => `<li>${esc(x)}</li>`).join("")}</ol>
 
-    ${it.applyNote ? `<div class="alert soft">💡 ${esc(it.applyNote)}</div>` : ""}
+    ${it.applyNote ? `<div class="alert soft">💡 ${esc(L(it, "applyNote"))}</div>` : ""}
 
     <div class="detail-actions">
       <a class="btn primary" href="${esc(it.applyUrl)}" target="_blank" rel="noopener">${it.type === "private" ? t("applyPrivate") : t("applyPublic")}</a>
