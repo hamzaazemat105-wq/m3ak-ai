@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>لوحة إدارة معاك — M3AK Admin</title>
+<title>لوحة إدارة رادار المباريات</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="icon-192.png?v=2" type="image/png">
 <style>
@@ -35,7 +35,7 @@
 <body>
 <header>
   <img src="icon-192.png?v=2" alt="">
-  <div><h1>لوحة إدارة معاك 🔐</h1><small>M3AK Admin — خاص بالمالك فقط</small></div>
+  <div><h1>لوحة إدارة رادار المباريات 🔐</h1><small>خاص بالمالك فقط</small></div>
 </header>
 <main>
   <div class="card" id="loginCard">
@@ -55,7 +55,7 @@
         <div class="stat"><b id="stTotal">–</b><span>إجمالي المستخدمين</span></div>
         <div class="stat"><b id="stWeek">–</b><span>جدد هاد الأسبوع</span></div>
         <div class="stat"><b id="stToday">–</b><span>نشطين اليوم</span></div>
-        <div class="stat"><b id="stTasks">–</b><span>مجموع المهام</span></div>
+        <div class="stat"><b id="stTasks">–</b><span>مجموع المباريات المتتبعة</span></div>
       </div>
       <p class="muted" id="dashMsg"></p>
       <button class="btn soft" id="refreshBtn">تحديث 🔄</button>
@@ -65,14 +65,14 @@
       <h3 style="margin-top:0">المستخدمون</h3>
       <div style="overflow-x:auto">
       <table>
-        <thead><tr><th>البريد</th><th>الباقة</th><th>تاريخ التسجيل</th><th>آخر نشاط</th><th>مهام</th><th>أهداف</th><th>عادات</th></tr></thead>
+        <thead><tr><th>البريد</th><th>الباقة</th><th>تاريخ التسجيل</th><th>آخر نشاط</th><th>مباريات متتبعة</th></tr></thead>
         <tbody id="usersBody"><tr><td colspan="7" class="muted">كنحمّل...</td></tr></tbody>
       </table>
       </div>
       <p class="muted">اللوحة كتعرض غير الإحصائيات والأعداد — محادثات المستخدمين ومحتواهم الخاص ما كيوصلش لهنا أبداً، بالتصميم.</p>
     </div>
   </div>
-  <p class="muted" style="text-align:center"><a href="./index.html">→ الرجوع لتطبيق معاك</a></p>
+  <p class="muted" style="text-align:center"><a href="./index.html">→ الرجوع لرادار المباريات</a></p>
 </main>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -121,14 +121,14 @@ async function loadUsers() {
       const seen = d.lastSeen && d.lastSeen.toDate ? d.lastSeen.toDate() : null;
       if (created && created > weekAgo) wk++;
       if (seen && seen > dayAgo) td++;
-      const c = d.counts || {}; tasks += c.tasks || 0;
-      rows.push({ email: d.email || doc.id, plan: d.plan || "free", created, seen, c });
+      const c = d.counts || {}; const tc = d.trackedCount != null ? d.trackedCount : (c.tracked || c.tasks || 0); tasks += tc;
+      rows.push({ email: d.email || doc.id, plan: d.plan || "free", created, seen, tc });
     });
     rows.sort((a, b) => (b.seen || 0) - (a.seen || 0));
     $("#stTotal").textContent = total; $("#stWeek").textContent = wk; $("#stToday").textContent = td; $("#stTasks").textContent = tasks;
     $("#usersBody").innerHTML = rows.length ? rows.map((r) =>
-      "<tr><td dir='ltr'>" + String(r.email).replace(/</g, "&lt;") + "</td><td>" + r.plan + "</td><td>" + fmt(r.created) + "</td><td>" + fmt(r.seen) + "</td><td>" + (r.c.tasks || 0) + "</td><td>" + (r.c.goals || 0) + "</td><td>" + (r.c.habits || 0) + "</td></tr>"
-    ).join("") : "<tr><td colspan='7' class='muted'>ما كاين حتى مستخدم مسجل بعد — اللوحة غادي تعمر ملي يبداو الناس ينشئو حسابات.</td></tr>";
+      "<tr><td dir='ltr'>" + String(r.email).replace(/</g, "&lt;") + "</td><td>" + r.plan + "</td><td>" + fmt(r.created) + "</td><td>" + fmt(r.seen) + "</td><td>" + r.tc + "</td></tr>"
+    ).join("") : "<tr><td colspan='5' class='muted'>ما كاين حتى مستخدم مسجل بعد — اللوحة غادي تعمر ملي يبداو الناس ينشئو حسابات.</td></tr>";
     $("#dashMsg").textContent = "آخر تحديث: " + now.toLocaleString("ar-MA");
   } catch (e) {
     $("#dashMsg").textContent = "وقع مشكل في التحميل: " + (e.message || e.code || "");
