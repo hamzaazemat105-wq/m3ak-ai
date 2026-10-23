@@ -28,7 +28,8 @@ const persistData = () => { save(LS_DATA, data); if (window.__queueSync) window.
 /* ---------- Concours data ---------- */
 let CONCOURS = [];
 let UPDATED_AT = "";
-const RANK_LABEL = { 1: "بكالوريا", 2: "باك+2", 3: "إجازة", 4: "ماستر", 5: "مهندس دولة / دكتوراه" };
+const t = window.t;
+function rankLabel(r) { return t("rank" + r); }
 
 function deadlineDate(it) {
   const d = new Date(it.deadline.length <= 10 ? it.deadline + "T23:59:59" : it.deadline);
@@ -45,23 +46,23 @@ function isOpen(it) { return deadlineDate(it) >= new Date(Date.now() - 60000); }
 function fmtDate(iso) {
   try {
     const d = new Date(iso.length <= 10 ? iso + "T12:00:00" : iso);
-    return d.toLocaleDateString("ar-MA", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+    return d.toLocaleDateString(window.dateLocale(), { weekday: "long", day: "numeric", month: "long", year: "numeric" });
   } catch { return iso; }
 }
 function fmtDateShort(iso) {
   try {
     const d = new Date(iso.length <= 10 ? iso + "T12:00:00" : iso);
-    return d.toLocaleDateString("ar-MA", { day: "numeric", month: "long" });
+    return d.toLocaleDateString(window.dateLocale(), { day: "numeric", month: "long" });
   } catch { return iso; }
 }
 function deadlineLabel(it) {
   const dl = daysLeft(it);
-  if (!isOpen(it)) return { txt: "سالا الأجل", cls: "closed" };
-  if (dl === 0) return { txt: "⏰ اليوم آخر أجل!", cls: "urgent" };
-  if (dl === 1) return { txt: "⏰ غداً آخر أجل!", cls: "urgent" };
-  if (dl <= 7) return { txt: "بقى " + dl + " أيام", cls: "soon" };
-  if (dl <= 14) return { txt: "بقى " + dl + " يوم", cls: "mid" };
-  return { txt: "بقى " + dl + " يوم", cls: "ok" };
+  if (!isOpen(it)) return { txt: t("dlClosed"), cls: "closed" };
+  if (dl === 0) return { txt: t("dlToday"), cls: "urgent" };
+  if (dl === 1) return { txt: t("dlTomorrow"), cls: "urgent" };
+  if (dl <= 7) return { txt: t("dlLeft", { n: dl }), cls: "soon" };
+  if (dl <= 14) return { txt: t("dlLeft", { n: dl }), cls: "mid" };
+  return { txt: t("dlLeft", { n: dl }), cls: "ok" };
 }
 const byDeadline = (a, b) => deadlineDate(a) - deadlineDate(b);
 const openItems = () => CONCOURS.filter(isOpen).sort(byDeadline);
@@ -109,20 +110,20 @@ function cardHTML(it) {
   return `<article class="ccard" data-id="${it.id}">
     <div class="ccard-top">
       <span class="sector">${esc(it.sector)}</span>
-      ${it.type === "private" ? `<span class="ptype">🏢 قطاع خاص</span>` : ""}
+      ${it.type === "private" ? `<span class="ptype">${t("privateBadge")}</span>` : ""}
       <span class="count ${dl.cls}">${dl.txt}</span>
     </div>
     <h3>${esc(it.title)}</h3>
     <p class="org">🏛️ ${esc(it.org)}</p>
     <div class="meta">
-      ${it.posts ? `<span>💼 ${it.posts} منصب</span>` : ""}
+      ${it.posts ? `<span>💼 ${t("postsN", { n: it.posts })}</span>` : ""}
       <span>🎓 ${esc(it.diploma)}</span>
       <span>📍 ${esc(it.region)}</span>
     </div>
-    <p class="deadline">🗓️ آخر أجل: <strong>${fmtDate(it.deadline)}</strong></p>
+    <p class="deadline">🗓️ ${t("deadlineL")} <strong>${fmtDate(it.deadline)}</strong></p>
     <div class="ccard-actions">
-      <button class="btn primary" type="button" data-act="open">التفاصيل والوثائق</button>
-      <button class="btn star ${isT ? "on" : ""}" type="button" data-act="track" aria-label="تتبع">${isT ? "⭐ متتبعة" : "☆ تتبّع"}</button>
+      <button class="btn primary" type="button" data-act="open">${t("detailsDocs")}</button>
+      <button class="btn star ${isT ? "on" : ""}" type="button" data-act="track" aria-label="track">${isT ? t("trackedB") : t("trackB")}</button>
     </div>
   </article>`;
 }
@@ -135,8 +136,8 @@ function bindCards(container) {
 }
 function toggleTrack(id) {
   const i = data.tracked.indexOf(id);
-  if (i >= 0) { data.tracked.splice(i, 1); toast("تحيدات من مبارياتي"); }
-  else { data.tracked.push(id); toast("تزادت في مبارياتي ⭐"); }
+  if (i >= 0) { data.tracked.splice(i, 1); toast(t("trackRemoved")); }
+  else { data.tracked.push(id); toast(t("trackAdded")); }
   persistData();
   renderHome(); renderMine(); updateBadge();
 }
@@ -147,7 +148,7 @@ function updateBadge() {
 }
 
 /* ---------- Home ---------- */
-let activeSector = "الكل";
+let activeSector = "all";
 let activeType = "all";
 let searchTerm = "";
 $$("#typeSeg button").forEach((b) => b.addEventListener("click", () => {
@@ -161,25 +162,25 @@ function renderHome() {
   const totalPosts = open.reduce((s, it) => s + (it.posts || 0), 0);
   const nearest = open[0];
   $("#statsStrip").innerHTML =
-    `<div class="stat"><strong>${open.length}</strong><span>مباراة مفتوحة</span></div>` +
-    `<div class="stat"><strong>${totalPosts}</strong><span>منصب معلن</span></div>` +
-    `<div class="stat"><strong>${nearest ? daysLeft(nearest) : "—"}</strong><span>يوم لأقرب أجل</span></div>`;
+    `<div class="stat"><strong>${open.length}</strong><span>${t("statOpen")}</span></div>` +
+    `<div class="stat"><strong>${totalPosts}</strong><span>${t("statPosts")}</span></div>` +
+    `<div class="stat"><strong>${nearest ? daysLeft(nearest) : "—"}</strong><span>${t("statNearest")}</span></div>`;
 
   /* sector chips */
-  const sectors = ["الكل", ...new Set(CONCOURS.map((c) => c.sector))];
-  $("#sectorChips").innerHTML = sectors.map((s) => `<button type="button" class="chip ${s === activeSector ? "on" : ""}" data-sector="${esc(s)}">${esc(s)}</button>`).join("");
+  const sectors = ["all", ...new Set(CONCOURS.map((c) => c.sector))];
+  $("#sectorChips").innerHTML = sectors.map((s) => `<button type="button" class="chip ${s === activeSector ? "on" : ""}" data-sector="${esc(s)}">${s === "all" ? t("all") : esc(s)}</button>`).join("");
   $$("#sectorChips .chip").forEach((ch) => ch.addEventListener("click", () => { activeSector = ch.dataset.sector; renderHome(); }));
 
   /* alerts for tracked items */
   const urgent = data.tracked.map(findItem).filter((it) => it && isOpen(it) && daysLeft(it) <= 7).sort(byDeadline);
   $("#alertBox").innerHTML = urgent.length
-    ? `<div class="alert">⏰ <strong>تنبيه أجل:</strong> ${urgent.map((it) => `${esc(it.org)} — ${deadlineLabel(it).txt}`).join(" • ")}</div>`
+    ? `<div class="alert">⏰ <strong>${t("alertTitle")}</strong> ${urgent.map((it) => `${esc(it.org)} — ${deadlineLabel(it).txt}`).join(" • ")}</div>`
     : "";
 
   const term = searchTerm.trim();
   const list = open.filter((it) =>
     (activeType === "all" || (it.type || "public") === activeType) &&
-    (activeSector === "الكل" || it.sector === activeSector) &&
+    (activeSector === "all" || it.sector === activeSector) &&
     (!term || (it.title + " " + it.org + " " + it.diploma + " " + it.region).includes(term))
   );
   $("#concoursList").innerHTML = list.map(cardHTML).join("");
@@ -197,9 +198,9 @@ function gcalLink(it) {
   const stamp = (x) => `${x.getFullYear()}${p(x.getMonth() + 1)}${p(x.getDate())}T${p(x.getHours())}${p(x.getMinutes())}00`;
   const end = new Date(d.getTime() + 3600000);
   return "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" +
-    encodeURIComponent("آخر أجل: " + it.title + " — " + it.org) +
+    encodeURIComponent(t("gcalPrefix") + " " + it.title + " — " + it.org) +
     "&dates=" + stamp(d) + "/" + stamp(end) +
-    "&details=" + encodeURIComponent("الترشيح عبر: " + it.applyUrl);
+    "&details=" + encodeURIComponent(t("gcalDetails") + " " + it.applyUrl);
 }
 function openDetail(id) {
   const it = findItem(id);
@@ -208,44 +209,44 @@ function openDetail(id) {
   const dl = deadlineLabel(it);
   const isT = tracked(id);
   const checks = data.checks[id] || [];
-  const shareTxt = encodeURIComponent(`🎯 مباراة: ${it.title}\n🏛️ ${it.org}\n🗓️ آخر أجل: ${fmtDate(it.deadline)}\nالتفاصيل في رادار المباريات: https://hamzaazemat105-wq.github.io/m3ak-ai/`);
+  const shareTxt = encodeURIComponent(`${t("shareWhat")} ${it.title}\n🏛️ ${it.org}\n${t("shareDl")} ${fmtDate(it.deadline)}\n${t("shareInApp")} https://hamzaazemat105-wq.github.io/m3ak-ai/`);
   $("#detailBox").innerHTML = `
   <article class="detail">
-    <div class="ccard-top"><span class="sector">${esc(it.sector)}</span>${it.type === "private" ? `<span class="ptype">🏢 قطاع خاص</span>` : ""}<span class="count ${dl.cls}">${dl.txt}</span></div>
+    <div class="ccard-top"><span class="sector">${esc(it.sector)}</span>${it.type === "private" ? `<span class="ptype">${t("privateBadge")}</span>` : ""}<span class="count ${dl.cls}">${dl.txt}</span></div>
     <h2>${esc(it.title)}</h2>
     <p class="org">🏛️ ${esc(it.org)}</p>
     <div class="meta">
-      ${it.posts ? `<span>💼 ${it.posts} منصب</span>` : ""}
+      ${it.posts ? `<span>💼 ${t("postsN", { n: it.posts })}</span>` : ""}
       <span>📍 ${esc(it.region)}</span>
       ${it.salary ? `<span>💰 ${esc(it.salary)}</span>` : ""}
     </div>
-    <div class="kv"><span>🎓 الدبلوم المطلوب</span><strong>${esc(it.diploma)}</strong></div>
-    <div class="kv"><span>🗓️ آخر أجل للترشيح</span><strong>${fmtDate(it.deadline)}</strong></div>
-    ${it.exam ? `<div class="kv"><span>✍️ تاريخ المباراة</span><strong>${fmtDate(it.exam)}</strong></div>` : ""}
-    <div class="kv"><span>📣 تاريخ الإعلان</span><strong>${fmtDate(it.announced)}</strong></div>
+    <div class="kv"><span>${t("diplomaReq")}</span><strong>${esc(it.diploma)}</strong></div>
+    <div class="kv"><span>${t("deadlineApply")}</span><strong>${fmtDate(it.deadline)}</strong></div>
+    ${it.exam ? `<div class="kv"><span>${t("examDate")}</span><strong>${fmtDate(it.exam)}</strong></div>` : ""}
+    <div class="kv"><span>${t("announcedDate")}</span><strong>${fmtDate(it.announced)}</strong></div>
 
-    <h3>📌 الشروط</h3>
+    <h3>${t("conditionsH")}</h3>
     <ul class="ticks">${(it.conditions || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
 
     ${(it.docs || []).length ? `
-    <h3>🗂️ الوثائق المطلوبة <small class="muted">(علّم على اللي وجدتي — التقدم: <span id="docPct">${checkProgress(it)}</span>%)</small></h3>
+    <h3>${t("docsH")} <small class="muted">${t("docsHint", { p: "@@" }).replace("@@", `<span id="docPct">${checkProgress(it)}</span>`)}</small></h3>
     <div class="docs">
       ${(it.docs || []).map((doc, i) => `<label class="doc"><input type="checkbox" data-doc="${i}" ${checks.includes(i) ? "checked" : ""}><span>${esc(doc)}</span></label>`).join("")}
-    </div>` : `<h3>🗂️ ملف الترشيح</h3><p class="muted">📎 جهّز سيرتك الذاتية محدثة — تفاصيل ملف الترشيح وطريقته في نص العرض أسفله.</p>`}
+    </div>` : `<h3>${t("docsFallbackH")}</h3><p class="muted">${t("docsFallbackP")}</p>`}
 
-    <h3>🧭 مراحل المباراة</h3>
+    <h3>${t("stagesH")}</h3>
     <ol class="steps">${(it.stages || []).map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
 
     ${it.applyNote ? `<div class="alert soft">💡 ${esc(it.applyNote)}</div>` : ""}
 
     <div class="detail-actions">
-      <a class="btn primary" href="${esc(it.applyUrl)}" target="_blank" rel="noopener">${it.type === "private" ? "🌐 الترشيح عند الشركة" : "🌐 بوابة الترشيح الرسمية"}</a>
-      <a class="btn" href="${esc(it.detailsUrl)}" target="_blank" rel="noopener">📄 نص الإعلان الكامل</a>
-      <a class="btn" href="${gcalLink(it)}" target="_blank" rel="noopener">📅 أضف الأجل لتقويمك</a>
-      <button class="btn star ${isT ? "on" : ""}" type="button" id="detailTrack">${isT ? "⭐ متتبعة" : "☆ تتبّع هاد المباراة"}</button>
-      <a class="btn" href="https://wa.me/?text=${shareTxt}" target="_blank" rel="noopener">📤 شارك في واتساب</a>
+      <a class="btn primary" href="${esc(it.applyUrl)}" target="_blank" rel="noopener">${it.type === "private" ? t("applyPrivate") : t("applyPublic")}</a>
+      <a class="btn" href="${esc(it.detailsUrl)}" target="_blank" rel="noopener">${t("fullAd")}</a>
+      <a class="btn" href="${gcalLink(it)}" target="_blank" rel="noopener">${t("addCal")}</a>
+      <button class="btn star ${isT ? "on" : ""}" type="button" id="detailTrack">${isT ? t("trackedB") : t("trackThisB")}</button>
+      <a class="btn" href="https://wa.me/?text=${shareTxt}" target="_blank" rel="noopener">${t("shareWA")}</a>
     </div>
-    <p class="muted small">المرجع النهائي هو الإعلان الرسمي المنشور من الجهة المنظمة. تحقق دائماً من الشروط والوثائق في نص الإعلان قبل الترشيح.</p>
+    <p class="muted small">${t("finalNote")}</p>
   </article>`;
   $$("#detailBox [data-doc]").forEach((cb) => cb.addEventListener("change", () => {
     const idx = Number(cb.dataset.doc);
@@ -264,28 +265,28 @@ function openDetail(id) {
 function fillSectors() {
   const sel = $("#chkSector");
   const sectors = [...new Set(CONCOURS.map((c) => c.sector))];
-  sel.innerHTML = `<option value="">كل القطاعات</option>` + sectors.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
+  sel.innerHTML = `<option value="">${t("allSectors")}</option>` + sectors.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
   if (data.profile.sector) sel.value = data.profile.sector;
 }
 function runCheck() {
   const age = Number($("#chkAge").value || 0);
   const rank = Number($("#chkDiploma").value || 0);
   const sector = $("#chkSector").value;
-  if (!age || !rank) { toast("عمر العمر والديبلوم أولاً"); return; }
+  if (!age || !rank) { toast(t("fillFirst")); return; }
   data.profile = { age, rank, sector };
   persistData();
   const open = openItems().filter((it) => !sector || it.sector === sector);
   const ok = [], no = [];
   for (const it of open) {
     const reasons = [];
-    if (rank < (it.diplomaRank || 0)) reasons.push("خاصك " + (RANK_LABEL[it.diplomaRank] || "ديبلوم أعلى"));
-    if (it.maxAge && age > it.maxAge) reasons.push("السن الأقصى " + it.maxAge + " سنة");
+    if (rank < (it.diplomaRank || 0)) reasons.push(t("needRank", { rank: rankLabel(it.diplomaRank) }));
+    if (it.maxAge && age > it.maxAge) reasons.push(t("maxAgeR", { age: it.maxAge }));
     (reasons.length ? no : ok).push({ it, reasons });
   }
   $("#chkResults").innerHTML =
-    `<h3 class="page-title">يناسبوك: ${ok.length} مباراة ✅</h3>` +
-    (ok.length ? `<div class="list">${ok.map(({ it }) => cardHTML(it)).join("")}</div>` : `<p class="empty">حتى مباراة مفتوحة ما كتناسب هاد المعايير دابا — راجع من بعد، المباريات كتتجدد كل يوم.</p>`) +
-    (no.length ? `<h3 class="page-title">ما كتناسبكش دابا: ${no.length}</h3><div class="list">${no.map(({ it, reasons }) => cardHTML(it).replace("</article>", `<p class="why">🚧 ${reasons.join(" • ")}</p></article>`)).join("")}</div>` : "");
+    `<h3 class="page-title">${t("suitYou", { n: ok.length })}</h3>` +
+    (ok.length ? `<div class="list">${ok.map(({ it }) => cardHTML(it)).join("")}</div>` : `<p class="empty">${t("noSuit")}</p>`) +
+    (no.length ? `<h3 class="page-title">${t("notSuitH", { n: no.length })}</h3><div class="list">${no.map(({ it, reasons }) => cardHTML(it).replace("</article>", `<p class="why">🚧 ${reasons.join(" • ")}</p></article>`)).join("")}</div>` : "");
   bindCards($("#chkResults"));
   $("#chkResults").scrollIntoView({ behavior: "smooth" });
 }
@@ -296,10 +297,10 @@ function renderMine() {
   const items = data.tracked.map(findItem).filter(Boolean).sort(byDeadline);
   const open = items.filter(isOpen);
   const closed = items.filter((it) => !isOpen(it));
-  const render = (it) => cardHTML(it).replace("</article>", `<div class="prog"><div class="bar"><i style="width:${checkProgress(it)}%"></i></div><span>الوثائق: ${checkProgress(it)}%</span></div></article>`);
+  const render = (it) => cardHTML(it).replace("</article>", `<div class="prog"><div class="bar"><i style="width:${checkProgress(it)}%"></i></div><span>${t("docsPct", { p: checkProgress(it) })}</span></div></article>`);
   $("#mineList").innerHTML =
     (open.length ? open.map(render).join("") : "") +
-    (closed.length ? `<h3 class="page-title">سالا أجلها</h3>` + closed.map(render).join("") : "");
+    (closed.length ? `<h3 class="page-title">${t("closedH")}</h3>` + closed.map(render).join("") : "");
   $("#mineEmpty").hidden = items.length > 0;
   bindCards($("#mineList"));
   updateBadge();
@@ -307,11 +308,11 @@ function renderMine() {
 
 /* ---------- Settings ---------- */
 $("#wipeBtn").addEventListener("click", () => {
-  if (!confirm("غادي يتمسح كلشي من هاد الجهاز: المباريات المتتبعة والوثائق والملف. متأكد؟")) return;
+  if (!confirm(t("wipeConfirm"))) return;
   data = { tracked: [], checks: {}, profile: { age: "", rank: "", sector: "" } };
   persistData();
   renderHome(); renderMine();
-  toast("تمسح كلشي من هاد الجهاز");
+  toast(t("wipedToast"));
 });
 
 /* ---------- Install (PWA) ---------- */
@@ -320,11 +321,11 @@ window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); defe
 function showInstall() {
   if (window.matchMedia("(display-mode: standalone)").matches) return;
   $("#installCard").hidden = false;
-  $("#installHint").textContent = deferredInstall ? "" : "في Chrome: القائمة ⋮ ثم «تثبيت التطبيق». في فايرفوكس: القائمة ثم «تثبيت».";
+  $("#installHint").textContent = deferredInstall ? "" : t("installHint");
 }
 $("#installBtn").addEventListener("click", async () => {
   if (deferredInstall) { deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null; $("#installCard").hidden = true; }
-  else toast("استعمل قائمة المتصفح ⋮ ← تثبيت التطبيق");
+  else toast(t("installToast"));
 });
 if (!window.matchMedia("(display-mode: standalone)").matches) showInstall();
 
@@ -358,4 +359,11 @@ async function boot() {
   renderHome();
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 }
+window.__rerender = () => {
+  if (!CONCOURS.length) return;
+  fillSectors();
+  renderHome();
+  renderMine();
+  if (currentView === "detail" && detailId) openDetail(detailId);
+};
 boot();
