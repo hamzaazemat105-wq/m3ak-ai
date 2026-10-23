@@ -13,7 +13,7 @@ const load = (k, d) => { try { const v = localStorage.getItem(k); return v ? JSO
 const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 
 const DEFAULT_AI_ENDPOINT = "https://text.pollinations.ai/openai";
-const DEFAULT_AI_MODEL = "openai";
+const DEFAULT_AI_MODEL = "openai-fast";
 const settings = Object.assign({
   name: "", lang: "darija", dark: false, voiceOut: false, memory: false,
   ai: { endpoint: DEFAULT_AI_ENDPOINT, model: DEFAULT_AI_MODEL, key: "", consent: true, enabled: true }
@@ -31,6 +31,7 @@ if (settings.ai.endpoint === "https://api.groq.com/openai/v1/chat/completions" &
   settings.ai.consent = true;
   settings.ai.enabled = true;
 }
+if (settings.ai.model === "openai" && settings.ai.endpoint.includes("pollinations.ai")) settings.ai.model = DEFAULT_AI_MODEL;
 save(LS_SETTINGS, settings);
 
 let data = Object.assign({ tasks: [], goals: [], habits: [] }, load(LS_DATA, {}));
@@ -438,10 +439,10 @@ const INTENTS = [
 
 const FALLBACK = {
   d: [
-    "سمعتك 🌿 زيد شرح ليا شوية باش نفهمك مزيان.",
-    "مفهوم... وشنو أكثر حاجة شاغلة بالك في هاد الموضوع؟",
+    "سمعتك 🌿 زيد عاود ليا شوية، بغيت نفهمك مزيان.",
+    "مفهوم عليا... وشنو هي أكثر حاجة مضيقاك في هادشي كامل؟",
     "أنا معاك، كمل — شنو وقع بالضبط؟",
-    "هادشي مهم. واش بغيتي غير تهضر عليه، ولا نفكرو في حل بجوج؟"
+    "هادشي اللي قلتي مهم. واش بغيتي غير تفضفض عليه، ولا نفكرو في حل أنا وياك؟"
   ],
   l: [
     "Same3 lik 🌿 Zid charah lia chwiya bach nafhmek mzyan.",
@@ -620,7 +621,17 @@ const SYSTEM_PROMPT = `أنت «معاك» (M3AK AI)، مساعد شخصي مغ�
 - وضّح عند الحاجة أنك ذكاء اصطناعي داعم، لست إنساناً ولا معالجاً نفسياً. ممنوع التشخيصات والعلاجات الطبية.
 - في حالات الخطر أو الأفكار الانتحارية: تعاطف بقوة، وشجع المستخدم على التواصل فوراً مع شخص موثوق أو الإسعاف 15 أو الشرطة 19 (المغرب).
 - أوضاع المحادثة: «فضفض معايا» = استماع ودعم عاطفي غير علاجي. «حل مشكلتي» = تحليل منظم: فهم، أسئلة، خيارات، ثم خطوات عملية. «سول معاك» = مساعدة عامة يومية.
-- لا تشجع أبداً على التعلق العاطفي المفرط بك أو الاستغناء عن العلاقات الإنسانية.`;
+- لا تشجع أبداً على التعلق العاطفي المفرط بك أو الاستغناء عن العلاقات الإنسانية.
+
+قواعد الدارجة (الأهم — صارمة جداً):
+- جاوب دائماً بالدارجة المغربية الأصيلة مكتوبة بالحروف العربية، حتى إلا كتب ليك المستخدم بالفصحى — إلا إلا طلب لغة أخرى بصريح العبارة.
+- كلماتك مغربية: بغيت، خاصني، عندي، دابا، بزاف، شوية، شحال، كيفاش، علاش، فين، غادي، راه، صافي، واخا، مزيان، بصح، والو، حتى حاجة، كنحس، كنبغي، ديالي، ديالك، سمح ليا، زعما، بحال، هاكا، تما، لهيا.
+- ممنوع فصحى الكتب والأخبار: ما تقولش «أشعر بالضغط الشديد» — قول «كنحس براسي مضغوط بزاف». ما تقولش «يجب أن تستريح» — قول «خاصك ترتاح». تجنب تماماً: لقد، سوف، إنّ، الآن، جداً، لذلك، عندما، أيضاً، للغاية، أشعر، عليك أن.
+- أمثلة على طريقتك:
+  • المستخدم: «راسي كيوجعني من الخدمة» → أنت: «الخدمة كتعبّق الواحد بصح… شنو أكثر حاجة كتقلقك فيها هاد الأيام؟»
+  • المستخدم: «ما كنعسش مزيان» → أنت: «النعاس إلا تخربق كيهلك النهار كامل. شحال من نهار ونتا هاكا؟»
+  • المستخدم: «شنو عاصمة أستراليا؟» → أنت: «عاصمة أستراليا هي كانبيرا، ماشي سيدني بحال ما كيظنو بزاف ديال الناس.»
+- هضر بحال صديق مغربي في القهوة: دافئ، طبيعي، بلا تكلف وبلا عبارات مترجمة.`;
 
 const chats = {
   ask: { box: "askMessages", ctx: { used: {}, asked: [], turns: 0, history: [] }, opened: false },
@@ -676,17 +687,23 @@ function showTyping(chatId) {
   return t;
 }
 
+function aiMessages(chatId, ctx) {
+  const modeNote = chatId === "vent" ? "\nالوضع الحالي: فضفض معايا (استماع ودعم)." : chatId === "solve" ? "\nالوضع الحالي: حل مشكلتي (تحليل وخطوات)." : "\nالوضع الحالي: سول معاك (مساعدة عامة).";
+  return [{ role: "system", content: SYSTEM_PROMPT + modeNote }, ...ctx.history.slice(-10)];
+}
+function aiHeaders() {
+  return { "Content-Type": "application/json", ...(settings.ai.key ? { "Authorization": "Bearer " + settings.ai.key } : {}) };
+}
+
 async function aiChat(mode, ctx, userText) {
-  const modeNote = mode === "vent" ? "\nالوضع الحالي: فضفض معايا (استماع ودعم)." : mode === "solve" ? "\nالوضع الحالي: حل مشكلتي (تحليل وخطوات)." : "\nالوضع الحالي: سول معاك (مساعدة عامة).";
-  const messages = [{ role: "system", content: SYSTEM_PROMPT + modeNote }, ...ctx.history.slice(-12)];
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 75000);
+  const timer = setTimeout(() => ctrl.abort(), 60000);
   let res;
   try {
     res = await fetch(settings.ai.endpoint, {
       method: "POST",
-      headers: { "Content-Type": "application/json", ...(settings.ai.key ? { "Authorization": "Bearer " + settings.ai.key } : {}) },
-      body: JSON.stringify({ model: settings.ai.model || DEFAULT_AI_MODEL, messages, temperature: 0.7 }),
+      headers: aiHeaders(),
+      body: JSON.stringify({ model: settings.ai.model || DEFAULT_AI_MODEL, messages: aiMessages(mode, ctx), temperature: 0.7, max_tokens: 600, reasoning_effort: "low" }),
       signal: ctrl.signal
     });
   } finally { clearTimeout(timer); }
@@ -695,6 +712,54 @@ async function aiChat(mode, ctx, userText) {
   const out = j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
   if (!out) throw new Error("AI empty");
   return out.trim();
+}
+
+/* Streaming: the reply appears word-by-word as it is generated — the wait
+   feels seconds instead of the full generation time. Reasoning tokens from
+   the provider are skipped; only real content is shown. */
+async function aiChatStream(chatId, ctx, typing) {
+  const ctrl = new AbortController();
+  const killer = setTimeout(() => ctrl.abort(), 90000);
+  let bubble = null, full = "";
+  const firstTimer = setTimeout(() => { if (!bubble) ctrl.abort(); }, 45000);
+  try {
+    const res = await fetch(settings.ai.endpoint, {
+      method: "POST",
+      headers: aiHeaders(),
+      body: JSON.stringify({ model: settings.ai.model || DEFAULT_AI_MODEL, messages: aiMessages(chatId, ctx), temperature: 0.7, max_tokens: 600, reasoning_effort: "low", stream: true }),
+      signal: ctrl.signal
+    });
+    if (!res.ok || !res.body) throw new Error("AI stream " + res.status);
+    const reader = res.body.getReader();
+    const dec = new TextDecoder();
+    let buf = "";
+    for (;;) {
+      const got = await reader.read();
+      if (got.done) break;
+      buf += dec.decode(got.value, { stream: true });
+      let idx;
+      while ((idx = buf.indexOf("\n")) >= 0) {
+        const line = buf.slice(0, idx).trim(); buf = buf.slice(idx + 1);
+        if (!line.startsWith("data:")) continue;
+        const payload = line.slice(5).trim();
+        if (!payload || payload === "[DONE]") continue;
+        try {
+          const j = JSON.parse(payload);
+          const piece = (j.choices && j.choices[0] && j.choices[0].delta && j.choices[0].delta.content) || "";
+          if (piece) {
+            if (!bubble) { typing.remove(); bubble = addMsg(chatId, "bot", ""); }
+            full += piece;
+            bubble.textContent = full;
+            const box = $("#" + chats[chatId].box); box.scrollTop = box.scrollHeight;
+          }
+        } catch (e) { /* partial SSE line — ignore */ }
+      }
+    }
+  } catch (e) {
+    if (!full.trim()) throw e;
+  } finally { clearTimeout(killer); clearTimeout(firstTimer); }
+  if (!full.trim()) throw new Error("AI stream empty");
+  return full.trim();
 }
 
 async function botRespond(chatId, userText) {
@@ -710,19 +775,20 @@ async function botRespond(chatId, userText) {
   };
   if (aiReady()) {
     const slowTimer = setTimeout(() => { typing.textContent = settings.lang === "fr" ? "M3AK écrit... (le service gratuit peut être lent 🌿)" : "معاك كيكتب... (المزود المجاني يقدر يتعطل شوية 🌿)"; }, 25000);
-    try {
-      const out = await aiChat(chatId, ctx, userText);
-      clearTimeout(slowTimer);
-      finish(out);
-      return;
-    } catch (e) {
-      clearTimeout(slowTimer);
-      typing.remove();
-      addMsg(chatId, "system", settings.lang === "fr" ? "La connexion IA a échoué — retour au mode démo local." : "الاتصال بالذكاء الاصطناعي ما خدامش دابا — رجعنا للوضع التجريبي المحلي.");
-      const r = engineReply(chatId, userText, ctx);
-      finish(r.text);
+    let out = null, streamed = false;
+    try { out = await aiChatStream(chatId, ctx, typing); streamed = true; }
+    catch (e1) { try { out = await aiChat(chatId, ctx, userText); } catch (e2) { out = null; } }
+    clearTimeout(slowTimer);
+    if (out !== null) {
+      if (streamed) { typing.remove(); ctx.history.push({ role: "assistant", content: out }); speak(out); }
+      else finish(out);
       return;
     }
+    typing.remove();
+    addMsg(chatId, "system", settings.lang === "fr" ? "La connexion IA a échoué — retour au mode démo local." : "الاتصال بالذكاء الاصطناعي ما خدامش دابا — رجعنا للوضع التجريبي المحلي.");
+    const r = engineReply(chatId, userText, ctx);
+    finish(r.text);
+    return;
   }
   const r = engineReply(chatId, userText, ctx);
   setTimeout(() => finish(r.text), 450 + Math.random() * 450);
@@ -891,25 +957,40 @@ const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 if (SR) {
   $$(".mic-btn").forEach((btn) => {
     btn.hidden = false;
-    btn.addEventListener("click", () => {
-      try {
-        const rec = new SR();
-        rec.lang = settings.lang === "fr" ? "fr-FR" : "ar-MA";
-        rec.interimResults = false;
-        btn.classList.add("recording");
-        rec.onresult = (ev) => {
-          const text = ev.results[0][0].transcript;
-          const form = btn.closest("form");
-          form.querySelector(".chat-input").value = text;
-          btn.classList.remove("recording");
-          form.requestSubmit();
-        };
-        rec.onend = () => btn.classList.remove("recording");
-        rec.onerror = () => { btn.classList.remove("recording"); toast(settings.lang === "fr" ? "Le micro n'a pas marché" : "الميكرو ما خدامش — جرب تكتب"); };
-        rec.start();
-      } catch { toast("الصوت غير مدعوم في هاد المتصفح"); }
-    });
+    btn.addEventListener("click", () => startRec(btn, settings.lang === "fr" ? "fr-FR" : "ar-MA", true));
   });
+}
+function startRec(btn, lang, canRetry) {
+  const fr = settings.lang === "fr";
+  try {
+    const rec = new SR();
+    rec.lang = lang;
+    rec.interimResults = false;
+    btn.classList.add("recording");
+    rec.onresult = (ev) => {
+      const text = ev.results[0][0].transcript;
+      const form = btn.closest("form");
+      form.querySelector(".chat-input").value = text;
+      btn.classList.remove("recording");
+      form.requestSubmit();
+    };
+    rec.onend = () => btn.classList.remove("recording");
+    rec.onerror = (e) => {
+      btn.classList.remove("recording");
+      const err = (e && e.error) || "";
+      if (err === "language-not-supported" && canRetry && lang !== "ar-SA") { startRec(btn, "ar-SA", false); return; }
+      const msgs = {
+        "not-allowed": fr ? "Autorise le micro dans les réglages du navigateur pour ce site" : "خاصك تفعّل إذن الميكروفون من إعدادات المتصفح لهاد الموقع",
+        "service-not-allowed": fr ? "Service vocal bloqué — essaie Chrome" : "خدمة الصوت محبوسة في هاد المتصفح — جرب تفتح في Chrome",
+        "network": fr ? "La reconnaissance vocale demande Internet" : "التعرف على الصوت خاصو إنترنت — تحقق من الاتصال ديالك",
+        "no-speech": fr ? "Je n'ai rien entendu — rapproche le téléphone et réessaie" : "ما سمعت والو — قرّب التيليفون من فمك وعاود",
+        "audio-capture": fr ? "Aucun micro détecté" : "ما تلقى حتى ميكروفون في الجهاز",
+        "language-not-supported": fr ? "Langue non supportée par ce navigateur" : "المتصفح ما كيدعمش التعرف بالعربية"
+      };
+      toast(msgs[err] || (fr ? "Le micro n'a pas marché — écris ton message" : "الميكرو ما خدامش — كتب رسالتك"));
+    };
+    rec.start();
+  } catch { toast(fr ? "Voix non supportée dans ce navigateur" : "الصوت غير مدعوم في هاد المتصفح"); }
 }
 
 /* Open chats when their view is shown */
