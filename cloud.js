@@ -118,15 +118,41 @@ function authError(e) {
 
   const email = () => (document.getElementById("acctEmail").value || "").trim();
   const pass = () => document.getElementById("acctPass").value || "";
-  document.getElementById("acctSignUp").addEventListener("click", async () => {
+  let authMode = "in";
+  const setMode = (m) => {
+    authMode = m;
+    document.getElementById("tabSignIn").classList.toggle("on", m === "in");
+    document.getElementById("tabSignUp").classList.toggle("on", m === "up");
+    document.getElementById("pass2Wrap").hidden = m !== "up";
+    document.getElementById("acctMainBtn").textContent = m === "in" ? "تسجيل الدخول" : "إنشاء حساب";
+    document.getElementById("acctPass").setAttribute("autocomplete", m === "in" ? "current-password" : "new-password");
     acctMsg("");
-    try { await firebase.auth().createUserWithEmailAndPassword(email(), pass()); toast("تنشأ الحساب 🎉"); }
-    catch (e) { acctMsg(authError(e)); }
-  });
-  document.getElementById("acctSignIn").addEventListener("click", async () => {
+  };
+  document.getElementById("tabSignIn").addEventListener("click", () => setMode("in"));
+  document.getElementById("tabSignUp").addEventListener("click", () => setMode("up"));
+  document.querySelectorAll(".eye").forEach((b) => b.addEventListener("click", () => {
+    const inp = document.getElementById(b.dataset.eye);
+    if (!inp) return;
+    const show = inp.type === "password";
+    inp.type = show ? "text" : "password";
+    b.textContent = show ? "🙈" : "👁️";
+    inp.focus();
+  }));
+  document.getElementById("acctMainBtn").addEventListener("click", async () => {
     acctMsg("");
-    try { await firebase.auth().signInWithEmailAndPassword(email(), pass()); toast("مرحبا بيك 👋"); }
-    catch (e) { acctMsg(authError(e)); }
+    const em = email(), pw = pass();
+    if (!em || !em.includes("@")) { acctMsg("⚠️ الإيميل ما صحيحش — تأكد منو وعاود."); return; }
+    if (authMode === "up") {
+      const pw2 = document.getElementById("acctPass2").value || "";
+      if (pw.length < 6) { acctMsg("⚠️ كلمة السر قصيرة — خاصها تكون 6 حروف أو أرقام على الأقل."); return; }
+      if (pw !== pw2) { acctMsg("⚠️ كلمتا السر ما متطابقينش — كتب نفس كلمة السر في الخانتين."); return; }
+      try { await firebase.auth().createUserWithEmailAndPassword(em, pw); toast("تنشأ الحساب 🎉"); }
+      catch (e) { acctMsg(authError(e)); }
+    } else {
+      if (!pw) { acctMsg("⚠️ كتب كلمة السر."); return; }
+      try { await firebase.auth().signInWithEmailAndPassword(em, pw); toast("مرحبا بيك 👋"); }
+      catch (e) { acctMsg(authError(e)); }
+    }
   });
   document.getElementById("acctGoogle").addEventListener("click", async () => {
     acctMsg("");
