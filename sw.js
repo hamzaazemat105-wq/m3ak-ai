@@ -1,6 +1,6 @@
 /* Work — service worker (network-first, versioned shell) */
-const CACHE = "work-v7";
-const SHELL = ["./", "./index.html", "./styles.css?v=7", "./i18n.js?v=7", "./app.js?v=7", "./cloud.js?v=7", "./manifest.webmanifest", "./concours.json", "./icon-192.png", "./icon-512.png"];
+const CACHE = "work-v8";
+const SHELL = ["./", "./index.html", "./styles.css?v=8", "./i18n.js?v=8", "./app.js?v=8", "./cloud.js?v=8", "./manifest.webmanifest", "./concours.json", "./icon-192.png", "./icon-512.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
