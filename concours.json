@@ -22,6 +22,58 @@
     "وثيقة إثبات الإعاقة للمترشحين في وضعية إعاقة"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively online via the public employment portal, with documents uploaded in PDF format. Incomplete files are automatically rejected.",
+     "conditions": [
+      "Moroccan nationality",
+      "Required diploma depending on the post and specialty",
+      "Only one application, specifying the chosen specialty"
+     ],
+     "diploma": "From Bac+2 to Bac+5 depending on the post (specialized technician / administrator / state engineer)",
+     "docs": [
+      "Application form completed on the public employment portal",
+      "CV with a recent photo, phone number and email",
+      "Certified copy of the national ID card",
+      "Certified copy of the diploma (and equivalence decision for foreign degrees)",
+      "Administration authorization for civil-servant candidates",
+      "Disability certificate for candidates with a disability"
+     ],
+     "org": "National Agency for the Promotion of Employment and Skills (ANAPEC)",
+     "region": "All regions of the Kingdom",
+     "stages": [
+      "Initial file screening",
+      "Written test",
+      "Oral test"
+     ],
+     "title": "State Engineers, Administrators and Technicians — 86 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement en ligne via le portail de l'emploi public, avec téléchargement des pièces au format PDF. Les dossiers incomplets sont automatiquement rejetés.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme requis selon le poste et la spécialité",
+      "Une seule candidature, en précisant la spécialité choisie"
+     ],
+     "diploma": "De Bac+2 à Bac+5 selon le poste (technicien spécialisé / administrateur / ingénieur d'État)",
+     "docs": [
+      "Formulaire de candidature rempli sur le portail de l'emploi public",
+      "CV avec photo récente, numéro de téléphone et e-mail",
+      "Copie certifiée conforme de la carte d'identité nationale",
+      "Copie certifiée conforme du diplôme (et décision d'équivalence pour les diplômes étrangers)",
+      "Autorisation de l'administration pour les candidats fonctionnaires",
+      "Attestation de handicap pour les candidats en situation de handicap"
+     ],
+     "org": "Agence Nationale de Promotion de l'Emploi et des Compétences (ANAPEC)",
+     "region": "Toutes les régions du Royaume",
+     "stages": [
+      "Présélection des dossiers",
+      "Épreuve écrite",
+      "Épreuve orale"
+     ],
+     "title": "Ingénieurs d'État, administrateurs et techniciens — 86 postes"
+    }
+   },
    "id": "anapec-2026-86",
    "maxAge": null,
    "org": "الوكالة الوطنية لإنعاش التشغيل والكفاءات (ANAPEC)",
@@ -33,7 +85,7 @@
     "اختبار كتابي",
     "اختبار شفوي"
    ],
-   "title": "مهندسو دولة ومتصرفون وتقنيون — 86 منصباً",
+   "title": "مهندسون ومتصرفون وتقنيون — 86 منصباً",
    "type": "public"
   },
   {
@@ -56,6 +108,54 @@
     "نسخة مطابقة للأصل من الدبلوم (وقرار المعادلة عند الاقتضاء)"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Registration is final and cannot be modified; a pass certificate is not accepted — the diploma itself is required.",
+     "conditions": [
+      "Moroccan nationality",
+      "Master's in one of the required specialties",
+      "Meet the conditions set out in the official announcement"
+     ],
+     "diploma": "Master's degree or equivalent (administration, finance, communication, international law, data science)",
+     "docs": [
+      "Online application form",
+      "CV",
+      "Certified copy of the national ID card",
+      "Certified copy of the diploma (and equivalence decision where applicable)"
+     ],
+     "org": "Ministry of Agriculture, Maritime Fisheries, Rural Development and Water and Forests",
+     "region": "Morocco",
+     "stages": [
+      "Initial file screening",
+      "Written test",
+      "Oral test"
+     ],
+     "title": "Second-Grade Administrators — 38 posts"
+    },
+    "fr": {
+     "applyNote": "L'inscription est définitive et non modifiable ; l'attestation de réussite n'est pas acceptée — le diplôme est obligatoire.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Master dans l'une des spécialités demandées",
+      "Remplir les conditions prévues dans l'annonce officielle"
+     ],
+     "diploma": "Master ou équivalent (administration, finance, communication, droit international, science des données)",
+     "docs": [
+      "Formulaire de candidature en ligne",
+      "CV",
+      "Copie certifiée conforme de la carte d'identité nationale",
+      "Copie certifiée conforme du diplôme (et décision d'équivalence le cas échéant)"
+     ],
+     "org": "Ministère de l'Agriculture, de la Pêche Maritime, du Développement Rural et des Eaux et Forêts",
+     "region": "Maroc",
+     "stages": [
+      "Présélection des dossiers",
+      "Épreuve écrite",
+      "Épreuve orale"
+     ],
+     "title": "Administrateurs de 2e grade — 38 postes"
+    }
+   },
    "id": "agriculture-2026-38",
    "maxAge": null,
    "org": "وزارة الفلاحة والصيد البحري والتنمية القروية والمياه والغابات",
@@ -90,6 +190,54 @@
     "سيرة ذاتية"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Submission exclusively via the public employment portal, clearly stating the post reference. Any incomplete or late file is void.",
+     "conditions": [
+      "Moroccan nationality",
+      "Required diploma for the post",
+      "Respect the deadline and place of submission set in the announcement"
+     ],
+     "diploma": "Bachelor's degree or equivalent (graduate executive — scale 10)",
+     "docs": [
+      "Application letter with the post reference",
+      "Copy of the required diploma",
+      "Copy of the national ID card",
+      "CV"
+     ],
+     "org": "Local Development Company Mediouna Services SA",
+     "region": "Mediouna — Casablanca-Settat Region",
+     "salary": "Around MAD 6,000 to 7,200 per month (per the announcement)",
+     "stages": [
+      "Review of application files",
+      "Oral interview"
+     ],
+     "title": "Central Media Library Site Manager — 1 post"
+    },
+    "fr": {
+     "applyNote": "Dépôt exclusivement via le portail de l'emploi public, en indiquant clairement la référence du poste. Tout dossier incomplet ou hors délai est annulé.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme requis pour le poste",
+      "Respect du délai et du lieu de dépôt fixés dans l'annonce"
+     ],
+     "diploma": "Licence ou équivalent (cadre licencié — échelle 10)",
+     "docs": [
+      "Demande de candidature avec la référence du poste",
+      "Copie du diplôme requis",
+      "Copie de la carte d'identité nationale",
+      "CV"
+     ],
+     "org": "Société de Développement Local Mediouna Services SA",
+     "region": "Mediouna — Région Casablanca-Settat",
+     "salary": "Environ 6 000 à 7 200 MAD par mois (selon l'annonce)",
+     "stages": [
+      "Étude des dossiers de candidature",
+      "Entretien oral"
+     ],
+     "title": "Responsable du site de la médiathèque centrale — 1 poste"
+    }
+   },
    "id": "mediouna-2026-biblio",
    "maxAge": null,
    "org": "شركة التنمية المحلية مديونة خدمات ش.م",
@@ -123,6 +271,50 @@
     "سيرة ذاتية"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Contract-based recruitment. See the competition opening decision for full conditions and documents.",
+     "conditions": [
+      "Moroccan nationality",
+      "Required diploma for the post"
+     ],
+     "diploma": "Diploma in IT (per the competition opening decision)",
+     "docs": [
+      "Application letter",
+      "Copy of the required diploma",
+      "Copy of the national ID card",
+      "CV"
+     ],
+     "org": "Local Development Company Mediouna Services SA",
+     "region": "Mediouna — Casablanca-Settat Region",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "IT Agent (Agent Informatique) — 1 post"
+    },
+    "fr": {
+     "applyNote": "Recrutement sous contrat. Consultez la décision d'ouverture du concours pour les conditions et pièces complètes.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme requis pour le poste"
+     ],
+     "diploma": "Diplôme en informatique (selon la décision d'ouverture du concours)",
+     "docs": [
+      "Demande de candidature",
+      "Copie du diplôme requis",
+      "Copie de la carte d'identité nationale",
+      "CV"
+     ],
+     "org": "Société de Développement Local Mediouna Services SA",
+     "region": "Mediouna — Région Casablanca-Settat",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Agent Informatique — 1 poste"
+    }
+   },
    "id": "mediouna-2026-info",
    "maxAge": null,
    "org": "شركة التنمية المحلية مديونة خدمات ش.م",
@@ -157,6 +349,56 @@
     "موافقة الإدارة النهائية بالنسبة للموظفين"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "In-person submission at the registry office of the chamber's headquarters: 98, Mohammed V Boulevard, Casablanca, against a receipt. Pass certificates are not accepted.",
+     "conditions": [
+      "Moroccan nationality",
+      "Specialized technician diploma in IT",
+      "File submitted within the deadline at the chamber's headquarters"
+     ],
+     "diploma": "Specialized technician diploma in IT or equivalent",
+     "docs": [
+      "Application letter",
+      "Copy of the required diploma",
+      "Copy of the national ID card",
+      "CV",
+      "Final administration approval for civil servants"
+     ],
+     "org": "Chamber of Commerce, Industry and Services of the Casablanca-Settat Region",
+     "region": "Casablanca",
+     "stages": [
+      "File review",
+      "Written test",
+      "Oral test"
+     ],
+     "title": "Third-Grade Technician — IT specialty"
+    },
+    "fr": {
+     "applyNote": "Dépôt en personne au bureau d'ordre du siège central de la chambre : 98, boulevard Mohammed V, Casablanca, contre récépissé. L'attestation de réussite n'est pas acceptée.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme de technicien spécialisé en informatique",
+      "Dépôt du dossier dans les délais au siège de la chambre"
+     ],
+     "diploma": "Diplôme de technicien spécialisé en informatique ou équivalent",
+     "docs": [
+      "Demande de candidature",
+      "Copie du diplôme requis",
+      "Copie de la carte d'identité nationale",
+      "CV",
+      "Accord définitif de l'administration pour les fonctionnaires"
+     ],
+     "org": "Chambre de Commerce, d'Industrie et de Services de la région Casablanca-Settat",
+     "region": "Casablanca",
+     "stages": [
+      "Étude des dossiers",
+      "Épreuve écrite",
+      "Épreuve orale"
+     ],
+     "title": "Technicien de 3e grade — spécialité informatique"
+    }
+   },
    "id": "cci-casa-2026-tech",
    "maxAge": null,
    "org": "غرفة التجارة والصناعة والخدمات لجهة الدار البيضاء سطات",
@@ -190,6 +432,52 @@
     "سيرة ذاتية"
    ],
    "exam": "2026-11-29",
+   "i18n": {
+    "en": {
+     "applyNote": "Online submission on the public employment portal. Competition date: November 29, 2026.",
+     "conditions": [
+      "Moroccan nationality",
+      "State engineer diploma in the required specialty"
+     ],
+     "diploma": "State engineer diploma (scale 11)",
+     "docs": [
+      "Application form on the portal",
+      "Copy of the state engineer diploma",
+      "Copy of the national ID card",
+      "CV"
+     ],
+     "org": "National Office for Agricultural Advisory",
+     "region": "Morocco",
+     "stages": [
+      "Preselection",
+      "Written test — November 29, 2026",
+      "Oral test"
+     ],
+     "title": "First-Grade State Engineer — 6 posts"
+    },
+    "fr": {
+     "applyNote": "Dépôt en ligne sur le portail de l'emploi public. Date du concours : 29 novembre 2026.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme d'ingénieur d'État dans la spécialité demandée"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État (échelle 11)",
+     "docs": [
+      "Formulaire de candidature sur le portail",
+      "Copie du diplôme d'ingénieur d'État",
+      "Copie de la carte d'identité nationale",
+      "CV"
+     ],
+     "org": "Office National du Conseil Agricole",
+     "region": "Maroc",
+     "stages": [
+      "Présélection",
+      "Épreuve écrite — 29 novembre 2026",
+      "Épreuve orale"
+     ],
+     "title": "Ingénieur d'État de 1er grade — 6 postes"
+    }
+   },
    "id": "onca-2026-ingenieur",
    "maxAge": null,
    "org": "المكتب الوطني للاستشارة الفلاحية",
@@ -223,6 +511,50 @@
     "سيرة ذاتية"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Posts: electrical technician (4th grade), IT technician and civil engineering technician (3rd grade). See the full announcement for submission details.",
+     "conditions": [
+      "Moroccan nationality",
+      "Required diploma depending on the post"
+     ],
+     "diploma": "Technician / specialized technician diploma depending on the post",
+     "docs": [
+      "Application letter",
+      "Copy of the required diploma",
+      "Copy of the national ID card",
+      "CV"
+     ],
+     "org": "Commune of Tazenakht — Ouarzazate Province",
+     "region": "Tazenakht — Ouarzazate Province",
+     "stages": [
+      "File review",
+      "Written and oral tests"
+     ],
+     "title": "Technicians (Electricity, IT, Civil Engineering) — 5 posts"
+    },
+    "fr": {
+     "applyNote": "Postes : technicien électricien (4e grade), technicien informatique et technicien génie civil (3e grade). Voir l'annonce complète pour les modalités de dépôt.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme requis selon le poste"
+     ],
+     "diploma": "Diplôme de technicien / technicien spécialisé selon le poste",
+     "docs": [
+      "Demande de candidature",
+      "Copie du diplôme requis",
+      "Copie de la carte d'identité nationale",
+      "CV"
+     ],
+     "org": "Commune de Tazenakht — Province de Ouarzazate",
+     "region": "Tazenakht — Province de Ouarzazate",
+     "stages": [
+      "Étude des dossiers",
+      "Épreuves écrites et orales"
+     ],
+     "title": "Techniciens (électricité, informatique, génie civil) — 5 postes"
+    }
+   },
    "id": "commune-tazenakhte-2026",
    "maxAge": null,
    "org": "جماعة تازناخت — إقليم ورزازات",
@@ -255,6 +587,50 @@
     "سيرة ذاتية"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "See the full announcement for how and where to submit application files.",
+     "conditions": [
+      "Moroccan nationality",
+      "Required diploma depending on the post"
+     ],
+     "diploma": "Specialized technician diploma (civil engineering or IT)",
+     "docs": [
+      "Application letter",
+      "Copy of the required diploma",
+      "Copy of the national ID card",
+      "CV"
+     ],
+     "org": "Commune of Inchaden — Chtouka Aït Baha Province",
+     "region": "Inchaden — Chtouka Aït Baha Province",
+     "stages": [
+      "File review",
+      "Written and oral tests"
+     ],
+     "title": "Third-Grade Technicians (Civil Engineering and IT) — 5 posts"
+    },
+    "fr": {
+     "applyNote": "Voir l'annonce complète pour les modalités et le lieu de dépôt des dossiers.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme requis selon le poste"
+     ],
+     "diploma": "Diplôme de technicien spécialisé (génie civil ou informatique)",
+     "docs": [
+      "Demande de candidature",
+      "Copie du diplôme requis",
+      "Copie de la carte d'identité nationale",
+      "CV"
+     ],
+     "org": "Commune d'Inchaden — Province de Chtouka Aït Baha",
+     "region": "Inchaden — Province de Chtouka Aït Baha",
+     "stages": [
+      "Étude des dossiers",
+      "Épreuves écrites et orales"
+     ],
+     "title": "Techniciens de 3e grade (génie civil et informatique) — 5 postes"
+    }
+   },
    "id": "commune-inchaden-2026",
    "maxAge": null,
    "org": "جماعة انشادن — إقليم اشتوكة آيت باها",
@@ -287,6 +663,50 @@
     "سيرة ذاتية"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Deadline: October 23, 2026 — see the full announcement for submission details before going.",
+     "conditions": [
+      "Moroccan nationality",
+      "Required diploma depending on the post"
+     ],
+     "diploma": "Specialized technician diploma (software development or systems & networks)",
+     "docs": [
+      "Application letter",
+      "Copy of the required diploma",
+      "Copy of the national ID card",
+      "CV"
+     ],
+     "org": "Commune of Tighmi — Tiznit Province",
+     "region": "Tighmi — Tiznit Province",
+     "stages": [
+      "File review",
+      "Written and oral tests"
+     ],
+     "title": "Third-Grade Technicians (IT) — 2 posts"
+    },
+    "fr": {
+     "applyNote": "Date limite : 23 octobre 2026 — voir l'annonce complète pour les modalités de dépôt avant de vous déplacer.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme requis selon le poste"
+     ],
+     "diploma": "Diplôme de technicien spécialisé (développement informatique ou systèmes et réseaux)",
+     "docs": [
+      "Demande de candidature",
+      "Copie du diplôme requis",
+      "Copie de la carte d'identité nationale",
+      "CV"
+     ],
+     "org": "Commune de Tighmi — Province de Tiznit",
+     "region": "Tighmi — Province de Tiznit",
+     "stages": [
+      "Étude des dossiers",
+      "Épreuves écrites et orales"
+     ],
+     "title": "Techniciens de 3e grade (informatique) — 2 postes"
+    }
+   },
    "id": "commune-tighmi-2026",
    "maxAge": null,
    "org": "جماعة تيغمي — إقليم تيزنيت",
@@ -319,6 +739,50 @@
     "سيرة ذاتية"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Deadline: October 23, 2026 — see the full announcement for submission details before going.",
+     "conditions": [
+      "Moroccan nationality",
+      "Required diploma depending on the post"
+     ],
+     "diploma": "Specialized technician diploma (civil engineering or public works)",
+     "docs": [
+      "Application letter",
+      "Copy of the required diploma",
+      "Copy of the national ID card",
+      "CV"
+     ],
+     "org": "Commune of Ain Taztout — Chichaoua Province",
+     "region": "Ain Taztout — Chichaoua Province",
+     "stages": [
+      "File review",
+      "Written and oral tests"
+     ],
+     "title": "Third-Grade Technician (Civil Engineering and Public Works) — 1 post"
+    },
+    "fr": {
+     "applyNote": "Date limite : 23 octobre 2026 — voir l'annonce complète pour les modalités de dépôt avant de vous déplacer.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme requis selon le poste"
+     ],
+     "diploma": "Diplôme de technicien spécialisé (génie civil ou travaux publics)",
+     "docs": [
+      "Demande de candidature",
+      "Copie du diplôme requis",
+      "Copie de la carte d'identité nationale",
+      "CV"
+     ],
+     "org": "Commune d'Aïn Taztout — Province de Chichaoua",
+     "region": "Aïn Taztout — Province de Chichaoua",
+     "stages": [
+      "Étude des dossiers",
+      "Épreuves écrites et orales"
+     ],
+     "title": "Technicien de 3e grade (génie civil et travaux publics) — 1 poste"
+    }
+   },
    "id": "commune-ain-taztout-2026",
    "maxAge": null,
    "org": "جماعة عين تزتونت — إقليم شيشاوة",
@@ -351,6 +815,50 @@
     "سيرة ذاتية"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Deadline: October 23, 2026 — see the full announcement for submission details before going.",
+     "conditions": [
+      "Moroccan nationality",
+      "Doctorate in general medicine"
+     ],
+     "diploma": "Doctorate in general medicine",
+     "docs": [
+      "Application letter",
+      "Copy of the medical doctorate diploma",
+      "Copy of the national ID card",
+      "CV"
+     ],
+     "org": "Commune of Oulmas — Khemisset Province",
+     "region": "Oulmas — Khemisset Province",
+     "stages": [
+      "File review",
+      "Written and oral tests"
+     ],
+     "title": "First-Grade Physician — General Medicine"
+    },
+    "fr": {
+     "applyNote": "Date limite : 23 octobre 2026 — voir l'annonce complète pour les modalités de dépôt avant de vous déplacer.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Doctorat en médecine générale"
+     ],
+     "diploma": "Doctorat en médecine générale",
+     "docs": [
+      "Demande de candidature",
+      "Copie du doctorat en médecine",
+      "Copie de la carte d'identité nationale",
+      "CV"
+     ],
+     "org": "Commune d'Oulmas — Province de Khémisset",
+     "region": "Oulmas — Province de Khémisset",
+     "stages": [
+      "Étude des dossiers",
+      "Épreuves écrites et orales"
+     ],
+     "title": "Médecin de 1er grade — médecine générale"
+    }
+   },
    "id": "commune-oulmas-2026-medecin",
    "maxAge": null,
    "org": "جماعة ولماس — إقليم الخميسات",
@@ -389,6 +897,64 @@
     "قرار المعادلة عند الاقتضاء"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the official platform — one post and one track per candidate. The exact diploma is required (a higher diploma is not accepted).",
+     "conditions": [
+      "Moroccan nationality",
+      "Full civil rights",
+      "Max age: 40 for agents and 45 for engineers, as of 12/31/2026",
+      "The exact diploma required for the post",
+      "Diplomas from Moroccan public institutions or equivalence"
+     ],
+     "diploma": "State engineer (for engineers) / Bac+3 public law or specialized technician Bac+2 / Baccalaureate + technician diploma depending on the post",
+     "docs": [
+      "CV with photo",
+      "Recent school certificate (less than 3 months old)",
+      "Copy of the baccalaureate where applicable",
+      "National ID card (both sides)",
+      "Certified copy of the diploma",
+      "Driving licenses B/C/D for drivers",
+      "Equivalence decision where applicable"
+     ],
+     "org": "Regional Multiservices Company of the Oriental Region (SRM-ORI)",
+     "region": "Oujda — Oriental Region",
+     "stages": [
+      "File preselection",
+      "Written test",
+      "Oral test (date and venue announced later)"
+     ],
+     "title": "32 posts: 8 execution agents + 14 supervisory agents + 10 state engineers"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme officielle — un seul poste et une seule orientation par candidat. Le diplôme exact est exigé (un diplôme supérieur n'est pas accepté).",
+     "conditions": [
+      "Nationalité marocaine",
+      "Jouissance des droits civiques",
+      "Âge max : 40 ans pour les agents et 45 ans pour les ingénieurs, au 31/12/2026",
+      "Le diplôme exact requis selon le poste",
+      "Diplômes des établissements publics marocains ou équivalence"
+     ],
+     "diploma": "Ingénieur d'État (pour les ingénieurs) / Bac+3 droit public ou technicien spécialisé Bac+2 / Bac + diplôme de technicien selon le poste",
+     "docs": [
+      "CV avec photo",
+      "Certificat de scolarité récent (moins de 3 mois)",
+      "Copie du baccalauréat le cas échéant",
+      "Carte d'identité nationale (recto-verso)",
+      "Copie légalisée du diplôme",
+      "Permis de conduire B/C/D pour les chauffeurs",
+      "Décision d'équivalence le cas échéant"
+     ],
+     "org": "Société Régionale Multiservices de la région de l'Oriental (SRM-ORI)",
+     "region": "Oujda — Région de l'Oriental",
+     "stages": [
+      "Présélection des dossiers",
+      "Épreuve écrite",
+      "Épreuve orale (date et lieu annoncés ultérieurement)"
+     ],
+     "title": "32 postes : 8 agents d'exécution + 14 agents de maîtrise + 10 ingénieurs d'État"
+    }
+   },
    "id": "srm-ori-2026-32",
    "maxAge": 45,
    "org": "الشركة الجهوية متعددة الخدمات لجهة الشرق (SRM-ORI)",
@@ -425,6 +991,56 @@
     "وثائق إثبات الخبرة"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Via the public employment portal — competition reference C44188/26. Contract-based recruitment.",
+     "conditions": [
+      "Moroccan nationality",
+      "Age 18 to 45",
+      "At least 3 years of professional experience"
+     ],
+     "diploma": "State engineer in civil engineering",
+     "docs": [
+      "Handwritten signed application (+ management opinion for civil servants)",
+      "Detailed CV",
+      "Copies of diplomas",
+      "Equivalence decision where applicable",
+      "National ID card",
+      "Proof of experience"
+     ],
+     "org": "High Atlas Development Agency (ADHA)",
+     "region": "Morocco",
+     "stages": [
+      "File review",
+      "Oral interview for shortlisted candidates"
+     ],
+     "title": "State Engineers in Civil Engineering (contract-based) — 5 posts"
+    },
+    "fr": {
+     "applyNote": "Via le portail de l'emploi public — référence du concours C44188/26. Recrutement sous contrat.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge de 18 à 45 ans",
+      "Expérience professionnelle de 3 ans minimum"
+     ],
+     "diploma": "Ingénieur d'État en génie civil",
+     "docs": [
+      "Demande manuscrite signée (+ avis de la hiérarchie pour les fonctionnaires)",
+      "CV détaillé",
+      "Copies des diplômes",
+      "Décision d'équivalence le cas échéant",
+      "Carte d'identité nationale",
+      "Justificatifs d'expérience"
+     ],
+     "org": "Agence pour le Développement du Haut Atlas (ADHA)",
+     "region": "Maroc",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien oral pour les retenus"
+     ],
+     "title": "Ingénieurs d'État en génie civil (sous contrat) — 5 postes"
+    }
+   },
    "id": "adha-2026-5",
    "maxAge": 45,
    "org": "وكالة تنمية الأطلس الكبير (ADHA)",
@@ -455,6 +1071,46 @@
    "diplomaRank": 4,
    "docs": [],
    "exam": "2026-11-22",
+   "i18n": {
+    "en": {
+     "applyNote": "Send files to recrutement@fnm.ma — competition reference C44186/26. Tests on November 22, 2026 at Lalla Aïcha High School, Rabat.",
+     "conditions": [
+      "Moroccan nationality",
+      "Diploma from an accredited Moroccan institution",
+      "IT proficiency",
+      "Writing in Arabic and French",
+      "Communication post: digital tools proficiency + 2 years of experience"
+     ],
+     "diploma": "Bac+5 in communication (COM post) / Master's in cultural mediation (PC post)",
+     "org": "National Museums Foundation",
+     "region": "Rabat",
+     "stages": [
+      "General written test 3 hrs (coefficient 2)",
+      "Specialty written test 3 hrs (coefficient 3)",
+      "Oral test 15-30 min (coefficient 3)"
+     ],
+     "title": "Second-Grade Administrators (Communication & Marketing / Cultural Mediation) — 2 posts"
+    },
+    "fr": {
+     "applyNote": "Envoyez les dossiers à recrutement@fnm.ma — référence du concours C44186/26. Épreuves le 22 novembre 2026 au lycée Lalla Aïcha, Rabat.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme d'un établissement marocain accrédité",
+      "Maîtrise de l'informatique",
+      "Rédaction en arabe et en français",
+      "Poste communication : maîtrise des outils numériques + 2 ans d'expérience"
+     ],
+     "diploma": "Bac+5 en communication (poste COM) / Master en médiation culturelle (poste PC)",
+     "org": "Fondation Nationale des Musées",
+     "region": "Rabat",
+     "stages": [
+      "Épreuve écrite générale 3 h (coefficient 2)",
+      "Épreuve écrite de spécialité 3 h (coefficient 3)",
+      "Épreuve orale 15-30 min (coefficient 3)"
+     ],
+     "title": "Administrateurs de 2e grade (communication & marketing / médiation culturelle) — 2 postes"
+    }
+   },
    "id": "fnm-2026-2",
    "maxAge": 45,
    "org": "المؤسسة الوطنية للمتاحف",
@@ -490,6 +1146,54 @@
     "ترخيص الإدارة للموظفين"
    ],
    "exam": "2026-11-15",
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via recrutement.enssup.gov.ma — references C44172/26 and C44173/26. Pass certificates are not accepted. Tests on November 15, 2026.",
+     "conditions": [
+      "Moroccan nationality",
+      "Legal age",
+      "Required diploma (pass certificates not accepted)"
+     ],
+     "diploma": "Master's / specialized Master's (administrator) — specialized technician (technician)",
+     "docs": [
+      "Signed application",
+      "CV with photo",
+      "National ID card",
+      "Diploma (+ equivalence decision)",
+      "Administration authorization for civil servants"
+     ],
+     "org": "Ibn Tofail University — Kenitra",
+     "region": "Kenitra",
+     "stages": [
+      "(Administrator) general written 3 hrs coef. 2 + specialty written 3 hrs coef. 3 + oral 15-30 min coef. 3",
+      "(Technician) general written coef. 4 + specialty written coef. 6 + oral coef. 3"
+     ],
+     "title": "Second-Grade Administrator (IT) + Third-Grade Technician (Software Development) — 2 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via recrutement.enssup.gov.ma — références C44172/26 et C44173/26. L'attestation de réussite n'est pas acceptée. Épreuves le 15 novembre 2026.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge légal",
+      "Diplôme requis (attestation de réussite non acceptée)"
+     ],
+     "diploma": "Master / Master spécialisé (administrateur) — technicien spécialisé (technicien)",
+     "docs": [
+      "Demande signée",
+      "CV avec photo",
+      "Carte d'identité nationale",
+      "Diplôme (+ décision d'équivalence)",
+      "Autorisation de l'administration pour les fonctionnaires"
+     ],
+     "org": "Université Ibn Tofaïl — Kénitra",
+     "region": "Kénitra",
+     "stages": [
+      "(Administrateur) écrit général 3 h coef. 2 + écrit de spécialité 3 h coef. 3 + oral 15-30 min coef. 3",
+      "(Technicien) écrit général coef. 4 + écrit de spécialité coef. 6 + oral coef. 3"
+     ],
+     "title": "Administrateur de 2e grade (informatique) + technicien de 3e grade (développement informatique) — 2 postes"
+    }
+   },
    "id": "uit-kenitra-2026-2",
    "maxAge": 45,
    "org": "جامعة ابن طفيل — القنيطرة",
@@ -517,6 +1221,38 @@
    "diplomaRank": 2,
    "docs": [],
    "exam": "2026-11-15",
+   "i18n": {
+    "en": {
+     "applyNote": "Online submission via recrutement.enssup.gov.ma — reference C44177/26. Tests on November 15, 2026.",
+     "conditions": [
+      "Moroccan nationality",
+      "Technician diploma (business management)"
+     ],
+     "diploma": "Technician diploma",
+     "org": "Ibn Zohr University — Agadir",
+     "region": "Laayoune",
+     "stages": [
+      "File review",
+      "Written and oral tests — November 15, 2026"
+     ],
+     "title": "Third-Grade Technician — Faculty of Medicine and Pharmacy of Laayoune (Business Management)"
+    },
+    "fr": {
+     "applyNote": "Dépôt en ligne via recrutement.enssup.gov.ma — référence C44177/26. Épreuves le 15 novembre 2026.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme de technicien (gestion des entreprises)"
+     ],
+     "diploma": "Diplôme de technicien",
+     "org": "Université Ibn Zohr — Agadir",
+     "region": "Laâyoune",
+     "stages": [
+      "Étude des dossiers",
+      "Épreuves écrites et orales — 15 novembre 2026"
+     ],
+     "title": "Technicien de 3e grade — Faculté de Médecine et de Pharmacie de Laâyoune (gestion des entreprises)"
+    }
+   },
    "id": "uiz-agadir-2026-1",
    "maxAge": null,
    "org": "جامعة ابن زهر — أكادير",
@@ -551,6 +1287,56 @@
     "ترخيص الإدارة للموظفين"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "In-person submission at the registry office of the headquarters: 98, Mohammed V Boulevard, Casablanca — decision 2026/02 dated 10/22.",
+     "conditions": [
+      "Moroccan nationality",
+      "18 years and over",
+      "The exact required diploma and specialty"
+     ],
+     "diploma": "Master's / specialized Master's in economics and management (administrator) — OFPPT IT diploma (technician)",
+     "docs": [
+      "Application",
+      "Copy of the diploma",
+      "National ID card",
+      "CV",
+      "Administration authorization for civil servants"
+     ],
+     "org": "Chamber of Commerce, Industry and Services of the Casablanca-Settat Region",
+     "region": "Casablanca",
+     "stages": [
+      "Written test 3 hrs (coefficient 3)",
+      "Oral/practical test 15-30 min (coefficient 3)",
+      "(Technician: written on November 19 and oral on November 24, 2026 at headquarters)"
+     ],
+     "title": "Second-Grade Administrator + Third-Grade Technician (IT) — 2 posts"
+    },
+    "fr": {
+     "applyNote": "Dépôt en personne au bureau d'ordre du siège central : 98, boulevard Mohammed V, Casablanca — décision 2026/02 du 22/10.",
+     "conditions": [
+      "Nationalité marocaine",
+      "18 ans et plus",
+      "Le diplôme et la spécialité exacts requis"
+     ],
+     "diploma": "Master / Master spécialisé en économie et gestion (administrateur) — diplôme d'informatique OFPPT (technicien)",
+     "docs": [
+      "Demande",
+      "Copie du diplôme",
+      "Carte d'identité nationale",
+      "CV",
+      "Autorisation de l'administration pour les fonctionnaires"
+     ],
+     "org": "Chambre de Commerce, d'Industrie et de Services de la région Casablanca-Settat",
+     "region": "Casablanca",
+     "stages": [
+      "Épreuve écrite 3 h (coefficient 3)",
+      "Épreuve orale/pratique 15-30 min (coefficient 3)",
+      "(Technicien : écrit le 19 novembre et oral le 24 novembre 2026 au siège)"
+     ],
+     "title": "Administrateur de 2e grade + technicien de 3e grade (informatique) — 2 postes"
+    }
+   },
    "id": "cciscs-2026-2",
    "maxAge": 45,
    "org": "غرفة التجارة والصناعة والخدمات لجهة الدار البيضاء سطات",
@@ -582,6 +1368,48 @@
     "سيرة ذاتية محدثة"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "ANAPEC offer reference: TA1910261193988 — apply via the ANAPEC platform or the Tangier Fahs/Zemmouri agency. Start date: October 26, 2026. Industrial offers close once filled — apply quickly.",
+     "conditions": [
+      "Baccalaureate or vocational certificate (specialization/qualification/technician)",
+      "6 months to 1 year of industrial experience",
+      "Basic French"
+     ],
+     "diploma": "Baccalaureate or specialization/qualification/technician diploma",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "STRATEGIC Company (via ANAPEC Tangier)",
+     "region": "Tangier — Asilah",
+     "salary": "MAD 4,000 per month — permanent contract (CDI)",
+     "stages": [
+      "File review via ANAPEC",
+      "Interview with the company"
+     ],
+     "title": "Automotive Production Workers — 400 posts"
+    },
+    "fr": {
+     "applyNote": "Référence de l'offre ANAPEC : TA1910261193988 — candidature via la plateforme ANAPEC ou l'agence de Tanger Fahs/Zemmouri. Début de travail : 26 octobre 2026. Les offres industrielles se clôturent dès que le nombre est atteint — postulez vite.",
+     "conditions": [
+      "Baccalauréat ou certificat professionnel (spécialisation/qualification/technicien)",
+      "Expérience de 6 mois à 1 an dans l'industrie",
+      "Bases de français"
+     ],
+     "diploma": "Baccalauréat ou diplôme de spécialisation/qualification/technicien",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Société STRATEGIC (via ANAPEC Tanger)",
+     "region": "Tanger — Assilah",
+     "salary": "4 000 MAD par mois — contrat CDI",
+     "stages": [
+      "Étude des dossiers via ANAPEC",
+      "Entretien avec l'entreprise"
+     ],
+     "title": "Ouvriers de production automobile — 400 postes"
+    }
+   },
    "id": "strategic-tanger-400",
    "maxAge": null,
    "org": "شركة STRATEGIC (عبر أنابيك طنجة)",
@@ -613,6 +1441,46 @@
     "سيرة ذاتية محدثة"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Permanent contract (CDI). Full details and application links in the recruitment post. Beginners accepted for some positions.",
+     "conditions": [
+      "Bac+3 to Bac+5 degree in finance, commerce or management",
+      "Customer-service mindset and excellent communication",
+      "First experience in banking or customer relations (a plus)"
+     ],
+     "diploma": "Bac+3 to Bac+5 (finance, commerce, management)",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Bank of Africa (BMCE Group)",
+     "region": "Casablanca, Rabat, Marrakech, Fez, Tangier, Agadir",
+     "stages": [
+      "File review",
+      "Recruitment interviews"
+     ],
+     "title": "Customer Service and Sales Support Officers — 25 posts"
+    },
+    "fr": {
+     "applyNote": "Contrat CDI. Détails complets et liens de candidature dans l'annonce de recrutement. Débutants acceptés sur certains postes.",
+     "conditions": [
+      "Diplôme Bac+3 à Bac+5 en finance, commerce ou gestion",
+      "Sens du service client et excellente communication",
+      "Première expérience en banque ou relation client (un plus)"
+     ],
+     "diploma": "Bac+3 à Bac+5 (finance, commerce, gestion)",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Bank of Africa (BMCE Group)",
+     "region": "Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir",
+     "stages": [
+      "Étude des dossiers",
+      "Entretiens de recrutement"
+     ],
+     "title": "Chargés de clientèle et appui commercial — 25 postes"
+    }
+   },
    "id": "boa-2026-25",
    "maxAge": null,
    "org": "Bank of Africa (BMCE Group)",
@@ -642,6 +1510,44 @@
     "سيرة ذاتية محدثة"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Send your CV stating the desired position in the subject line to: Recrutements@hyundai.ma — announced positions: Sales Advisor in 6 cities, security & services team lead, and Microsoft 365 systems & Cloud manager in Casablanca.",
+     "conditions": [
+      "Sales and customer-relations skills for sales roles",
+      "Microsoft 365, Cloud administration and support for the IT role"
+     ],
+     "diploma": "Depending on the position (sales / IT)",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Hyundai Maroc",
+     "region": "Casablanca, Mohammedia, Tangier, Fez, Oujda, Rabat",
+     "stages": [
+      "CV review",
+      "Interview"
+     ],
+     "title": "Sales Advisors (6 cities) + IT positions"
+    },
+    "fr": {
+     "applyNote": "Envoyez votre CV en précisant le poste souhaité dans l'objet à : Recrutements@hyundai.ma — postes annoncés : Sales Advisor dans 6 villes, responsable d'équipe sécurité et services, et manager systèmes & Cloud Microsoft 365 à Casablanca.",
+     "conditions": [
+      "Compétences en vente et relation client pour les postes commerciaux",
+      "Administration Microsoft 365, Cloud et support pour le poste informatique"
+     ],
+     "diploma": "Selon le poste (vente / informatique)",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Hyundai Maroc",
+     "region": "Casablanca, Mohammedia, Tanger, Fès, Oujda, Rabat",
+     "stages": [
+      "Étude des CV",
+      "Entretien"
+     ],
+     "title": "Conseillers de vente (6 villes) + postes informatiques"
+    }
+   },
    "id": "hyundai-maroc-2026",
    "maxAge": null,
    "org": "Hyundai Maroc",
@@ -670,6 +1576,44 @@
    "diplomaRank": 1,
    "docs": [],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Apply via WhatsApp: 0612109862. Pre-start training is included per the announcement. Bonuses are uncapped per the announcement.",
+     "conditions": [
+      "Perfect spoken French and elocution",
+      "Good communication skills and a challenge-driven mindset",
+      "Beginners accepted for some positions"
+     ],
+     "diploma": "Good school level — French is the key requirement",
+     "org": "Expert Call Center — Casablanca",
+     "region": "Casablanca",
+     "salary": "From MAD 4,500 to 6,000 net + bonuses (depending on position and experience)",
+     "stages": [
+      "Call and interview",
+      "Training",
+      "Start"
+     ],
+     "title": "French-Speaking Customer Advisors (Beginners and Experienced)"
+    },
+    "fr": {
+     "applyNote": "Candidature via WhatsApp : 0612109862. Formation avant la prise de poste prévue dans l'annonce. Primes non plafonnées selon l'annonce.",
+     "conditions": [
+      "Maîtrise parfaite du français parlé et de l'élocution",
+      "Bon sens de la communication et esprit de challenge",
+      "Débutants acceptés sur certains postes"
+     ],
+     "diploma": "Bon niveau scolaire — le français est l'essentiel",
+     "org": "Expert Call Center — Casablanca",
+     "region": "Casablanca",
+     "salary": "De 4 500 à 6 000 MAD nets + primes (selon le poste et l'expérience)",
+     "stages": [
+      "Appel et entretien",
+      "Formation",
+      "Prise de poste"
+     ],
+     "title": "Téléconseillers francophones (débutants et expérimentés)"
+    }
+   },
    "id": "expert-call-center-casa",
    "maxAge": null,
    "org": "Expert Call Center — الدار البيضاء",
@@ -701,6 +1645,44 @@
     "سيرة ذاتية محدثة"
    ],
    "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Various roles: ground equipment mechanics (Agadir), fleet & training interns (Casablanca), station operations coordinators (Tangier and Nador)… 'Apply' links for each role are in the full announcement.",
+     "conditions": [
+      "Requirements vary by role: e.g. mechanics: Bac+2 in mechanics + 5 years of experience + B license",
+      "Good English and French in most positions"
+     ],
+     "diploma": "From Bac+2 depending on the position",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Swissport Maroc (airport services)",
+     "region": "Agadir, Casablanca, Tangier, Nador",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Hiring at Several Airports — Technicians, Administrative Staff and Interns"
+    },
+    "fr": {
+     "applyNote": "Postes variés : mécanique d'engins au sol (Agadir), stagiaires flotte et formation (Casablanca), coordinateurs des opérations de station (Tanger et Nador)… Liens « Postulez » pour chaque poste dans l'annonce complète.",
+     "conditions": [
+      "Conditions selon le poste : ex. mécanique : Bac+2 mécanique + 5 ans d'expérience + permis B",
+      "Bon niveau d'anglais et de français dans la plupart des postes"
+     ],
+     "diploma": "À partir de Bac+2 selon le poste",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Swissport Maroc (services aéroportuaires)",
+     "region": "Agadir, Casablanca, Tanger, Nador",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Recrutement dans plusieurs aéroports — techniciens, administratifs et stagiaires"
+    }
+   },
    "id": "swissport-maroc-2026",
    "maxAge": null,
    "org": "Swissport Maroc (خدمات الطيران)",
@@ -729,6 +1711,46 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Permanent contract from day one — 09:00 to 17:00, weekends off. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Experience in renewable energy required",
+      "Fluent French"
+     ],
+     "diploma": "Baccalaureate and above",
+     "docs": [
+      "CV"
+     ],
+     "org": "VCall",
+     "region": "Casablanca",
+     "salary": "MAD 5,000 net + incentives (per the announcement)",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Experienced Sales Agents (Outbound — Renewable Energy)"
+    },
+    "fr": {
+     "applyNote": "Contrat CDI dès le premier jour — 09h00 à 17h00, week-end off. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Expérience dans les énergies renouvelables exigée",
+      "Maîtrise du français"
+     ],
+     "diploma": "Bac et plus",
+     "docs": [
+      "CV"
+     ],
+     "org": "VCall",
+     "region": "Casablanca",
+     "salary": "5 000 MAD nets + incentives (selon l'annonce)",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Commerciaux expérimentés (émission — énergies renouvelables)"
+    }
+   },
    "id": "vcall-2026",
    "maxAge": null,
    "org": "VCall",
@@ -758,6 +1780,46 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Permanent contract — transport provided. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "First management experience required",
+      "Fluent French"
+     ],
+     "diploma": "Bac+5 / Master's",
+     "docs": [
+      "CV"
+     ],
+     "org": "Onvousassure.com",
+     "region": "Casablanca",
+     "salary": "Fixed salary MAD 7,000 (8,000 after training) + bonus",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Sales Team Coach (M/F)"
+    },
+    "fr": {
+     "applyNote": "Contrat CDI — transport assuré. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Première expérience en management obligatoire",
+      "Maîtrise du français"
+     ],
+     "diploma": "Bac+5 / Master",
+     "docs": [
+      "CV"
+     ],
+     "org": "Onvousassure.com",
+     "region": "Casablanca",
+     "salary": "Salaire fixe 7 000 MAD (8 000 après formation) + prime",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Coach d'équipe commerciale (H/F)"
+    }
+   },
    "id": "onvousassure-2026",
    "maxAge": null,
    "org": "Onvousassure.com",
@@ -786,6 +1848,44 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Beginners accepted — paid training. Permanent contract + CNSS + AMO — Monday to Friday 08:00-17:30. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Perfect command of French"
+     ],
+     "diploma": "Excellent French — beginners accepted",
+     "docs": [
+      "CV"
+     ],
+     "org": "Next CX",
+     "region": "Rabat (Agdal)",
+     "salary": "Starting from MAD 5,000 + bonuses",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "French-Speaking Inside Sales Agent — Rabat Agdal"
+    },
+    "fr": {
+     "applyNote": "Débutants acceptés — formation rémunérée. Contrat CDI + CNSS + AMO — du lundi au vendredi 08h00-17h30. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Maîtrise parfaite du français"
+     ],
+     "diploma": "Excellent français — débutants acceptés",
+     "docs": [
+      "CV"
+     ],
+     "org": "Next CX",
+     "region": "Rabat (Agdal)",
+     "salary": "À partir de 5 000 MAD + primes",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Commercial sédentaire francophone — Rabat Agdal"
+    }
+   },
    "id": "nextcx-2026",
    "maxAge": null,
    "org": "Next CX",
@@ -815,6 +1915,44 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Onboarding training — 09:00 to 19:00, weekends off. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Fluent French",
+      "Telesales experience"
+     ],
+     "diploma": "Baccalaureate and above",
+     "docs": [
+      "CV"
+     ],
+     "org": "Seza Shore",
+     "region": "Fez",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Experienced Telesales Agents (Belgian Market) — Fez"
+    },
+    "fr": {
+     "applyNote": "Formation à la prise de poste — 09h00 à 19h00, week-end off. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Maîtrise du français",
+      "Expérience en télévente"
+     ],
+     "diploma": "Bac et plus",
+     "docs": [
+      "CV"
+     ],
+     "org": "Seza Shore",
+     "region": "Fès",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Télévendeurs expérimentés (marché belge) — Fès"
+    }
+   },
    "id": "seza-shore-2026",
    "maxAge": null,
    "org": "Seza Shore",
@@ -842,6 +1980,44 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "One week of initial unpaid training (per the announcement), then a permanent contract. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "2+ years of telesales experience"
+     ],
+     "diploma": "2+ years of telesales experience",
+     "docs": [
+      "CV"
+     ],
+     "org": "LDC Esthétique Internationale",
+     "region": "Berrechid",
+     "salary": "MAD 6,000 starting → 7,000 after 6 months → 8,000 after 12 months + uncapped bonuses",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Telesales Agents and Coordinators — Berrechid"
+    },
+    "fr": {
+     "applyNote": "Une semaine de formation initiale non rémunérée (selon l'annonce), puis contrat CDI. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "2 ans d'expérience minimum en télévente"
+     ],
+     "diploma": "2 ans d'expérience minimum en télévente",
+     "docs": [
+      "CV"
+     ],
+     "org": "LDC Esthétique Internationale",
+     "region": "Berrechid",
+     "salary": "6 000 MAD au départ → 7 000 après 6 mois → 8 000 après 12 mois + primes non plafonnées",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Télévendeurs et coordinateurs — Berrechid"
+    }
+   },
    "id": "ldc-esthetique-2026",
    "maxAge": null,
    "org": "LDC Esthétique Internationale",
@@ -870,6 +2046,42 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Permanent contract from day one — private health insurance — Monday to Friday 08:30-18:30. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "1+ year of experience in decennial insurance"
+     ],
+     "diploma": "1+ year of experience in decennial insurance",
+     "docs": [
+      "CV"
+     ],
+     "org": "ECG Pereire Assurances",
+     "region": "Casablanca",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Expert Sales Advisors in Decennial Insurance — Casablanca"
+    },
+    "fr": {
+     "applyNote": "Contrat CDI dès le premier jour — assurance santé privée — du lundi au vendredi 08h30-18h30. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "1 an d'expérience minimum en assurance décennale"
+     ],
+     "diploma": "1 an d'expérience minimum en assurance décennale",
+     "docs": [
+      "CV"
+     ],
+     "org": "ECG Pereire Assurances",
+     "region": "Casablanca",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Conseillers commerciaux experts en assurance décennale — Casablanca"
+    }
+   },
    "id": "ecg-pereire-2026",
    "maxAge": null,
    "org": "ECG Pereire Assurances",
@@ -898,6 +2110,46 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "CNSS + private health coverage — weekends off. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Perfect command of Spanish",
+      "B2B sales experience"
+     ],
+     "diploma": "Excellent Spanish + B2B sales experience",
+     "docs": [
+      "CV"
+     ],
+     "org": "07zr",
+     "region": "Casablanca",
+     "salary": "MAD 7,000 + bonuses",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Spanish-Speaking B2B Sales Agents (Auto Parts) — Casablanca"
+    },
+    "fr": {
+     "applyNote": "CNSS + couverture santé privée — week-end off. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Maîtrise parfaite de l'espagnol",
+      "Expérience commerciale B2B"
+     ],
+     "diploma": "Excellent espagnol + expérience commerciale B2B",
+     "docs": [
+      "CV"
+     ],
+     "org": "07zr",
+     "region": "Casablanca",
+     "salary": "7 000 MAD + primes",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Commerciaux hispanophones B2B (pièces auto) — Casablanca"
+    }
+   },
    "id": "07zr-2026",
    "maxAge": null,
    "org": "07zr",
@@ -927,6 +2179,46 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Permanent contract — Monday to Friday 08:00-18:00. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Good French elocution",
+      "Not open to students"
+     ],
+     "diploma": "Good French elocution",
+     "docs": [
+      "CV"
+     ],
+     "org": "ADM Value",
+     "region": "Rabat (Agdal)",
+     "salary": "Fixed salary MAD 4,901 gross + target bonus from 0 to MAD 2,303 gross, uncapped",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Energy Customer Advisor (Outbound) — Rabat Agdal"
+    },
+    "fr": {
+     "applyNote": "Contrat CDI — du lundi au vendredi 08h00-18h00. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Bonne élocution en français",
+      "Non ouvert aux étudiants"
+     ],
+     "diploma": "Bonne élocution en français",
+     "docs": [
+      "CV"
+     ],
+     "org": "ADM Value",
+     "region": "Rabat (Agdal)",
+     "salary": "Salaire fixe 4 901 MAD bruts + prime d'objectifs de 0 à 2 303 MAD bruts non plafonnée",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Conseiller(ère) clientèle en énergie (émission) — Rabat Agdal"
+    }
+   },
    "id": "adm-value-2026",
    "maxAge": null,
    "org": "ADM Value",
@@ -955,6 +2247,44 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Permanent contract from hiring — outbound (health insurance) — 09:00-12:00 / 13:30-19:00. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Fluency in spoken French"
+     ],
+     "diploma": "No experience required — spoken French",
+     "docs": [
+      "CV"
+     ],
+     "org": "TELEACTIS",
+     "region": "Agadir",
+     "salary": "MAD 3,500 (no experience) / 4,500 (6 months-1 year of experience) / 5,000 (1 year+) + bonuses",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Beginners Accepted — Paid Training + Permanent Contract — Agadir"
+    },
+    "fr": {
+     "applyNote": "Contrat CDI dès l'embauche — émission (assurance santé) — 09h00-12h00 / 13h30-19h00. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Maîtrise du français parlé"
+     ],
+     "diploma": "Aucune expérience requise — français parlé",
+     "docs": [
+      "CV"
+     ],
+     "org": "TELEACTIS",
+     "region": "Agadir",
+     "salary": "3 500 MAD (sans expérience) / 4 500 (6 mois-1 an d'expérience) / 5 000 (1 an et plus) + primes",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Débutants acceptés — formation rémunérée + CDI — Agadir"
+    }
+   },
    "id": "teleactis-2026",
    "maxAge": null,
    "org": "TELEACTIS",
@@ -983,6 +2313,42 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Salary disclosed on site — uncapped bonuses — private health insurance (dental) — pension — Eid bonus — certified training programs. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Sales mindset"
+     ],
+     "diploma": "Beginners and experienced",
+     "docs": [
+      "CV"
+     ],
+     "org": "Concentrix",
+     "region": "Kenitra",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Sales Agents (Telecom, Energy, Banking/Insurance) — Kenitra"
+    },
+    "fr": {
+     "applyNote": "Salaire annoncé sur place — primes non plafonnées — assurance santé privée (dentaire) — retraite — prime de l'Aïd — formations certifiantes. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Esprit commercial"
+     ],
+     "diploma": "Débutants et expérimentés",
+     "docs": [
+      "CV"
+     ],
+     "org": "Concentrix",
+     "region": "Kénitra",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Commerciaux (télécoms, énergie, banque/assurance) — Kénitra"
+    }
+   },
    "id": "concentrix-2026",
    "maxAge": null,
    "org": "Concentrix",
@@ -1011,6 +2377,44 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Apply via LinkedIn. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Proficiency with DOORS and RAMS tools",
+      "Experience in interfaces and testing"
+     ],
+     "diploma": "Bac+5 in embedded systems / industrial IT / automation / electrical engineering",
+     "docs": [
+      "CV"
+     ],
+     "org": "SEGULA Technologies",
+     "region": "Casablanca",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Railway Engineers (Embedded Systems) — Casablanca"
+    },
+    "fr": {
+     "applyNote": "Candidature via LinkedIn. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Maîtrise des outils DOORS et RAMS",
+      "Expérience en interfaces et tests"
+     ],
+     "diploma": "Bac+5 systèmes embarqués / informatique industrielle / automatisme / génie électrique",
+     "docs": [
+      "CV"
+     ],
+     "org": "SEGULA Technologies",
+     "region": "Casablanca",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Ingénieurs ferroviaires (systèmes embarqués) — Casablanca"
+    }
+   },
    "id": "segula-2026",
    "maxAge": null,
    "org": "SEGULA Technologies",
@@ -1039,6 +2443,44 @@
    "docs": [
     "سيرة ذاتية"
    ],
+   "i18n": {
+    "en": {
+     "applyNote": "Temporary contract — no single salary figure is set in the offer. The offer closes once the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Stock management experience (preferred)",
+      "CACES forklift license"
+     ],
+     "diploma": "Baccalaureate / Bac level",
+     "docs": [
+      "CV"
+     ],
+     "org": "ManpowerGroup Morocco",
+     "region": "Casablanca",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Warehouse Workers and Forklift Drivers (Temp) — Casablanca"
+    },
+    "fr": {
+     "applyNote": "Contrat d'intérim — le salaire n'est pas fixé par un montant unique dans l'offre. L'offre se clôture dès que le nombre est atteint — postulez au plus vite.",
+     "conditions": [
+      "Expérience en gestion de stock (souhaitée)",
+      "Permis CACES"
+     ],
+     "diploma": "Bac / niveau Bac",
+     "docs": [
+      "CV"
+     ],
+     "org": "ManpowerGroup Maroc",
+     "region": "Casablanca",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Magasiniers et caristes (intérim) — Casablanca"
+    }
+   },
    "id": "manpower-2026",
    "maxAge": null,
    "org": "ManpowerGroup Maroc",
