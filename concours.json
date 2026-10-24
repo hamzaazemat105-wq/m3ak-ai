@@ -1352,6 +1352,188 @@
    "type": "public"
   },
   {
+   "announced": "2026-10-16",
+   "applyNote": "الترشيح حصرياً عبر المنصة الإلكترونية المخصصة، وآخر أجل هو 29 أكتوبر 2026 عند منتصف الليل. لوائح المقبولين تُنشر على بوابة التشغيل العمومي وتُعتبر استدعاءً.",
+   "applyUrl": "https://www.emploi-public.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن من 18 إلى 45 سنة عند تاريخ المباراة",
+    "الدبلوم المطلوب حسب المنصب من مؤسسة مؤهلة أو ما يعادله",
+    "خبرة مهنية سنتان (باستثناء منصب الإطار القانوني)"
+   ],
+   "deadline": "2026-10-29",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-onmt-2026-9-postes/",
+   "diploma": "باك+5 (تدبير الموارد البشرية، قانون الأعمال، تسويق، تواصل، سياحة) / باك+3 (مالية، محاسبة، تجارة، سياحة)",
+   "diplomaRank": 4,
+   "docs": [
+    "طلب ترشيح موجه إلى المدير العام",
+    "سيرة ذاتية مفصلة بالفرنسية مع صورة حديثة",
+    "نسخة من بطاقة التعريف الوطنية الإلكترونية (الوجهان)",
+    "نسخة من الدبلوم المطلوب",
+    "وثائق إثبات الخبرة المهنية",
+    "ترخيص الإدارة للمترشحين الموظفين",
+    "قرار المعادلة للشهادات الأجنبية أو الخاصة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the dedicated online platform; deadline October 29, 2026 at midnight. Shortlists are published on the public employment portal and count as invitations.",
+     "conditions": [
+      "Moroccan nationality",
+      "Age 18 to 45 on the competition date",
+      "Required diploma for the post from an accredited institution or equivalent",
+      "2 years of professional experience (except the legal officer post)"
+     ],
+     "diploma": "Bac+5 (human resources management, business law, marketing, communication, tourism) / Bac+3 (finance, accounting, commerce, tourism)",
+     "docs": [
+      "Application letter addressed to the Director General",
+      "Detailed CV in French with a recent photo",
+      "Copy of the electronic national ID card (both sides)",
+      "Copy of the required diploma",
+      "Proof of professional experience",
+      "Administration authorization for civil-servant candidates",
+      "Equivalence decision for foreign or private degrees"
+     ],
+     "org": "Moroccan National Tourist Office (ONMT)",
+     "region": "Rabat",
+     "stages": [
+      "Initial file screening",
+      "Written test — 3 hours",
+      "Oral test — 30 minutes"
+     ],
+     "title": "Tourism Office Executives — 9 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme électronique dédiée, dernier délai le 29 octobre 2026 à minuit. Les listes des retenus sont publiées sur le portail de l'emploi public et valent convocation.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge de 18 à 45 ans à la date du concours",
+      "Diplôme requis selon le poste, délivré par un établissement habilité ou équivalent",
+      "Expérience professionnelle de 2 ans (sauf le poste de cadre juridique)"
+     ],
+     "diploma": "Bac+5 (management des ressources humaines, droit des affaires, marketing, communication, tourisme) / Bac+3 (finance, comptabilité, commerce, tourisme)",
+     "docs": [
+      "Demande de candidature adressée au Directeur Général",
+      "CV détaillé en français avec photo récente",
+      "Copie recto-verso de la carte d'identité nationale électronique",
+      "Copie du diplôme requis",
+      "Justificatifs de l'expérience professionnelle",
+      "Autorisation de l'administration pour les candidats fonctionnaires",
+      "Décision d'équivalence pour les diplômes étrangers ou privés"
+     ],
+     "org": "Office National Marocain du Tourisme (ONMT)",
+     "region": "Rabat",
+     "stages": [
+      "Présélection des dossiers",
+      "Épreuve écrite — 3 heures",
+      "Épreuve orale — 30 minutes"
+     ],
+     "title": "Cadres de l'Office National Marocain du Tourisme — 9 postes"
+    }
+   },
+   "id": "onmt-2026-9",
+   "maxAge": 45,
+   "org": "المكتب الوطني المغربي للسياحة (ONMT)",
+   "posts": 9,
+   "region": "الرباط",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "اختبار كتابي — 3 ساعات",
+    "اختبار شفوي — 30 دقيقة"
+   ],
+   "title": "أطر المكتب الوطني المغربي للسياحة — 9 مناصب",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-19",
+   "applyNote": "الترشيح حصرياً عبر منصة depot.emploi-public.ma من 19 أكتوبر إلى 2 نونبر 2026 على الساعة 16:30. الاختبارات يوم 29 نونبر 2026 بكلية العلوم القانونية والسياسية بسطات.",
+   "applyUrl": "https://www.emploi-public.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن من 18 إلى 45 سنة عند فاتح يناير من السنة الجارية",
+    "الدبلوم المطلوب حسب المنصب",
+    "الحصول على 12/20 على الأقل في الاختبار الكتابي للمرور إلى الشفوي (للمتصرفين)"
+   ],
+   "deadline": "2026-11-02T16:30",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-province-settat-2026-8-postes/",
+   "diploma": "دبلوم مهندس دولة (نظم المعلومات الجغرافية، إحصاء واقتصاد تطبيقي، هندسة مدنية) / ماستر أو ما يعادله (تدقيق ومراقبة التسيير، التعمير)",
+   "diplomaRank": 5,
+   "docs": [
+    "طلب الترشيح",
+    "نسخة من الدبلوم المطلوب",
+    "نسخة من بطاقة التعريف الوطنية",
+    "سيرة ذاتية",
+    "ترخيص الإدارة للموظفين",
+    "قرار المعادلة للشهادات الأجنبية أو الخاصة"
+   ],
+   "exam": "2026-11-29",
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via depot.emploi-public.ma from October 19 to November 2, 2026 at 4:30 p.m. Tests on November 29, 2026 at the Faculty of Legal and Political Sciences of Settat.",
+     "conditions": [
+      "Moroccan nationality",
+      "Age 18 to 45 on January 1 of the current year",
+      "Required diploma for the post",
+      "At least 12/20 in the written test to reach the oral test (for administrators)"
+     ],
+     "diploma": "State engineer diploma (geographic information systems, statistics and applied economics, civil engineering) / Master's or equivalent (audit and management control, urban planning)",
+     "docs": [
+      "Application letter",
+      "Copy of the required diploma",
+      "Copy of the national ID card",
+      "CV",
+      "Administration authorization for civil servants",
+      "Equivalence decision for foreign or private degrees"
+     ],
+     "org": "Province of Settat",
+     "region": "Settat — Casablanca-Settat Region",
+     "stages": [
+      "Written test — 3 hours",
+      "Oral and/or practical test — 15 to 45 minutes depending on the post"
+     ],
+     "title": "State Engineers and Administrators — Province of Settat — 8 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via depot.emploi-public.ma du 19 octobre au 2 novembre 2026 à 16h30. Épreuves le 29 novembre 2026 à la Faculté des Sciences Juridiques et Politiques de Settat.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge de 18 à 45 ans au 1er janvier de l'année en cours",
+      "Diplôme requis selon le poste",
+      "Au moins 12/20 à l'écrit pour accéder à l'oral (pour les administrateurs)"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État (systèmes d'information géographique, statistiques et économie appliquée, génie civil) / Master ou équivalent (audit et contrôle de gestion, urbanisme)",
+     "docs": [
+      "Demande de candidature",
+      "Copie du diplôme requis",
+      "Copie de la carte d'identité nationale",
+      "CV",
+      "Autorisation de l'administration pour les fonctionnaires",
+      "Décision d'équivalence pour les diplômes étrangers ou privés"
+     ],
+     "org": "Province de Settat",
+     "region": "Settat — Région Casablanca-Settat",
+     "stages": [
+      "Épreuve écrite — 3 heures",
+      "Épreuve orale et/ou pratique — 15 à 45 minutes selon le poste"
+     ],
+     "title": "Ingénieurs d'État et administrateurs — Province de Settat — 8 postes"
+    }
+   },
+   "id": "province-settat-2026-8",
+   "maxAge": 45,
+   "org": "عمالة إقليم سطات",
+   "posts": 8,
+   "region": "سطات — جهة الدار البيضاء سطات",
+   "sector": "جماعات وتنمية محلية",
+   "stages": [
+    "اختبار كتابي — 3 ساعات",
+    "اختبار شفوي و/أو تطبيقي — 15 إلى 45 دقيقة حسب المنصب"
+   ],
+   "title": "مهندسو الدولة ومتصرفون — عمالة إقليم سطات — 8 مناصب",
+   "type": "public"
+  },
+  {
    "announced": "2026-10-19",
    "applyNote": "مرجع العرض في أنابيك: TA1910261193988 — الترشيح عبر منصة أنابيك أو وكالة طنجة فحص/الزموري. بداية العمل: 26 أكتوبر 2026. العروض الصناعية كتسد ملي يكتمل العدد — قدّم بسرعة.",
    "applyUrl": "https://www.anapec.org",
@@ -2493,8 +2675,303 @@
    ],
    "title": "عمال مخزن وسائق رافعة (Intérim) — الدار البيضاء",
    "type": "private"
+  },
+  {
+   "announced": "2026-10-16",
+   "applyNote": "عقد CI. الترشيح عبر منصة أنابيك — ابحث عن عرض سائقي المناولة المينائية بالناظور. العرض يُغلق عند اكتمال العدد.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "دبلوم باك+2 تقني متخصص في التخصصات المطلوبة",
+    "رخصة السياقة B أو C",
+    "قبول العمل بميناء الناظور غرب المتوسط",
+    "احترام قواعد السلامة"
+   ],
+   "deadline": "2026-11-15",
+   "detailsUrl": "https://www.wadifaty.ma/2026/10/anapec-171-offres-demploi-nador-et-el.html",
+   "diploma": "باك+2 تقني متخصص (هندسة كهربائية، صناعة ميكانيكية، إلكتروميكانيك، أتمتة وأجهزة صناعية)",
+   "diplomaRank": 2,
+   "docs": [
+    "سيرة ذاتية محدثة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "CI contract. Apply via the ANAPEC platform — search for the Nador port handling-equipment drivers offer. The offer closes once filled.",
+     "conditions": [
+      "Bac+2 specialized technician diploma in the required specialties",
+      "Driving license B or C",
+      "Willing to work at the Nador West Med port",
+      "Compliance with safety rules"
+     ],
+     "diploma": "Bac+2 specialized technician (electrical engineering, mechanical manufacturing, electromechanics, automation and industrial instrumentation)",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Marsa Maroc — via ANAPEC",
+     "region": "Nador — Nador West Med Port",
+     "stages": [
+      "File review via ANAPEC",
+      "Interview with the company"
+     ],
+     "title": "Port Handling Equipment Drivers — Nador West Med — 120 posts"
+    },
+    "fr": {
+     "applyNote": "Contrat CI. Candidature via la plateforme ANAPEC — recherchez l'offre conducteurs d'engins de manutention portuaire de Nador. L'offre se clôture dès que le nombre est atteint.",
+     "conditions": [
+      "Diplôme Bac+2 technicien spécialisé dans les spécialités demandées",
+      "Permis de conduire B ou C",
+      "Acceptation du poste au port de Nador West Med",
+      "Respect des règles de sécurité"
+     ],
+     "diploma": "Bac+2 technicien spécialisé (génie électrique, fabrication mécanique, électromécanique, automatisation et instrumentation industrielle)",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Marsa Maroc — via ANAPEC",
+     "region": "Nador — Port de Nador West Med",
+     "stages": [
+      "Étude des dossiers via ANAPEC",
+      "Entretien avec l'entreprise"
+     ],
+     "title": "Conducteurs d'engins de manutention portuaire — Nador West Med — 120 postes"
+    }
+   },
+   "id": "marsa-maroc-nador-120",
+   "maxAge": null,
+   "org": "مرسى المغرب (Marsa Maroc) — عبر أنابيك",
+   "posts": 120,
+   "region": "الناظور — ميناء الناظور غرب المتوسط",
+   "sector": "صناعة ولوجستيك",
+   "stages": [
+    "دراسة الملفات عبر أنابيك",
+    "مقابلة مع الشركة"
+   ],
+   "title": "سائقو الآلات المينائية — ميناء الناظور غرب المتوسط — 120 منصباً",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-16",
+   "applyNote": "عقود CDD. الترشيح عبر منصة أنابيك — 15 سائقاً، 4 تقنيين، كهربائيان صناعيان، 30 عاملاً متعدد المهام. العرض يُغلق عند اكتمال العدد.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "رخصة سياقة C أو EC أو D وخبرة 3 سنوات على الأقل (للسائقين)",
+    "تكوين تقني في الصيانة الصناعية (للتقنيين)",
+    "دبلوم تقني متخصص في كهرباء الصيانة الصناعية (للكهربائيين)",
+    "الاستعداد للعمل بإقليم قلعة السراغنة",
+    "احترام قواعد السلامة"
+   ],
+   "deadline": "2026-11-15",
+   "detailsUrl": "https://www.wadifaty.ma/2026/10/anapec-171-offres-demploi-nador-et-el.html",
+   "diploma": "رخصة سياقة C أو EC أو D (للسائقين) / تقني متخصص (للتقنيين والكهربائيين) / بدون دبلوم محدد (للعمال)",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية محدثة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Fixed-term contracts (CDD). Apply via the ANAPEC platform — 15 drivers, 4 technicians, 2 industrial electricians, 30 multi-skilled workers. The offer closes once filled.",
+     "conditions": [
+      "Driving license C, EC or D and at least 3 years of experience (for drivers)",
+      "Technical training in industrial maintenance (for technicians)",
+      "Specialized technician diploma in industrial maintenance electricity (for electricians)",
+      "Willing to work in El Kelaa des Sraghna province",
+      "Compliance with safety rules"
+     ],
+     "diploma": "Driving license C, EC or D (for drivers) / specialized technician (for technicians and electricians) / no specific diploma (for workers)",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Construction-sector company (via ANAPEC)",
+     "region": "El Kelaa des Sraghna",
+     "stages": [
+      "File review via ANAPEC",
+      "Interview with the company"
+     ],
+     "title": "Drivers, Technicians, Electricians and Multi-Skilled Workers — El Kelaa des Sraghna — 51 posts"
+    },
+    "fr": {
+     "applyNote": "Contrats CDD. Candidature via la plateforme ANAPEC — 15 chauffeurs, 4 techniciens, 2 électriciens industriels, 30 ouvriers polyvalents. L'offre se clôture dès que le nombre est atteint.",
+     "conditions": [
+      "Permis de conduire C, EC ou D et 3 ans d'expérience minimum (pour les chauffeurs)",
+      "Formation technique en maintenance industrielle (pour les techniciens)",
+      "Diplôme de technicien spécialisé en électricité de maintenance industrielle (pour les électriciens)",
+      "Disponibilité pour travailler dans la province d'El Kelaa des Sraghna",
+      "Respect des règles de sécurité"
+     ],
+     "diploma": "Permis de conduire C, EC ou D (pour les chauffeurs) / technicien spécialisé (pour les techniciens et électriciens) / aucun diplôme précis (pour les ouvriers)",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Entreprise du secteur de la construction (via ANAPEC)",
+     "region": "El Kelaa des Sraghna",
+     "stages": [
+      "Étude des dossiers via ANAPEC",
+      "Entretien avec l'entreprise"
+     ],
+     "title": "Chauffeurs, techniciens, électriciens et ouvriers polyvalents — El Kelaa des Sraghna — 51 postes"
+    }
+   },
+   "id": "anapec-kelaa-51",
+   "maxAge": null,
+   "org": "شركة في قطاع البناء (عبر أنابيك)",
+   "posts": 51,
+   "region": "قلعة السراغنة",
+   "sector": "صناعة ولوجستيك",
+   "stages": [
+    "دراسة الملفات عبر أنابيك",
+    "مقابلة مع الشركة"
+   ],
+   "title": "سائقون وتقنيون وكهربائيون وعمال متعددو المهام — قلعة السراغنة — 51 منصباً",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "عقد CDD. الترشيح عبر منصة أنابيك. العرض يُغلق عند اكتمال العدد.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "شهادة البكالوريا",
+    "إتقان العربية ومستوى متوسط في الفرنسية",
+    "حس التواصل والاستماع",
+    "قدرة على التكيف",
+    "احترام معايير النظافة والسلامة الغذائية"
+   ],
+   "deadline": "2026-11-20",
+   "detailsUrl": "https://ijob.ma/emploi/anapec-recrute-100-equipiers-en-restauration-rapide-a-tanger/",
+   "diploma": "بكالوريا (يفضل آداب عصرية)",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية محدثة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Fixed-term contract (CDD). Apply via the ANAPEC platform. The offer closes once filled.",
+     "conditions": [
+      "Baccalaureate",
+      "Fluent Arabic and intermediate French",
+      "Communication and listening skills",
+      "Adaptability",
+      "Compliance with food hygiene and safety standards"
+     ],
+     "diploma": "Baccalaureate (modern literature preferred)",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Fast-food company (via ANAPEC)",
+     "region": "Tangier — Asilah",
+     "stages": [
+      "File review via ANAPEC",
+      "Interview with the company"
+     ],
+     "title": "Fast-Food Crew Members — Tangier-Assilah — 100 posts"
+    },
+    "fr": {
+     "applyNote": "Contrat CDD. Candidature via la plateforme ANAPEC. L'offre se clôture dès que le nombre est atteint.",
+     "conditions": [
+      "Baccalauréat",
+      "Arabe courant et français de niveau moyen",
+      "Sens du contact et de l'écoute",
+      "Capacité d'adaptation",
+      "Respect des normes d'hygiène et de sécurité alimentaire"
+     ],
+     "diploma": "Baccalauréat (lettres modernes de préférence)",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Société de restauration rapide (via ANAPEC)",
+     "region": "Tanger — Assilah",
+     "stages": [
+      "Étude des dossiers via ANAPEC",
+      "Entretien avec l'entreprise"
+     ],
+     "title": "Équipiers en restauration rapide — Tanger-Assilah — 100 postes"
+    }
+   },
+   "id": "anapec-tanger-equipiers-100",
+   "maxAge": null,
+   "org": "شركة مطاعم سريعة (عبر أنابيك)",
+   "posts": 100,
+   "region": "طنجة — أصيلة",
+   "sector": "خدمات",
+   "stages": [
+    "دراسة الملفات عبر أنابيك",
+    "مقابلة مع الشركة"
+   ],
+   "title": "عمال مطاعم سريعة (Équipiers) — طنجة أصيلة — 100 منصب",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-12",
+   "applyNote": "عقد CI. مرجع العرض في أنابيك: AU1210261188186 — وكالة أنابيك القاضي عياض (المنارة). العرض يُغلق عند اكتمال العدد.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "مستوى باك+2",
+    "إتقان الفرنسية والإنجليزية (لغات أخرى ميزة)",
+    "مهارات تواصل وخدمة زبناء ممتازة"
+   ],
+   "deadline": "2026-11-11",
+   "detailsUrl": "https://www.maroconcours.com/2026/09/aeroport-marrakech-menara-recrutement.html",
+   "diploma": "باك+2",
+   "diplomaRank": 2,
+   "docs": [
+    "سيرة ذاتية محدثة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "CI contract. ANAPEC offer reference: AU1210261188186 — ANAPEC agency Cadi Ayyad (Menara). The offer closes once filled.",
+     "conditions": [
+      "Bac+2 level",
+      "Fluent French and English (other languages a plus)",
+      "Excellent communication and customer-service skills"
+     ],
+     "diploma": "Bac+2",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Airport services at Marrakech-Menara Airport (via ANAPEC)",
+     "region": "Marrakech — Marrakech-Menara Airport",
+     "stages": [
+      "File review via ANAPEC",
+      "Interview with the company"
+     ],
+     "title": "Check-in Agents (Agents d'escale) — Marrakech-Menara Airport — 30 posts"
+    },
+    "fr": {
+     "applyNote": "Contrat CI. Référence de l'offre ANAPEC : AU1210261188186 — agence ANAPEC Cadi Ayyad (Ménara). L'offre se clôture dès que le nombre est atteint.",
+     "conditions": [
+      "Niveau Bac+2",
+      "Maîtrise du français et de l'anglais (autres langues un atout)",
+      "Excellent relationnel et sens du service client"
+     ],
+     "diploma": "Bac+2",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Services aéroportuaires à l'aéroport Marrakech-Ménara (via ANAPEC)",
+     "region": "Marrakech — Aéroport Marrakech-Ménara",
+     "stages": [
+      "Étude des dossiers via ANAPEC",
+      "Entretien avec l'entreprise"
+     ],
+     "title": "Agents d'escale — Aéroport Marrakech-Ménara — 30 postes"
+    }
+   },
+   "id": "anapec-marrakech-escale-30",
+   "maxAge": null,
+   "org": "خدمات مطارية بمطار مراكش المنارة (عبر أنابيك)",
+   "posts": 30,
+   "region": "مراكش — مطار مراكش المنارة",
+   "sector": "خدمات",
+   "stages": [
+    "دراسة الملفات عبر أنابيك",
+    "مقابلة مع الشركة"
+   ],
+   "title": "أعوان محطة (Agents d'escale) — مطار مراكش المنارة — 30 منصباً",
+   "type": "private"
   }
  ],
  "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
- "updatedAt": "2026-10-23"
+ "updatedAt": "2026-10-24"
 }
