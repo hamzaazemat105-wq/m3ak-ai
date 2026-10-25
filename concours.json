@@ -645,234 +645,6 @@
    "type": "public"
   },
   {
-   "announced": "2026-10-03",
-   "applyNote": "آخر أجل: 23 أكتوبر 2026 — راجع الإعلان الكامل لطريقة الإيداع قبل التوجه.",
-   "applyUrl": "https://www.emploi-public.ma",
-   "conditions": [
-    "الجنسية المغربية",
-    "الدبلوم المطلوب حسب المنصب"
-   ],
-   "deadline": "2026-10-23T16:30",
-   "detailsUrl": "https://alwadifa.ma/%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-25-%D9%85%D9%86%D8%B5%D8%A8%D8%A7%D9%8B-%D8%A8%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7/",
-   "diploma": "دبلوم تقني متخصص (التنمية المعلوماتية أو الأنظمة والشبكات)",
-   "diplomaRank": 2,
-   "docs": [
-    "طلب الترشيح",
-    "نسخة من الدبلوم المطلوب",
-    "نسخة من بطاقة التعريف الوطنية",
-    "سيرة ذاتية"
-   ],
-   "exam": null,
-   "i18n": {
-    "en": {
-     "applyNote": "Deadline: October 23, 2026 — see the full announcement for submission details before going.",
-     "conditions": [
-      "Moroccan nationality",
-      "Required diploma depending on the post"
-     ],
-     "diploma": "Specialized technician diploma (software development or systems & networks)",
-     "docs": [
-      "Application letter",
-      "Copy of the required diploma",
-      "Copy of the national ID card",
-      "CV"
-     ],
-     "org": "Commune of Tighmi — Tiznit Province",
-     "region": "Tighmi — Tiznit Province",
-     "stages": [
-      "File review",
-      "Written and oral tests"
-     ],
-     "title": "Third-Grade Technicians (IT) — 2 posts"
-    },
-    "fr": {
-     "applyNote": "Date limite : 23 octobre 2026 — voir l'annonce complète pour les modalités de dépôt avant de vous déplacer.",
-     "conditions": [
-      "Nationalité marocaine",
-      "Diplôme requis selon le poste"
-     ],
-     "diploma": "Diplôme de technicien spécialisé (développement informatique ou systèmes et réseaux)",
-     "docs": [
-      "Demande de candidature",
-      "Copie du diplôme requis",
-      "Copie de la carte d'identité nationale",
-      "CV"
-     ],
-     "org": "Commune de Tighmi — Province de Tiznit",
-     "region": "Tighmi — Province de Tiznit",
-     "stages": [
-      "Étude des dossiers",
-      "Épreuves écrites et orales"
-     ],
-     "title": "Techniciens de 3e grade (informatique) — 2 postes"
-    }
-   },
-   "id": "commune-tighmi-2026",
-   "maxAge": null,
-   "org": "جماعة تيغمي — إقليم تيزنيت",
-   "posts": 2,
-   "region": "تيغمي — إقليم تيزنيت",
-   "sector": "جماعات وتنمية محلية",
-   "stages": [
-    "دراسة الملفات",
-    "اختبارات كتابية وشفوية"
-   ],
-   "title": "تقنيون من الدرجة الثالثة (معلوميات) — منصبان",
-   "type": "public"
-  },
-  {
-   "announced": "2026-10-03",
-   "applyNote": "آخر أجل: 23 أكتوبر 2026 — راجع الإعلان الكامل لطريقة الإيداع قبل التوجه.",
-   "applyUrl": "https://www.emploi-public.ma",
-   "conditions": [
-    "الجنسية المغربية",
-    "الدبلوم المطلوب حسب المنصب"
-   ],
-   "deadline": "2026-10-23T16:30",
-   "detailsUrl": "https://alwadifa.ma/%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-25-%D9%85%D9%86%D8%B5%D8%A8%D8%A7%D9%8B-%D8%A8%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7/",
-   "diploma": "دبلوم تقني متخصص (هندسة مدنية أو أشغال عمومية)",
-   "diplomaRank": 2,
-   "docs": [
-    "طلب الترشيح",
-    "نسخة من الدبلوم المطلوب",
-    "نسخة من بطاقة التعريف الوطنية",
-    "سيرة ذاتية"
-   ],
-   "exam": null,
-   "i18n": {
-    "en": {
-     "applyNote": "Deadline: October 23, 2026 — see the full announcement for submission details before going.",
-     "conditions": [
-      "Moroccan nationality",
-      "Required diploma depending on the post"
-     ],
-     "diploma": "Specialized technician diploma (civil engineering or public works)",
-     "docs": [
-      "Application letter",
-      "Copy of the required diploma",
-      "Copy of the national ID card",
-      "CV"
-     ],
-     "org": "Commune of Ain Taztout — Chichaoua Province",
-     "region": "Ain Taztout — Chichaoua Province",
-     "stages": [
-      "File review",
-      "Written and oral tests"
-     ],
-     "title": "Third-Grade Technician (Civil Engineering and Public Works) — 1 post"
-    },
-    "fr": {
-     "applyNote": "Date limite : 23 octobre 2026 — voir l'annonce complète pour les modalités de dépôt avant de vous déplacer.",
-     "conditions": [
-      "Nationalité marocaine",
-      "Diplôme requis selon le poste"
-     ],
-     "diploma": "Diplôme de technicien spécialisé (génie civil ou travaux publics)",
-     "docs": [
-      "Demande de candidature",
-      "Copie du diplôme requis",
-      "Copie de la carte d'identité nationale",
-      "CV"
-     ],
-     "org": "Commune d'Aïn Taztout — Province de Chichaoua",
-     "region": "Aïn Taztout — Province de Chichaoua",
-     "stages": [
-      "Étude des dossiers",
-      "Épreuves écrites et orales"
-     ],
-     "title": "Technicien de 3e grade (génie civil et travaux publics) — 1 poste"
-    }
-   },
-   "id": "commune-ain-taztout-2026",
-   "maxAge": null,
-   "org": "جماعة عين تزتونت — إقليم شيشاوة",
-   "posts": 1,
-   "region": "عين تزتونت — إقليم شيشاوة",
-   "sector": "جماعات وتنمية محلية",
-   "stages": [
-    "دراسة الملفات",
-    "اختبارات كتابية وشفوية"
-   ],
-   "title": "تقني من الدرجة الثالثة (هندسة مدنية وأشغال عمومية) — منصب واحد",
-   "type": "public"
-  },
-  {
-   "announced": "2026-10-03",
-   "applyNote": "آخر أجل: 23 أكتوبر 2026 — راجع الإعلان الكامل لطريقة الإيداع قبل التوجه.",
-   "applyUrl": "https://www.emploi-public.ma",
-   "conditions": [
-    "الجنسية المغربية",
-    "دكتوراه في الطب العام"
-   ],
-   "deadline": "2026-10-23T16:30",
-   "detailsUrl": "https://alwadifa.ma/%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-25-%D9%85%D9%86%D8%B5%D8%A8%D8%A7%D9%8B-%D8%A8%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7/",
-   "diploma": "دكتوراه في الطب العام",
-   "diplomaRank": 5,
-   "docs": [
-    "طلب الترشيح",
-    "نسخة من دبلوم الدكتوراه في الطب",
-    "نسخة من بطاقة التعريف الوطنية",
-    "سيرة ذاتية"
-   ],
-   "exam": null,
-   "i18n": {
-    "en": {
-     "applyNote": "Deadline: October 23, 2026 — see the full announcement for submission details before going.",
-     "conditions": [
-      "Moroccan nationality",
-      "Doctorate in general medicine"
-     ],
-     "diploma": "Doctorate in general medicine",
-     "docs": [
-      "Application letter",
-      "Copy of the medical doctorate diploma",
-      "Copy of the national ID card",
-      "CV"
-     ],
-     "org": "Commune of Oulmas — Khemisset Province",
-     "region": "Oulmas — Khemisset Province",
-     "stages": [
-      "File review",
-      "Written and oral tests"
-     ],
-     "title": "First-Grade Physician — General Medicine"
-    },
-    "fr": {
-     "applyNote": "Date limite : 23 octobre 2026 — voir l'annonce complète pour les modalités de dépôt avant de vous déplacer.",
-     "conditions": [
-      "Nationalité marocaine",
-      "Doctorat en médecine générale"
-     ],
-     "diploma": "Doctorat en médecine générale",
-     "docs": [
-      "Demande de candidature",
-      "Copie du doctorat en médecine",
-      "Copie de la carte d'identité nationale",
-      "CV"
-     ],
-     "org": "Commune d'Oulmas — Province de Khémisset",
-     "region": "Oulmas — Province de Khémisset",
-     "stages": [
-      "Étude des dossiers",
-      "Épreuves écrites et orales"
-     ],
-     "title": "Médecin de 1er grade — médecine générale"
-    }
-   },
-   "id": "commune-oulmas-2026-medecin",
-   "maxAge": null,
-   "org": "جماعة ولماس — إقليم الخميسات",
-   "posts": 1,
-   "region": "ولماس — إقليم الخميسات",
-   "sector": "جماعات وتنمية محلية",
-   "stages": [
-    "دراسة الملفات",
-    "اختبارات كتابية وشفوية"
-   ],
-   "title": "طبيب من الدرجة الأولى — تخصص الطب العام",
-   "type": "public"
-  },
-  {
    "announced": "2026-10-21",
    "applyNote": "الترشيح حصرياً عبر المنصة الرسمية — منصب واحد وتوجيه واحد لكل مترشح. الدبلوم المطلوب بالضبط (الدبلوم الأعلى غير مقبول).",
    "applyUrl": "https://econcours.brainman.ma/cmp/SRM_ORI_2026",
@@ -1531,6 +1303,162 @@
     "اختبار شفوي و/أو تطبيقي — 15 إلى 45 دقيقة حسب المنصب"
    ],
    "title": "مهندسو الدولة ومتصرفون — عمالة إقليم سطات — 8 مناصب",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-16",
+   "applyNote": "التسجيل الإلكتروني من 17 إلى 31 أكتوبر 2026 عبر منصة الوقاية المدنية. للاستفسار: recrutement@protectioncivile.ma",
+   "applyUrl": "https://recrutement.protectioncivile.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "الذكور فقط",
+    "السن من 18 إلى 26 سنة",
+    "إجازة في أحد التخصصات المطلوبة",
+    "الطول 1.70 متر على الأقل حافي القدمين",
+    "سجل عدلي نظيف"
+   ],
+   "deadline": "2026-10-31",
+   "detailsUrl": "http://wadefanow.blogspot.com/2026/10/concours-protection-civile-2026-50.html",
+   "diploma": "إجازة في العلوم الاقتصادية والتدبير / التدبير، الفيزياء، الكيمياء، علوم الحياة والأرض، علوم الأرض والكون، الدراسات الإنجليزية، القانون العام أو القانون الخاص",
+   "diplomaRank": 3,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Online registration from October 17 to 31, 2026 via the Civil Protection platform. Questions: recrutement@protectioncivile.ma",
+     "conditions": [
+      "Moroccan nationality",
+      "Male candidates only",
+      "Age 18 to 26",
+      "Bachelor's degree in one of the required specialties",
+      "Height at least 1.70 m barefoot",
+      "Clean criminal record"
+     ],
+     "diploma": "Bachelor's degree in economics and management / management, physics, chemistry, life and earth sciences, earth and universe sciences, English studies, public law or private law",
+     "org": "General Directorate of Civil Protection (DGPC) — Ministry of the Interior",
+     "region": "Morocco",
+     "stages": [
+      "Medical visit from November 16, 2026",
+      "Sports tests: rope climb (12.5 m), 1000 m run, 100 m swim",
+      "Written tests: essay, summary-commentary, Arabic-French translation",
+      "Oral test and psychotechnical test"
+     ],
+     "title": "Civil Protection Officer Cadets — 50 posts"
+    },
+    "fr": {
+     "applyNote": "Inscription en ligne du 17 au 31 octobre 2026 via la plateforme de la Protection civile. Questions : recrutement@protectioncivile.ma",
+     "conditions": [
+      "Nationalité marocaine",
+      "Candidats de sexe masculin uniquement",
+      "Âge de 18 à 26 ans",
+      "Licence dans l'une des spécialités demandées",
+      "Taille d'au moins 1,70 m pieds nus",
+      "Casier judiciaire vierge"
+     ],
+     "diploma": "Licence en sciences économiques et gestion / management, physique, chimie, sciences de la vie et de la terre, sciences de la terre et de l'univers, études anglaises, droit public ou droit privé",
+     "org": "Direction Générale de la Protection Civile (DGPC) — Ministère de l'Intérieur",
+     "region": "Maroc",
+     "stages": [
+      "Visite médicale à partir du 16 novembre 2026",
+      "Épreuves sportives : montée de corde (12,5 m), course 1000 m, natation 100 m",
+      "Épreuves écrites : dissertation, résumé-commentaire, traduction arabe-français",
+      "Épreuve orale et test psychotechnique"
+     ],
+     "title": "Élèves officiers de la Protection civile — 50 postes"
+    }
+   },
+   "id": "protection-civile-2026-50",
+   "maxAge": 26,
+   "org": "المديرية العامة للوقاية المدنية (DGPC) — وزارة الداخلية",
+   "posts": 50,
+   "region": "المغرب",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "زيارة طبية ابتداءً من 16 نونبر 2026",
+    "اختبارات رياضية: تسلق الحبل (12.5 متر)، سباق 1000 متر، سباحة 100 متر",
+    "اختبارات كتابية: إنشاء، تلخيص وتعليق، ترجمة عربي ↔ فرنسي",
+    "اختبار شفوي واختبار نفسي تقني"
+   ],
+   "title": "تلاميذ ضباط الوقاية المدنية — 50 منصباً",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-22",
+   "applyNote": "الترشيح حصرياً عبر منصة الإيداع depot.emploi-public.ma — مرجع المباراة C44194/26.",
+   "applyUrl": "https://depot.emploi-public.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن من 18 إلى 45 سنة",
+    "دبلوم مهندس دولة في أحد التخصصات المطلوبة أو ما يعادله"
+   ],
+   "deadline": "2026-11-05T16:30",
+   "detailsUrl": "https://www.tawjihweb.com/ar/concours/agence-nationale-de-promotion-de-l-emploi-et-des-competences-anapec-recrutement/",
+   "diploma": "دبلوم مهندس دولة في الذكاء الاصطناعي وعلوم البيانات / هندسة الشبكات وأنظمة المعلومات / أمن نظم المعلومات والأمن السيبراني",
+   "diplomaRank": 5,
+   "docs": [
+    "سيرة ذاتية",
+    "نسخة من بطاقة التعريف الوطنية الإلكترونية",
+    "نسخة من دبلوم مهندس الدولة",
+    "قرار المعادلة عند الاقتضاء"
+   ],
+   "exam": "2026-11-21",
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the depot.emploi-public.ma platform — competition reference C44194/26.",
+     "conditions": [
+      "Moroccan nationality",
+      "Age 18 to 45",
+      "State engineer diploma in one of the required specialties or equivalent"
+     ],
+     "diploma": "State engineer diploma in artificial intelligence and data science / networks and information systems engineering / information systems security and cybersecurity",
+     "docs": [
+      "CV",
+      "Copy of the electronic national ID card",
+      "Copy of the state engineer diploma",
+      "Equivalence decision where applicable"
+     ],
+     "org": "National Agency for the Promotion of Employment and Skills (ANAPEC)",
+     "region": "Morocco",
+     "stages": [
+      "Initial file screening",
+      "Competition tests — November 21, 2026"
+     ],
+     "title": "State Engineers in AI, Networks and Cybersecurity — 3 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme depot.emploi-public.ma — référence du concours C44194/26.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge de 18 à 45 ans",
+      "Diplôme d'ingénieur d'État dans l'une des spécialités demandées ou équivalent"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État en intelligence artificielle et science des données / ingénierie des réseaux et systèmes d'information / sécurité des systèmes d'information et cybersécurité",
+     "docs": [
+      "CV",
+      "Copie de la carte d'identité nationale électronique",
+      "Copie du diplôme d'ingénieur d'État",
+      "Décision d'équivalence le cas échéant"
+     ],
+     "org": "Agence Nationale de Promotion de l'Emploi et des Compétences (ANAPEC)",
+     "region": "Maroc",
+     "stages": [
+      "Présélection des dossiers",
+      "Épreuves du concours — 21 novembre 2026"
+     ],
+     "title": "Ingénieurs d'État en IA, réseaux et cybersécurité — 3 postes"
+    }
+   },
+   "id": "anapec-ingenieurs-ia-2026-3",
+   "maxAge": 45,
+   "org": "الوكالة الوطنية لإنعاش التشغيل والكفاءات (ANAPEC)",
+   "posts": 3,
+   "region": "المغرب",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "اختبارات المباراة — 21 نونبر 2026"
+   ],
+   "title": "مهندسو الدولة في الذكاء الاصطناعي والشبكات والأمن السيبراني — 3 مناصب",
    "type": "public"
   },
   {
@@ -2970,8 +2898,154 @@
    ],
    "title": "أعوان محطة (Agents d'escale) — مطار مراكش المنارة — 30 منصباً",
    "type": "private"
+  },
+  {
+   "announced": "2026-10-21",
+   "applyNote": "عقد CDD لمدة 3 أشهر — مرجع العرض في أنابيك: MA2110261194856 — العرض يُغلق عند اكتمال العدد.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "باك+2 فما فوق في المعلوميات",
+    "العربية لغة أم",
+    "مستوى متوسط في الفرنسية",
+    "العمل من 9 صباحاً إلى 6:30 مساءً على منصات هاتفية بالدار البيضاء"
+   ],
+   "deadline": "2026-11-20",
+   "detailsUrl": "https://www.maroconcours.com/2026/08/24.html",
+   "diploma": "باك+2 فما فوق — تقني متخصص في المعلوميات",
+   "diplomaRank": 2,
+   "docs": [
+    "سيرة ذاتية محدثة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Fixed-term contract (CDD) for 3 months — ANAPEC offer reference: MA2110261194856 — the offer closes once filled.",
+     "conditions": [
+      "Bac+2 or more in IT",
+      "Arabic as mother tongue",
+      "Intermediate French",
+      "Working hours 9 a.m. to 6:30 p.m. on phone platforms in Casablanca"
+     ],
+     "diploma": "Bac+2 or more — specialized technician in IT",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Services company (via ANAPEC)",
+     "region": "Casablanca — Anfa",
+     "stages": [
+      "File review via ANAPEC",
+      "Interview with the company"
+     ],
+     "title": "Telephone Survey Agents (Télé-enquêteurs) — Casablanca-Anfa — 10 posts"
+    },
+    "fr": {
+     "applyNote": "Contrat CDD de 3 mois — référence de l'offre ANAPEC : MA2110261194856 — l'offre se clôture dès que le nombre est atteint.",
+     "conditions": [
+      "Bac+2 ou plus en informatique",
+      "Arabe langue maternelle",
+      "Français de niveau moyen",
+      "Horaires de 9 h à 18 h 30 sur des plateaux téléphoniques à Casablanca"
+     ],
+     "diploma": "Bac+2 ou plus — technicien spécialisé en informatique",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Société de services (via ANAPEC)",
+     "region": "Casablanca — Anfa",
+     "stages": [
+      "Étude des dossiers via ANAPEC",
+      "Entretien avec l'entreprise"
+     ],
+     "title": "Télé-enquêteurs — Casablanca-Anfa — 10 postes"
+    }
+   },
+   "id": "anapec-tele-enqueteurs-2026-10",
+   "maxAge": null,
+   "org": "شركة خدمات (عبر أنابيك)",
+   "posts": 10,
+   "region": "الدار البيضاء — أنفا",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات عبر أنابيك",
+    "مقابلة مع الشركة"
+   ],
+   "title": "باحثون هاتفيون (Télé-enquêteurs) — الدار البيضاء أنفا — 10 مناصب",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-24",
+   "applyNote": "التوظيف فوري — العرض يُغلق عند اكتمال العدد.",
+   "applyUrl": "https://www.moncallcenter.ma/q-offres/?lang=n&page=28",
+   "conditions": [
+    "خبرة سنة على الأقل في مراكز النداء",
+    "فرنسية ممتازة",
+    "روح تجارية وقدرة على الإقناع"
+   ],
+   "deadline": "2026-11-23",
+   "detailsUrl": "https://www.moncallcenter.ma/q-offres/?lang=n&page=28",
+   "diploma": "فرنسية ممتازة — خبرة سنة على الأقل في مراكز النداء",
+   "diplomaRank": 1,
+   "docs": [
+    "سيرة ذاتية محدثة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Immediate recruitment — the offer closes once filled.",
+     "conditions": [
+      "At least 1 year of experience in call centers",
+      "Excellent French",
+      "Commercial mindset and persuasion skills"
+     ],
+     "diploma": "Excellent French — at least 1 year of call-center experience",
+     "docs": [
+      "Up-to-date CV"
+     ],
+     "org": "Aria Sales — Temara",
+     "region": "Temara",
+     "salary": "MAD 6,000 to 8,000 + uncapped commissions",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "B2B Sales Agents (Sedentary) — Temara — 20 posts"
+    },
+    "fr": {
+     "applyNote": "Recrutement immédiat — l'offre se clôture dès que le nombre est atteint.",
+     "conditions": [
+      "Au moins 1 an d'expérience en centres d'appels",
+      "Excellent français",
+      "Fibre commerciale et sens de la persuasion"
+     ],
+     "diploma": "Excellent français — au moins 1 an d'expérience en centres d'appels",
+     "docs": [
+      "CV à jour"
+     ],
+     "org": "Aria Sales — Témara",
+     "region": "Témara",
+     "salary": "6 000 à 8 000 MAD + commissions déplafonnées",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Commerciaux B2B (sédentaires) — Témara — 20 postes"
+    }
+   },
+   "id": "aria-temara-b2b-2026-20",
+   "maxAge": null,
+   "org": "Aria Sales — تمارة",
+   "posts": 20,
+   "region": "تمارة",
+   "salary": "6.000 إلى 8.000 درهم + عمولات غير محدودة",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "تجاريون B2B (سيدنتير) — تمارة — 20 منصباً",
+   "type": "private"
   }
  ],
  "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
- "updatedAt": "2026-10-24"
+ "updatedAt": "2026-10-25"
 }
