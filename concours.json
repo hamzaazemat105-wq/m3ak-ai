@@ -3044,8 +3044,557 @@
    ],
    "title": "تجاريون B2B (سيدنتير) — تمارة — 20 منصباً",
    "type": "private"
+  },
+  {
+   "announced": "2026-10-23",
+   "applyNote": "الترشيح حصرياً عبر منصة توظيف المكتب، وآخر أجل هو 6 نونبر 2026 على الساعة 23:00. الوثائق المطلوبة حسب الإعلان الرسمي للمباراة.",
+   "applyUrl": "https://recrutement-oncf.com/",
+   "conditions": [
+    "الجنسية المغربية",
+    "دبلوم مهندس دولة أو ماستر (باك+5) في أحد التخصصات المطلوبة",
+    "السن 35 سنة على الأكثر عند 31 دجنبر 2026"
+   ],
+   "deadline": "2026-11-06T23:00",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-oncf-2026-100-postes/",
+   "diploma": "دبلوم مهندس دولة أو ماستر (باك+5) في أحد التخصصات المطلوبة",
+   "diplomaRank": 5,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the Office's recruitment platform; deadline November 6, 2026 at 23:00. Required documents per the official competition notice.",
+     "conditions": [
+      "Moroccan nationality",
+      "State engineer diploma or Master's (Bac+5) in one of the required specialties",
+      "Age 35 at most on December 31, 2026"
+     ],
+     "diploma": "State engineer diploma or Master's (Bac+5) in one of the required specialties",
+     "org": "National Railway Office (ONCF)",
+     "region": "Morocco",
+     "stages": [
+      "Online application",
+      "Online test",
+      "Interview",
+      "Psychotechnical and medical tests",
+      "Onboarding"
+     ],
+     "title": "State Engineer Executives and Management Executives (Bac+5) — 100 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme de recrutement de l'Office ; dernier délai le 6 novembre 2026 à 23h00. Pièces requises selon l'avis officiel du concours.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme d'ingénieur d'État ou master (Bac+5) dans l'une des spécialités demandées",
+      "Âge de 35 ans au plus au 31 décembre 2026"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État ou master (Bac+5) dans l'une des spécialités demandées",
+     "org": "Office National des Chemins de Fer (ONCF)",
+     "region": "Maroc",
+     "stages": [
+      "Candidature en ligne",
+      "Test en ligne",
+      "Entretien",
+      "Tests psychotechniques et médicaux",
+      "Intégration"
+     ],
+     "title": "Cadres ingénieurs d'État et cadres gestionnaires (Bac+5) — 100 postes"
+    }
+   },
+   "id": "oncf-2026-100",
+   "maxAge": 35,
+   "org": "المكتب الوطني للسكك الحديدية (ONCF)",
+   "posts": 100,
+   "region": "المغرب",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "ترشيح إلكتروني",
+    "اختبار إلكتروني",
+    "مقابلة",
+    "اختبارات نفسية تقنية وطبية",
+    "الإدماج"
+   ],
+   "title": "أطر من مهندسي الدولة وأطر التدبير (باك+5) — 100 منصب",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-23",
+   "applyNote": "الترشيح حصرياً عبر منصة recrutement.enssup.gov.ma، وآخر أجل هو 8 نونبر 2026 على الساعة 16:30. الملف الناقص أو المتأخر يُرفض.",
+   "applyUrl": "https://recrutement.enssup.gov.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن من 18 إلى 45 سنة عند فاتح يناير من السنة الجارية (باستثناء الموظفين)",
+    "دبلوم في أحد التخصصات المطلوبة"
+   ],
+   "deadline": "2026-11-08T16:30",
+   "detailsUrl": "https://www.alwadifa-mag.com/2026/10/concours-de-recrutement-cnrst-2026.html",
+   "diploma": "ماستر أو ما يعادله في التخصص المطلوب (متصرف من الدرجة الثانية) / إجازة (متصرف من الدرجة الثالثة)",
+   "diplomaRank": 4,
+   "docs": [
+    "طلب مكتوب بخط اليد وموقع موجه إلى مديرة المركز (الاسم والعنوان والهاتف والبريد الإلكتروني والإطار والتخصص)",
+    "سيرة ذاتية بصورة",
+    "نسخة من بطاقة التعريف الوطنية",
+    "نسخة من الدبلوم المطلوب",
+    "قرار المعادلة عند الاقتضاء",
+    "ترخيص الإدارة للمترشحين الموظفين"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via recrutement.enssup.gov.ma; deadline November 8, 2026 at 16:30. Incomplete or late files are rejected.",
+     "conditions": [
+      "Moroccan nationality",
+      "Age 18 to 45 on January 1 of the current year (except civil servants)",
+      "Diploma in one of the required specialties"
+     ],
+     "diploma": "Master's or equivalent in the required specialty (2nd-grade administrator) / Bachelor's (3rd-grade administrator)",
+     "docs": [
+      "Handwritten signed application to the Centre's Director (name, address, phone, email, grade, specialty)",
+      "CV with photo",
+      "Copy of the national ID card",
+      "Copy of the required diploma",
+      "Equivalence decision where applicable",
+      "Administration authorization for civil-servant candidates"
+     ],
+     "org": "National Centre for Scientific and Technical Research (CNRST)",
+     "region": "Tangier, Oujda, Fes, Agadir",
+     "stages": [
+      "Shortlists for the written tests published on the public employment portal and the Centre's website (counts as invitation)",
+      "Written tests"
+     ],
+     "title": "Second- and Third-Grade Administrators — 24 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via recrutement.enssup.gov.ma ; dernier délai le 8 novembre 2026 à 16h30. Tout dossier incomplet ou hors délai est rejeté.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge de 18 à 45 ans au 1er janvier de l'année en cours (sauf fonctionnaires)",
+      "Diplôme dans l'une des spécialités demandées"
+     ],
+     "diploma": "Master ou équivalent dans la spécialité demandée (administrateur de 2e grade) / licence (administrateur de 3e grade)",
+     "docs": [
+      "Demande manuscrite signée adressée à la Directrice du Centre (nom, adresse, téléphone, e-mail, cadre, spécialité)",
+      "CV avec photo",
+      "Copie de la carte d'identité nationale",
+      "Copie du diplôme exigé",
+      "Décision d'équivalence le cas échéant",
+      "Autorisation de l'administration pour les candidats fonctionnaires"
+     ],
+     "org": "Centre National pour la Recherche Scientifique et Technique (CNRST)",
+     "region": "Tanger, Oujda, Fès, Agadir",
+     "stages": [
+      "Listes des admis aux épreuves écrites publiées sur le portail de l'emploi public et le site du Centre (valant convocation)",
+      "Épreuves écrites"
+     ],
+     "title": "Administrateurs de 2e et 3e grade — 24 postes"
+    }
+   },
+   "id": "cnrst-2026-24",
+   "maxAge": 45,
+   "org": "المركز الوطني للبحث العلمي والتقني (CNRST)",
+   "posts": 24,
+   "region": "طنجة ووجدة وفاس وأكادير",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "نشر لوائح المقبولين لاجتياز الاختبارات الكتابية على بوابة التشغيل العمومي وموقع المركز (تعتبر استدعاءً)",
+    "اختبارات كتابية"
+   ],
+   "title": "متصرفون من الدرجة الثانية والثالثة — 24 منصباً",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-24",
+   "applyNote": "الترشيح حصرياً عبر منصة توظيف المكتب، وآخر أجل هو 9 نونبر 2026. الملف الناقص أو المرسل عبر قناة أخرى لا يُقبل.",
+   "applyUrl": "https://recrutement.ofppt.ma/",
+   "conditions": [
+    "الجنسية المغربية",
+    "أقل من 45 سنة عند تاريخ تولي المنصب",
+    "دبلوم مهندس دولة (رؤساء الأقطاب وأطر تدبير المشاريع) أو شهادة مدرسة عليا للتجارة أو التدبير أو المعلوميات (الأطر الإدارية)",
+    "خبرة 4 سنوات على الأقل للرؤساء، وخبرة في تدبير المشاريع مرغوبة لأطر المشاريع"
+   ],
+   "deadline": "2026-11-09",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-ofppt-2026-30-postes/",
+   "diploma": "دبلوم مهندس دولة (رؤساء الأقطاب وأطر تدبير المشاريع) / شهادة مدرسة عليا للتجارة أو التدبير أو المعلوميات (الأطر الإدارية)",
+   "diplomaRank": 5,
+   "docs": [
+    "استمارة الترشيح F1 بصيغة PDF من موقع المكتب",
+    "سيرة ذاتية مفصلة",
+    "نسخة من الدبلوم المطلوب (وقرار المعادلة للشهادات الأجنبية)",
+    "نسخة من بطاقة التعريف الوطنية (الوجهان في صفحة واحدة)",
+    "مقترح خطة عمل (لأطر تدبير المشاريع والأطر الإدارية)"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the Office's recruitment platform; deadline November 9, 2026. Incomplete files or files sent through another channel are not accepted.",
+     "conditions": [
+      "Moroccan nationality",
+      "Under 45 on the date of taking up the post",
+      "State engineer diploma (pole heads and project management executives) or grande école degree in commerce, management or IT (administrative executives)",
+      "At least 4 years of experience for pole heads; project management experience desirable for project executives"
+     ],
+     "diploma": "State engineer diploma (pole heads and project management executives) / grande école degree in commerce, management or IT (administrative executives)",
+     "docs": [
+      "Application form F1 in PDF from the Office's website",
+      "Detailed CV",
+      "Copy of the required diploma (and equivalence decision for foreign degrees)",
+      "Copy of the national ID card (both sides on a single page)",
+      "Proposed action plan (for project management and administrative executives)"
+     ],
+     "org": "Office of Vocational Training and Employment Promotion (OFPPT)",
+     "region": "Casablanca, Rabat, Laayoune",
+     "stages": [
+      "Initial file screening",
+      "Evaluation tests (dates and venues announced later)"
+     ],
+     "title": "Pedagogical Pole Heads, Project Management Executives and Administrative Executives — 23 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme de recrutement de l'Office ; dernier délai le 9 novembre 2026. Les dossiers incomplets ou envoyés par un autre canal ne sont pas acceptés.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Moins de 45 ans à la date de la prise de service",
+      "Diplôme d'ingénieur d'État (chefs de pôle et cadres gestion de projets) ou diplôme de grande école de commerce, de gestion ou d'informatique (cadres administratifs)",
+      "Au moins 4 ans d'expérience pour les chefs de pôle ; expérience en gestion de projets souhaitée pour les cadres projets"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État (chefs de pôle et cadres gestion de projets) / diplôme de grande école de commerce, de gestion ou d'informatique (cadres administratifs)",
+     "docs": [
+      "Formulaire de candidature F1 au format PDF sur le site de l'Office",
+      "CV détaillé",
+      "Copie du diplôme requis (et décision d'équivalence pour les diplômes étrangers)",
+      "Copie de la carte d'identité nationale (recto-verso sur une seule page)",
+      "Proposition de plan d'action (pour les cadres gestion de projets et administratifs)"
+     ],
+     "org": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
+     "region": "Casablanca, Rabat, Laâyoune",
+     "stages": [
+      "Présélection des dossiers",
+      "Tests d'évaluation (dates et lieux annoncés ultérieurement)"
+     ],
+     "title": "Chefs de pôle pédagogique, cadres gestion de projets et cadres administratifs — 23 postes"
+    }
+   },
+   "id": "ofppt-2026-main-23",
+   "maxAge": null,
+   "org": "مكتب التكوين المهني وإنعاش الشغل (OFPPT)",
+   "posts": 23,
+   "region": "الدار البيضاء والرباط والعيون",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "اختبارات التقييم (التواريخ والأماكن تُعلن لاحقاً)"
+   ],
+   "title": "رؤساء أقطاب بيداغوجية وأطر تدبير المشاريع وأطر إدارية — 23 منصباً",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-24",
+   "applyNote": "الترشيح حصرياً عبر منصة توظيف المكتب، وآخر أجل هو 28 أكتوبر 2026 عند منتصف الليل. الملف الناقص أو المرسل عبر قناة أخرى لا يُقبل.",
+   "applyUrl": "https://recrutement.ofppt.ma/",
+   "conditions": [
+    "الجنسية المغربية",
+    "أقل من 45 سنة عند تاريخ تولي المنصب",
+    "إجازة في السياحة والفندقة على الأقل",
+    "خبرة 4 سنوات على الأقل في القطاع"
+   ],
+   "deadline": "2026-10-28",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-ofppt-2026-30-postes/",
+   "diploma": "إجازة في السياحة والفندقة على الأقل",
+   "diplomaRank": 3,
+   "docs": [
+    "استمارة الترشيح F1 بصيغة PDF من موقع المكتب",
+    "سيرة ذاتية مفصلة",
+    "نسخة من الدبلوم المطلوب (وقرار المعادلة للشهادات الأجنبية)",
+    "نسخة من بطاقة التعريف الوطنية (الوجهان في صفحة واحدة)"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the Office's recruitment platform; deadline October 28, 2026 at midnight. Incomplete files or files sent through another channel are not accepted.",
+     "conditions": [
+      "Moroccan nationality",
+      "Under 45 on the date of taking up the post",
+      "At least a Bachelor's in tourism and hospitality",
+      "At least 4 years of experience in the sector"
+     ],
+     "diploma": "At least a Bachelor's in tourism and hospitality",
+     "docs": [
+      "Application form F1 in PDF from the Office's website",
+      "Detailed CV",
+      "Copy of the required diploma (and equivalence decision for foreign degrees)",
+      "Copy of the national ID card (both sides on a single page)"
+     ],
+     "org": "Office of Vocational Training and Employment Promotion (OFPPT)",
+     "region": "Casablanca",
+     "stages": [
+      "Initial file screening",
+      "Evaluation tests (dates and venues announced later)"
+     ],
+     "title": "Tourism and Hospitality Pole Head — 1 post"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme de recrutement de l'Office ; dernier délai le 28 octobre 2026 à minuit. Les dossiers incomplets ou envoyés par un autre canal ne sont pas acceptés.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Moins de 45 ans à la date de la prise de service",
+      "Licence en tourisme et hôtellerie au minimum",
+      "Au moins 4 ans d'expérience dans le secteur"
+     ],
+     "diploma": "Licence en tourisme et hôtellerie au minimum",
+     "docs": [
+      "Formulaire de candidature F1 au format PDF sur le site de l'Office",
+      "CV détaillé",
+      "Copie du diplôme requis (et décision d'équivalence pour les diplômes étrangers)",
+      "Copie de la carte d'identité nationale (recto-verso sur une seule page)"
+     ],
+     "org": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
+     "region": "Casablanca",
+     "stages": [
+      "Présélection des dossiers",
+      "Tests d'évaluation (dates et lieux annoncés ultérieurement)"
+     ],
+     "title": "Chef de pôle Tourisme et Hôtellerie — 1 poste"
+    }
+   },
+   "id": "ofppt-2026-tourisme-1",
+   "maxAge": null,
+   "org": "مكتب التكوين المهني وإنعاش الشغل (OFPPT)",
+   "posts": 1,
+   "region": "الدار البيضاء",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "اختبارات التقييم (التواريخ والأماكن تُعلن لاحقاً)"
+   ],
+   "title": "رئيس قطب السياحة والفندقة — منصب واحد",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-24",
+   "applyNote": "الترشيح حصرياً عبر منصة توظيف المكتب، وآخر أجل هو 29 أكتوبر 2026. الملف الناقص أو المرسل عبر قناة أخرى لا يُقبل.",
+   "applyUrl": "https://recrutement.ofppt.ma/",
+   "conditions": [
+    "الجنسية المغربية",
+    "أقل من 45 سنة عند تاريخ تولي المنصب",
+    "شهادة مدرسة عليا للتجارة والتدبير، تخصص التدقيق و/أو مراقبة التدبير (السلك العادي)",
+    "خبرة في التدقيق ميزة مهمة"
+   ],
+   "deadline": "2026-10-29",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-ofppt-2026-30-postes/",
+   "diploma": "شهادة مدرسة عليا للتجارة والتدبير، تخصص التدقيق و/أو مراقبة التدبير",
+   "diplomaRank": 4,
+   "docs": [
+    "استمارة الترشيح F1 بصيغة PDF من موقع المكتب",
+    "سيرة ذاتية مفصلة",
+    "نسخة من الدبلوم المطلوب (وقرار المعادلة للشهادات الأجنبية)",
+    "نسخة من بطاقة التعريف الوطنية (الوجهان في صفحة واحدة)"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the Office's recruitment platform; deadline October 29, 2026. Incomplete files or files sent through another channel are not accepted.",
+     "conditions": [
+      "Moroccan nationality",
+      "Under 45 on the date of taking up the post",
+      "Grande école degree in commerce and management, specialty audit and/or management control (normal cycle)",
+      "Audit experience a major asset"
+     ],
+     "diploma": "Grande école degree in commerce and management, specialty audit and/or management control",
+     "docs": [
+      "Application form F1 in PDF from the Office's website",
+      "Detailed CV",
+      "Copy of the required diploma (and equivalence decision for foreign degrees)",
+      "Copy of the national ID card (both sides on a single page)"
+     ],
+     "org": "Office of Vocational Training and Employment Promotion (OFPPT)",
+     "region": "Casablanca",
+     "stages": [
+      "Initial file screening",
+      "Evaluation tests (dates and venues announced later)"
+     ],
+     "title": "Auditors — 5 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme de recrutement de l'Office ; dernier délai le 29 octobre 2026. Les dossiers incomplets ou envoyés par un autre canal ne sont pas acceptés.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Moins de 45 ans à la date de la prise de service",
+      "Diplôme de grande école de commerce et de gestion, spécialité audit et/ou contrôle de gestion (cycle normal)",
+      "Une expérience en audit est un atout majeur"
+     ],
+     "diploma": "Diplôme de grande école de commerce et de gestion, spécialité audit et/ou contrôle de gestion",
+     "docs": [
+      "Formulaire de candidature F1 au format PDF sur le site de l'Office",
+      "CV détaillé",
+      "Copie du diplôme requis (et décision d'équivalence pour les diplômes étrangers)",
+      "Copie de la carte d'identité nationale (recto-verso sur une seule page)"
+     ],
+     "org": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
+     "region": "Casablanca",
+     "stages": [
+      "Présélection des dossiers",
+      "Tests d'évaluation (dates et lieux annoncés ultérieurement)"
+     ],
+     "title": "Auditeurs — 5 postes"
+    }
+   },
+   "id": "ofppt-2026-auditeurs-5",
+   "maxAge": null,
+   "org": "مكتب التكوين المهني وإنعاش الشغل (OFPPT)",
+   "posts": 5,
+   "region": "الدار البيضاء",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "اختبارات التقييم (التواريخ والأماكن تُعلن لاحقاً)"
+   ],
+   "title": "مدققون (تدقيق ومراقبة التدبير) — 5 مناصب",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-24",
+   "applyNote": "الترشيح حصرياً عبر منصة توظيف المكتب، وآخر أجل هو 30 أكتوبر 2026. الملف الناقص أو المرسل عبر قناة أخرى لا يُقبل.",
+   "applyUrl": "https://recrutement.ofppt.ma/",
+   "conditions": [
+    "الجنسية المغربية",
+    "أقل من 45 سنة عند تاريخ تولي المنصب",
+    "إجازة في الصحة والسلامة والبيئة أو السلامة الصناعية أو مجال مماثل",
+    "خبرة 3 سنوات على الأقل في الصحة والسلامة والبيئة وخبرة في القطاع المنجمي"
+   ],
+   "deadline": "2026-10-30",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-ofppt-2026-30-postes/",
+   "diploma": "إجازة في الصحة والسلامة والبيئة أو السلامة الصناعية أو مجال مماثل",
+   "diplomaRank": 3,
+   "docs": [
+    "استمارة الترشيح F1 بصيغة PDF من موقع المكتب",
+    "سيرة ذاتية مفصلة",
+    "نسخة من الدبلوم المطلوب (وقرار المعادلة للشهادات الأجنبية)",
+    "نسخة من بطاقة التعريف الوطنية (الوجهان في صفحة واحدة)"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the Office's recruitment platform; deadline October 30, 2026. Incomplete files or files sent through another channel are not accepted.",
+     "conditions": [
+      "Moroccan nationality",
+      "Under 45 on the date of taking up the post",
+      "Bachelor's in health, safety and environment, industrial safety or a similar field",
+      "At least 3 years of experience in health, safety and environment and experience in the mining sector"
+     ],
+     "diploma": "Bachelor's in health, safety and environment, industrial safety or a similar field",
+     "docs": [
+      "Application form F1 in PDF from the Office's website",
+      "Detailed CV",
+      "Copy of the required diploma (and equivalence decision for foreign degrees)",
+      "Copy of the national ID card (both sides on a single page)"
+     ],
+     "org": "Office of Vocational Training and Employment Promotion (OFPPT)",
+     "region": "Errachidia",
+     "stages": [
+      "Initial file screening",
+      "Evaluation tests (dates and venues announced later)"
+     ],
+     "title": "Mining Safety Trainer — 1 post"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme de recrutement de l'Office ; dernier délai le 30 octobre 2026. Les dossiers incomplets ou envoyés par un autre canal ne sont pas acceptés.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Moins de 45 ans à la date de la prise de service",
+      "Licence en hygiène, sécurité et environnement, en sécurité industrielle ou dans un domaine similaire",
+      "Au moins 3 ans d'expérience en hygiène, sécurité et environnement et une expérience dans le secteur minier"
+     ],
+     "diploma": "Licence en hygiène, sécurité et environnement, en sécurité industrielle ou dans un domaine similaire",
+     "docs": [
+      "Formulaire de candidature F1 au format PDF sur le site de l'Office",
+      "CV détaillé",
+      "Copie du diplôme requis (et décision d'équivalence pour les diplômes étrangers)",
+      "Copie de la carte d'identité nationale (recto-verso sur une seule page)"
+     ],
+     "org": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
+     "region": "Errachidia",
+     "stages": [
+      "Présélection des dossiers",
+      "Tests d'évaluation (dates et lieux annoncés ultérieurement)"
+     ],
+     "title": "Formateur en sécurité minière — 1 poste"
+    }
+   },
+   "id": "ofppt-2026-formateur-1",
+   "maxAge": null,
+   "org": "مكتب التكوين المهني وإنعاش الشغل (OFPPT)",
+   "posts": 1,
+   "region": "الرشيدية",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "اختبارات التقييم (التواريخ والأماكن تُعلن لاحقاً)"
+   ],
+   "title": "مكون في السلامة المنجمية — منصب واحد",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-24",
+   "applyNote": "لا يوجد أجل إغلاق مصرح به في العرض؛ الأجل هنا بعد 30 يوماً من تاريخ الإعلان، والعرض يُغلق عند اكتمال العدد. الترشيح إلكترونياً عبر صفحة توظيف Auto Hall على ReKrute.",
+   "applyUrl": "https://www.rekrute.com",
+   "conditions": [
+    "باك+2/3 في التجارة والتسويق للتجاريين (سيارات) مع خبرة أولى في السيارات مرغوبة",
+    "باك+5 و5 سنوات من الخبرة للتجاريين (شاحنات وآليات)",
+    "باك+2 تقني وخبرة سنة على الأقل للتقنيين",
+    "تكوين مهندس أو مدرسة عليا حسب المنصب للأطر"
+   ],
+   "deadline": "2026-11-23",
+   "detailsUrl": "https://www.alwadifa365.com/2026/10/auto-hall-ouvre-52-postes-en-cdi-dans.html",
+   "diploma": "من باك+2 إلى باك+5 حسب المنصب (تجارة وتسويق / تقني / مهندس أو مدرسة عليا)",
+   "diplomaRank": 2,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "No closing date is stated in the offer; the deadline here is 30 days after the announcement date, and the offer closes once the headcount is complete. Apply online via Auto Hall's recruitment page on ReKrute.",
+     "conditions": [
+      "Bac+2/3 in commerce/marketing for car salespeople, with initial automotive experience desirable",
+      "Bac+5 and 5 years of experience for industrial salespeople (trucks and machinery)",
+      "Bac+2 technical diploma and at least 1 year of experience for technicians",
+      "Engineering or grande école training depending on the post for executives"
+     ],
+     "diploma": "From Bac+2 to Bac+5 depending on the post (commerce/marketing / technical / engineer or grande école)",
+     "org": "Auto Hall",
+     "region": "Casablanca, Agadir, Tangier and other cities",
+     "stages": [
+      "Online application on ReKrute"
+     ],
+     "title": "Salespeople, Technicians and Executives — 52 posts (permanent contracts)"
+    },
+    "fr": {
+     "applyNote": "Aucune date de clôture n'est indiquée dans l'offre ; le délai indiqué ici est de 30 jours après la date de publication, et l'offre se clôture une fois l'effectif complété. Candidature en ligne via la page recrutement d'Auto Hall sur ReKrute.",
+     "conditions": [
+      "Bac+2/3 en commerce/marketing pour les commerciaux voitures, avec une première expérience automobile souhaitée",
+      "Bac+5 et 5 ans d'expérience pour les commerciaux industriels (camions et engins)",
+      "Bac+2 technique et au moins 1 an d'expérience pour les techniciens",
+      "Formation d'ingénieur ou de grande école selon le poste pour les cadres"
+     ],
+     "diploma": "De Bac+2 à Bac+5 selon le poste (commerce/marketing / technique / ingénieur ou grande école)",
+     "org": "Auto Hall",
+     "region": "Casablanca, Agadir, Tanger et autres villes",
+     "stages": [
+      "Candidature en ligne sur ReKrute"
+     ],
+     "title": "Commerciaux, techniciens et cadres — 52 postes (CDI)"
+    }
+   },
+   "id": "auto-hall-2026-52",
+   "maxAge": null,
+   "org": "Auto Hall",
+   "posts": 52,
+   "region": "الدار البيضاء وأكادير وطنجة ومدن أخرى",
+   "sector": "تجارة ومبيعات",
+   "stages": [
+    "ترشيح إلكتروني عبر ReKrute"
+   ],
+   "title": "تجاريون وتقنيون وأطر — 52 منصباً (عقود دائمة)",
+   "type": "private"
   }
  ],
  "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
- "updatedAt": "2026-10-25"
+ "updatedAt": "2026-10-26"
 }
