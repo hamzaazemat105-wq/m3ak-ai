@@ -3593,8 +3593,254 @@
    ],
    "title": "تجاريون وتقنيون وأطر — 52 منصباً (عقود دائمة)",
    "type": "private"
+  },
+  {
+   "announced": "2026-10-16",
+   "applyNote": "الترشيح حصرياً عبر المنصة الرسمية — منصب واحد وتعيين واحد فقط لكل مترشح. الدبلوم المطلوب بالضبط (الدبلوم الأعلى غير مقبول). لوائح المقبولين وتواريخ الاختبارات تُنشر على بوابة التشغيل العمومي وموقع الشركة.",
+   "applyUrl": "https://econcours.brainman.ma/cmp/SRM_FM_2026",
+   "conditions": [
+    "الجنسية المغربية والتمتع بالحقوق المدنية",
+    "السن من 18 إلى 40 سنة لأعوان الإتقان والتنفيذ، ومن 18 إلى 45 سنة للأطر والمهندسين، إلى غاية 31 دجنبر 2026",
+    "الدبلوم المطلوب بالضبط حسب المنصب والتخصص، من مؤسسة عمومية مغربية أو معتمدة أو معادلة",
+    "ترشيح واحد فقط لمنصب واحد وتعيين واحد"
+   ],
+   "deadline": "2026-10-31T22:00",
+   "detailsUrl": "https://www.jobhub.ma/concours-srm-fes-meknes-2026-271-postes/",
+   "diploma": "من الباك إلى باك+5 حسب المنصب (أطر ومهندسون، أعوان إتقان، أعوان تنفيذ)",
+   "diplomaRank": 1,
+   "docs": [
+    "طلب ترشيح موقع موجه إلى المدير العام للشركة يبين المنصب والتعيين",
+    "الاستمارة المستخرجة بعد التسجيل الإلكتروني",
+    "سيرة ذاتية حديثة ومفصلة بصورة",
+    "نسخة من بطاقة التعريف الوطنية (الوجهان)",
+    "نسخ من الباك والدبلوم المطلوب (وقرار المعادلة عند الاقتضاء)",
+    "شهادات الخبرة أو المعارف المعلوماتية أو التخصص عند اقتضاء المنصب"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the official platform — one post and one assignment only per candidate. The exact diploma is required (a higher diploma is not accepted). Shortlists and test dates are published on the public employment portal and the company's website.",
+     "conditions": [
+      "Moroccan nationality and full civil rights",
+      "Age 18 to 40 for supervisory and execution agents, 18 to 45 for executives and engineers, as of December 31, 2026",
+      "The exact diploma required for the post and specialty, from a Moroccan public or accredited institution, or equivalent",
+      "Only one application, for one post and one assignment"
+     ],
+     "diploma": "From baccalaureate to Bac+5 depending on the post (executives and engineers, supervisory agents, execution agents)",
+     "docs": [
+      "Signed application addressed to the company's Director General, stating the post and assignment",
+      "Form generated after online registration",
+      "Recent detailed CV with photo",
+      "Copy of the national ID card (both sides)",
+      "Copies of the baccalaureate and required diploma (and equivalence decision where applicable)",
+      "Experience certificates or IT/specialty credentials where the post requires them"
+     ],
+     "org": "Regional Multiservices Company of the Fès-Meknès Region (SRM-FM)",
+     "region": "Fès-Meknès Region",
+     "stages": [
+      "File preselection",
+      "Written test and/or oral interview"
+     ],
+     "title": "271 posts: 25 executives and engineers + 119 supervisory agents + 127 execution agents"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via la plateforme officielle — un seul poste et une seule affectation par candidat. Le diplôme exact est exigé (un diplôme supérieur n'est pas accepté). Les listes des admis et les dates des épreuves sont publiées sur le portail de l'emploi public et le site de la société.",
+     "conditions": [
+      "Nationalité marocaine et jouissance des droits civiques",
+      "Âge de 18 à 40 ans pour les agents de maîtrise et d'exécution, de 18 à 45 ans pour les cadres et ingénieurs, au 31 décembre 2026",
+      "Le diplôme exact requis selon le poste et la spécialité, d'un établissement public marocain ou agréé, ou équivalence",
+      "Une seule candidature, pour un seul poste et une seule affectation"
+     ],
+     "diploma": "Du baccalauréat à Bac+5 selon le poste (cadres et ingénieurs, agents de maîtrise, agents d'exécution)",
+     "docs": [
+      "Demande signée adressée au Directeur général de la société, indiquant le poste et l'affectation",
+      "Formulaire généré après l'inscription en ligne",
+      "CV récent et détaillé avec photo",
+      "Copie de la carte d'identité nationale (recto-verso)",
+      "Copies du baccalauréat et du diplôme exigé (et décision d'équivalence le cas échéant)",
+      "Attestations d'expérience ou de connaissances informatiques ou de spécialité lorsque le poste l'exige"
+     ],
+     "org": "Société Régionale Multiservices de la région Fès-Meknès (SRM-FM)",
+     "region": "Région Fès-Meknès",
+     "stages": [
+      "Présélection des dossiers",
+      "Épreuve écrite et/ou entretien oral"
+     ],
+     "title": "271 postes : 25 cadres et ingénieurs + 119 agents de maîtrise + 127 agents d'exécution"
+    }
+   },
+   "id": "srm-fm-2026-271",
+   "maxAge": 45,
+   "org": "الشركة الجهوية متعددة الخدمات لجهة فاس مكناس (SRM-FM)",
+   "posts": 271,
+   "region": "جهة فاس مكناس",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "اختبار كتابي و/أو مقابلة شفوية"
+   ],
+   "title": "271 منصباً: 25 إطاراً ومهندساً + 119 عون إتقان + 127 عون تنفيذ",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "الترشيح عبر صفحة العرض لدى أنابيك؛ عرض الرشيدية يتطلب إرسال السيرة الذاتية بالبريد الإلكتروني مع كتابة LIVREUR أو COMMERCIAL في الموضوع حسب المنصب. العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "باك+3 في التجارة أو التسيير أو ما يعادله للمناصب التجارية",
+    "رخصة السياقة B أو C لسائقي التوزيع",
+    "خبرة مهنية من 6 أشهر إلى سنة حسب المنصب",
+    "إتقان العربية، مع معرفة الأمازيغية والفرنسية حسب العرض"
+   ],
+   "deadline": "2026-11-25",
+   "detailsUrl": "https://www.irchadnet.com/2026/10/anapec-recrutement-pepsi-200-postes-2026.html",
+   "diploma": "باك+3 في التجارة أو التسيير أو ما يعادله (تختلف الشروط حسب المنصب)",
+   "diplomaRank": 3,
+   "docs": [
+    "سيرة ذاتية",
+    "نسخة من الدبلوم المطلوب",
+    "نسخة من رخصة السياقة لسائقي التوزيع"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Apply via the ANAPEC offer page; the Errachidia offer requires sending your CV by email with LIVREUR or COMMERCIAL in the subject, depending on the post. The offer closes once the quota is filled; the deadline shown here is 30 days after publication as an estimated deadline, since no closing date was stated.",
+     "conditions": [
+      "Bac+3 in commerce or management or equivalent for commercial posts",
+      "Driving licence B or C for distribution drivers",
+      "6 months to 1 year of professional experience depending on the post",
+      "Arabic proficiency, with Amazigh and French depending on the offer"
+     ],
+     "diploma": "Bac+3 in commerce or management or equivalent (conditions vary by post)",
+     "docs": [
+      "CV",
+      "Copy of the required diploma",
+      "Copy of the driving licence for distribution drivers"
+     ],
+     "org": "PEPSI products distribution company (via ANAPEC)",
+     "region": "Errachidia and Zagora",
+     "stages": [
+      "File review",
+      "Interview"
+     ],
+     "title": "Distribution drivers, sales distributors and sales representatives — 200 posts"
+    },
+    "fr": {
+     "applyNote": "Postulez via la page de l'offre ANAPEC ; l'offre d'Errachidia exige l'envoi du CV par e-mail avec LIVREUR ou COMMERCIAL en objet, selon le poste. L'offre se clôture une fois le quota atteint ; la date limite indiquée ici est de 30 jours après la publication, à titre estimatif, aucune date de clôture n'ayant été annoncée.",
+     "conditions": [
+      "Bac+3 en commerce ou gestion ou équivalent pour les postes commerciaux",
+      "Permis de conduire B ou C pour les chauffeurs-livreurs",
+      "Expérience professionnelle de 6 mois à 1 an selon le poste",
+      "Maîtrise de l'arabe, avec amazigh et français selon l'offre"
+     ],
+     "diploma": "Bac+3 en commerce ou gestion ou équivalent (conditions variables selon le poste)",
+     "docs": [
+      "CV",
+      "Copie du diplôme requis",
+      "Copie du permis de conduire pour les chauffeurs-livreurs"
+     ],
+     "org": "Société de distribution des produits PEPSI (via ANAPEC)",
+     "region": "Errachidia et Zagora",
+     "stages": [
+      "Étude des dossiers",
+      "Entretien"
+     ],
+     "title": "Chauffeurs-livreurs, distributeurs commerciaux et vendeurs — 200 postes"
+    }
+   },
+   "id": "anapec-pepsi-2026-200",
+   "maxAge": null,
+   "org": "شركة توزيع منتجات PEPSI (عبر ANAPEC)",
+   "posts": 200,
+   "region": "الرشيدية وزاكورة",
+   "sector": "تجارة ومبيعات",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلة"
+   ],
+   "title": "سائقو التوزيع وموزعون وبائعون تجاريون — 200 منصب",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-13",
+   "applyNote": "الترشيح حصرياً عبر بوابة التشغيل العمومي — مرجع المباراة 621/DRH/AMMPS/26. توظيف بموجب عقد.",
+   "applyUrl": "https://www.emploi-public.ma",
+   "conditions": [
+    "الجنسية المغربية والتمتع بالحقوق المدنية",
+    "ماستر (باك+5) في علوم المعلومات والتوثيق أو ما يعادله",
+    "خبرة مهنية لا تقل عن 3 سنوات في مجال الأرشفة والتوثيق؛ تُفضّل الخبرة في القطاع العام"
+   ],
+   "deadline": "2026-10-28T18:00",
+   "detailsUrl": "https://wadifalik.ma/concours/%D9%85%D8%A8%D8%A7%D8%B1%D8%A7%D8%A9-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-%D8%A7%D9%84%D9%88%D9%83%D8%A7%D9%84%D8%A9-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A%D8%A9-%D9%84%D9%84%D8%A7%D9%94%D8%AF%D9%88%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D9%86-%D8%B9%D9%88%D9%86-%D9%85%D9%83%D9%84%D9%81-%D8%A8%D8%A7%D9%84%D8%A7%D9%94%D8%B1%D8%B4%D9%8A%D9%81-%D9%88%D8%A7%D9%84%D8%AA%D9%88%D8%AB%D9%8A%D9%82-c4409526-a401e758",
+   "diploma": "ماستر (باك+5) في علوم المعلومات والتوثيق أو ما يعادله",
+   "diplomaRank": 4,
+   "docs": [
+    "طلب ترشيح موجه إلى مدير الوكالة",
+    "سيرة ذاتية مفصلة بصورة شخصية وبريد إلكتروني ورقم هاتف",
+    "نسخة من البطاقة الوطنية للتعريف الإلكترونية (الوجهان)",
+    "نسخ من الشهادات والوثائق المثبتة للمؤهلات والكفاءات"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Applications exclusively via the public employment portal — competition reference 621/DRH/AMMPS/26. Contract-based recruitment.",
+     "conditions": [
+      "Moroccan nationality and full civil rights",
+      "Master's (Bac+5) in information and documentation sciences or equivalent",
+      "At least 3 years of professional experience in archiving and documentation; public-sector experience preferred"
+     ],
+     "diploma": "Master's (Bac+5) in information and documentation sciences or equivalent",
+     "docs": [
+      "Application addressed to the Agency's Director",
+      "Detailed CV with photo, email and phone number",
+      "Copy of the electronic national ID card (both sides)",
+      "Copies of certificates and documents proving qualifications and skills"
+     ],
+     "org": "Moroccan Agency for Medicines and Health Products (AMMPS)",
+     "region": "Rabat",
+     "stages": [
+      "Initial file screening",
+      "Oral interview"
+     ],
+     "title": "Contract Agent — Archivist Documentalist — 1 post"
+    },
+    "fr": {
+     "applyNote": "Candidature exclusivement via le portail de l'emploi public — référence du concours 621/DRH/AMMPS/26. Recrutement sous contrat.",
+     "conditions": [
+      "Nationalité marocaine et jouissance des droits civiques",
+      "Master (Bac+5) en sciences de l'information et de la documentation ou équivalent",
+      "Expérience professionnelle d'au moins 3 ans en archivage et documentation ; expérience dans le secteur public appréciée"
+     ],
+     "diploma": "Master (Bac+5) en sciences de l'information et de la documentation ou équivalent",
+     "docs": [
+      "Demande adressée au Directeur de l'Agence",
+      "CV détaillé avec photo, e-mail et numéro de téléphone",
+      "Copie de la carte d'identité nationale électronique (recto-verso)",
+      "Copies des attestations et pièces justifiant les qualifications et compétences"
+     ],
+     "org": "Agence Marocaine des Médicaments et des Produits de Santé (AMMPS)",
+     "region": "Rabat",
+     "stages": [
+      "Présélection des dossiers",
+      "Entretien oral"
+     ],
+     "title": "Agent contractuel — Archiviste documentaliste — 1 poste"
+    }
+   },
+   "id": "ammps-2026-archiviste",
+   "maxAge": null,
+   "org": "الوكالة المغربية للأدوية والمنتجات الصحية (AMMPS)",
+   "posts": 1,
+   "region": "الرباط",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي للملفات",
+    "مقابلة شفوية"
+   ],
+   "title": "عون متعاقد — أرشيفي موثق (Archiviste Documentaliste) — منصب واحد",
+   "type": "public"
   }
  ],
  "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
- "updatedAt": "2026-10-26"
+ "updatedAt": "2026-10-27"
 }
