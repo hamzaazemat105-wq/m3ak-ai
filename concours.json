@@ -414,85 +414,6 @@
    "type": "public"
   },
   {
-   "announced": "2026-10-09",
-   "applyNote": "الإيداع عبر الإنترنت على بوابة التشغيل العمومي. تاريخ إجراء المباراة: 29 نونبر 2026.",
-   "applyUrl": "https://www.emploi-public.ma",
-   "conditions": [
-    "الجنسية المغربية",
-    "دبلوم مهندس دولة في التخصص المطلوب"
-   ],
-   "deadline": "2026-10-26T16:30",
-   "detailsUrl": "https://www.manasseb.com/%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%A7%D8%AD%D9%8A%D8%A9-%D9%85%D8%A8%D8%A7/",
-   "diploma": "دبلوم مهندس دولة (سلم 11)",
-   "diplomaRank": 5,
-   "docs": [
-    "استمارة الترشيح على البوابة",
-    "نسخة من دبلوم مهندس دولة",
-    "نسخة من بطاقة التعريف الوطنية",
-    "سيرة ذاتية"
-   ],
-   "exam": "2026-11-29",
-   "i18n": {
-    "en": {
-     "applyNote": "Online submission on the public employment portal. Competition date: November 29, 2026.",
-     "conditions": [
-      "Moroccan nationality",
-      "State engineer diploma in the required specialty"
-     ],
-     "diploma": "State engineer diploma (scale 11)",
-     "docs": [
-      "Application form on the portal",
-      "Copy of the state engineer diploma",
-      "Copy of the national ID card",
-      "CV"
-     ],
-     "org": "National Office for Agricultural Advisory",
-     "region": "Morocco",
-     "stages": [
-      "Preselection",
-      "Written test — November 29, 2026",
-      "Oral test"
-     ],
-     "title": "First-Grade State Engineer — 6 posts"
-    },
-    "fr": {
-     "applyNote": "Dépôt en ligne sur le portail de l'emploi public. Date du concours : 29 novembre 2026.",
-     "conditions": [
-      "Nationalité marocaine",
-      "Diplôme d'ingénieur d'État dans la spécialité demandée"
-     ],
-     "diploma": "Diplôme d'ingénieur d'État (échelle 11)",
-     "docs": [
-      "Formulaire de candidature sur le portail",
-      "Copie du diplôme d'ingénieur d'État",
-      "Copie de la carte d'identité nationale",
-      "CV"
-     ],
-     "org": "Office National du Conseil Agricole",
-     "region": "Maroc",
-     "stages": [
-      "Présélection",
-      "Épreuve écrite — 29 novembre 2026",
-      "Épreuve orale"
-     ],
-     "title": "Ingénieur d'État de 1er grade — 6 postes"
-    }
-   },
-   "id": "onca-2026-ingenieur",
-   "maxAge": null,
-   "org": "المكتب الوطني للاستشارة الفلاحية",
-   "posts": 6,
-   "region": "المغرب",
-   "sector": "مؤسسات عمومية",
-   "stages": [
-    "انتقاء أولي",
-    "اختبار كتابي — 29 نونبر 2026",
-    "اختبار شفوي"
-   ],
-   "title": "مهندس دولة من الدرجة الأولى — 6 مناصب",
-   "type": "public"
-  },
-  {
    "announced": "2026-10-03",
    "applyNote": "المناصب: تقني كهرباء (الدرجة الرابعة)، تقني معلوميات وتقني هندسة مدنية (الدرجة الثالثة). راجع الإعلان الكامل لطريقة الإيداع.",
    "applyUrl": "https://www.emploi-public.ma",
@@ -3839,8 +3760,863 @@
    ],
    "title": "عون متعاقد — أرشيفي موثق (Archiviste Documentaliste) — منصب واحد",
    "type": "public"
+  },
+  {
+   "announced": "2026-10-27",
+   "applyNote": "لا يوجد ترشيح إلكتروني؛ الإيداع بمكتب الضبط بالوكالة أو إرساله بالبريد قبل الأجل إلى: Agence Urbaine de Kénitra-Sidi Kacem-Sidi Slimane, Rue Lamhaned Kacem, Bir Rami Est, B.P 1356, Kénitra. مراجع المباريات: C44309/26 (مهندس)، C44310/26 (معماري)، C44311/26 (تقني). الاختبارات بالقنيطرة، ومباشرة العمل للمهندس والمعماري متوقعة في دجنبر 2026.",
+   "applyUrl": "https://www.emploi-public.ma/fr/concours/details/b526d274-b490-4982-833e-71d21ea20813",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن من 18 إلى 45 سنة عند تاريخ التوظيف",
+    "عدم التسجيل في السجل التأديبي المركزي للإدارات العمومية",
+    "تجربة مهنية مرغوبة"
+   ],
+   "deadline": "2026-11-11T16:30",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-agence-urbaine-de-kenitra-sidi-kacem-2026-3-postes/",
+   "diploma": "دبلوم مهندس دولة في الهندسة المعلوماتية (بيانات ضخمة / علم البيانات / ذكاء اصطناعي) — دبلوم الهندسة المعمارية — دبلوم تقني متخصص (باك+2) في مساعدة المديرية",
+   "diplomaRank": 2,
+   "docs": [
+    "طلب مشاركة موقع يتضمن العنوان والهاتف والبريد الإلكتروني",
+    "سيرة ذاتية",
+    "نسخة مصادق عليها من البطاقة الوطنية للتعريف",
+    "نسخ مصادق عليها من الشهادات (وقرار المعادلة للشهادات الأجنبية)",
+    "ترخيص الإدارة الأصلية لمرشحي القطاع العمومي"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "No online application; submit at the agency's registry office or by post before the deadline to: Agence Urbaine de Kénitra-Sidi Kacem-Sidi Slimane, Rue Lamhaned Kacem, Bir Rami Est, B.P 1356, Kénitra. References: C44309/26 (engineer), C44310/26 (architect), C44311/26 (technician). Tests in Kénitra; start expected in December 2026 for the engineer and the architect.",
+     "conditions": [
+      "Moroccan nationality",
+      "Age 18 to 45 on the recruitment date",
+      "Not registered in the central disciplinary register of public administrations",
+      "Professional experience desirable"
+     ],
+     "diploma": "State engineer diploma in computer engineering (Big Data / Data Science / Artificial Intelligence) — architecture diploma — specialized technician diploma (Bac+2) in executive assistance",
+     "docs": [
+      "Signed application stating address, phone number and email",
+      "CV",
+      "Certified copy of the national ID card",
+      "Certified copies of diplomas (and equivalence decision for foreign diplomas)",
+      "Authorization from the home administration for public-sector candidates"
+     ],
+     "org": "Urban Agency of Kénitra-Sidi Kacem-Sidi Slimane",
+     "region": "Kénitra and Sidi Slimane",
+     "stages": [
+      "Initial file screening",
+      "Written test linked to the specialty and the agency's activities (3 hours for the engineer and the architect, 2 hours for the technician)",
+      "30-minute oral interview (only candidates scoring at least 10/20 in the written test are invited)"
+     ],
+     "title": "State Engineer (IT) + Architect + Specialized Technician (Executive Assistance) — 3 posts"
+    },
+    "fr": {
+     "applyNote": "Pas de candidature en ligne ; dépôt au bureau d'ordre de l'agence ou envoi par courrier avant le délai à : Agence Urbaine de Kénitra-Sidi Kacem-Sidi Slimane, Rue Lamhaned Kacem, Bir Rami Est, B.P 1356, Kénitra. Références : C44309/26 (ingénieur), C44310/26 (architecte), C44311/26 (technicien). Épreuves à Kénitra ; prise de poste prévue en décembre 2026 pour l'ingénieur et l'architecte.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge de 18 à 45 ans à la date de recrutement",
+      "Non-inscription au registre disciplinaire central des administrations publiques",
+      "Expérience professionnelle souhaitée"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État en génie informatique (Big Data / Data Science / Intelligence Artificielle) — diplôme d'architecture — diplôme de technicien spécialisé (Bac+2) en assistance de direction",
+     "docs": [
+      "Demande de participation signée indiquant l'adresse, le téléphone et l'e-mail",
+      "CV",
+      "Copie certifiée conforme de la carte d'identité nationale",
+      "Copies certifiées conformes des diplômes (et décision d'équivalence pour les diplômes étrangers)",
+      "Autorisation de l'administration d'origine pour les candidats du secteur public"
+     ],
+     "org": "Agence Urbaine de Kénitra-Sidi Kacem-Sidi Slimane",
+     "region": "Kénitra et Sidi Slimane",
+     "stages": [
+      "Présélection sur dossier",
+      "Épreuve écrite liée à la spécialité et aux activités de l'agence (3 h pour l'ingénieur et l'architecte, 2 h pour le technicien)",
+      "Entretien oral de 30 minutes (seuls les candidats ayant au moins 10/20 à l'écrit y sont convoqués)"
+     ],
+     "title": "Ingénieur d'État (informatique) + architecte + technicien spécialisé (assistance de direction) — 3 postes"
+    }
+   },
+   "id": "agence-kenitra-2026-3",
+   "maxAge": 45,
+   "org": "الوكالة الحضرية للقنيطرة-سيدي قاسم-سيدي سليمان",
+   "posts": 3,
+   "region": "القنيطرة وسيدي سليمان",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "انتقاء أولي على الملف",
+    "اختبار كتابي مرتبط بالتخصص وأنشطة الوكالة (3 ساعات للمهندس والمعماري، ساعتان للتقني)",
+    "مقابلة شفوية لمدة 30 دقيقة (لا يُستدعى لها إلا من حصل على 10/20 على الأقل في الكتابي)"
+   ],
+   "title": "مهندس دولة (معلوميات) + مهندس معماري + تقني متخصص (مساعدة المديرية) — 3 مناصب",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "التسجيل إلكتروني فقط عبر منصة المجلس. الملفات الناقصة مرفوضة. اللائحة المؤقتة تُنشر على www.cspj.ma مع أجل 3 أيام للشكاية، واللائحة النهائية للمدعوين للكتابي تقوم مقام الاستدعاء وتُحمل من منصة المباراة. حصة 25% للمقاومين ومكفولي الأمة وقدماء العسكريين وقدماء المحاربين، و7% للأشخاص في وضعية إعاقة.",
+   "applyUrl": "https://www.concours.cspj.ma",
+   "conditions": [
+    "التخصصات: ميكانيك السيارات، إصلاح المركبات، كهرباء السيارات، أو ميكانيك الصيانة",
+    "الجنسية المغربية واستيفاء شروط المادة 21 من النظام الأساسي العام للوظيفة العمومية",
+    "السن من 18 إلى 40 سنة في فاتح يناير من السنة الجارية",
+    "رخصة سياقة من صنف C أو D",
+    "تجربة مهنية في أحد التخصصات المطلوبة"
+   ],
+   "deadline": "2026-11-10T16:30",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-conseil-superieur-du-pouvoir-judiciaire-2026-15-postes/",
+   "diploma": "شهادة التأهيل المهني من مؤسسة للتكوين المهني في التخصص المطلوب أو دبلوم معادل",
+   "diplomaRank": 1,
+   "docs": [
+    "نسخة من البطاقة الوطنية للتعريف",
+    "نسخة من الدبلوم المطلوب (وقرار المعادلة عند الاقتضاء)",
+    "نسخة من أصل رخصة السياقة صنف C أو D",
+    "سيرة ذاتية تتضمن رقم الهاتف والبريد الإلكتروني",
+    "شهادة إثبات صفة مقاوم أو مكفول الأمة أو قديم عسكري أو قديم محارب للمعنيين",
+    "شهادة من السلطة المكلفة بالأشخاص في وضعية إعاقة للمعنيين",
+    "ترخيص اجتياز المباراة من الإدارة الأصلية للموظفين والمتعاقدين"
+   ],
+   "exam": "2026-12-27",
+   "i18n": {
+    "en": {
+     "applyNote": "Registration online only via the Council's platform. Incomplete files are rejected. The provisional list is published on www.cspj.ma with a 3-day complaint period; the final list of candidates called to the written test serves as convocation and is downloaded from the platform. Quotas: 25% for resistance members, wards of the nation, former military and former combatants; 7% for persons with disabilities.",
+     "conditions": [
+      "Specialties: automotive mechanics, automotive repair, automotive electricity, or maintenance mechanics",
+      "Moroccan nationality and meeting article 21 of the general civil service statute",
+      "Age 18 to 40 on January 1 of the current year",
+      "Category C or D driving licence",
+      "Professional experience in one of the required specialties"
+     ],
+     "diploma": "Vocational qualification certificate from a vocational training institution in the required specialty, or equivalent diploma",
+     "docs": [
+      "Copy of the national ID card",
+      "Copy of the required diploma (and equivalence decision where applicable)",
+      "Copy of the original category C or D driving licence",
+      "CV with phone number and email address",
+      "Certificate of resistance member / ward of the nation / former military / former combatant status for those concerned",
+      "Certificate from the authority for persons with disabilities for those concerned",
+      "Authorization to sit the competition from the home administration for civil servants and contract staff"
+     ],
+     "org": "Superior Council of the Judiciary (CSPJ)",
+     "region": "Rabat",
+     "stages": [
+      "3-hour written MCQ test (coefficient 4)",
+      "Oral or practical test of 15 to 30 minutes (coefficient 3) — only candidates scoring at least 12/20 in the written test are admitted"
+     ],
+     "title": "Assistant Legal Secretaries, 4th Grade (Automotive Mechanics and Electricity) — 15 posts"
+    },
+    "fr": {
+     "applyNote": "Inscription exclusivement en ligne via la plateforme du Conseil. Les dossiers incomplets sont rejetés. La liste provisoire est publiée sur www.cspj.ma avec un délai de réclamation de 3 jours ; la liste définitive des convoqués à l'écrit vaut convocation et se télécharge depuis la plateforme. Quotas : 25 % pour les résistants, pupilles de la nation, anciens militaires et anciens combattants ; 7 % pour les personnes en situation de handicap.",
+     "conditions": [
+      "Spécialités : mécanique automobile, réparation de véhicules automobiles, électricité automobile ou mécanique d'entretien",
+      "Nationalité marocaine et conditions de l'article 21 du statut général de la fonction publique",
+      "Âge de 18 à 40 ans au 1er janvier de l'année en cours",
+      "Permis de conduire de catégorie C ou D",
+      "Expérience professionnelle dans l'une des spécialités demandées"
+     ],
+     "diploma": "Certificat de qualification professionnelle délivré par un établissement de formation professionnelle dans la spécialité demandée, ou diplôme équivalent",
+     "docs": [
+      "Copie de la carte d'identité nationale",
+      "Copie du diplôme requis (et décision d'équivalence le cas échéant)",
+      "Copie de l'original du permis de conduire de catégorie C ou D",
+      "CV avec numéro de téléphone et adresse e-mail",
+      "Attestation de résistant, pupille de la nation, ancien militaire ou ancien combattant pour les concernés",
+      "Attestation de l'autorité chargée des personnes en situation de handicap pour les concernés",
+      "Autorisation de passer le concours de l'administration d'origine pour les fonctionnaires et contractuels"
+     ],
+     "org": "Conseil Supérieur du Pouvoir Judiciaire (CSPJ)",
+     "region": "Rabat",
+     "stages": [
+      "Épreuve écrite de 3 heures sous forme de QCM (coefficient 4)",
+      "Épreuve orale ou pratique de 15 à 30 minutes (coefficient 3) — seuls les candidats ayant au moins 12/20 à l'écrit y sont admis"
+     ],
+     "title": "Secrétaires juridiques adjoints de 4e grade (mécanique et électricité automobiles) — 15 postes"
+    }
+   },
+   "id": "cspj-2026-15",
+   "maxAge": 40,
+   "org": "المجلس الأعلى للسلطة القضائية",
+   "posts": 15,
+   "region": "الرباط",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "اختبار كتابي 3 ساعات على شكل أسئلة متعددة الاختيارات (معامل 4)",
+    "اختبار شفوي أو عملي من 15 إلى 30 دقيقة (معامل 3) — لا يقبل له إلا من حصل على 12/20 على الأقل في الكتابي"
+   ],
+   "title": "كتاب مساعدون من الدرجة الرابعة (ميكانيك وكهرباء السيارات) — 15 منصباً",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "التوزيع: 15 مسؤولاً و26 مهندساً و13 إطاراً و84 تقنياً و25 عاملاً متخصصاً و8 سائقين. رابط فئة المسؤولين: mafoamanagement.com/e-concours/srm-ls-2026-3/ . مراجع المباريات: C44294/26 (مسؤول)، C44300/26 (تقني).",
+   "applyUrl": "https://mafoamanagement.com/e-concours/srm-ls-2026-a/",
+   "conditions": [
+    "الترشح لمنصب واحد فقط في المباراة",
+    "الدبلوم والتخصص المطلوبان حسب المنصب",
+    "راجع قرار فتح المباراة للشروط الكاملة"
+   ],
+   "deadline": "2026-11-10T23:00",
+   "detailsUrl": "https://www.manasseb.com/organisme/%d8%a7%d9%84%d8%b4%d8%b1%d9%83%d8%a9-%d8%a7%d9%84%d8%ac%d9%87%d9%88%d9%8a%d8%a9-%d9%85%d8%aa%d8%b9%d8%af%d8%af%d8%a9-%d8%a7%d9%84%d8%ae%d8%af%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d9%8a%d9%88%d9%86/",
+   "diploma": "من تأهيل مهني إلى مهندس دولة حسب المنصب (تقنيون باك+2 في الغالب، باك+3 لبعض المناصب، باك لبعض مناصب السكرتارية)",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Breakdown: 15 managers, 26 engineers, 13 executives, 84 technicians, 25 specialized workers and 8 drivers. Managers' category link: mafoamanagement.com/e-concours/srm-ls-2026-3/ . References: C44294/26 (managers), C44300/26 (technicians).",
+     "conditions": [
+      "Only one application per competition",
+      "Required diploma and specialty depending on the post",
+      "See the competition opening decision for the full conditions"
+     ],
+     "diploma": "From vocational qualification to state engineer depending on the post (mostly Bac+2 technicians, Bac+3 for some posts, Bac for some secretarial posts)",
+     "org": "Regional Multiservices Company Laâyoune-Sakia El Hamra (SRM-LS)",
+     "region": "Laayoune — Laayoune-Sakia El Hamra Region",
+     "stages": [
+      "Stages detailed in the competition opening decision — see the full announcement"
+     ],
+     "title": "171 posts: managers, engineers, executives, technicians, specialized workers and drivers"
+    },
+    "fr": {
+     "applyNote": "Répartition : 15 responsables, 26 ingénieurs, 13 cadres, 84 techniciens, 25 ouvriers spécialisés et 8 conducteurs. Lien de la catégorie responsables : mafoamanagement.com/e-concours/srm-ls-2026-3/ . Références : C44294/26 (responsables), C44300/26 (techniciens).",
+     "conditions": [
+      "Une seule candidature par concours",
+      "Diplôme et spécialité requis selon le poste",
+      "Voir la décision d'ouverture du concours pour les conditions complètes"
+     ],
+     "diploma": "De la qualification professionnelle à l'ingénieur d'État selon le poste (techniciens Bac+2 pour la plupart, Bac+3 pour certains postes, Bac pour certains postes de secrétariat)",
+     "org": "Société Régionale Multiservices Laâyoune-Sakia El Hamra (SRM-LS)",
+     "region": "Laâyoune — Région Laâyoune-Sakia El Hamra",
+     "stages": [
+      "Étapes détaillées dans la décision d'ouverture du concours — voir l'annonce complète"
+     ],
+     "title": "171 postes : responsables, ingénieurs, cadres, techniciens, ouvriers spécialisés et conducteurs"
+    }
+   },
+   "id": "srm-laayoune-2026-171",
+   "maxAge": null,
+   "org": "الشركة الجهوية متعددة الخدمات العيون-الساقية الحمراء (SRM-LS)",
+   "posts": 171,
+   "region": "العيون — جهة العيون الساقية الحمراء",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "المراحل مفصلة في قرار فتح المباراة — راجع الإعلان الكامل"
+   ],
+   "title": "171 منصباً: مسؤولون ومهندسون وأطر وتقنيون وعمال متخصصون وسائقون",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "الترشيح عبر موقع التوظيف الخاص بالمختبر. من بين العروض: مكلف بالإدارة قبل البيع، وتقنيون في التجارب في البنيات والكهرباء والجيولوجيا والصيانة بالدار البيضاء. مرجع المباراة: C44291/26.",
+   "applyUrl": "https://emploi.lpee.ma/",
+   "conditions": [
+    "راجع صفحة العرض لكل منصب للشهادة والشروط المطلوبة"
+   ],
+   "deadline": "2026-11-09T16:30",
+   "detailsUrl": "https://emploi.lpee.ma/offres",
+   "diploma": "حسب المنصب: هندسة مدنية، هندسة كهربائية، جيولوجيا، صحة وسلامة وبيئة، إدارة وتجارة — راجع صفحة العرض لكل منصب",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Apply via the laboratory's recruitment website. Among the offers: pre-sales administration officer, test technicians in structures, electricity, geology and maintenance in Casablanca. Reference: C44291/26.",
+     "conditions": [
+      "See each offer's page for the required diploma and conditions"
+     ],
+     "diploma": "Depending on the post: civil engineering, electrical engineering, geology, health-safety-environment, administration and commerce — see each offer's page",
+     "org": "Public Laboratory for Testing and Studies (LPEE)",
+     "region": "Casablanca (10 posts), Marrakech-Safi (1 post), Rabat-Salé-Kénitra (1 post)",
+     "stages": [
+      "See each offer's page for the stages"
+     ],
+     "title": "Test Technicians and Administrative and Commercial Executives — 12 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature via le site de recrutement du laboratoire. Parmi les offres : chargé d'administration avant-vente, techniciens d'essais en structures, électricité, géologie et maintenance à Casablanca. Référence : C44291/26.",
+     "conditions": [
+      "Voir la page de chaque offre pour le diplôme et les conditions requis"
+     ],
+     "diploma": "Selon le poste : génie civil, génie électrique, géologie, santé-sécurité-environnement, administration et commerce — voir la page de chaque offre",
+     "org": "Laboratoire Public d'Essais et d'Études (LPEE)",
+     "region": "Casablanca (10 postes), Marrakech-Safi (1 poste), Rabat-Salé-Kénitra (1 poste)",
+     "stages": [
+      "Voir la page de chaque offre pour les étapes"
+     ],
+     "title": "Techniciens d'essais et cadres administratifs et commerciaux — 12 postes"
+    }
+   },
+   "id": "lpee-2026-12",
+   "maxAge": null,
+   "org": "المختبر العمومي للتجارب والدراسات (LPEE)",
+   "posts": 12,
+   "region": "الدار البيضاء (10 مناصب)، مراكش-أسفي (منصب واحد)، الرباط-سلا-القنيطرة (منصب واحد)",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "راجع صفحة العرض لكل منصب للمراحل"
+   ],
+   "title": "تقنيون في التجارب وأطر إدارية وتجارية — 12 منصباً",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "مرجع المباراة: C44289/26. الشهادة والشروط والوثائق مفصلة في قرار فتح المباراة.",
+   "applyUrl": "https://www.emploi-public.ma",
+   "conditions": [
+    "راجع قرار فتح المباراة للشروط والوثائق الكاملة"
+   ],
+   "deadline": "2026-11-09T16:30",
+   "detailsUrl": "https://www.manasseb.com/%d8%ac%d8%a7%d9%85%d8%b9%d8%a9-%d8%a7%d9%84%d8%ad%d8%b3%d9%86-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a-%d8%a7%d9%84%d8%af%d8%a7%d8%b1%d8%a7%d9%84%d8%a8%d9%8a%d8%b6%d8%a7%d8%a1-%d9%85%d8%a8%d8%a7%d8%b1-3/",
+   "diploma": "حسب قرار فتح المباراة (أستاذ محاضر من الدرجة A — كلية الطب والصيدلة)",
+   "diplomaRank": 5,
+   "docs": [],
+   "exam": "2026-11-25",
+   "i18n": {
+    "en": {
+     "applyNote": "Reference: C44289/26. Diploma, conditions and documents detailed in the competition opening decision.",
+     "conditions": [
+      "See the competition opening decision for the full conditions and documents"
+     ],
+     "diploma": "Per the competition opening decision (assistant professor, grade A — Faculty of Medicine and Pharmacy)",
+     "org": "Hassan II University — Casablanca",
+     "region": "Casablanca",
+     "stages": [
+      "Competition on November 25, 2026 — see the opening decision for the full stages"
+     ],
+     "title": "Assistant Professors, Grade A, for the Faculty of Medicine and Pharmacy — 12 posts"
+    },
+    "fr": {
+     "applyNote": "Référence : C44289/26. Diplôme, conditions et pièces détaillés dans la décision d'ouverture du concours.",
+     "conditions": [
+      "Voir la décision d'ouverture du concours pour les conditions et pièces complètes"
+     ],
+     "diploma": "Selon la décision d'ouverture du concours (professeur assistant de grade A — Faculté de Médecine et de Pharmacie)",
+     "org": "Université Hassan II — Casablanca",
+     "region": "Casablanca",
+     "stages": [
+      "Concours le 25 novembre 2026 — voir la décision d'ouverture pour les étapes complètes"
+     ],
+     "title": "Professeurs assistants de grade A pour la Faculté de Médecine et de Pharmacie — 12 postes"
+    }
+   },
+   "id": "uh2-casablanca-2026-12",
+   "maxAge": null,
+   "org": "جامعة الحسن الثاني — الدار البيضاء",
+   "posts": 12,
+   "region": "الدار البيضاء",
+   "sector": "تعليم عالٍ",
+   "stages": [
+    "مباراة يوم 25 نونبر 2026 — راجع قرار فتح المباراة للمراحل الكاملة"
+   ],
+   "title": "أساتذة محاضرون من الدرجة A لفائدة كلية الطب والصيدلة — 12 منصباً",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "التوزيع: 3 أطباء (طب عام) و4 ممرضين (متعددو التخصصات) وتقنيا صحة (صحة وبيئة). لا يوجد ترشيح إلكتروني؛ الملفات توضع في ظرف كبير يحمل ذكر المباراة والدرجة، وتُودع بمكتب الضبط المركزي لجماعة مراكش أو تُرسل بالبريد المضمون، من 28 أكتوبر إلى 13 نونبر 2026 الساعة 16:30، إلى: Commune de Marrakech, Palais Municipal, Boulevard Mohammed V, Marrakech. حصة 25% محجوزة للمقاومين ومكفولي الأمة وقدماء العسكريين وقدماء المحاربين، وحصة للأشخاص في وضعية إعاقة.",
+   "applyUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-commune-marrakech-2026-9-postes/",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن من 18 إلى 45 سنة في فاتح يناير من السنة الجارية",
+    "الدبلوم المطلوب حسب المنصب"
+   ],
+   "deadline": "2026-11-13T16:30",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-commune-marrakech-2026-9-postes/",
+   "diploma": "دكتوراه في الطب العام أو ما يعادلها (الأطباء) — إجازة من المعاهد العليا للمهن التمريضية وتقنيات الصحة (الممرضون وتقنيو الصحة)",
+   "diplomaRank": 3,
+   "docs": [
+    "طلب موقع موجه إلى رئيسة جماعة مراكش (الاسم الكامل والعنوان والبريد الإلكتروني والهاتف)",
+    "سيرة ذاتية بصورة حديثة",
+    "نسخة من الدبلوم (وقرار المعادلة عند الاقتضاء)",
+    "نسخة من البطاقة الوطنية للتعريف",
+    "ترخيص الإدارة الأصلية للموظفين"
+   ],
+   "exam": "2026-12-13",
+   "i18n": {
+    "en": {
+     "applyNote": "Breakdown: 3 doctors (general medicine), 4 nurses (multi-skilled) and 2 health technicians (health and environment). No online application; files, in a large envelope stating the competition and grade, are submitted to the central registry of the Marrakech commune or sent by registered post, from October 28 to November 13, 2026 at 4:30 p.m., to: Commune de Marrakech, Palais Municipal, Boulevard Mohammed V, Marrakech. 25% quota for resistance members, wards of the nation, former military and former combatants, and a quota for persons with disabilities.",
+     "conditions": [
+      "Moroccan nationality",
+      "Age 18 to 45 on January 1 of the current year",
+      "Required diploma depending on the post"
+     ],
+     "diploma": "Doctorate in general medicine or equivalent (doctors) — bachelor's degree from the Higher Institutes of Nursing Professions and Health Techniques (nurses and health technicians)",
+     "docs": [
+      "Signed application addressed to the president of the Marrakech commune (full name, address, email, phone)",
+      "CV with a recent photo",
+      "Copy of the diploma (and equivalence decision where applicable)",
+      "Copy of the national ID card",
+      "Authorization from the home administration for civil servants"
+     ],
+     "org": "Commune of Marrakech",
+     "region": "Marrakech",
+     "stages": [
+      "3-hour written test (coefficient 4): general topic or MCQ on the post's duties",
+      "Oral or practical test of 15 to 45 minutes (coefficient 3)"
+     ],
+     "title": "First-Grade Doctors, Nurses and Health Technicians — 9 posts"
+    },
+    "fr": {
+     "applyNote": "Répartition : 3 médecins (médecine générale), 4 infirmiers (polyvalents) et 2 techniciens de santé (santé et environnement). Pas de candidature en ligne ; les dossiers, dans une grande enveloppe mentionnant le concours et le grade, sont déposés au bureau d'ordre central de la commune de Marrakech ou envoyés par courrier recommandé, du 28 octobre au 13 novembre 2026 à 16h30, à : Commune de Marrakech, Palais Municipal, Boulevard Mohammed V, Marrakech. Quota de 25 % pour les résistants, pupilles de la nation, anciens militaires et anciens combattants, et un quota pour les personnes en situation de handicap.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge de 18 à 45 ans au 1er janvier de l'année en cours",
+      "Diplôme requis selon le poste"
+     ],
+     "diploma": "Doctorat en médecine générale ou équivalent (médecins) — licence des Instituts Supérieurs des Professions Infirmières et Techniques de Santé (infirmiers et techniciens de santé)",
+     "docs": [
+      "Demande signée adressée à la présidente de la commune de Marrakech (nom complet, adresse, e-mail, téléphone)",
+      "CV avec photo récente",
+      "Copie du diplôme (et décision d'équivalence le cas échéant)",
+      "Copie de la carte d'identité nationale",
+      "Autorisation de l'administration d'origine pour les fonctionnaires"
+     ],
+     "org": "Commune de Marrakech",
+     "region": "Marrakech",
+     "stages": [
+      "Épreuve écrite de 3 heures (coefficient 4) : sujet général ou QCM sur les missions du poste",
+      "Épreuve orale ou pratique de 15 à 45 minutes (coefficient 3)"
+     ],
+     "title": "Médecins, infirmiers et techniciens de santé de 1er grade — 9 postes"
+    }
+   },
+   "id": "commune-marrakech-2026-9",
+   "maxAge": 45,
+   "org": "جماعة مراكش",
+   "posts": 9,
+   "region": "مراكش",
+   "sector": "جماعات وتنمية محلية",
+   "stages": [
+    "اختبار كتابي 3 ساعات (معامل 4) على شكل موضوع عام أو أسئلة متعددة الاختيارات حول مهام المنصب",
+    "اختبار شفوي أو عملي من 15 إلى 45 دقيقة (معامل 3)"
+   ],
+   "title": "أطباء وممرضون وتقنيون في الصحة من الدرجة الأولى — 9 مناصب",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "التوزيع: 3 مهندسي دولة (هندسة مدنية وأشغال عمومية) ومهندس دولة (هندسة معمارية) وطبيب بيطري و3 تقنيين (هندسة مدنية وأشغال عمومية) وتقنيا كهرباء وتقني (تعمير وبناء) وتقنيا ميكانيك سيارات. لا يوجد ترشيح إلكتروني؛ الملفات تُودع بمكتب الضبط بجماعة العرائش مقابل وصل، أو تُرسل بالبريد المضمون، إلى: Commune de Larache, 209 Boulevard Assaoussane, Lotissement Al Maghrib Al Jadid, Larache. راجع الإعلان الكامل لشروط رخص السياقة حسب الدرجة. حصة 25% محجوزة للمقاومين ومكفولي الأمة وقدماء العسكريين وقدماء المحاربين، وحصة للأشخاص في وضعية إعاقة. المباراة يوم 29 نونبر 2026 الساعة 09:00 بالكلية متعددة التخصصات بالعرائش.",
+   "applyUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-commune-larache-2026-13-postes/",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن 18 سنة على الأقل في فاتح يناير 2026، والسن الأقصى 45 سنة للمهندسين والطبيب البيطري و40 سنة للتقنيين",
+    "الدبلوم والتخصص المطلوبان حسب المنصب"
+   ],
+   "deadline": "2026-11-13T16:30",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-commune-larache-2026-13-postes/",
+   "diploma": "دبلوم مهندس دولة (هندسة مدنية وأشغال عمومية، أو هندسة معمارية) — دكتوراه في الطب البيطري أو ما يعادلها — دبلوم تقني في التخصص المطلوب",
+   "diplomaRank": 2,
+   "docs": [
+    "طلب ترشيح يذكر الاسم والعنوان والهاتف والبريد الإلكتروني والدرجة المختارة",
+    "نسخة من الدبلوم",
+    "نسخة من البطاقة الوطنية للتعريف سارية الصلاحية",
+    "مستخرج السجل العدلي وعقد الازدياد الأصليان",
+    "سيرة ذاتية بصورة حديثة",
+    "ترخيص الإدارة للموظفين"
+   ],
+   "exam": "2026-11-29",
+   "i18n": {
+    "en": {
+     "applyNote": "Breakdown: 3 state engineers (civil engineering, public works), 1 state engineer (architectural engineering), 1 veterinarian, 3 technicians (civil engineering, public works), 2 electrical technicians, 1 technician (urban planning and construction) and 2 automotive mechanics technicians. No online application; files are submitted to the Larache commune registry against receipt, or sent by registered post, to: Commune de Larache, 209 Boulevard Assaoussane, Lotissement Al Maghrib Al Jadid, Larache. See the full announcement for driving licence requirements by grade. 25% quota for resistance members, wards of the nation, former military and former combatants, and a quota for persons with disabilities. Competition on November 29, 2026 at 9:00 a.m. at the Larache Multidisciplinary Faculty.",
+     "conditions": [
+      "Moroccan nationality",
+      "At least 18 years old on January 1, 2026; maximum age 45 for engineers and the veterinarian, 40 for technicians",
+      "Required diploma and specialty depending on the post"
+     ],
+     "diploma": "State engineer diploma (civil engineering and public works, or architectural engineering) — doctorate in veterinary medicine or equivalent — technician diploma in the required specialty",
+     "docs": [
+      "Application stating name, address, phone, email and chosen grade",
+      "Copy of the diploma",
+      "Copy of a valid national ID card",
+      "Original criminal record extract and birth certificate",
+      "CV with a recent photo",
+      "Administration authorization for civil servants"
+     ],
+     "org": "Commune of Larache",
+     "region": "Larache",
+     "stages": [
+      "3-hour written test (coefficient 4): general topic or MCQ on the post's duties",
+      "Oral or practical test of 15 to 45 minutes (coefficient 3)"
+     ],
+     "title": "Engineers, Veterinarian and Technicians — 13 posts"
+    },
+    "fr": {
+     "applyNote": "Répartition : 3 ingénieurs d'État (génie civil, travaux publics), 1 ingénieur d'État (génie architectural), 1 médecin vétérinaire, 3 techniciens (génie civil, travaux publics), 2 techniciens électriciens, 1 technicien (urbanisme et construction) et 2 techniciens mécaniciens automobiles. Pas de candidature en ligne ; les dossiers sont déposés au bureau d'ordre de la commune de Larache contre récépissé, ou envoyés par courrier recommandé, à : Commune de Larache, 209 Boulevard Assaoussane, Lotissement Al Maghrib Al Jadid, Larache. Voir l'annonce complète pour les permis de conduire requis selon le grade. Quota de 25 % pour les résistants, pupilles de la nation, anciens militaires et anciens combattants, et un quota pour les personnes en situation de handicap. Concours le 29 novembre 2026 à 09h00 à la Faculté Polydisciplinaire de Larache.",
+     "conditions": [
+      "Nationalité marocaine",
+      "18 ans au moins au 1er janvier 2026 ; âge maximum 45 ans pour les ingénieurs et le vétérinaire, 40 ans pour les techniciens",
+      "Diplôme et spécialité requis selon le poste"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État (génie civil et travaux publics, ou génie architectural) — doctorat en médecine vétérinaire ou équivalent — diplôme de technicien dans la spécialité demandée",
+     "docs": [
+      "Demande de candidature indiquant nom, adresse, téléphone, e-mail et grade choisi",
+      "Copie du diplôme",
+      "Copie de la carte d'identité nationale en cours de validité",
+      "Extrait du casier judiciaire et acte de naissance originaux",
+      "CV avec photo récente",
+      "Autorisation de l'administration pour les fonctionnaires"
+     ],
+     "org": "Commune de Larache",
+     "region": "Larache",
+     "stages": [
+      "Épreuve écrite de 3 heures (coefficient 4) : sujet général ou QCM sur les missions du poste",
+      "Épreuve orale ou pratique de 15 à 45 minutes (coefficient 3)"
+     ],
+     "title": "Ingénieurs, médecin vétérinaire et techniciens — 13 postes"
+    }
+   },
+   "id": "commune-larache-2026-13",
+   "maxAge": 45,
+   "org": "جماعة العرائش",
+   "posts": 13,
+   "region": "العرائش",
+   "sector": "جماعات وتنمية محلية",
+   "stages": [
+    "اختبار كتابي 3 ساعات (معامل 4) على شكل موضوع عام أو أسئلة متعددة الاختيارات حول مهام المنصب",
+    "اختبار شفوي أو عملي من 15 إلى 45 دقيقة (معامل 3)"
+   ],
+   "title": "مهندسون وطبيب بيطري وتقنيون — 13 منصباً",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "الملف الأول يُودع على بوابة التشغيل العمومي من 24 أكتوبر إلى 9 نونبر 2026 الساعة 15:30، والملف الثاني يُودع عبر الاستمارة المذكورة في الإعلان في نفس الآجال، مع نسخة ورقية بمقر المدرسة: École Nationale d'Agriculture de Meknès, BP S/40, Meknès. تواريخ وأماكن الاختبارات تُنشر لاحقاً مع لائحة المدعوين.",
+   "applyUrl": "https://www.emploi-public.ma/fr/concours/details/f9d10920-e672-4141-b0d5-59643d479eaa",
+   "conditions": [
+    "الجنسية المغربية",
+    "السن الأقصى 45 سنة في فاتح يناير 2026 للمرشحين غير الموظفين"
+   ],
+   "deadline": "2026-11-09T15:30",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-ecole-nationale-dagriculture-de-meknes-2026-2-postes/",
+   "diploma": "دكتوراه في بيوتكنولوجيا التخمير والميكروبيولوجيا الغذائية أو ما يعادلها — دكتوراه في العلوم الزراعية أو علوم الحياة والبيئة، تخصص زراعة أو ما يعادلها",
+   "diplomaRank": 5,
+   "docs": [
+    "طلب مكتوب بخط اليد موجه إلى مدير المدرسة",
+    "سيرة ذاتية",
+    "أطروحة الدكتوراه والأعمال البحثية (ملف ثانٍ)",
+    "نسخة ورقية من الملف الثاني بمقر المدرسة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "The first file is submitted on the public employment portal from October 24 to November 9, 2026 at 3:30 p.m.; the second file is submitted via the form mentioned in the announcement within the same deadlines, with a paper copy at the school's headquarters: École Nationale d'Agriculture de Meknès, BP S/40, Meknès. Test dates and venues will be published later with the list of invited candidates.",
+     "conditions": [
+      "Moroccan nationality",
+      "Maximum age 45 on January 1, 2026 for non-civil-servant candidates"
+     ],
+     "diploma": "Doctorate in fermentation biotechnology and food microbiology or equivalent — doctorate in agronomic sciences or life and environmental sciences, agronomy specialty or equivalent",
+     "docs": [
+      "Handwritten application addressed to the school's director",
+      "CV",
+      "Doctoral thesis and research works (second file)",
+      "Paper copy of the second file at the school's headquarters"
+     ],
+     "org": "National School of Agriculture of Meknes (ENAM)",
+     "region": "Meknes",
+     "stages": [
+      "Review of files and scientific works",
+      "Presentation (exposé)"
+     ],
+     "title": "Assistant Professors, Grade A (Fermentation Biotechnology / Agronomy) — 2 posts"
+    },
+    "fr": {
+     "applyNote": "Le premier dossier se dépose sur le portail de l'emploi public du 24 octobre au 9 novembre 2026 à 15h30 ; le second dossier se dépose via le formulaire mentionné dans l'annonce dans les mêmes délais, avec une copie papier au siège de l'école : École Nationale d'Agriculture de Meknès, BP S/40, Meknès. Dates et lieux des épreuves publiés ultérieurement avec la liste des convoqués.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Âge maximum 45 ans au 1er janvier 2026 pour les candidats non fonctionnaires"
+     ],
+     "diploma": "Doctorat en biotechnologie des fermentations et microbiologie alimentaire ou équivalent — doctorat en sciences agronomiques ou en sciences de la vie et de l'environnement, spécialité agronomie ou équivalent",
+     "docs": [
+      "Demande manuscrite adressée au directeur de l'école",
+      "CV",
+      "Thèse de doctorat et travaux de recherche (second dossier)",
+      "Copie papier du second dossier au siège de l'école"
+     ],
+     "org": "École Nationale d'Agriculture de Meknès (ENAM)",
+     "region": "Meknès",
+     "stages": [
+      "Étude des dossiers et des travaux scientifiques",
+      "Exposé"
+     ],
+     "title": "Professeurs assistants de grade A (biotechnologie des fermentations / agronomie) — 2 postes"
+    }
+   },
+   "id": "enam-2026-2",
+   "maxAge": 45,
+   "org": "المدرسة الوطنية للفلاحة بمكناس (ENAM)",
+   "posts": 2,
+   "region": "مكناس",
+   "sector": "تعليم عالٍ",
+   "stages": [
+    "دراسة الملفات والأعمال العلمية",
+    "عرض (Exposé)"
+   ],
+   "title": "أستاذان محاضران من الدرجة A (بيوتكنولوجيا التخمير / زراعة) — منصبان",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "أجل هذا المنصب هو اليوم 28 أكتوبر 2026 (دون ساعة مذكورة في المقال). الملفات تُمسح بصيغة PDF وتُودع إلكترونياً عبر قائمة مباريات الشركة على بوابة التشغيل العمومي.",
+   "applyUrl": "https://www.emploi-public.ma/fr/concours-liste?key_word=&stat=etab_publics&establishment%5B%5D=750&corps=0&region=0&datePicker=&date_from=&date_to=&procedure=0",
+   "conditions": [
+    "خبرة 5 سنوات على الأقل في الاستغلال وقيادة المشاريع الرقمية، منها سنتان على الأقل في تنسيق المشاريع أو الفرق",
+    "معرفة عملية بالمحطات الطرقية",
+    "إتقان الفرنسية والعربية المهنيتين، والقدرة على استغلال وثائق تقنية بالإنجليزية"
+   ],
+   "deadline": "2026-10-28",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-sdl-marrakech-moussafir-2026-3-postes/",
+   "diploma": "دبلوم مهندس دولة في الإعلاميات أو نظم المعلومات أو الهندسة الصناعية أو الأتمتة أو تخصص مرتبط مباشرة",
+   "diplomaRank": 5,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "This post's deadline is today, October 28, 2026 (no time stated in the article). Files scanned as PDF are submitted online via the company's competition list on the public employment portal.",
+     "conditions": [
+      "At least 5 years of experience in operations and digital project management, including at least 2 years coordinating projects or teams",
+      "Practical knowledge of bus stations",
+      "Professional French and Arabic, and ability to use technical documents in English"
+     ],
+     "diploma": "State engineer diploma in IT, information systems, industrial engineering, automation or a directly related specialty",
+     "org": "Local Development Company Marrakech Moussafir S.A.",
+     "region": "Marrakech",
+     "stages": [
+      "File review — test dates and venues published later with the list of invited candidates"
+     ],
+     "title": "Deputy Director of the Al Azzouzia Passenger Bus Station — 1 post"
+    },
+    "fr": {
+     "applyNote": "Le délai de ce poste est aujourd'hui, 28 octobre 2026 (heure non indiquée dans l'article). Les dossiers numérisés en PDF se déposent en ligne via la liste des concours de la société sur le portail de l'emploi public.",
+     "conditions": [
+      "Au moins 5 ans d'expérience dans l'exploitation et la conduite de projets numériques, dont au moins 2 ans en coordination de projets ou d'équipes",
+      "Connaissance pratique des gares routières",
+      "Maîtrise professionnelle du français et de l'arabe, et capacité à exploiter des documents techniques en anglais"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État en informatique, systèmes d'information, génie industriel, automatisme ou spécialité directement liée",
+     "org": "Société de Développement Local Marrakech Moussafir S.A.",
+     "region": "Marrakech",
+     "stages": [
+      "Étude des dossiers — dates et lieux des épreuves publiés ultérieurement avec la liste des convoqués"
+     ],
+     "title": "Vice-directeur de la gare routière des voyageurs Al Azzouzia — 1 poste"
+    }
+   },
+   "id": "sdl-marrakech-vice-2026",
+   "maxAge": null,
+   "org": "شركة التنمية المحلية مراكش مسافر ش.م",
+   "posts": 1,
+   "region": "مراكش",
+   "sector": "جماعات وتنمية محلية",
+   "stages": [
+    "دراسة الملفات — تواريخ وأماكن الاختبارات تُنشر لاحقاً مع لائحة المدعوين"
+   ],
+   "title": "نائب مدير المحطة الطرقية للمسافرين العزوزية — منصب واحد",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "تناقض في المقال نفسه حول شهادة منصب التواصل (باك+3 في الإعلان مقابل باك+5 في بطاقة المنصب) — راجع الإعلان الكامل قبل الترشيح. الملفات تُمسح بصيغة PDF وتُودع إلكترونياً عبر قائمة مباريات الشركة على بوابة التشغيل العمومي.",
+   "applyUrl": "https://www.emploi-public.ma/fr/concours-liste?key_word=&stat=etab_publics&establishment%5B%5D=750&corps=0&region=0&datePicker=&date_from=&date_to=&procedure=0",
+   "conditions": [
+    "التواصل: خبرة 5 سنوات، منها سنتان في قيادة مشاريع التواصل أو الشراكات، وإتقان ممتاز للفرنسية والعربية كتابة وشفاهة",
+    "المحاسب: خبرة سنتين على الأقل في المحاسبة ومراقبة الصندوق، وإتقان تسويات الصندوق والبنك وExcel وبرنامج محاسبي"
+   ],
+   "deadline": "2026-11-07",
+   "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-sdl-marrakech-moussafir-2026-3-postes/",
+   "diploma": "التواصل: باك+3 حسب الإعلان وباك+5 حسب بطاقة المنصب في التواصل أو التسويق أو العلاقات العامة أو التجارة أو التدبير — المحاسب: باك+2 أو باك+3 في المحاسبة أو المالية أو التدبير",
+   "diplomaRank": 2,
+   "docs": [
+    "سيرة ذاتية مفصلة",
+    "رسالة تحفيز",
+    "نسخة من الدبلوم",
+    "شهادات مبررة"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Contradiction within the article itself on the communication post's diploma (Bac+3 in the announcement versus Bac+5 on the post's card) — see the full announcement before applying. Files scanned as PDF are submitted online via the company's competition list on the public employment portal.",
+     "conditions": [
+      "Communication: 5 years of experience, including 2 years leading communication or partnership projects, and excellent written and spoken French and Arabic",
+      "Accountant: at least 2 years of experience in accounting and cash control, mastery of cash and bank reconciliations, Excel and accounting software"
+     ],
+     "diploma": "Communication: Bac+3 per the announcement and Bac+5 per the post's card, in communication, marketing, public relations, commerce or management — Accountant: Bac+2 or Bac+3 in accounting, finance or management",
+     "docs": [
+      "Detailed CV",
+      "Cover letter",
+      "Copy of the diploma",
+      "Supporting certificates"
+     ],
+     "org": "Local Development Company Marrakech Moussafir S.A.",
+     "region": "Marrakech",
+     "stages": [
+      "File and portfolio review (communication) or application review (accountant)",
+      "Practical test on a cash statement (accountant), then interview"
+     ],
+     "title": "Communication and Partnerships Officer + Accountant in Charge of Revenue and Cash Control — 2 posts"
+    },
+    "fr": {
+     "applyNote": "Contradiction dans l'article lui-même sur le diplôme du poste communication (Bac+3 dans l'annonce contre Bac+5 sur la fiche du poste) — voir l'annonce complète avant de candidater. Les dossiers numérisés en PDF se déposent en ligne via la liste des concours de la société sur le portail de l'emploi public.",
+     "conditions": [
+      "Communication : 5 ans d'expérience, dont 2 ans en conduite de projets de communication ou de partenariats, et excellente maîtrise du français et de l'arabe à l'écrit et à l'oral",
+      "Comptable : au moins 2 ans d'expérience en comptabilité et contrôle de caisse, maîtrise des rapprochements de caisse et de banque, d'Excel et d'un logiciel comptable"
+     ],
+     "diploma": "Communication : Bac+3 selon l'annonce et Bac+5 selon la fiche du poste, en communication, marketing, relations publiques, commerce ou gestion — Comptable : Bac+2 ou Bac+3 en comptabilité, finance ou gestion",
+     "docs": [
+      "CV détaillé",
+      "Lettre de motivation",
+      "Copie du diplôme",
+      "Attestations justificatives"
+     ],
+     "org": "Société de Développement Local Marrakech Moussafir S.A.",
+     "region": "Marrakech",
+     "stages": [
+      "Étude des dossiers et du portfolio (communication) ou étude des candidatures (comptable)",
+      "Test pratique sur un arrêté de caisse (comptable), puis entretien"
+     ],
+     "title": "Chargé de communication et partenariats + comptable chargé du contrôle des recettes et des caisses — 2 postes"
+    }
+   },
+   "id": "sdl-marrakech-2026-2",
+   "maxAge": null,
+   "org": "شركة التنمية المحلية مراكش مسافر ش.م",
+   "posts": 2,
+   "region": "مراكش",
+   "sector": "جماعات وتنمية محلية",
+   "stages": [
+    "دراسة الملفات والمحفظة (التواصل) أو دراسة الترشيحات (المحاسب)",
+    "اختبار عملي حول محضر صندوق (المحاسب) ثم مقابلة"
+   ],
+   "title": "مكلف بالتواصل والشراكات + محاسب مكلف بمراقبة المداخيل والصناديق — منصبان",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-27",
+   "applyNote": "التوزيع: 25 منصباً ببني ملال ومنصبان بميناء الدار البيضاء ومنصب بالرباط ومنصب بالدار البيضاء. العقود: CDD باستثناء منصب الشراء (CDI). العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق في المقال.",
+   "applyUrl": "https://www.anapec.org/sigec-app-rv/fr/entreprises/bloc_offre_home/1197058/display",
+   "conditions": [
+    "25 عوناً متعدد المهام للمطاعم (KFC) ببني ملال: عربية لغة أم وفرنسية جيدة وإنجليزية بمستوى تواصل مهني",
+    "مشرفا فريق سائقي الرافعات المينائية بميناء الدار البيضاء: رخصتا B وC، وWord وExcel، وفرنسية جيدة",
+    "مشرف فريق نظافة بالرباط (أكدال): Word وExcel، وفرنسية جيدة",
+    "مكلف بالشراء والتدبير بالدار البيضاء (عين الشق): باك+5 في التدبير أو المالية، خبرة 3 إلى 5 سنوات، وWord وExcel، وفرنسية وإنجليزية جيدتان"
+   ],
+   "deadline": "2026-11-26",
+   "detailsUrl": "https://www.dreamjob.ma/emploi/lanapec-lance-une-campagne-de-recrutement-de-29-postes-dans-3-villes/",
+   "diploma": "شهادة تأهيل مهني أو دبلوم تكوين مهني إلى باك+5 حسب المنصب",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Breakdown: 25 posts in Béni Mellal, 2 at the Casablanca port, 1 in Rabat and 1 in Casablanca. Contracts: fixed-term except the purchasing post (permanent). The offer closes once the quota is filled; the deadline shown here is 30 days after publication as an estimate, since no closing date was stated in the article.",
+     "conditions": [
+      "25 multi-skilled restaurant agents (KFC) in Béni Mellal: native Arabic, good French and professional-communication English",
+      "2 team supervisors for port forklift drivers at the Casablanca port: B and C licences, Word and Excel, good French",
+      "1 cleaning team supervisor in Rabat (Agdal): Word and Excel, good French",
+      "1 purchasing and management officer in Casablanca (Aïn Chock): Bac+5 in management or finance, 3 to 5 years of experience, Word and Excel, good French and English"
+     ],
+     "diploma": "Vocational qualification certificate or vocational training diploma up to Bac+5 depending on the post",
+     "org": "National Agency for the Promotion of Employment and Skills (ANAPEC) — recruitment campaign",
+     "region": "Béni Mellal, Casablanca, Rabat",
+     "stages": [
+      "Application via the ANAPEC platform",
+      "Interview"
+     ],
+     "title": "ANAPEC campaign: 29 posts in 3 cities (restaurants, port, cleaning, purchasing)"
+    },
+    "fr": {
+     "applyNote": "Répartition : 25 postes à Béni Mellal, 2 au port de Casablanca, 1 à Rabat et 1 à Casablanca. Contrats : CDD sauf le poste achats (CDI). L'offre se ferme une fois le quota atteint ; le délai affiché ici est de 30 jours après la publication, à titre estimatif, aucun délai de clôture n'étant indiqué dans l'article.",
+     "conditions": [
+      "25 agents polyvalents de restauration (KFC) à Béni Mellal : arabe langue maternelle, bon français et anglais de communication professionnelle",
+      "2 superviseurs d'équipe de conducteurs d'élévateurs portuaires au port de Casablanca : permis B et C, Word et Excel, bon français",
+      "1 superviseur d'équipe de nettoyage à Rabat (Agdal) : Word et Excel, bon français",
+      "1 chargé d'achat et de gestion à Casablanca (Aïn Chock) : Bac+5 en gestion ou finance, 3 à 5 ans d'expérience, Word et Excel, bon français et bon anglais"
+     ],
+     "diploma": "Certificat de qualification professionnelle ou diplôme de formation professionnelle jusqu'à Bac+5 selon le poste",
+     "org": "Agence Nationale de Promotion de l'Emploi et des Compétences (ANAPEC) — campagne de recrutement",
+     "region": "Béni Mellal, Casablanca, Rabat",
+     "stages": [
+      "Candidature via la plateforme ANAPEC",
+      "Entretien"
+     ],
+     "title": "Campagne ANAPEC : 29 postes dans 3 villes (restauration, port, nettoyage, achats)"
+    }
+   },
+   "id": "anapec-2026-29",
+   "maxAge": null,
+   "org": "الوكالة الوطنية لإنعاش التشغيل والكفاءات (ANAPEC) — حملة توظيف",
+   "posts": 29,
+   "region": "بني ملال، الدار البيضاء، الرباط",
+   "sector": "خدمات",
+   "stages": [
+    "الترشيح عبر منصة أنابيك",
+    "مقابلة"
+   ],
+   "title": "حملة أنابيك: 29 منصباً في 3 مدن (مطاعم، ميناء، نظافة، شراء)",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-28",
+   "applyNote": "عقد CDI براتب ثابت؛ الراتب غير مصرح به في العرض. العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق.",
+   "applyUrl": "https://www.moncallcenter.ma/offre-emploi/be-ys-outsourcing-services-maroc-support-client-italien-casablanca-sur-site-159786",
+   "conditions": [
+    "إتقان الإيطالية بمستوى متوسط",
+    "مساعدة دعم الزبناء دون بيع، عبر الهاتف أو البريد الإلكتروني أو الدردشة",
+    "العمل حضورياً بالدار البيضاء، من الاثنين إلى الأحد، 8 ساعات يومياً بين 09:00 و22:00"
+   ],
+   "deadline": "2026-11-27",
+   "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/be-ys-outsourcing-services-maroc-support-client-italien-casablanca-sur-site-159786",
+   "diploma": "إتقان الإيطالية بمستوى متوسط (الشهادة غير محددة في العرض)",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Permanent contract with a fixed salary; the salary is not stated in the offer. The offer closes once the quota is filled; the deadline shown here is 30 days after publication as an estimate, since no closing date was stated.",
+     "conditions": [
+      "Intermediate Italian",
+      "Customer support without sales, by phone, email or chat",
+      "On-site work in Casablanca, Monday to Sunday, 8 hours a day between 09:00 and 22:00"
+     ],
+     "diploma": "Intermediate Italian (diploma not specified in the offer)",
+     "org": "Be Ys Outsourcing Services Maroc",
+     "region": "Casablanca",
+     "stages": [
+      "Application review",
+      "Interview",
+      "Full training before starting"
+     ],
+     "title": "Italian-Speaking Customer Support (No Sales) — Casablanca"
+    },
+    "fr": {
+     "applyNote": "CDI à salaire fixe ; le salaire n'est pas indiqué dans l'offre. L'offre se ferme une fois le quota atteint ; le délai affiché ici est de 30 jours après la publication, à titre estimatif, aucun délai de clôture n'étant indiqué.",
+     "conditions": [
+      "Maîtrise de l'italien à un niveau intermédiaire",
+      "Assistance à la clientèle sans vente, par téléphone, e-mail ou chat",
+      "Travail sur site à Casablanca, du lundi au dimanche, 8 heures par jour entre 09h00 et 22h00"
+     ],
+     "diploma": "Maîtrise de l'italien à un niveau intermédiaire (diplôme non précisé dans l'offre)",
+     "org": "Be Ys Outsourcing Services Maroc",
+     "region": "Casablanca",
+     "stages": [
+      "Étude des candidatures",
+      "Entretien",
+      "Formation complète avant la prise de poste"
+     ],
+     "title": "Support client en italien (sans vente) — Casablanca"
+    }
+   },
+   "id": "beys-italien-2026",
+   "maxAge": null,
+   "org": "Be Ys Outsourcing Services Maroc",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الترشيحات",
+    "مقابلة",
+    "تكوين كامل قبل الالتحاق"
+   ],
+   "title": "دعم الزبناء باللغة الإيطالية (دون بيع) — الدار البيضاء",
+   "type": "private"
   }
  ],
  "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
- "updatedAt": "2026-10-27"
+ "updatedAt": "2026-10-28"
 }
