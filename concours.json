@@ -4615,8 +4615,678 @@
    ],
    "title": "دعم الزبناء باللغة الإيطالية (دون بيع) — الدار البيضاء",
    "type": "private"
+  },
+  {
+   "announced": "2026-10-20",
+   "applyNote": "التسجيل يفتح يوم 30 أكتوبر 2026 عبر المنصة الرسمية wolouj.men.gov.ma. العدد الرسمي للمناصب يُعلن مع فتح التسجيل — العدد المتداول (15,144) غير مؤكد رسمياً بعد.",
+   "applyUrl": "https://wolouj.men.gov.ma/",
+   "conditions": [
+    "الجنسية المغربية",
+    "التمتع بالحقوق المدنية وعدم صدور حكم سالب للحرية",
+    "عدم الارتباط بعقد شغل آخر",
+    "اللياقة البدنية"
+   ],
+   "deadline": "2026-11-13T16:30",
+   "detailsUrl": "https://www.maroconcours.com/2026/10/woloujmengovma-20272026.html",
+   "diploma": "إجازة في التربية أو إجازة مهنية أو ما يعادلها",
+   "diplomaRank": 3,
+   "docs": [
+    "وصل الترشيح الإلكتروني",
+    "دبلوم الإجازة وكشف النقط",
+    "البكالوريا وكشف النقط",
+    "البطاقة الوطنية الإلكترونية",
+    "ترخيص المشاركة للموظفين"
+   ],
+   "exam": "2026-11-22",
+   "i18n": {
+    "en": {
+     "applyNote": "Registration opens October 30, 2026 on the official platform wolouj.men.gov.ma. The official number of posts is announced when registration opens — the circulating figure (15,144) is not officially confirmed yet.",
+     "conditions": [
+      "Moroccan nationality",
+      "Full civil rights and no custodial sentence",
+      "No other employment contract",
+      "Physical fitness"
+     ],
+     "diploma": "Bachelor's degree in education or professional bachelor's degree or equivalent",
+     "docs": [
+      "Electronic registration receipt",
+      "Bachelor's diploma and transcripts",
+      "Baccalaureate and transcripts",
+      "Electronic national ID card",
+      "Participation authorization for civil servants"
+     ],
+     "org": "Ministry of National Education, Preschool and Sports",
+     "region": "All regions of the Kingdom",
+     "stages": [
+      "Online registration",
+      "Initial screening — November 17, 2026",
+      "Written test — November 22, 2026"
+     ],
+     "title": "Access to the Regional Centers for Education and Training Professions — Secondary Teachers 2026/2027"
+    },
+    "fr": {
+     "applyNote": "L'inscription ouvre le 30 octobre 2026 via la plateforme officielle wolouj.men.gov.ma. Le nombre officiel de postes est annoncé à l'ouverture des inscriptions — le chiffre circulant (15 144) n'est pas encore confirmé officiellement.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Jouissance des droits civiques et aucune peine privative de liberté",
+      "Aucun autre contrat de travail",
+      "Aptitude physique"
+     ],
+     "diploma": "Licence en éducation ou licence professionnelle ou équivalent",
+     "docs": [
+      "Reçu d'inscription électronique",
+      "Diplôme de licence et relevés de notes",
+      "Baccalauréat et relevés de notes",
+      "Carte d'identité nationale électronique",
+      "Autorisation de participation pour les fonctionnaires"
+     ],
+     "org": "Ministère de l'Éducation Nationale, du Préscolaire et des Sports",
+     "region": "Toutes les régions du Royaume",
+     "stages": [
+      "Inscription en ligne",
+      "Présélection — 17 novembre 2026",
+      "Épreuve écrite — 22 novembre 2026"
+     ],
+     "title": "Concours d'accès aux Centres Régionaux des Métiers de l'Éducation et de la Formation — Enseignants du secondaire 2026/2027"
+    }
+   },
+   "id": "education-2026-crmef",
+   "maxAge": null,
+   "org": "وزارة التربية الوطنية والتعليم الأولي والرياضة",
+   "posts": null,
+   "region": "جميع جهات المملكة",
+   "sector": "تعليم",
+   "stages": [
+    "التسجيل الإلكتروني",
+    "الانتقاء الأولي — 17 نونبر 2026",
+    "الاختبار الكتابي — 22 نونبر 2026"
+   ],
+   "title": "مباراة ولوج المراكز الجهوية لمهن التربية والتكوين — أساتذة التعليم الثانوي 2026/2027",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-28",
+   "applyNote": "الترشيح عبر المنصة الرسمية recrutement.enssup.gov.ma — مرجع المباراة C44314/26. راجع قرار الفتح للشروط والوثائق الكاملة.",
+   "applyUrl": "https://recrutement.enssup.gov.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "الدبلوم المطابق للتخصص المطلوب (مرجع المباراة C44314/26)"
+   ],
+   "deadline": "2026-11-12",
+   "detailsUrl": "https://www.tawjihweb.com/ar/concours/universite-mohammed-v-de-rabat-recrutement/",
+   "diploma": "دبلوم مهندس دولة / ماستر / إجازة / تقني متخصص حسب المنصب",
+   "diplomaRank": 4,
+   "docs": [],
+   "exam": "2026-11-22",
+   "i18n": {
+    "en": {
+     "applyNote": "Apply via the official platform recrutement.enssup.gov.ma — competition reference C44314/26. See the opening decision for full conditions and documents.",
+     "conditions": [
+      "Moroccan nationality",
+      "Diploma matching the required specialty (reference C44314/26)"
+     ],
+     "diploma": "State engineer diploma / Master's / Bachelor's / specialized technician diploma depending on the post",
+     "docs": [],
+     "org": "Mohammed V University — Rabat",
+     "region": "Rabat",
+     "stages": [
+      "File screening",
+      "Written test",
+      "Oral test"
+     ],
+     "title": "14 administrative and technical executives — 3 state engineers + 9 second-grade administrators + one third-grade administrator + one third-grade technician"
+    },
+    "fr": {
+     "applyNote": "Candidature via la plateforme officielle recrutement.enssup.gov.ma — référence du concours C44314/26. Voir la décision d'ouverture pour les conditions et pièces complètes.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Diplôme correspondant à la spécialité requise (référence C44314/26)"
+     ],
+     "diploma": "Diplôme d'ingénieur d'État / Master / Licence / technicien spécialisé selon le poste",
+     "docs": [],
+     "org": "Université Mohammed V — Rabat",
+     "region": "Rabat",
+     "stages": [
+      "Présélection des dossiers",
+      "Épreuve écrite",
+      "Épreuve orale"
+     ],
+     "title": "14 cadres administratifs et techniques — 3 ingénieurs d'État + 9 administrateurs de 2e grade + un administrateur de 3e grade + un technicien de 3e grade"
+    }
+   },
+   "id": "um5-2026-14",
+   "maxAge": null,
+   "org": "جامعة محمد الخامس — الرباط",
+   "posts": 14,
+   "region": "الرباط",
+   "sector": "تعليم عالٍ",
+   "stages": [
+    "انتقاء الملفات",
+    "اختبار كتابي",
+    "اختبار شفوي"
+   ],
+   "title": "14 إطاراً: 3 مهندسي دولة + 9 متصرفين من الدرجة الثانية + متصرف من الدرجة الثالثة + تقني من الدرجة الثالثة",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-28",
+   "applyNote": "الترشيح عبر recrutement.enssup.gov.ma (مرجع المباراة C44313/26) وعبر بوابة التشغيل العمومي. تنبيه: مصدر يشير إلى 13 نونبر كآخر أجل — راجع البطاقة الرسمية للمباراة عند التسجيل.",
+   "applyUrl": "https://recrutement.enssup.gov.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "الدكتوراه في التخصص المطلوب"
+   ],
+   "deadline": "2026-11-14",
+   "detailsUrl": "https://www.dimajadid.com/alwadifa-maroc/86521/universite-mohammed-v-rabat-concours-08-postes/",
+   "diploma": "دكتوراه",
+   "diplomaRank": 5,
+   "docs": [],
+   "exam": "2026-11-19",
+   "i18n": {
+    "en": {
+     "applyNote": "Apply via recrutement.enssup.gov.ma (reference C44313/26) and the public employment portal. Note: one source cites November 13 as the deadline — check the official competition card when applying.",
+     "conditions": [
+      "Moroccan nationality",
+      "Doctorate in the required specialty"
+     ],
+     "diploma": "Doctorate",
+     "docs": [],
+     "org": "Mohammed V University — Rabat",
+     "region": "Rabat",
+     "stages": [
+      "File review",
+      "Presentation and discussion"
+     ],
+     "title": "8 Grade-A university professors (C44313/26)"
+    },
+    "fr": {
+     "applyNote": "Candidature via recrutement.enssup.gov.ma (référence C44313/26) et le portail de l'emploi public. Attention : une source indique le 13 novembre comme dernier délai — vérifiez la fiche officielle du concours lors de la candidature.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Doctorat dans la spécialité requise"
+     ],
+     "diploma": "Doctorat",
+     "docs": [],
+     "org": "Université Mohammed V — Rabat",
+     "region": "Rabat",
+     "stages": [
+      "Étude des dossiers",
+      "Présentation et discussion"
+     ],
+     "title": "8 professeurs habilités de grade A (C44313/26)"
+    }
+   },
+   "id": "um5-2026-8",
+   "maxAge": null,
+   "org": "جامعة محمد الخامس — الرباط",
+   "posts": 8,
+   "region": "الرباط",
+   "sector": "تعليم عالٍ",
+   "stages": [
+    "دراسة الملفات",
+    "عرض ومناقشة"
+   ],
+   "title": "8 أساتذة محاضرين من الدرجة A (C44313/26)",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-17",
+   "applyNote": "الترشيح عبر الموقع الرسمي للمجموعة. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
+   "applyUrl": "https://alomrane.gov.ma",
+   "conditions": [
+    "الجنسية المغربية",
+    "خبرة مهنية 3 سنوات في المجال",
+    "التنقل الجغرافي مطلوب"
+   ],
+   "deadline": "2026-10-30",
+   "detailsUrl": "https://www.jobhub.ma/concours-al-omrane-2026-17-postes-recrutement/",
+   "diploma": "باك+4/5 في الموارد البشرية (خبرة 3 سنوات) — باك+3 في المشتريات (خبرة 3 سنوات)",
+   "diplomaRank": 4,
+   "docs": [
+    "سيرة ذاتية",
+    "نسخة من الدبلوم",
+    "قرار المعادلة عند الاقتضاء",
+    "رسالة تحفيز وشهادات العمل"
+   ],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Apply via the group's official website. The offer closes when the quota is filled — apply as soon as possible.",
+     "conditions": [
+      "Moroccan nationality",
+      "3 years of professional experience in the field",
+      "Geographic mobility required"
+     ],
+     "diploma": "Bac+4/5 in human resources (3 years of experience) — Bac+3 in procurement (3 years of experience)",
+     "docs": [
+      "CV",
+      "Copy of the diploma",
+      "Equivalence decision where applicable",
+      "Cover letter and work certificates"
+     ],
+     "org": "Al Omrane Group",
+     "region": "Casablanca — Casablanca-Settat Region",
+     "stages": [
+      "File review",
+      "Interviews"
+     ],
+     "title": "HR executive + procurement executive — 2 posts"
+    },
+    "fr": {
+     "applyNote": "Candidature via le site officiel du groupe. L'offre se clôture dès que le quota est atteint — candidatez au plus vite.",
+     "conditions": [
+      "Nationalité marocaine",
+      "Expérience professionnelle de 3 ans dans le domaine",
+      "Mobilité géographique requise"
+     ],
+     "diploma": "Bac+4/5 en ressources humaines (3 ans d'expérience) — Bac+3 en achats (3 ans d'expérience)",
+     "docs": [
+      "CV",
+      "Copie du diplôme",
+      "Décision d'équivalence le cas échéant",
+      "Lettre de motivation et attestations de travail"
+     ],
+     "org": "Groupe Al Omrane",
+     "region": "Casablanca — Région Casablanca-Settat",
+     "stages": [
+      "Étude des dossiers",
+      "Entretiens"
+     ],
+     "title": "Cadre RH + cadre achats — 2 postes"
+    }
+   },
+   "id": "alomrane-2026-rh-achats",
+   "maxAge": null,
+   "org": "مجموعة العمران",
+   "posts": 2,
+   "region": "الدار البيضاء — جهة الدار البيضاء سطات",
+   "sector": "مؤسسات عمومية",
+   "stages": [
+    "دراسة الملفات",
+    "مقابلات"
+   ],
+   "title": "إطار موارد بشرية + إطار مشتريات — منصبان",
+   "type": "public"
+  },
+  {
+   "announced": "2026-10-24",
+   "applyNote": "عقود CDD — بداية العمل 2 نونبر 2026. الترشيح عبر منصة أنابيك. العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "حس التواصل",
+    "العربية جيدة والفرنسية متوسطة/جيدة",
+    "قبول العمل بنظام الورديات"
+   ],
+   "deadline": "2026-11-23",
+   "detailsUrl": "https://www.dreamjob.ma/emploi/lanapec-ouvre-280-opportunites-dans-la-restauration-rapide/",
+   "diploma": "بكالوريا (العمال) / باك+2 في الاقتصاد أو التجارة (المديرون)",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Fixed-term contracts (CDD) — work starts November 2, 2026. Apply via the ANAPEC platform. The offer closes when the quota is filled; the deadline shown here is 30 days after announcement as an estimate since no closing date was stated.",
+     "conditions": [
+      "Communication skills",
+      "Good Arabic, intermediate/good French",
+      "Willing to work shifts"
+     ],
+     "diploma": "Baccalaureate (crew) / Bac+2 in economics or commerce (managers)",
+     "docs": [],
+     "org": "Fast-food company (Northern Morocco) — via ANAPEC",
+     "region": "Tetouan",
+     "stages": [
+      "Application review",
+      "Interview"
+     ],
+     "title": "Fast-food crew (80) + restaurant managers (10) — 90 posts"
+    },
+    "fr": {
+     "applyNote": "Contrats CDD — début du travail le 2 novembre 2026. Candidature via la plateforme ANAPEC. L'offre se clôture dès que le quota est atteint ; le délai indiqué ici est de 30 jours après l'annonce, à titre estimatif, aucun délai de clôture n'ayant été déclaré.",
+     "conditions": [
+      "Sens de la communication",
+      "Bon arabe, français moyen/bon",
+      "Accepter le travail en équipes"
+     ],
+     "diploma": "Baccalauréat (équipiers) / Bac+2 en économie ou commerce (managers)",
+     "docs": [],
+     "org": "Société de restauration rapide (nord du Maroc) — via l'ANAPEC",
+     "region": "Tétouan",
+     "stages": [
+      "Étude des candidatures",
+      "Entretien"
+     ],
+     "title": "Équipiers restauration rapide (80) + managers (10) — 90 postes"
+    }
+   },
+   "id": "anapec-tetouan-restau-90",
+   "maxAge": null,
+   "org": "شركة مطاعم سريعة (شمال المغرب) — عبر ANAPEC",
+   "posts": 90,
+   "region": "تطوان",
+   "sector": "خدمات",
+   "stages": [
+    "دراسة الترشيحات",
+    "مقابلة"
+   ],
+   "title": "90 منصباً في مطاعم سريعة: 80 عاملاً + 10 مديرين",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-24",
+   "applyNote": "عقود CDD للعمال وCDI للمديرين — بداية العمل 2 نونبر 2026. الترشيح عبر منصة أنابيك. العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "حس التواصل",
+    "العربية جيدة والفرنسية متوسطة/جيدة",
+    "قبول العمل بنظام الورديات"
+   ],
+   "deadline": "2026-11-23",
+   "detailsUrl": "https://www.dreamjob.ma/emploi/lanapec-ouvre-280-opportunites-dans-la-restauration-rapide/",
+   "diploma": "بكالوريا (العمال) / باك+2 في الاقتصاد أو التجارة (المديرون)",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "CDD contracts for crew, CDI for managers — work starts November 2, 2026. Apply via the ANAPEC platform. The offer closes when the quota is filled; the deadline shown here is 30 days after announcement as an estimate since no closing date was stated.",
+     "conditions": [
+      "Communication skills",
+      "Good Arabic, intermediate/good French",
+      "Willing to work shifts"
+     ],
+     "diploma": "Baccalaureate (crew) / Bac+2 in economics or commerce (managers)",
+     "docs": [],
+     "org": "Fast-food company (Northern Morocco) — via ANAPEC",
+     "region": "M'diq — work in Martil",
+     "stages": [
+      "Application review",
+      "Interview"
+     ],
+     "title": "Fast-food crew (80) + restaurant managers (10) — 90 posts"
+    },
+    "fr": {
+     "applyNote": "Contrats CDD pour les équipiers et CDI pour les managers — début du travail le 2 novembre 2026. Candidature via la plateforme ANAPEC. L'offre se clôture dès que le quota est atteint ; le délai indiqué ici est de 30 jours après l'annonce, à titre estimatif, aucun délai de clôture n'ayant été déclaré.",
+     "conditions": [
+      "Sens de la communication",
+      "Bon arabe, français moyen/bon",
+      "Accepter le travail en équipes"
+     ],
+     "diploma": "Baccalauréat (équipiers) / Bac+2 en économie ou commerce (managers)",
+     "docs": [],
+     "org": "Société de restauration rapide (nord du Maroc) — via l'ANAPEC",
+     "region": "M'diq — poste basé à Martil",
+     "stages": [
+      "Étude des candidatures",
+      "Entretien"
+     ],
+     "title": "Équipiers restauration rapide (80) + managers (10) — 90 postes"
+    }
+   },
+   "id": "anapec-mdik-restau-90",
+   "maxAge": null,
+   "org": "شركة مطاعم سريعة (شمال المغرب) — عبر ANAPEC",
+   "posts": 90,
+   "region": "المضيق — العمل بالمرتيل",
+   "sector": "خدمات",
+   "stages": [
+    "دراسة الترشيحات",
+    "مقابلة"
+   ],
+   "title": "90 منصباً في مطاعم سريعة: 80 عاملاً + 10 مديرين",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-26",
+   "applyNote": "عقد CDD — مرجع العرض TA2610261197155 لدى أنابيك. الترشيح عبر منصة أنابيك. العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق.",
+   "applyUrl": "https://www.anapec.org",
+   "conditions": [
+    "الاستعداد للعمل في الصناعة"
+   ],
+   "deadline": "2026-11-25",
+   "detailsUrl": "https://www.tawdif-press.com/2026/10/offre-demploi-tanger-assilah-2026.html",
+   "diploma": "بدون دبلوم محدد — يُقبل المبتدئون",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "CDD contract — offer reference TA2610261197155 at ANAPEC. Apply via the ANAPEC platform. The offer closes when the quota is filled; the deadline shown here is 30 days after announcement as an estimate since no closing date was stated.",
+     "conditions": [
+      "Willing to work in industry"
+     ],
+     "diploma": "No specific diploma required — beginners accepted",
+     "docs": [],
+     "org": "Industrial company (Tanger-Assilah) — via ANAPEC",
+     "region": "Tanger-Assilah",
+     "stages": [
+      "Application review",
+      "Interview"
+     ],
+     "title": "Production workers — cardboard box factory"
+    },
+    "fr": {
+     "applyNote": "Contrat CDD — référence de l'offre TA2610261197155 à l'ANAPEC. Candidature via la plateforme ANAPEC. L'offre se clôture dès que le quota est atteint ; le délai indiqué ici est de 30 jours après l'annonce, à titre estimatif, aucun délai de clôture n'ayant été déclaré.",
+     "conditions": [
+      "Être prêt à travailler dans l'industrie"
+     ],
+     "diploma": "Aucun diplôme précis requis — débutants acceptés",
+     "docs": [],
+     "org": "Société industrielle (Tanger-Assilah) — via l'ANAPEC",
+     "region": "Tanger-Assilah",
+     "stages": [
+      "Étude des candidatures",
+      "Entretien"
+     ],
+     "title": "Ouvriers de production — usine de cartons"
+    }
+   },
+   "id": "anapec-tanger-carton",
+   "maxAge": null,
+   "org": "شركة صناعية (طنجة أصيلة) — عبر ANAPEC",
+   "posts": null,
+   "region": "طنجة أصيلة",
+   "sector": "صناعة ولوجستيك",
+   "stages": [
+    "دراسة الترشيحات",
+    "مقابلة"
+   ],
+   "title": "عمال إنتاج — مصنع علب الكرتون",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-29",
+   "applyNote": "منصب إطار (Cadre). الترشيح عبر صفحة العرض على moncallcenter.ma. العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق.",
+   "applyUrl": "https://www.moncallcenter.ma/q-offres/?ville=casablanca&type=reception",
+   "conditions": [
+    "خبرة قوية في إدارة الفرق",
+    "إتقان اللغة الهولندية"
+   ],
+   "deadline": "2026-11-28",
+   "detailsUrl": "https://www.moncallcenter.ma/q-offres/?ville=casablanca&type=reception",
+   "diploma": "تجربة مؤكدة في قيادة الفرق — إتقان الهولندية",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Executive position (Cadre). Apply via the offer page on moncallcenter.ma. The offer closes when the quota is filled; the deadline shown here is 30 days after announcement as an estimate since no closing date was stated.",
+     "conditions": [
+      "Strong team-management experience",
+      "Fluent Dutch"
+     ],
+     "diploma": "Proven team-leadership experience — fluent Dutch",
+     "docs": [],
+     "org": "Intelcia — Casablanca",
+     "region": "Casablanca",
+     "stages": [
+      "Application review",
+      "Interview"
+     ],
+     "title": "Dutch-speaking Team Leader"
+    },
+    "fr": {
+     "applyNote": "Poste de cadre. Candidature via la page de l'offre sur moncallcenter.ma. L'offre se clôture dès que le quota est atteint ; le délai indiqué ici est de 30 jours après l'annonce, à titre estimatif, aucun délai de clôture n'ayant été déclaré.",
+     "conditions": [
+      "Solide expérience en gestion d'équipes",
+      "Maîtrise du néerlandais"
+     ],
+     "diploma": "Expérience confirmée en management d'équipes — néerlandais courant",
+     "docs": [],
+     "org": "Intelcia — Casablanca",
+     "region": "Casablanca",
+     "stages": [
+      "Étude des candidatures",
+      "Entretien"
+     ],
+     "title": "Team leader néerlandophone"
+    }
+   },
+   "id": "intelcia-teamleader-nl-2026",
+   "maxAge": null,
+   "org": "Intelcia — الدار البيضاء",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الترشيحات",
+    "مقابلة"
+   ],
+   "title": "قائد(ة) فريق ناطق(ة) بالهولندية (Team Leader)",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-28",
+   "applyNote": "إصدار (تجارة عبر الهاتف). الترشيح عبر صفحة العرض على moncallcenter.ma. العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق.",
+   "applyUrl": "https://www.moncallcenter.ma/offres-emploi/9/",
+   "conditions": [
+    "توفر فوري",
+    "مهارات تجارية عبر الهاتف",
+    "إتقان الفرنسية"
+   ],
+   "deadline": "2026-11-27",
+   "detailsUrl": "https://www.moncallcenter.ma/offres-emploi/9/",
+   "diploma": "باك فما فوق — الفرنسية هي الأساس",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Outbound (phone sales). Apply via the offer page on moncallcenter.ma. The offer closes when the quota is filled; the deadline shown here is 30 days after announcement as an estimate since no closing date was stated.",
+     "conditions": [
+      "Immediate availability",
+      "Phone sales skills",
+      "Fluent French"
+     ],
+     "diploma": "Baccalaureate or higher — French is essential",
+     "docs": [],
+     "org": "Call center — Casablanca (via moncallcenter.ma)",
+     "region": "Casablanca",
+     "salary": "MAD 5,000 to 5,500 net + bonuses (per the offer)",
+     "stages": [
+      "Application review",
+      "Interview"
+     ],
+     "title": "Telecom sales agents (French/Belgian market)"
+    },
+    "fr": {
+     "applyNote": "Émission (vente par téléphone). Candidature via la page de l'offre sur moncallcenter.ma. L'offre se clôture dès que le quota est atteint ; le délai indiqué ici est de 30 jours après l'annonce, à titre estimatif, aucun délai de clôture n'ayant été déclaré.",
+     "conditions": [
+      "Disponibilité immédiate",
+      "Compétences en vente par téléphone",
+      "Maîtrise du français"
+     ],
+     "diploma": "Bac ou plus — le français est essentiel",
+     "docs": [],
+     "org": "Centre d'appels — Casablanca (via moncallcenter.ma)",
+     "region": "Casablanca",
+     "salary": "5 000 à 5 500 MAD net + primes (selon l'offre)",
+     "stages": [
+      "Étude des candidatures",
+      "Entretien"
+     ],
+     "title": "Commerciaux télécoms (marché français/belge)"
+    }
+   },
+   "id": "telecoms-fr-be-2026",
+   "maxAge": null,
+   "org": "مركز نداء — الدار البيضاء (عبر moncallcenter.ma)",
+   "posts": null,
+   "region": "الدار البيضاء",
+   "salary": "5.000 إلى 5.500 درهم صافي + منح (حسب الإعلان)",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الترشيحات",
+    "مقابلة"
+   ],
+   "title": "تجاريون في الاتصالات (السوق الفرنسية/البلجيكية)",
+   "type": "private"
+  },
+  {
+   "announced": "2026-10-28",
+   "applyNote": "إصدار (أخذ مواعيد هاتفياً). الترشيح عبر صفحة العرض على moncallcenter.ma. العرض يُغلق عند اكتمال العدد؛ الأجل المبين هنا هو 30 يوماً بعد الإعلان كأجل تقديري لعدم التصريح بأجل إغلاق.",
+   "applyUrl": "https://www.moncallcenter.ma/offres-emploi/9/",
+   "conditions": [
+    "خبرة في الإصدار الهاتفي وأخذ المواعيد",
+    "إتقان الفرنسية"
+   ],
+   "deadline": "2026-11-27",
+   "detailsUrl": "https://www.moncallcenter.ma/offres-emploi/9/",
+   "diploma": "باك فما فوق — خبرة في أخذ المواعيد هاتفياً",
+   "diplomaRank": 1,
+   "docs": [],
+   "exam": null,
+   "i18n": {
+    "en": {
+     "applyNote": "Outbound (phone appointment-setting). Apply via the offer page on moncallcenter.ma. The offer closes when the quota is filled; the deadline shown here is 30 days after announcement as an estimate since no closing date was stated.",
+     "conditions": [
+      "Experience in outbound calls and appointment-setting",
+      "Fluent French"
+     ],
+     "diploma": "Baccalaureate or higher — experience in phone appointment-setting",
+     "docs": [],
+     "org": "Call center — Marrakech (via moncallcenter.ma)",
+     "region": "Marrakech",
+     "salary": "Up to MAD 7,800 + bonuses (per the offer)",
+     "stages": [
+      "Application review",
+      "Interview"
+     ],
+     "title": "Experienced phone operators (appointment-setting)"
+    },
+    "fr": {
+     "applyNote": "Émission (prise de rendez-vous par téléphone). Candidature via la page de l'offre sur moncallcenter.ma. L'offre se clôture dès que le quota est atteint ; le délai indiqué ici est de 30 jours après l'annonce, à titre estimatif, aucun délai de clôture n'ayant été déclaré.",
+     "conditions": [
+      "Expérience en émission d'appels et prise de rendez-vous",
+      "Maîtrise du français"
+     ],
+     "diploma": "Bac ou plus — expérience en prise de rendez-vous par téléphone",
+     "docs": [],
+     "org": "Centre d'appels — Marrakech (via moncallcenter.ma)",
+     "region": "Marrakech",
+     "salary": "Jusqu'à 7 800 MAD + primes (selon l'offre)",
+     "stages": [
+      "Étude des candidatures",
+      "Entretien"
+     ],
+     "title": "Téléopérateurs expérimentés (prise de rendez-vous)"
+    }
+   },
+   "id": "rdv-marrakech-2026",
+   "maxAge": null,
+   "org": "مركز نداء — مراكش (عبر moncallcenter.ma)",
+   "posts": null,
+   "region": "مراكش",
+   "salary": "حتى 7.800 درهم + منح (حسب الإعلان)",
+   "sector": "مراكز النداء",
+   "stages": [
+    "دراسة الترشيحات",
+    "مقابلة"
+   ],
+   "title": "مشغلون هاتفيون ذوو خبرة (أخذ مواعيد)",
+   "type": "private"
   }
  ],
  "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
- "updatedAt": "2026-10-28"
+ "updatedAt": "2026-10-29"
 }
