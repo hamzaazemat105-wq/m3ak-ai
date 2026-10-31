@@ -171,164 +171,6 @@
       "type": "public"
     },
     {
-      "announced": "2026-10-12",
-      "applyNote": "الإيداع حصرياً عبر بوابة التشغيل العمومي، مع كتابة مرجع المنصب بوضوح. كل ملف ناقص أو خارج الأجل يُعتبر ملغى.",
-      "applyUrl": "https://www.emploi-public.ma",
-      "conditions": [
-        "الجنسية المغربية",
-        "الدبلوم المطلوب للمنصب",
-        "احترام أجل ومكان الإيداع المحددين في الإعلان"
-      ],
-      "deadline": "2026-10-29T16:00",
-      "detailsUrl": "https://wadifalik.ma/concours/%D9%85%D8%A8%D8%A7%D8%B1%D8%A7%D8%A9-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-%D9%85%D8%AF%D9%8A%D9%88%D9%86%D8%A9-%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%B4-%D9%85-%D9%85%D8%B3%D9%88%D9%94%D9%88%D9%84-%D9%85%D9%88%D9%82%D8%B9-%D8%A7%D9%84%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%D9%8A%D8%A9-%D8%A7%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%85%D9%8A-c4407426-5f3a1e07",
-      "diploma": "إجازة أو ما يعادلها (إطار مجاز — السلم 10)",
-      "diplomaRank": 3,
-      "docs": [
-        "طلب الترشيح مع مرجع المنصب",
-        "نسخة من الدبلوم المطلوب",
-        "نسخة من بطاقة التعريف الوطنية",
-        "سيرة ذاتية"
-      ],
-      "exam": null,
-      "i18n": {
-        "en": {
-          "applyNote": "Submission exclusively via the public employment portal, clearly stating the post reference. Any incomplete or late file is void.",
-          "conditions": [
-            "Moroccan nationality",
-            "Required diploma for the post",
-            "Respect the deadline and place of submission set in the announcement"
-          ],
-          "diploma": "Bachelor's degree or equivalent (graduate executive — scale 10)",
-          "docs": [
-            "Application letter with the post reference",
-            "Copy of the required diploma",
-            "Copy of the national ID card",
-            "CV"
-          ],
-          "org": "Local Development Company Mediouna Services SA",
-          "region": "Mediouna — Casablanca-Settat Region",
-          "salary": "Around MAD 6,000 to 7,200 per month (per the announcement)",
-          "stages": [
-            "Review of application files",
-            "Oral interview"
-          ],
-          "title": "Central Media Library Site Manager — 1 post"
-        },
-        "fr": {
-          "applyNote": "Dépôt exclusivement via le portail de l'emploi public, en indiquant clairement la référence du poste. Tout dossier incomplet ou hors délai est annulé.",
-          "conditions": [
-            "Nationalité marocaine",
-            "Diplôme requis pour le poste",
-            "Respect du délai et du lieu de dépôt fixés dans l'annonce"
-          ],
-          "diploma": "Licence ou équivalent (cadre licencié — échelle 10)",
-          "docs": [
-            "Demande de candidature avec la référence du poste",
-            "Copie du diplôme requis",
-            "Copie de la carte d'identité nationale",
-            "CV"
-          ],
-          "org": "Société de Développement Local Mediouna Services SA",
-          "region": "Mediouna — Région Casablanca-Settat",
-          "salary": "Environ 6 000 à 7 200 MAD par mois (selon l'annonce)",
-          "stages": [
-            "Étude des dossiers de candidature",
-            "Entretien oral"
-          ],
-          "title": "Responsable du site de la médiathèque centrale — 1 poste"
-        }
-      },
-      "id": "mediouna-2026-biblio",
-      "maxAge": null,
-      "org": "شركة التنمية المحلية مديونة خدمات ش.م",
-      "posts": 1,
-      "region": "مديونة — جهة الدار البيضاء سطات",
-      "salary": "حوالي 6.000 إلى 7.200 درهم شهرياً (حسب الإعلان)",
-      "sector": "جماعات وتنمية محلية",
-      "stages": [
-        "دراسة ملفات الترشيح",
-        "مقابلة شفوية"
-      ],
-      "title": "مسؤول موقع المكتبة المركزية والوسائطية — منصب واحد",
-      "type": "public"
-    },
-    {
-      "announced": "2026-10-12",
-      "applyNote": "توظيف بموجب عقد. راجع قرار فتح المباراة للشروط والوثائق الكاملة.",
-      "applyUrl": "https://www.emploi-public.ma",
-      "conditions": [
-        "الجنسية المغربية",
-        "الدبلوم المطلوب للمنصب"
-      ],
-      "deadline": "2026-10-29T16:00",
-      "detailsUrl": "https://www.manasseb.com/%D9%85%D8%AF%D9%8A%D9%88%D9%86%D8%A9-%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%B4-%D9%85-%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%88%D8%B8%D9%8A%D9%81-agent-informatique/",
-      "diploma": "دبلوم في المعلوميات (حسب قرار فتح المباراة)",
-      "diplomaRank": 2,
-      "docs": [
-        "طلب الترشيح",
-        "نسخة من الدبلوم المطلوب",
-        "نسخة من بطاقة التعريف الوطنية",
-        "سيرة ذاتية"
-      ],
-      "exam": null,
-      "i18n": {
-        "en": {
-          "applyNote": "Contract-based recruitment. See the competition opening decision for full conditions and documents.",
-          "conditions": [
-            "Moroccan nationality",
-            "Required diploma for the post"
-          ],
-          "diploma": "Diploma in IT (per the competition opening decision)",
-          "docs": [
-            "Application letter",
-            "Copy of the required diploma",
-            "Copy of the national ID card",
-            "CV"
-          ],
-          "org": "Local Development Company Mediouna Services SA",
-          "region": "Mediouna — Casablanca-Settat Region",
-          "stages": [
-            "File review",
-            "Interview"
-          ],
-          "title": "IT Agent (Agent Informatique) — 1 post"
-        },
-        "fr": {
-          "applyNote": "Recrutement sous contrat. Consultez la décision d'ouverture du concours pour les conditions et pièces complètes.",
-          "conditions": [
-            "Nationalité marocaine",
-            "Diplôme requis pour le poste"
-          ],
-          "diploma": "Diplôme en informatique (selon la décision d'ouverture du concours)",
-          "docs": [
-            "Demande de candidature",
-            "Copie du diplôme requis",
-            "Copie de la carte d'identité nationale",
-            "CV"
-          ],
-          "org": "Société de Développement Local Mediouna Services SA",
-          "region": "Mediouna — Région Casablanca-Settat",
-          "stages": [
-            "Étude des dossiers",
-            "Entretien"
-          ],
-          "title": "Agent Informatique — 1 poste"
-        }
-      },
-      "id": "mediouna-2026-info",
-      "maxAge": null,
-      "org": "شركة التنمية المحلية مديونة خدمات ش.م",
-      "posts": 1,
-      "region": "مديونة — جهة الدار البيضاء سطات",
-      "sector": "جماعات وتنمية محلية",
-      "stages": [
-        "دراسة ملفات الترشيح",
-        "مقابلة"
-      ],
-      "title": "عون معلوميات (Agent Informatique) — منصب واحد",
-      "type": "public"
-    },
-    {
       "announced": "2026-10-22",
       "applyNote": "الإيداع بالحضور الشخصي بمكتب الضبط بالمقر المركزي للغرفة: 98 شارع محمد الخامس، الدار البيضاء، مقابل وصل استلام. لا يُعتد بشهادة النجاح.",
       "applyUrl": "https://www.emploi-public.ma",
@@ -1042,100 +884,6 @@
         "(التقني: الكتابي 19 نونبر والشفوي 24 نونبر 2026 بالمقر)"
       ],
       "title": "متصرف من الدرجة الثانية + تقني من الدرجة الثالثة (معلوميات) — منصبان",
-      "type": "public"
-    },
-    {
-      "announced": "2026-10-16",
-      "applyNote": "الترشيح حصرياً عبر المنصة الإلكترونية المخصصة، وآخر أجل هو 29 أكتوبر 2026 عند منتصف الليل. لوائح المقبولين تُنشر على بوابة التشغيل العمومي وتُعتبر استدعاءً.",
-      "applyUrl": "https://www.emploi-public.ma",
-      "conditions": [
-        "الجنسية المغربية",
-        "السن من 18 إلى 45 سنة عند تاريخ المباراة",
-        "الدبلوم المطلوب حسب المنصب من مؤسسة مؤهلة أو ما يعادله",
-        "خبرة مهنية سنتان (باستثناء منصب الإطار القانوني)"
-      ],
-      "deadline": "2026-10-29",
-      "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-onmt-2026-9-postes/",
-      "diploma": "باك+5 (تدبير الموارد البشرية، قانون الأعمال، تسويق، تواصل، سياحة) / باك+3 (مالية، محاسبة، تجارة، سياحة)",
-      "diplomaRank": 4,
-      "docs": [
-        "طلب ترشيح موجه إلى المدير العام",
-        "سيرة ذاتية مفصلة بالفرنسية مع صورة حديثة",
-        "نسخة من بطاقة التعريف الوطنية الإلكترونية (الوجهان)",
-        "نسخة من الدبلوم المطلوب",
-        "وثائق إثبات الخبرة المهنية",
-        "ترخيص الإدارة للمترشحين الموظفين",
-        "قرار المعادلة للشهادات الأجنبية أو الخاصة"
-      ],
-      "exam": null,
-      "i18n": {
-        "en": {
-          "applyNote": "Applications exclusively via the dedicated online platform; deadline October 29, 2026 at midnight. Shortlists are published on the public employment portal and count as invitations.",
-          "conditions": [
-            "Moroccan nationality",
-            "Age 18 to 45 on the competition date",
-            "Required diploma for the post from an accredited institution or equivalent",
-            "2 years of professional experience (except the legal officer post)"
-          ],
-          "diploma": "Bac+5 (human resources management, business law, marketing, communication, tourism) / Bac+3 (finance, accounting, commerce, tourism)",
-          "docs": [
-            "Application letter addressed to the Director General",
-            "Detailed CV in French with a recent photo",
-            "Copy of the electronic national ID card (both sides)",
-            "Copy of the required diploma",
-            "Proof of professional experience",
-            "Administration authorization for civil-servant candidates",
-            "Equivalence decision for foreign or private degrees"
-          ],
-          "org": "Moroccan National Tourist Office (ONMT)",
-          "region": "Rabat",
-          "stages": [
-            "Initial file screening",
-            "Written test — 3 hours",
-            "Oral test — 30 minutes"
-          ],
-          "title": "Tourism Office Executives — 9 posts"
-        },
-        "fr": {
-          "applyNote": "Candidature exclusivement via la plateforme électronique dédiée, dernier délai le 29 octobre 2026 à minuit. Les listes des retenus sont publiées sur le portail de l'emploi public et valent convocation.",
-          "conditions": [
-            "Nationalité marocaine",
-            "Âge de 18 à 45 ans à la date du concours",
-            "Diplôme requis selon le poste, délivré par un établissement habilité ou équivalent",
-            "Expérience professionnelle de 2 ans (sauf le poste de cadre juridique)"
-          ],
-          "diploma": "Bac+5 (management des ressources humaines, droit des affaires, marketing, communication, tourisme) / Bac+3 (finance, comptabilité, commerce, tourisme)",
-          "docs": [
-            "Demande de candidature adressée au Directeur Général",
-            "CV détaillé en français avec photo récente",
-            "Copie recto-verso de la carte d'identité nationale électronique",
-            "Copie du diplôme requis",
-            "Justificatifs de l'expérience professionnelle",
-            "Autorisation de l'administration pour les candidats fonctionnaires",
-            "Décision d'équivalence pour les diplômes étrangers ou privés"
-          ],
-          "org": "Office National Marocain du Tourisme (ONMT)",
-          "region": "Rabat",
-          "stages": [
-            "Présélection des dossiers",
-            "Épreuve écrite — 3 heures",
-            "Épreuve orale — 30 minutes"
-          ],
-          "title": "Cadres de l'Office National Marocain du Tourisme — 9 postes"
-        }
-      },
-      "id": "onmt-2026-9",
-      "maxAge": 45,
-      "org": "المكتب الوطني المغربي للسياحة (ONMT)",
-      "posts": 9,
-      "region": "الرباط",
-      "sector": "مؤسسات عمومية",
-      "stages": [
-        "انتقاء أولي للملفات",
-        "اختبار كتابي — 3 ساعات",
-        "اختبار شفوي — 30 دقيقة"
-      ],
-      "title": "أطر المكتب الوطني المغربي للسياحة — 9 مناصب",
       "type": "public"
     },
     {
@@ -3205,88 +2953,6 @@
         "اختبارات التقييم (التواريخ والأماكن تُعلن لاحقاً)"
       ],
       "title": "رؤساء أقطاب بيداغوجية وأطر تدبير المشاريع وأطر إدارية — 23 منصباً",
-      "type": "public"
-    },
-    {
-      "announced": "2026-10-24",
-      "applyNote": "الترشيح حصرياً عبر منصة توظيف المكتب، وآخر أجل هو 29 أكتوبر 2026. الملف الناقص أو المرسل عبر قناة أخرى لا يُقبل.",
-      "applyUrl": "https://recrutement.ofppt.ma/",
-      "conditions": [
-        "الجنسية المغربية",
-        "أقل من 45 سنة عند تاريخ تولي المنصب",
-        "شهادة مدرسة عليا للتجارة والتدبير، تخصص التدقيق و/أو مراقبة التدبير (السلك العادي)",
-        "خبرة في التدقيق ميزة مهمة"
-      ],
-      "deadline": "2026-10-29",
-      "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-ofppt-2026-30-postes/",
-      "diploma": "شهادة مدرسة عليا للتجارة والتدبير، تخصص التدقيق و/أو مراقبة التدبير",
-      "diplomaRank": 4,
-      "docs": [
-        "استمارة الترشيح F1 بصيغة PDF من موقع المكتب",
-        "سيرة ذاتية مفصلة",
-        "نسخة من الدبلوم المطلوب (وقرار المعادلة للشهادات الأجنبية)",
-        "نسخة من بطاقة التعريف الوطنية (الوجهان في صفحة واحدة)"
-      ],
-      "exam": null,
-      "i18n": {
-        "en": {
-          "applyNote": "Applications exclusively via the Office's recruitment platform; deadline October 29, 2026. Incomplete files or files sent through another channel are not accepted.",
-          "conditions": [
-            "Moroccan nationality",
-            "Under 45 on the date of taking up the post",
-            "Grande école degree in commerce and management, specialty audit and/or management control (normal cycle)",
-            "Audit experience a major asset"
-          ],
-          "diploma": "Grande école degree in commerce and management, specialty audit and/or management control",
-          "docs": [
-            "Application form F1 in PDF from the Office's website",
-            "Detailed CV",
-            "Copy of the required diploma (and equivalence decision for foreign degrees)",
-            "Copy of the national ID card (both sides on a single page)"
-          ],
-          "org": "Office of Vocational Training and Employment Promotion (OFPPT)",
-          "region": "Casablanca",
-          "stages": [
-            "Initial file screening",
-            "Evaluation tests (dates and venues announced later)"
-          ],
-          "title": "Auditors — 5 posts"
-        },
-        "fr": {
-          "applyNote": "Candidature exclusivement via la plateforme de recrutement de l'Office ; dernier délai le 29 octobre 2026. Les dossiers incomplets ou envoyés par un autre canal ne sont pas acceptés.",
-          "conditions": [
-            "Nationalité marocaine",
-            "Moins de 45 ans à la date de la prise de service",
-            "Diplôme de grande école de commerce et de gestion, spécialité audit et/ou contrôle de gestion (cycle normal)",
-            "Une expérience en audit est un atout majeur"
-          ],
-          "diploma": "Diplôme de grande école de commerce et de gestion, spécialité audit et/ou contrôle de gestion",
-          "docs": [
-            "Formulaire de candidature F1 au format PDF sur le site de l'Office",
-            "CV détaillé",
-            "Copie du diplôme requis (et décision d'équivalence pour les diplômes étrangers)",
-            "Copie de la carte d'identité nationale (recto-verso sur une seule page)"
-          ],
-          "org": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
-          "region": "Casablanca",
-          "stages": [
-            "Présélection des dossiers",
-            "Tests d'évaluation (dates et lieux annoncés ultérieurement)"
-          ],
-          "title": "Auditeurs — 5 postes"
-        }
-      },
-      "id": "ofppt-2026-auditeurs-5",
-      "maxAge": null,
-      "org": "مكتب التكوين المهني وإنعاش الشغل (OFPPT)",
-      "posts": 5,
-      "region": "الدار البيضاء",
-      "sector": "مؤسسات عمومية",
-      "stages": [
-        "انتقاء أولي للملفات",
-        "اختبارات التقييم (التواريخ والأماكن تُعلن لاحقاً)"
-      ],
-      "title": "مدققون (تدقيق ومراقبة التدبير) — 5 مناصب",
       "type": "public"
     },
     {
@@ -5775,8 +5441,1263 @@
       "stages": [],
       "title": "تقنيو الصيانة — مصنع بوقنادل",
       "type": "private"
+    },
+    {
+      "announced": "2026-10-29",
+      "applyNote": "الترشيح حصرياً عبر بوابة التشغيل العمومي؛ التسجيل إلكتروني نهائي.",
+      "applyUrl": "https://www.emploi-public.ma",
+      "conditions": [
+        "الجنسية المغربية",
+        "السن بين 18 و45 سنة في فاتح يناير 2026",
+        "ماستر أو ما يعادله في الإحصاء والاقتصاد التطبيقي",
+        "نسبة 25% من المناصب محجوزة للمقاومين ومكفولي الأمة وقدماء المحاربين والعسكريين، و7% للأشخاص في وضعية إعاقة"
+      ],
+      "deadline": "2026-11-13T16:30",
+      "detailsUrl": "https://www.tawdif24.com/2026/10/concours-de-recrutement-haut.html",
+      "diploma": "ماستر أو ماستر متخصص أو DESA أو DESS أو ما يعادلها في الإحصاء والاقتصاد التطبيقي",
+      "diplomaRank": 4,
+      "docs": [
+        "استمارة الترشيح المعبأة إلكترونياً",
+        "نسخة من الدبلوم (وقرار المعادلة للدبلومات الأجنبية)",
+        "شهادة تثبت التخصص عند الاقتضاء",
+        "نسخة من البطاقة الوطنية للتعريف الإلكترونية",
+        "سيرة ذاتية مع صورة",
+        "ترخيص الإدارة الأصلية بالنسبة للموظفين"
+      ],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Applications exclusively via the public employment portal; online registration is final.",
+          "conditions": [
+            "Moroccan nationality",
+            "Aged 18 to 45 as of 1 January 2026",
+            "Master's degree or equivalent in statistics and applied economics",
+            "25% of posts reserved for resistance fighters, wards of the nation, veterans and military personnel; 7% for persons with disabilities"
+          ],
+          "diploma": "Master's, specialized Master's, DESA or DESS or equivalent in statistics and applied economics",
+          "docs": [
+            "Online application form",
+            "Copy of the diploma (and equivalence decision for foreign degrees)",
+            "Certificate of specialty where applicable",
+            "Copy of the electronic national ID card",
+            "CV with photo",
+            "Home administration authorization for civil servants"
+          ],
+          "org": "High Commission for Planning",
+          "region": "Rabat",
+          "sector": "Public institutions",
+          "stages": [
+            "General written test (3 hrs, coefficient 2)",
+            "Specialty written test (3 hrs, coefficient 3)",
+            "Oral interview (15–30 min, coefficient 3)"
+          ],
+          "title": "Second-Grade Administrators — Statistics and Applied Economics — 11 posts"
+        },
+        "fr": {
+          "applyNote": "Candidature exclusivement via le portail de l'emploi public ; inscription en ligne définitive.",
+          "conditions": [
+            "Nationalité marocaine",
+            "Âgé de 18 à 45 ans au 1er janvier 2026",
+            "Master ou équivalent en statistique et économie appliquée",
+            "25 % des postes réservés aux résistants, pupilles de la Nation, anciens combattants et militaires ; 7 % aux personnes en situation de handicap"
+          ],
+          "diploma": "Master, master spécialisé, DESA ou DESS ou équivalent en statistique et économie appliquée",
+          "docs": [
+            "Formulaire de candidature rempli en ligne",
+            "Copie du diplôme (et décision d'équivalence pour les diplômes étrangers)",
+            "Attestation de spécialité le cas échéant",
+            "Copie de la carte d'identité nationale électronique",
+            "CV avec photo",
+            "Autorisation de l'administration d'origine pour les fonctionnaires"
+          ],
+          "org": "Haut-Commissariat au Plan",
+          "region": "Rabat",
+          "sector": "Établissements publics",
+          "stages": [
+            "Épreuve écrite générale (3 h, coefficient 2)",
+            "Épreuve écrite de spécialité (3 h, coefficient 3)",
+            "Entretien oral (15–30 min, coefficient 3)"
+          ],
+          "title": "Administrateurs de 2e grade — statistique et économie appliquée — 11 postes"
+        }
+      },
+      "id": "hcp-2026-11",
+      "maxAge": 45,
+      "org": "المندوبية السامية للتخطيط",
+      "posts": 11,
+      "region": "الرباط",
+      "sector": "مؤسسات عمومية",
+      "stages": [
+        "اختبار كتابي عام (3 ساعات، معامل 2)",
+        "اختبار كتابي في التخصص (3 ساعات، معامل 3)",
+        "مقابلة شفوية (15-30 دقيقة، معامل 3)"
+      ],
+      "title": "متصرفون من الدرجة الثانية — الإحصاء والاقتصاد التطبيقي — 11 منصباً",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-29",
+      "applyNote": "إيداع ملف الترشيح وفق شروط الإعلان الرسمي؛ حدد المنصب المطلوب في رسالة الترشيح.",
+      "applyUrl": "https://www.emploi-public.ma",
+      "conditions": [
+        "الجنسية المغربية",
+        "دبلوم معترف به من الدولة في التخصص المطلوب",
+        "18 سنة على الأقل",
+        "45 سنة على الأكثر للأطر و40 سنة على الأكثر للسائق-مراسل"
+      ],
+      "deadline": "2026-11-12T16:30",
+      "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-anda-2026-3-postes/",
+      "diploma": "باك+5 في المحاسبة والمالية والتدبير (إطار المالية) / باك+3 في الاقتصاد والتدبير والمالية (إطار الخزينة) / دبلوم تقني متخصص مع رخصة السياقة صنف ب (سائق-مراسل)",
+      "diplomaRank": 4,
+      "docs": [
+        "رسالة ترشيح تحدد المنصب المطلوب",
+        "سيرة ذاتية مفصلة وموقعة",
+        "نسخ مصادق عليها من الدبلومات والبطاقة الوطنية للتعريف",
+        "قرار المعادلة للدبلومات الخاصة أو الأجنبية",
+        "شواهد العمل للمترشحين ذوي الخبرة",
+        "ترخيص الإدارة الأصلية بالنسبة للموظفين"
+      ],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Submit the application file per the official announcement; state the requested post in the application letter.",
+          "conditions": [
+            "Moroccan nationality",
+            "State-recognized diploma in the required specialty",
+            "At least 18 years old",
+            "At most 45 years old for officers and 40 for the driver-courier"
+          ],
+          "diploma": "Bac+5 in accounting, finance and management (finance officer) / Bac+3 in economics, management and finance (treasury officer) / specialized technician diploma with a category B driving license (driver-courier)",
+          "docs": [
+            "Application letter stating the requested post",
+            "Detailed signed CV",
+            "Certified copies of diplomas and national ID card",
+            "Equivalence decision for private or foreign diplomas",
+            "Work certificates for experienced candidates",
+            "Home administration authorization for civil servants"
+          ],
+          "org": "National Agency for Aquaculture Development (ANDA)",
+          "region": "Rabat",
+          "sector": "Public institutions",
+          "stages": [
+            "Initial file screening",
+            "General-topic essay (3 hrs, coefficient 2)",
+            "Specialty-topic test linked to the post (3 hrs, coefficient 3)",
+            "Oral presentation before the jury (15–30 min, coefficient 3)"
+          ],
+          "title": "Finance Officer, Treasury Officer and Driver-Courier — 3 posts"
+        },
+        "fr": {
+          "applyNote": "Dépôt du dossier de candidature selon l'annonce officielle ; précisez le poste demandé dans la lettre de candidature.",
+          "conditions": [
+            "Nationalité marocaine",
+            "Diplôme reconnu par l'État dans la spécialité demandée",
+            "18 ans au moins",
+            "45 ans au plus pour les cadres et 40 ans au plus pour le chauffeur-coursier"
+          ],
+          "diploma": "Bac+5 en comptabilité, finance et gestion (cadre finances) / Bac+3 en économie, gestion et finance (cadre trésorerie) / diplôme de technicien spécialisé avec permis de conduire catégorie B (chauffeur-coursier)",
+          "docs": [
+            "Lettre de candidature précisant le poste demandé",
+            "CV détaillé et signé",
+            "Copies légalisées des diplômes et de la carte d'identité nationale",
+            "Décision d'équivalence pour les diplômes privés ou étrangers",
+            "Attestations de travail pour les candidats expérimentés",
+            "Autorisation de l'administration d'origine pour les fonctionnaires"
+          ],
+          "org": "Agence Nationale pour le Développement de l'Aquaculture (ANDA)",
+          "region": "Rabat",
+          "sector": "Établissements publics",
+          "stages": [
+            "Présélection des dossiers",
+            "Dissertation sur un sujet général (3 h, coefficient 2)",
+            "Sujet de spécialité lié au poste (3 h, coefficient 3)",
+            "Exposé oral devant le jury (15–30 min, coefficient 3)"
+          ],
+          "title": "Cadre finances, cadre trésorerie et chauffeur-coursier — 3 postes"
+        }
+      },
+      "id": "anda-2026-3",
+      "maxAge": 45,
+      "org": "الوكالة الوطنية لتنمية تربية الأحياء المائية (ANDA)",
+      "posts": 3,
+      "region": "الرباط",
+      "sector": "مؤسسات عمومية",
+      "stages": [
+        "انتقاء أولي للملفات",
+        "إنشاء في موضوع عام (3 ساعات، معامل 2)",
+        "موضوع في التخصص مرتبط بالمنصب (3 ساعات، معامل 3)",
+        "عرض شفوي أمام لجنة التحكيم (15-30 دقيقة، معامل 3)"
+      ],
+      "title": "إطار مالي وإطار خزينة وسائق-مراسل — 3 مناصب",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-29",
+      "applyNote": "الترشيح عبر بوابة التوظيف الخاصة بصندوق الإيداع والتدبير (مرجع العرض 254).",
+      "applyUrl": "https://recrutement.cdg.ma/Agirhcv/PartageOffre?Id_Offre=254",
+      "conditions": [
+        "باك+5 في المالية أو الهندسة المالية أو ما يعادلها",
+        "خبرة مهنية مؤكدة حوالي 8 سنوات في تدبير الأصول والخصوم (ALM) أو هيكلة التمويلات، وخاصة تمويل المشاريع"
+      ],
+      "deadline": "2026-11-12",
+      "detailsUrl": "https://alwadifa-club.com/emploi-public/%d8%b5%d9%86%d8%af%d9%88%d9%82-%d8%a7%d9%84%d8%a7%d9%8a%d8%af%d8%a7%d8%b9-%d9%88%d8%a7%d9%84%d8%aa%d8%af%d8%a8%d9%8a%d8%b1-%d9%85%d8%a8%d8%a7%d8%b1%d9%8a%d8%a7%d8%aa-%d8%aa%d9%88%d8%b8%d9%8a%d9%81-%d9%85/105059/",
+      "diploma": "باك+5 في المالية أو الهندسة المالية أو ما يعادلها",
+      "diplomaRank": 4,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the CDG recruitment portal (offer reference 254).",
+          "conditions": [
+            "Bac+5 in finance or financial engineering or equivalent",
+            "Proven professional experience of about 8 years in asset-liability management (ALM) or financing structuring, especially project finance"
+          ],
+          "diploma": "Bac+5 in finance or financial engineering or equivalent",
+          "org": "Caisse de Dépôt et de Gestion (CDG)",
+          "region": "Rabat",
+          "sector": "Public institutions",
+          "title": "Resources Mobilization Manager — 1 post"
+        },
+        "fr": {
+          "applyNote": "Candidature via le portail de recrutement de la CDG (référence de l'offre 254).",
+          "conditions": [
+            "Bac+5 en finance ou en ingénierie financière ou équivalent",
+            "Expérience professionnelle confirmée d'environ 8 ans en gestion actif-passif (ALM) ou en structuration de financements, notamment le financement de projets"
+          ],
+          "diploma": "Bac+5 en finance ou en ingénierie financière ou équivalent",
+          "org": "Caisse de Dépôt et de Gestion (CDG)",
+          "region": "Rabat",
+          "sector": "Établissements publics",
+          "title": "Responsable Mobilisation des Ressources — 1 poste"
+        }
+      },
+      "id": "cdg-2026-mobilisation-1",
+      "maxAge": null,
+      "org": "صندوق الإيداع والتدبير (CDG)",
+      "posts": 1,
+      "region": "الرباط",
+      "sector": "مؤسسات عمومية",
+      "stages": [],
+      "title": "مسؤول تدبير الموارد (Mobilisation des Ressources) — منصب واحد",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-29",
+      "applyNote": "الترشيح عبر منصة الترشيح الخاصة بالوكالة (candidature.map.ma)؛ حدد المنصب المطلوب في طلب الترشيح.",
+      "applyUrl": "https://candidature.map.ma",
+      "conditions": [
+        "الدبلوم المطلوب حسب المنصب (من باك+3 إلى باك+5 أو دبلوم مهندس)",
+        "إتقان الأدوات المهنية الخاصة بالتخصص (مونتاج الصوت، الأنفوغرافيا، الأدوات الرقمية)",
+        "مستوى C1 في الإنجليزية لمنصب الصحفي الناطق بالإنجليزية",
+        "خبرة مهنية للمناصب التي تشترطها (التكوين، التوظيف)"
+      ],
+      "deadline": "2026-11-12T16:30",
+      "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-map-maghreb-arabe-presse-2026-9-postes/",
+      "diploma": "باك+3 (إجازة) إلى باك+5 (ماستر) أو دبلوم مهندس حسب المنصب",
+      "diplomaRank": 4,
+      "docs": [
+        "نسخة من البطاقة الوطنية للتعريف",
+        "طلب ترشيح مؤرخ وموقع يذكر مرجع إعلان التوظيف",
+        "صورة حديثة",
+        "نسخ الدبلومات ابتداء من البكالوريا",
+        "سيرة ذاتية مفصلة",
+        "شواهد العمل وكشف مسار الصندوق الوطني للضمان الاجتماعي للمترشحين ذوي الخبرة"
+      ],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the agency's application platform (candidature.map.ma); state the requested post in the application.",
+          "conditions": [
+            "Required diploma depending on the post (Bac+3 to Bac+5 or engineering degree)",
+            "Mastery of the professional tools of the specialty (audio editing, infographics, digital tools)",
+            "C1 level in English for the English-speaking journalist post",
+            "Professional experience for posts that require it (training, recruitment)"
+          ],
+          "diploma": "Bac+3 (Bachelor's) to Bac+5 (Master's) or engineering degree depending on the post",
+          "docs": [
+            "Copy of the national ID card",
+            "Dated and signed application stating the job-ad reference",
+            "Recent photo",
+            "Copies of diplomas starting from the baccalaureate",
+            "Detailed CV",
+            "Work certificates and CNSS career record for experienced candidates"
+          ],
+          "org": "Maghreb Arabe Presse (MAP)",
+          "region": "Rabat",
+          "sector": "Public institutions",
+          "title": "9 statutory posts: audio editing, infographics, training, English journalism, recruitment, knowledge and data engineering, digital communication, executive assistance"
+        },
+        "fr": {
+          "applyNote": "Candidature via la plateforme de candidature de l'agence (candidature.map.ma) ; précisez le poste demandé dans la demande.",
+          "conditions": [
+            "Diplôme requis selon le poste (de Bac+3 à Bac+5 ou diplôme d'ingénieur)",
+            "Maîtrise des outils professionnels de la spécialité (montage sonore, infographie, outils numériques)",
+            "Niveau C1 en anglais pour le poste de journaliste anglophone",
+            "Expérience professionnelle pour les postes qui l'exigent (formation, recrutement)"
+          ],
+          "diploma": "Bac+3 (licence) à Bac+5 (master) ou diplôme d'ingénieur selon le poste",
+          "docs": [
+            "Copie de la carte d'identité nationale",
+            "Demande de candidature datée et signée mentionnant la référence de l'annonce",
+            "Photo récente",
+            "Copies des diplômes à partir du baccalauréat",
+            "CV détaillé",
+            "Attestations de travail et relevé de parcours CNSS pour les candidats expérimentés"
+          ],
+          "org": "Maghreb Arabe Presse (MAP)",
+          "region": "Rabat",
+          "sector": "Établissements publics",
+          "title": "9 postes statutaires : montage sonore, infographie, formation, journalisme anglophone, recrutement, ingénierie des connaissances et des données, communication digitale, assistanat de direction"
+        }
+      },
+      "id": "map-2026-9",
+      "maxAge": null,
+      "org": "وكالة المغرب العربي للأنباء",
+      "posts": 9,
+      "region": "الرباط",
+      "sector": "مؤسسات عمومية",
+      "stages": [],
+      "title": "9 مناصب نظامية: مونتور صوت، أنفوغرافيا، تكوين، صحافة بالإنجليزية، توظيف، هندسة المعارف والبيانات، تواصل رقمي، مساعدة إدارية",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح إلكترونياً عبر منصة recrutement.enssup.gov.ma.",
+      "applyUrl": "https://recrutement.enssup.gov.ma",
+      "conditions": [
+        "دكتوراه في الطب أو الصيدلة أو طب الأسنان",
+        "إتمام المدة العادية للإقامة بالمراكز الاستشفائية الجامعية في التخصص"
+      ],
+      "deadline": "2026-11-14",
+      "detailsUrl": "https://www.dimajadid.com/alwadifa-maroc/86548/faculte-medecine-pharmacie-dentaire-fes-concours-15-postes/",
+      "diploma": "دكتوراه في الطب أو الصيدلة أو طب الأسنان مع إتمام المدة العادية للإقامة في التخصص",
+      "diplomaRank": 5,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply online via the recrutement.enssup.gov.ma platform.",
+          "conditions": [
+            "Doctorate in medicine, pharmacy or dental medicine",
+            "Completion of the standard residency at university hospital centers in the specialty"
+          ],
+          "diploma": "Doctorate in medicine, pharmacy or dental medicine with completion of the standard residency in the specialty",
+          "org": "Faculty of Medicine, Pharmacy and Dental Medicine of Fez — Sidi Mohamed Ben Abdellah University",
+          "region": "Fez",
+          "sector": "Higher education",
+          "title": "Assistant Professors (30 November 2026 session) — 15 posts"
+        },
+        "fr": {
+          "applyNote": "Candidature en ligne via la plateforme recrutement.enssup.gov.ma.",
+          "conditions": [
+            "Doctorat en médecine, en pharmacie ou en médecine dentaire",
+            "Accomplissement de la durée normale de résidanat dans les CHU dans la spécialité"
+          ],
+          "diploma": "Doctorat en médecine, en pharmacie ou en médecine dentaire avec accomplissement de la durée normale de résidanat dans la spécialité",
+          "org": "Faculté de Médecine, de Pharmacie et de Médecine Dentaire de Fès — Université Sidi Mohamed Ben Abdellah",
+          "region": "Fès",
+          "sector": "Enseignement supérieur",
+          "title": "Professeurs assistants (session du 30 novembre 2026) — 15 postes"
+        }
+      },
+      "id": "usmba-fes-2026-pa-15",
+      "maxAge": null,
+      "org": "كلية الطب والصيدلة وطب الأسنان بفاس — جامعة سيدي محمد بن عبد الله",
+      "posts": 15,
+      "region": "فاس",
+      "sector": "تعليم عالٍ",
+      "stages": [],
+      "title": "أساتذة محاضرون (دورة 30 نونبر 2026) — 15 منصباً",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-29",
+      "applyNote": "الترشيح إلكترونياً عبر منصة recrutement.enssup.gov.ma.",
+      "applyUrl": "https://recrutement.enssup.gov.ma/",
+      "conditions": [
+        "الجنسية المغربية",
+        "السن بين 25 و45 سنة",
+        "دكتوراه أو شهادة معترف بمعادلتها في التخصص",
+        "نسبة 25% من المقاعد محجوزة للمقاومين ومكفولي الأمة وقدماء المحاربين والعسكريين، و7% للأشخاص في وضعية إعاقة"
+      ],
+      "deadline": "2026-11-17",
+      "detailsUrl": "https://wadifalik.ma/concours/%D9%85%D8%A8%D8%A7%D8%B1%D8%A7%D8%A9-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D8%A8%D9%86-%D8%B2%D9%87%D8%B1-%D8%A7%D9%94%D9%83%D8%A7%D8%AF%D9%8A%D8%B1-%D8%A7%D9%94%D8%B3%D8%AA%D8%A7%D8%B0-%D9%85%D8%AD%D8%A7%D8%B6%D8%B1-%D8%A8%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9-%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%B3%D9%8A%D9%8A%D8%B1-%D8%A8%D8%A7%D9%84-c4434126-7c53345f",
+      "diploma": "دكتوراه أو شهادة معترف بمعادلتها في التخصص",
+      "diplomaRank": 5,
+      "docs": [
+        "طلب خطي يوضح التخصص ورقم الهاتف والبريد الإلكتروني",
+        "نسخة مصادق عليها من البطاقة الوطنية للتعريف الإلكترونية",
+        "نسخة من شهادة الدكتوراه أو الدبلوم المعادل (وقرار المعادلة عند الاقتضاء)",
+        "تصريح بالشرف مصادق عليه",
+        "شهادة العمل وترخيص رسمي لاجتياز المباراة بالنسبة للموظفين",
+        "سيرة ذاتية مفصلة تتضمن الخبرات البحثية والتدريسية"
+      ],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply online via the recrutement.enssup.gov.ma platform.",
+          "conditions": [
+            "Moroccan nationality",
+            "Aged 25 to 45",
+            "Doctorate or recognized-equivalent degree in the specialty",
+            "25% of seats reserved for resistance fighters, wards of the nation, veterans and military personnel; 7% for persons with disabilities"
+          ],
+          "diploma": "Doctorate or recognized-equivalent degree in the specialty",
+          "docs": [
+            "Written application stating the specialty, phone number and email",
+            "Certified copy of the electronic national ID card",
+            "Copy of the doctorate or equivalent diploma (and equivalence decision where applicable)",
+            "Certified sworn statement",
+            "Work certificate and official authorization to sit the competition for civil servants",
+            "Detailed CV including research and teaching experience"
+          ],
+          "org": "Ibn Zohr University — Agadir (Presidency)",
+          "region": "Agadir, Dakhla, Aït Melloul, Guelmim",
+          "sector": "Higher education",
+          "stages": [
+            "Written test (3 hrs, coefficient 3) on general knowledge of the specialty and research/teaching skills",
+            "Oral test (1 hr, coefficient 2)"
+          ],
+          "title": "Assistant Professors (23 November 2026 session) — 10 posts"
+        },
+        "fr": {
+          "applyNote": "Candidature en ligne via la plateforme recrutement.enssup.gov.ma.",
+          "conditions": [
+            "Nationalité marocaine",
+            "Âgé de 25 à 45 ans",
+            "Doctorat ou diplôme reconnu équivalent dans la spécialité",
+            "25 % des places réservées aux résistants, pupilles de la Nation, anciens combattants et militaires ; 7 % aux personnes en situation de handicap"
+          ],
+          "diploma": "Doctorat ou diplôme reconnu équivalent dans la spécialité",
+          "docs": [
+            "Demande écrite précisant la spécialité, le numéro de téléphone et l'e-mail",
+            "Copie légalisée de la carte d'identité nationale électronique",
+            "Copie du doctorat ou du diplôme équivalent (et décision d'équivalence le cas échéant)",
+            "Déclaration sur l'honneur légalisée",
+            "Attestation de travail et autorisation officielle de passer le concours pour les fonctionnaires",
+            "CV détaillé incluant l'expérience de recherche et d'enseignement"
+          ],
+          "org": "Université Ibn Zohr — Agadir (Présidence)",
+          "region": "Agadir, Dakhla, Aït Melloul, Guelmim",
+          "sector": "Enseignement supérieur",
+          "stages": [
+            "Épreuve écrite (3 h, coefficient 3) sur la connaissance générale de la spécialité et les compétences de recherche et d'enseignement",
+            "Épreuve orale (1 h, coefficient 2)"
+          ],
+          "title": "Professeurs assistants (session du 23 novembre 2026) — 10 postes"
+        }
+      },
+      "id": "uiz-agadir-2026-pa-23nov",
+      "maxAge": 45,
+      "org": "جامعة ابن زهر — أكادير (الرئاسة)",
+      "posts": 10,
+      "region": "أكادير، الداخلة، آيت ملول، كلميم",
+      "sector": "تعليم عالٍ",
+      "stages": [
+        "اختبار كتابي (3 ساعات، معامل 3) في المعرفة العامة بالتخصص ومهارات البحث والتدريس",
+        "اختبار شفوي (ساعة واحدة، معامل 2)"
+      ],
+      "title": "أساتذة محاضرون (دورة 23 نونبر 2026) — 10 مناصب",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-29",
+      "applyNote": "الترشيح إلكترونياً عبر منصة recrutement.enssup.gov.ma.",
+      "applyUrl": "https://recrutement.enssup.gov.ma/",
+      "conditions": [
+        "الجنسية المغربية",
+        "دكتوراه أو شهادة معترف بمعادلتها في التخصص",
+        "نسبة 25% من المقاعد محجوزة للمقاومين ومكفولي الأمة وقدماء المحاربين والعسكريين، و7% للأشخاص في وضعية إعاقة"
+      ],
+      "deadline": "2026-11-17",
+      "detailsUrl": "https://wadifalik.ma/concours/%D9%85%D8%A8%D8%A7%D8%B1%D8%A7%D8%A9-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D8%A8%D9%86-%D8%B2%D9%87%D8%B1-%D8%A7%D9%94%D9%83%D8%A7%D8%AF%D9%8A%D8%B1-%D8%A7%D9%94%D8%B3%D8%AA%D8%A7%D8%B0-%D9%85%D8%AD%D8%A7%D8%B6%D8%B1-%D8%A8%D8%A7%D9%84%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%B9%D9%84%D9%8A%D8%A7-%D9%84%D9%84%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7-%D8%A8%D8%A7%D9%84%D8%AF%D8%A7%D8%AE%D9%84%D8%A9--c4434826-2c523ea6",
+      "diploma": "دكتوراه أو شهادة معترف بمعادلتها (رياضيات تطبيقية، حوسبة وعلوم البيانات والذكاء الاصطناعي، تحكم في الأجهزة)",
+      "diplomaRank": 5,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply online via the recrutement.enssup.gov.ma platform.",
+          "conditions": [
+            "Moroccan nationality",
+            "Doctorate or recognized-equivalent degree in the specialty",
+            "25% of seats reserved for resistance fighters, wards of the nation, veterans and military personnel; 7% for persons with disabilities"
+          ],
+          "diploma": "Doctorate or recognized-equivalent degree (applied mathematics, computing, data science and AI, device control)",
+          "org": "Ibn Zohr University — Agadir (Presidency)",
+          "region": "Agadir, Guelmim, Dakhla",
+          "sector": "Higher education",
+          "title": "Assistant Professors (21 November 2026 session) — 10 posts"
+        },
+        "fr": {
+          "applyNote": "Candidature en ligne via la plateforme recrutement.enssup.gov.ma.",
+          "conditions": [
+            "Nationalité marocaine",
+            "Doctorat ou diplôme reconnu équivalent dans la spécialité",
+            "25 % des places réservées aux résistants, pupilles de la Nation, anciens combattants et militaires ; 7 % aux personnes en situation de handicap"
+          ],
+          "diploma": "Doctorat ou diplôme reconnu équivalent (mathématiques appliquées, informatique, science des données et IA, contrôle des appareils)",
+          "org": "Université Ibn Zohr — Agadir (Présidence)",
+          "region": "Agadir, Guelmim, Dakhla",
+          "sector": "Enseignement supérieur",
+          "title": "Professeurs assistants (session du 21 novembre 2026) — 10 postes"
+        }
+      },
+      "id": "uiz-agadir-2026-pa-21nov",
+      "maxAge": 45,
+      "org": "جامعة ابن زهر — أكادير (الرئاسة)",
+      "posts": 10,
+      "region": "أكادير، كلميم، الداخلة",
+      "sector": "تعليم عالٍ",
+      "stages": [],
+      "title": "أساتذة محاضرون (دورة 21 نونبر 2026) — 10 مناصب",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-29",
+      "applyNote": "الترشيح إلكترونياً عبر منصة recrutement.enssup.gov.ma.",
+      "applyUrl": "https://recrutement.enssup.gov.ma",
+      "conditions": [],
+      "deadline": "2026-11-15",
+      "detailsUrl": "https://www.manasseb.com/جامعة-محمد-الأول-وجدة-مباريات-التوظي-7/",
+      "diploma": "دكتوراه في التخصص (رياضيات-معلوميات)",
+      "diplomaRank": 5,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply online via the recrutement.enssup.gov.ma platform.",
+          "diploma": "Doctorate in the specialty (mathematics-computer science)",
+          "org": "Mohammed I University — Oujda (National School of Applied Sciences)",
+          "region": "Oujda",
+          "sector": "Higher education",
+          "title": "Assistant Professor — Mathematics-Computer Science — 1 post"
+        },
+        "fr": {
+          "applyNote": "Candidature en ligne via la plateforme recrutement.enssup.gov.ma.",
+          "diploma": "Doctorat dans la spécialité (mathématiques-informatique)",
+          "org": "Université Mohammed Premier — Oujda (École Nationale des Sciences Appliquées)",
+          "region": "Oujda",
+          "sector": "Enseignement supérieur",
+          "title": "Professeur assistant — mathématiques-informatique — 1 poste"
+        }
+      },
+      "id": "ump-oujda-2026-ensa-1",
+      "maxAge": null,
+      "org": "جامعة محمد الأول — وجدة (المدرسة الوطنية للعلوم التطبيقية)",
+      "posts": 1,
+      "region": "وجدة",
+      "sector": "تعليم عالٍ",
+      "stages": [],
+      "title": "أستاذ محاضر — تخصص رياضيات-معلوميات — منصب واحد",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-29",
+      "applyNote": "الترشيح عبر منصة أنابيك باستعمال مرجع العرض 1197444 (100 عقد CDD و100 عقد إدماج CI)؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://wadifa.analkhabar.com/%d9%81%d8%b1%d8%b5%d8%a9-%d8%b9%d9%85%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d9%82%d9%86%d9%8a%d8%b7%d8%b1%d8%a9-%d8%b4%d8%b1%d9%83%d8%a9-sews-k2/",
+      "conditions": [
+        "شهادة التكوين المهني الأولي",
+        "إتقان العربية ومعرفة أساسية بالفرنسية",
+        "الدقة والتركيز والقدرة على العمل داخل ورشة صناعية",
+        "احترام قواعد السلامة والجودة"
+      ],
+      "deadline": "2026-11-28",
+      "detailsUrl": "https://wadifa.analkhabar.com/%d9%81%d8%b1%d8%b5%d8%a9-%d8%b9%d9%85%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d9%82%d9%86%d9%8a%d8%b7%d8%b1%d8%a9-%d8%b4%d8%b1%d9%83%d8%a9-sews-k2/",
+      "diploma": "شهادة التكوين المهني الأولي",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the ANAPEC platform using offer reference 1197444 (100 fixed-term and 100 integration contracts); the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Initial vocational training certificate",
+            "Command of Arabic and basic French",
+            "Precision, focus and ability to work in an industrial workshop",
+            "Compliance with safety and quality rules"
+          ],
+          "diploma": "Initial vocational training certificate",
+          "org": "SEWS MAROC K2",
+          "region": "Kenitra",
+          "sector": "Industry and logistics",
+          "title": "Automotive wiring assembly operators — 200 positions"
+        },
+        "fr": {
+          "applyNote": "Postuler via la plateforme ANAPEC avec la référence d'offre 1197444 (100 contrats CDD et 100 contrats d'insertion CI) ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Certificat d'initiation professionnelle",
+            "Maîtrise de l'arabe et notions de français",
+            "Précision, concentration et capacité à travailler dans un atelier industriel",
+            "Respect des règles de sécurité et de qualité"
+          ],
+          "diploma": "Certificat d'initiation professionnelle",
+          "org": "SEWS MAROC K2",
+          "region": "Kénitra",
+          "sector": "Industrie et logistique",
+          "title": "Opératrices de câblage automobile — 200 postes"
+        }
+      },
+      "id": "sews-k2-2026-200",
+      "maxAge": null,
+      "org": "SEWS MAROC K2",
+      "posts": 200,
+      "region": "القنيطرة",
+      "sector": "صناعة ولوجستيك",
+      "stages": [],
+      "title": "عاملات في تركيب الأسلاك الكهربائية للسيارات (الكابلاج) — 200 منصباً",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح عبر منصة أنابيك بأرقام المراجع ET3010261199763 / ET3010261199747 / ET3010261199733؛ بداية العمل 16 نونبر 2026؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://wadifa.analkhabar.com/%d8%b4%d8%b1%d9%83%d8%a9-aeolon-%d9%84%d9%84%d8%b7%d8%a7%d9%82%d8%a9-%d8%a7%d9%84%d9%85%d8%aa%d8%ac%d8%af%d8%af%d8%a9-%d8%aa%d8%b9%d9%84%d9%86/",
+      "conditions": [
+        "خبرة مهنية من 3 إلى 5 سنوات في منصب مماثل",
+        "خبرة في التصنيع الصناعي وإنتاج شفرات توربينات الرياح بالمواد المركبة",
+        "احترام صارم لتعليمات السلامة"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://wadifa.analkhabar.com/%d8%b4%d8%b1%d9%83%d8%a9-aeolon-%d9%84%d9%84%d8%b7%d8%a7%d9%82%d8%a9-%d8%a7%d9%84%d9%85%d8%aa%d8%ac%d8%af%d8%af%d8%a9-%d8%aa%d8%b9%d9%84%d9%86/",
+      "diploma": "خبرة مهنية 3-5 سنوات في منصب مماثل (لا دبلوم محدد في العرض)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the ANAPEC platform with references ET3010261199763 / ET3010261199747 / ET3010261199733; start date 16 November 2026; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "3 to 5 years of professional experience in a similar position",
+            "Experience in industrial manufacturing and wind-turbine blade production with composite materials",
+            "Strict compliance with safety instructions"
+          ],
+          "diploma": "3–5 years of professional experience in a similar position (no diploma specified in the offer)",
+          "org": "AEOLON RENEWABLE ENERGY MOROCCO",
+          "region": "Nador",
+          "salary": "MAD 8,000 per month on a permanent contract",
+          "sector": "Industry and logistics",
+          "title": "Wind-turbine blade manufacturing workers (mold closing, production, demolding) — 57 positions"
+        },
+        "fr": {
+          "applyNote": "Postuler via la plateforme ANAPEC avec les références ET3010261199763 / ET3010261199747 / ET3010261199733 ; démarrage le 16 novembre 2026 ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Expérience professionnelle de 3 à 5 ans dans un poste similaire",
+            "Expérience dans la fabrication industrielle et la production de pales d'éoliennes en matériaux composites",
+            "Respect strict des consignes de sécurité"
+          ],
+          "diploma": "Expérience professionnelle de 3 à 5 ans dans un poste similaire (aucun diplôme précisé dans l'offre)",
+          "org": "AEOLON RENEWABLE ENERGY MOROCCO",
+          "region": "Nador",
+          "salary": "8 000 DH par mois en CDI",
+          "sector": "Industrie et logistique",
+          "title": "Ouvriers de fabrication de pales d'éoliennes (fermeture de moules, production, démoulage) — 57 postes"
+        }
+      },
+      "id": "aeolon-nador-2026-57",
+      "maxAge": null,
+      "org": "AEOLON RENEWABLE ENERGY MOROCCO",
+      "posts": 57,
+      "region": "الناظور",
+      "salary": "8000 درهم شهرياً بعقد CDI",
+      "sector": "صناعة ولوجستيك",
+      "stages": [],
+      "title": "عمال صناعة شفرات توربينات الرياح (إغلاق القوالب، التصنيع، إزالة القوالب) — 57 منصباً",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الاطلاع على تفاصيل العرض والترشيح عبر أقرب وكالة أنابيك؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://wadifa.analkhabar.com/%d8%a7%d9%84%d8%a3%d9%86%d8%a7%d8%a8%d9%8a%d9%83-%d8%aa%d9%81%d8%aa%d8%ad-%d8%a8%d8%a7%d8%a8-%d8%a7%d9%84%d8%aa%d9%88%d8%b8%d9%8a%d9%81-%d8%a3%d9%85%d8%a7%d9%85-30-%d8%ad%d8%a7%d8%b1%d8%b3-%d8%a3/",
+      "conditions": [
+        "مستوى دراسي لا يقل عن السنة الثالثة إعدادي أو مستوى البكالوريا",
+        "لا يشترط دبلوم أو تكوين مسبق في المجال",
+        "رخصة سياقة من صنف A",
+        "مستوى متوسط في اللغة الفرنسية"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://wadifa.analkhabar.com/%d8%a7%d9%84%d8%a3%d9%86%d8%a7%d8%a8%d9%8a%d9%83-%d8%aa%d9%81%d8%aa%d8%ad-%d8%a8%d8%a7%d8%a8-%d8%a7%d9%84%d8%aa%d9%88%d8%b8%d9%8a%d9%81-%d8%a3%d9%85%d8%a7%d9%85-30-%d8%ad%d8%a7%d8%b1%d8%b3-%d8%a3/",
+      "diploma": "مستوى السنة الثالثة إعدادي أو البكالوريا (لا يشترط دبلوم أو تكوين)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "See the offer details and apply at the nearest ANAPEC agency; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Education level of at least 3rd year of middle school or baccalaureate level",
+            "No diploma or prior training required",
+            "Category A driving license",
+            "Intermediate level of French"
+          ],
+          "diploma": "3rd-year middle-school or baccalaureate level (no diploma or training required)",
+          "org": "ANAPEC",
+          "region": "Tangier-Assilah",
+          "sector": "Services",
+          "title": "Security and surveillance guards in Tangier-Assilah (fixed-term) — 30 positions"
+        },
+        "fr": {
+          "applyNote": "Consultez les détails de l'offre et postulez à l'agence ANAPEC la plus proche ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Niveau scolaire de 3e année collégiale au moins ou niveau baccalauréat",
+            "Aucun diplôme ni formation préalable exigés",
+            "Permis de conduire de catégorie A",
+            "Niveau intermédiaire en français"
+          ],
+          "diploma": "Niveau 3e année collégiale ou baccalauréat (aucun diplôme ni formation exigés)",
+          "org": "ANAPEC",
+          "region": "Tanger-Assilah",
+          "sector": "Services",
+          "title": "Agents de sécurité et de surveillance à Tanger-Assilah (CDD) — 30 postes"
+        }
+      },
+      "id": "anapec-gardiens-tanger-2026-30",
+      "maxAge": null,
+      "org": "الوكالة الوطنية لإنعاش التشغيل والكفاءات (ANAPEC)",
+      "posts": 30,
+      "region": "طنجة-أصيلة",
+      "sector": "خدمات",
+      "stages": [],
+      "title": "حراس أمن ومراقبة بطنجة-أصيلة (CDD) — 30 منصباً",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح عبر بوابة التوظيف الخاصة بـ Expleo؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://expleo-jobs-ma-fr.icims.com/jobs/57414/ing%C3%A9nieurs-juniors-automobile-%26-syst%C3%A8mes-embarqu%C3%A9s/job",
+      "conditions": [
+        "شهادة باك+5 في التخصصات المذكورة",
+        "معرفة جيدة بالأنظمة الكهربائية والإلكترونية للسيارات (E/E)",
+        "معرفة شبكات الاتصال CAN وLIN وEthernet",
+        "معرفة أساسية بالأنظمة المدمجة ووحدات ECU",
+        "إتقان الفرنسية والإنجليزية",
+        "لا يشترط خبرة مهنية سابقة — موجه للخريجين الجدد"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.tawdif-press.com/2026/10/expleo-recrute-ingenieurs-juniors-tanger-2026.html",
+      "diploma": "باك+5 في هندسة السيارات أو الهندسة الكهربائية أو الإلكترونية أو الميكاترونيك أو الأنظمة المدمجة",
+      "diplomaRank": 5,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the Expleo recruitment portal; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Bac+5 degree in the listed specialties",
+            "Good knowledge of automotive electrical and electronic systems (E/E)",
+            "Knowledge of CAN, LIN and Ethernet communication networks",
+            "Basic knowledge of embedded systems and ECU units",
+            "Command of French and English",
+            "No prior professional experience required — aimed at new graduates"
+          ],
+          "diploma": "Bac+5 in automotive engineering, electrical, electronic, mechatronics or embedded-systems engineering",
+          "org": "Expleo",
+          "region": "Tangier",
+          "sector": "Industry and logistics",
+          "title": "Junior Automotive & Embedded-Systems Engineers (permanent) — Tangier"
+        },
+        "fr": {
+          "applyNote": "Postuler via le portail de recrutement Expleo ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Diplôme Bac+5 dans les spécialités citées",
+            "Bonne connaissance des systèmes électriques et électroniques automobiles (E/E)",
+            "Connaissance des réseaux de communication CAN, LIN et Ethernet",
+            "Connaissances de base en systèmes embarqués et unités ECU",
+            "Maîtrise du français et de l'anglais",
+            "Aucune expérience professionnelle requise — destiné aux jeunes diplômés"
+          ],
+          "diploma": "Bac+5 en ingénierie automobile, électrique, électronique, mécatronique ou systèmes embarqués",
+          "org": "Expleo",
+          "region": "Tanger",
+          "sector": "Industrie et logistique",
+          "title": "Ingénieurs juniors automobile & systèmes embarqués (CDI) — Tanger"
+        }
+      },
+      "id": "expleo-tanger-juniors-2026",
+      "maxAge": null,
+      "org": "Expleo",
+      "posts": null,
+      "region": "طنجة",
+      "sector": "صناعة ولوجستيك",
+      "stages": [],
+      "title": "مهندسون مبتدئون في السيارات والأنظمة المدمجة (CDI) — طنجة",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح مباشرة عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/vilavi-conseiller-e-commercial-en-assurance-h-f-140404",
+      "conditions": [
+        "تكوين تجاري (باك+2 إلى باك+5)",
+        "حس الإنصات وخدمة الزبناء",
+        "روح تجارية والراحة في البيع عبر الهاتف",
+        "إتقان تام للغة الفرنسية",
+        "تكوين مدفوع الأجر لمدة 4 أسابيع في التأمين"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/vilavi-conseiller-e-commercial-en-assurance-h-f-140404",
+      "diploma": "تكوين تجاري من باك+2 إلى باك+5",
+      "diplomaRank": 2,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply directly via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Business training (Bac+2 to Bac+5)",
+            "Listening skills and customer service",
+            "Sales drive and comfort with phone sales",
+            "Perfect command of French",
+            "4-week paid training in insurance"
+          ],
+          "diploma": "Business training from Bac+2 to Bac+5",
+          "org": "VILAVI",
+          "region": "Tangier",
+          "salary": "MAD 3,850 + uncapped commissions (average pay MAD 7,000)",
+          "sector": "Call centers",
+          "title": "Insurance sales advisor (permanent) — Tangier"
+        },
+        "fr": {
+          "applyNote": "Postuler directement via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Formation commerciale (Bac+2 à Bac+5)",
+            "Sens de l'écoute et du service client",
+            "Fibre commerciale et aisance en vente par téléphone",
+            "Maîtrise parfaite du français",
+            "Formation rémunérée de 4 semaines en assurance"
+          ],
+          "diploma": "Formation commerciale de Bac+2 à Bac+5",
+          "org": "VILAVI",
+          "region": "Tanger",
+          "salary": "3 850 DH + commissions non plafonnées (salaire moyen 7 000 DH)",
+          "sector": "Centres d'appels",
+          "title": "Conseiller(e) commercial(e) en assurance (CDI) — Tanger"
+        }
+      },
+      "id": "vilavi-tanger-assurance-2026",
+      "maxAge": null,
+      "org": "VILAVI",
+      "posts": null,
+      "region": "طنجة",
+      "salary": "3850 درهم + عمولات غير محدودة (متوسط الأجر 7000 درهم)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "مستشار(ة) تجاري(ة) في التأمين (CDI) — طنجة",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "أوقات العمل موافقة لتوقيت مونتريال (كندا)؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/belocum-gestionnaire-de-contenu-et-crm-h-f-169429",
+      "conditions": [
+        "تحويل استراتيجية التسويق إلى محتوى وحملات CRM فعالة",
+        "إتقان أدوات الذكاء الاصطناعي التوليدية",
+        "إتقان الفرنسية والإنجليزية تحريرياً",
+        "خبرة في HubSpot أو أدوات CRM",
+        "تأطير فريق (تصميم وتحرير)"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/belocum-gestionnaire-de-contenu-et-crm-h-f-169429",
+      "diploma": "خبرة في المحتوى وأدوات CRM (لا دبلوم محدد في العرض)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Working hours aligned with Montreal (Canada) time; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Turn marketing strategy into effective content and CRM campaigns",
+            "Mastery of generative AI tools",
+            "Command of French and English in writing",
+            "Experience with HubSpot or CRM tools",
+            "Team leadership (design and copywriting)"
+          ],
+          "diploma": "Experience in content and CRM tools (no diploma specified in the offer)",
+          "org": "BeLOCUM",
+          "region": "Tangier",
+          "sector": "Services",
+          "title": "Content & CRM manager (on-site) — Tangier"
+        },
+        "fr": {
+          "applyNote": "Horaires alignés sur le fuseau de Montréal (Canada) ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Traduire la stratégie marketing en contenus et campagnes CRM efficaces",
+            "Maîtrise des outils d'IA générative",
+            "Maîtrise du français et de l'anglais à l'écrit",
+            "Expérience HubSpot ou outils CRM",
+            "Encadrement d'équipe (design et rédaction)"
+          ],
+          "diploma": "Expérience en contenu et outils CRM (aucun diplôme précisé dans l'offre)",
+          "org": "BeLOCUM",
+          "region": "Tanger",
+          "sector": "Services",
+          "title": "Gestionnaire de contenu et CRM (présentiel) — Tanger"
+        }
+      },
+      "id": "belocum-crm-tanger-2026",
+      "maxAge": null,
+      "org": "BeLOCUM",
+      "posts": null,
+      "region": "طنجة",
+      "sector": "خدمات",
+      "stages": [],
+      "title": "مسؤول(ة) المحتوى وحملات CRM (حضورياً) — طنجة",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "المقر: Carré Eden، كيليز، مراكش — عقد CDI مع CNSS، الدوام 08:30–18:00؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/univoice-televendeur-se-francophone-experimente-e-telecom-belgique-167295",
+      "conditions": [
+        "خبرة في البيع عبر الهاتف في السوق البلجيكي",
+        "إتقان ممتاز للفرنسية شفوياً مع نطق سليم",
+        "إتقان تقنيات البيع عبر الهاتف ومعالجة الاعتراضات وإغلاق الصفقات"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/univoice-televendeur-se-francophone-experimente-e-telecom-belgique-167295",
+      "diploma": "خبرة في البيع عبر الهاتف (الفرنسية هي الأساس)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Location: Carré Eden, Guéliz, Marrakech — permanent contract with CNSS, hours 08:30–18:00; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Phone-sales experience in the Belgian market",
+            "Excellent spoken French with correct pronunciation",
+            "Mastery of phone-sales techniques, objection handling and closing"
+          ],
+          "diploma": "Phone-sales experience (French is key)",
+          "org": "UNIVOICE",
+          "region": "Marrakech",
+          "salary": "MAD 5,500 net + performance bonuses",
+          "sector": "Call centers",
+          "title": "Experienced French-speaking telesales agent — Belgian telecom market (permanent) — Marrakech"
+        },
+        "fr": {
+          "applyNote": "Lieu : Carré Eden, Guéliz, Marrakech — contrat CDI avec CNSS, horaires 08h30–18h00 ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Expérience en vente par téléphone sur le marché belge",
+            "Excellent français à l'oral avec une prononciation correcte",
+            "Maîtrise des techniques de vente par téléphone, traitement des objections et closing"
+          ],
+          "diploma": "Expérience en vente par téléphone (le français est essentiel)",
+          "org": "UNIVOICE",
+          "region": "Marrakech",
+          "salary": "5 500 DH nets + primes de performance",
+          "sector": "Centres d'appels",
+          "title": "Télévendeur(se) francophone expérimenté(e) — marché télécoms belge (CDI) — Marrakech"
+        }
+      },
+      "id": "univoice-marrakech-belgique-2026",
+      "maxAge": null,
+      "org": "UNIVOICE",
+      "posts": null,
+      "region": "مراكش",
+      "salary": "5500 درهم صافي + منح الأداء",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "بائع(ة) عبر الهاتف — سوق الاتصالات البلجيكي (CDI) — مراكش",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "CNSS + تكوين مستمر، الدوام 9–12 و13–18؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/groupamaroc-courtier-recrute-des-televendeurs-en-assurances-a-marrakech-167397",
+      "conditions": [
+        "بيع منتجات التأمين الصحي والاحتياط للأفراد في السوق الفرنسي",
+        "روح تجارية وقدرة على الإنصات للزبناء",
+        "الجدية والانضباط والتحفيز"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/groupamaroc-courtier-recrute-des-televendeurs-en-assurances-a-marrakech-167397",
+      "diploma": "الفرنسية المحكية الجيدة (لا دبلوم محدد في العرض)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "CNSS + continuous training, hours 9–12 and 13–18; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Selling health and provident insurance products to individuals on the French market",
+            "Sales drive and active listening",
+            "Seriousness, discipline and motivation"
+          ],
+          "diploma": "Good spoken French (no diploma specified in the offer)",
+          "org": "Groupamaroc",
+          "region": "Marrakech",
+          "salary": "MAD 6,000 + percentage of turnover",
+          "sector": "Call centers",
+          "title": "Insurance telesales agents — Marrakech"
+        },
+        "fr": {
+          "applyNote": "CNSS + formation continue, horaires 9h–12h et 13h–18h ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Vente de produits d'assurance santé et prévoyance aux particuliers sur le marché français",
+            "Fibre commerciale et écoute active",
+            "Sérieux, discipline et motivation"
+          ],
+          "diploma": "Bon français parlé (aucun diplôme précisé dans l'offre)",
+          "org": "Groupamaroc",
+          "region": "Marrakech",
+          "salary": "6 000 DH + % du chiffre d'affaires",
+          "sector": "Centres d'appels",
+          "title": "Télévendeurs en assurances — Marrakech"
+        }
+      },
+      "id": "groupamaroc-marrakech-2026",
+      "maxAge": null,
+      "org": "Groupamaroc",
+      "posts": null,
+      "region": "مراكش",
+      "salary": "6000 درهم + نسبة من رقم المعاملات",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "بائعون عبر الهاتف في التأمين — مراكش",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "إرسال السيرة الذاتية ورسالة التحفيز إلى recrutement.callson@gmail.com؛ عقد CDI مع CNSS وAMO، الدوام 9–18 مع عطلة نهاية الأسبوع؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/call-ma-profils-francophones-sondage-a-5000-dhs-155455",
+      "conditions": [
+        "إتقان تام للفرنسية شفوياً (مفردات، نطق، إلقاء)",
+        "مهارات تواصل ممتازة",
+        "إتقان أساسيات الأدوات المعلوماتية",
+        "التوفر الفوري والانتظام التام"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/call-ma-profils-francophones-sondage-a-5000-dhs-155455",
+      "diploma": "إتقان الفرنسية شفوياً (الخبرة في مراكز الاتصال مرحب بها)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Send your CV and cover letter to recrutement.callson@gmail.com; permanent contract with CNSS and AMO, hours 9–18 with weekends off; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Perfect spoken French (vocabulary, pronunciation, delivery)",
+            "Excellent communication skills",
+            "Mastery of basic IT tools",
+            "Immediate availability and full commitment"
+          ],
+          "diploma": "Command of spoken French (call-center experience welcome)",
+          "org": "Call Ma (Callson Group)",
+          "region": "Casablanca",
+          "salary": "MAD 5,000 gross + uncapped performance bonuses + ranking bonus",
+          "sector": "Call centers",
+          "title": "French-speaking phone surveyors — Casablanca"
+        },
+        "fr": {
+          "applyNote": "Envoyez CV et lettre de motivation à recrutement.callson@gmail.com ; contrat CDI avec CNSS et AMO, horaires 9h–18h avec week-ends ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Maîtrise parfaite du français à l'oral (vocabulaire, prononciation, élocution)",
+            "Excellentes compétences en communication",
+            "Maîtrise des outils informatiques de base",
+            "Disponibilité immédiate et assiduité totale"
+          ],
+          "diploma": "Maîtrise du français à l'oral (expérience en centres d'appels bienvenue)",
+          "org": "Call Ma (Groupe Callson)",
+          "region": "Casablanca",
+          "salary": "5 000 DH bruts + primes de performance non plafonnées + prime de classement",
+          "sector": "Centres d'appels",
+          "title": "Télé-enquêteurs francophones (sondages) — Casablanca"
+        }
+      },
+      "id": "callma-teleenqueteurs-casa-2026",
+      "maxAge": null,
+      "org": "Call Ma (Groupe Callson)",
+      "posts": null,
+      "region": "الدار البيضاء",
+      "salary": "5000 درهم خام + منح أداء غير محدودة ومنحة تصنيف",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "محققون هاتفيون ناطقون بالفرنسية (استطلاعات) — الدار البيضاء",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "عقد CDI مع CNSS من اليوم الأول + تغطية صحية كاملة؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/net-courtage-assurances-recrutement-immediat-experts-iard-assurance-decennale-assurance-auto-remuneration-attractive-156322",
+      "conditions": [
+        "خبرة لا تقل عن 6 أشهر في بيع التأمين العشري أو تأمين السيارات",
+        "إتقان تام للفرنسية",
+        "روح المفاوضة والبيع الاستشاري"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/net-courtage-assurances-recrutement-immediat-experts-iard-assurance-decennale-assurance-auto-remuneration-attractive-156322",
+      "diploma": "خبرة 6 أشهر فأكثر في بيع التأمين (الفرنسية هي الأساس)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Permanent contract with CNSS from day one + full health coverage; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "At least 6 months of experience selling ten-year liability or auto insurance",
+            "Perfect command of French",
+            "Negotiation skills and consultative selling"
+          ],
+          "diploma": "6+ months of insurance-sales experience (French is key)",
+          "org": "Net Courtage Assurances (NCA)",
+          "region": "Rabat",
+          "sector": "Call centers",
+          "title": "P&C insurance experts (ten-year liability / auto) — Rabat Agdal"
+        },
+        "fr": {
+          "applyNote": "Contrat CDI avec CNSS dès le premier jour + couverture santé complète ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Expérience d'au moins 6 mois en vente d'assurance décennale ou auto",
+            "Maîtrise parfaite du français",
+            "Sens de la négociation et vente consultative"
+          ],
+          "diploma": "6 mois et plus d'expérience en vente d'assurances (le français est essentiel)",
+          "org": "Net Courtage Assurances (NCA)",
+          "region": "Rabat",
+          "sector": "Centres d'appels",
+          "title": "Experts en assurance IARD (décennale / auto) — Rabat Agdal"
+        }
+      },
+      "id": "nca-experts-iard-rabat-2026",
+      "maxAge": null,
+      "org": "Net Courtage Assurances (NCA)",
+      "posts": null,
+      "region": "الرباط",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "خبراء تأمين IARD (التأمين العشري / تأمين السيارات) — الرباط أكدال",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "عقد CDI مع CNSS وAMO وتأمين صحي تكميلي + تكوين كامل، الدوام 09–19؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/right-place-call-morocco-conseillers-experimentes-en-btob-5000-5500dhs-primes-non-plafonnees-169530",
+      "conditions": [
+        "خبرة في البيع عبر الهاتف",
+        "تواصل شفوي ممتاز وإنصات نشط",
+        "روح المفاوضة والإقناع",
+        "القدرة على العمل باستقلالية وتحقيق الأهداف",
+        "إتقان الأدوات المعلوماتية",
+        "التوفر الفوري"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/right-place-call-morocco-conseillers-experimentes-en-btob-5000-5500dhs-primes-non-plafonnees-169530",
+      "diploma": "خبرة في البيع عبر الهاتف (الفرنسية هي الأساس)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Permanent contract with CNSS, AMO and complementary health insurance + full training, hours 09–19; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Phone-sales experience",
+            "Excellent oral communication and active listening",
+            "Negotiation and persuasion skills",
+            "Ability to work autonomously and hit targets",
+            "Mastery of IT tools",
+            "Immediate availability"
+          ],
+          "diploma": "Phone-sales experience (French is key)",
+          "org": "Right Place Call Morocco (RPCM)",
+          "region": "Casablanca",
+          "salary": "MAD 4,800–5,500 net + uncapped bonuses",
+          "sector": "Call centers",
+          "title": "Experienced B2B advisors — Casablanca"
+        },
+        "fr": {
+          "applyNote": "Contrat CDI avec CNSS, AMO et mutuelle santé + formation complète, horaires 09h–19h ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Expérience en vente par téléphone",
+            "Excellente communication orale et écoute active",
+            "Sens de la négociation et de la persuasion",
+            "Capacité à travailler en autonomie et à atteindre les objectifs",
+            "Maîtrise des outils informatiques",
+            "Disponibilité immédiate"
+          ],
+          "diploma": "Expérience en vente par téléphone (le français est essentiel)",
+          "org": "Right Place Call Morocco (RPCM)",
+          "region": "Casablanca",
+          "salary": "4 800–5 500 DH nets + primes non plafonnées",
+          "sector": "Centres d'appels",
+          "title": "Conseillers expérimentés en BtoB — Casablanca"
+        }
+      },
+      "id": "rpcm-btob-casa-2026",
+      "maxAge": null,
+      "org": "Right Place Call Morocco (RPCM)",
+      "posts": null,
+      "region": "الدار البيضاء",
+      "salary": "4800–5500 درهم صافي + منح غير محدودة",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "مستشارون ذوو خبرة في البيع BtoB — الدار البيضاء",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "منح أداء غير محدودة + تكوين + مرافقة مستمرة، الدوام 09–18 مع عطلة نهاية الأسبوع؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/cms-grande-campagne-de-recrutement-conseillers-commerciaux-debutants-et-experimentes-168558",
+      "conditions": [
+        "إتقان جيد للفرنسية شفوياً",
+        "سهولة في التواصل وحسن الإنصات",
+        "روح الإقناع والتفاوض",
+        "التحفيز والجدية وحس المسؤولية",
+        "القدرة على العمل الجماعي وتحقيق الأهداف",
+        "المبتدئون مقبولون — الخبرة في البيع الهاتفي ميزة"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/cms-grande-campagne-de-recrutement-conseillers-commerciaux-debutants-et-experimentes-168558",
+      "diploma": "الفرنسية المحكية الجيدة — المبتدئون مقبولون",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Uncapped performance bonuses + training + continuous coaching, hours 09–18 with weekends off; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Good spoken French",
+            "Ease of communication and good listening",
+            "Persuasion and negotiation skills",
+            "Motivation, seriousness and sense of responsibility",
+            "Teamwork and target achievement",
+            "Beginners welcome — phone-sales experience a plus"
+          ],
+          "diploma": "Good spoken French — beginners welcome",
+          "org": "CMS Factory",
+          "region": "Casablanca",
+          "salary": "MAD 5,000 + daily and weekly sales challenges",
+          "sector": "Call centers",
+          "title": "Sales advisors (junior and experienced) — Casablanca"
+        },
+        "fr": {
+          "applyNote": "Primes de performance non plafonnées + formation + accompagnement continu, horaires 09h–18h avec week-ends ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Bon français à l'oral",
+            "Aisance en communication et bonne écoute",
+            "Sens de la persuasion et de la négociation",
+            "Motivation, sérieux et sens des responsabilités",
+            "Esprit d'équipe et atteinte des objectifs",
+            "Débutants acceptés — l'expérience en télévente est un atout"
+          ],
+          "diploma": "Bon français parlé — débutants acceptés",
+          "org": "CMS Factory",
+          "region": "Casablanca",
+          "salary": "5 000 DH + challenges commerciaux quotidiens et hebdomadaires",
+          "sector": "Centres d'appels",
+          "title": "Conseillers commerciaux (débutants et expérimentés) — Casablanca"
+        }
+      },
+      "id": "cms-factory-casa-2026",
+      "maxAge": null,
+      "org": "CMS Factory",
+      "posts": null,
+      "region": "الدار البيضاء",
+      "salary": "5000 درهم + تحديات تجارية يومية وأسبوعية",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "مستشارون تجاريون (مبتدئون وذوو خبرة) — الدار البيضاء",
+      "type": "private"
     }
   ],
   "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
-  "updatedAt": "2026-10-30"
+  "updatedAt": "2026-10-31"
 }
