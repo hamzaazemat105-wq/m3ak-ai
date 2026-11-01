@@ -332,82 +332,6 @@
       "type": "public"
     },
     {
-      "announced": "2026-10-03",
-      "applyNote": "راجع الإعلان الكامل لطريقة ومكان إيداع ملفات الترشيح.",
-      "applyUrl": "https://www.emploi-public.ma",
-      "conditions": [
-        "الجنسية المغربية",
-        "الدبلوم المطلوب حسب المنصب"
-      ],
-      "deadline": "2026-10-30T16:30",
-      "detailsUrl": "https://alwadifa.ma/%D9%85%D8%A8%D8%A7%D8%B1%D9%8A%D8%A7%D8%AA-%D8%AA%D9%88%D8%B8%D9%8A%D9%81-25-%D9%85%D9%86%D8%B5%D8%A8%D8%A7%D9%8B-%D8%A8%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7/",
-      "diploma": "دبلوم تقني متخصص (هندسة مدنية أو معلوميات)",
-      "diplomaRank": 2,
-      "docs": [
-        "طلب الترشيح",
-        "نسخة من الدبلوم المطلوب",
-        "نسخة من بطاقة التعريف الوطنية",
-        "سيرة ذاتية"
-      ],
-      "exam": null,
-      "i18n": {
-        "en": {
-          "applyNote": "See the full announcement for how and where to submit application files.",
-          "conditions": [
-            "Moroccan nationality",
-            "Required diploma depending on the post"
-          ],
-          "diploma": "Specialized technician diploma (civil engineering or IT)",
-          "docs": [
-            "Application letter",
-            "Copy of the required diploma",
-            "Copy of the national ID card",
-            "CV"
-          ],
-          "org": "Commune of Inchaden — Chtouka Aït Baha Province",
-          "region": "Inchaden — Chtouka Aït Baha Province",
-          "stages": [
-            "File review",
-            "Written and oral tests"
-          ],
-          "title": "Third-Grade Technicians (Civil Engineering and IT) — 5 posts"
-        },
-        "fr": {
-          "applyNote": "Voir l'annonce complète pour les modalités et le lieu de dépôt des dossiers.",
-          "conditions": [
-            "Nationalité marocaine",
-            "Diplôme requis selon le poste"
-          ],
-          "diploma": "Diplôme de technicien spécialisé (génie civil ou informatique)",
-          "docs": [
-            "Demande de candidature",
-            "Copie du diplôme requis",
-            "Copie de la carte d'identité nationale",
-            "CV"
-          ],
-          "org": "Commune d'Inchaden — Province de Chtouka Aït Baha",
-          "region": "Inchaden — Province de Chtouka Aït Baha",
-          "stages": [
-            "Étude des dossiers",
-            "Épreuves écrites et orales"
-          ],
-          "title": "Techniciens de 3e grade (génie civil et informatique) — 5 postes"
-        }
-      },
-      "id": "commune-inchaden-2026",
-      "maxAge": null,
-      "org": "جماعة انشادن — إقليم اشتوكة آيت باها",
-      "posts": 5,
-      "region": "انشادن — إقليم اشتوكة آيت باها",
-      "sector": "جماعات وتنمية محلية",
-      "stages": [
-        "دراسة الملفات",
-        "اختبارات كتابية وشفوية"
-      ],
-      "title": "تقنيون من الدرجة الثالثة (هندسة مدنية ومعلوميات) — 5 مناصب",
-      "type": "public"
-    },
-    {
       "announced": "2026-10-21",
       "applyNote": "الترشيح حصرياً عبر المنصة الرسمية — منصب واحد وتوجيه واحد لكل مترشح. الدبلوم المطلوب بالضبط (الدبلوم الأعلى غير مقبول).",
       "applyUrl": "https://econcours.brainman.ma/cmp/SRM_ORI_2026",
@@ -2957,88 +2881,6 @@
     },
     {
       "announced": "2026-10-24",
-      "applyNote": "الترشيح حصرياً عبر منصة توظيف المكتب، وآخر أجل هو 30 أكتوبر 2026. الملف الناقص أو المرسل عبر قناة أخرى لا يُقبل.",
-      "applyUrl": "https://recrutement.ofppt.ma/",
-      "conditions": [
-        "الجنسية المغربية",
-        "أقل من 45 سنة عند تاريخ تولي المنصب",
-        "إجازة في الصحة والسلامة والبيئة أو السلامة الصناعية أو مجال مماثل",
-        "خبرة 3 سنوات على الأقل في الصحة والسلامة والبيئة وخبرة في القطاع المنجمي"
-      ],
-      "deadline": "2026-10-30",
-      "detailsUrl": "https://www.dreamjob.ma/emploi-public/concours-de-recrutement-ofppt-2026-30-postes/",
-      "diploma": "إجازة في الصحة والسلامة والبيئة أو السلامة الصناعية أو مجال مماثل",
-      "diplomaRank": 3,
-      "docs": [
-        "استمارة الترشيح F1 بصيغة PDF من موقع المكتب",
-        "سيرة ذاتية مفصلة",
-        "نسخة من الدبلوم المطلوب (وقرار المعادلة للشهادات الأجنبية)",
-        "نسخة من بطاقة التعريف الوطنية (الوجهان في صفحة واحدة)"
-      ],
-      "exam": null,
-      "i18n": {
-        "en": {
-          "applyNote": "Applications exclusively via the Office's recruitment platform; deadline October 30, 2026. Incomplete files or files sent through another channel are not accepted.",
-          "conditions": [
-            "Moroccan nationality",
-            "Under 45 on the date of taking up the post",
-            "Bachelor's in health, safety and environment, industrial safety or a similar field",
-            "At least 3 years of experience in health, safety and environment and experience in the mining sector"
-          ],
-          "diploma": "Bachelor's in health, safety and environment, industrial safety or a similar field",
-          "docs": [
-            "Application form F1 in PDF from the Office's website",
-            "Detailed CV",
-            "Copy of the required diploma (and equivalence decision for foreign degrees)",
-            "Copy of the national ID card (both sides on a single page)"
-          ],
-          "org": "Office of Vocational Training and Employment Promotion (OFPPT)",
-          "region": "Errachidia",
-          "stages": [
-            "Initial file screening",
-            "Evaluation tests (dates and venues announced later)"
-          ],
-          "title": "Mining Safety Trainer — 1 post"
-        },
-        "fr": {
-          "applyNote": "Candidature exclusivement via la plateforme de recrutement de l'Office ; dernier délai le 30 octobre 2026. Les dossiers incomplets ou envoyés par un autre canal ne sont pas acceptés.",
-          "conditions": [
-            "Nationalité marocaine",
-            "Moins de 45 ans à la date de la prise de service",
-            "Licence en hygiène, sécurité et environnement, en sécurité industrielle ou dans un domaine similaire",
-            "Au moins 3 ans d'expérience en hygiène, sécurité et environnement et une expérience dans le secteur minier"
-          ],
-          "diploma": "Licence en hygiène, sécurité et environnement, en sécurité industrielle ou dans un domaine similaire",
-          "docs": [
-            "Formulaire de candidature F1 au format PDF sur le site de l'Office",
-            "CV détaillé",
-            "Copie du diplôme requis (et décision d'équivalence pour les diplômes étrangers)",
-            "Copie de la carte d'identité nationale (recto-verso sur une seule page)"
-          ],
-          "org": "Office de la Formation Professionnelle et de la Promotion du Travail (OFPPT)",
-          "region": "Errachidia",
-          "stages": [
-            "Présélection des dossiers",
-            "Tests d'évaluation (dates et lieux annoncés ultérieurement)"
-          ],
-          "title": "Formateur en sécurité minière — 1 poste"
-        }
-      },
-      "id": "ofppt-2026-formateur-1",
-      "maxAge": null,
-      "org": "مكتب التكوين المهني وإنعاش الشغل (OFPPT)",
-      "posts": 1,
-      "region": "الرشيدية",
-      "sector": "مؤسسات عمومية",
-      "stages": [
-        "انتقاء أولي للملفات",
-        "اختبارات التقييم (التواريخ والأماكن تُعلن لاحقاً)"
-      ],
-      "title": "مكون في السلامة المنجمية — منصب واحد",
-      "type": "public"
-    },
-    {
-      "announced": "2026-10-24",
       "applyNote": "لا يوجد أجل إغلاق مصرح به في العرض؛ الأجل هنا بعد 30 يوماً من تاريخ الإعلان، والعرض يُغلق عند اكتمال العدد. الترشيح إلكترونياً عبر صفحة توظيف Auto Hall على ReKrute.",
       "applyUrl": "https://www.rekrute.com",
       "conditions": [
@@ -4273,85 +4115,6 @@
         "عرض ومناقشة"
       ],
       "title": "8 أساتذة محاضرين من الدرجة A (C44313/26)",
-      "type": "public"
-    },
-    {
-      "announced": "2026-10-17",
-      "applyNote": "الترشيح عبر الموقع الرسمي للمجموعة. العرض يُغلق عند اكتمال العدد — قدّم في أقرب وقت.",
-      "applyUrl": "https://alomrane.gov.ma",
-      "conditions": [
-        "الجنسية المغربية",
-        "خبرة مهنية 3 سنوات في المجال",
-        "التنقل الجغرافي مطلوب"
-      ],
-      "deadline": "2026-10-30",
-      "detailsUrl": "https://www.jobhub.ma/concours-al-omrane-2026-17-postes-recrutement/",
-      "diploma": "باك+4/5 في الموارد البشرية (خبرة 3 سنوات) — باك+3 في المشتريات (خبرة 3 سنوات)",
-      "diplomaRank": 4,
-      "docs": [
-        "سيرة ذاتية",
-        "نسخة من الدبلوم",
-        "قرار المعادلة عند الاقتضاء",
-        "رسالة تحفيز وشهادات العمل"
-      ],
-      "exam": null,
-      "i18n": {
-        "en": {
-          "applyNote": "Apply via the group's official website. The offer closes when the quota is filled — apply as soon as possible.",
-          "conditions": [
-            "Moroccan nationality",
-            "3 years of professional experience in the field",
-            "Geographic mobility required"
-          ],
-          "diploma": "Bac+4/5 in human resources (3 years of experience) — Bac+3 in procurement (3 years of experience)",
-          "docs": [
-            "CV",
-            "Copy of the diploma",
-            "Equivalence decision where applicable",
-            "Cover letter and work certificates"
-          ],
-          "org": "Al Omrane Group",
-          "region": "Casablanca — Casablanca-Settat Region",
-          "stages": [
-            "File review",
-            "Interviews"
-          ],
-          "title": "HR executive + procurement executive — 2 posts"
-        },
-        "fr": {
-          "applyNote": "Candidature via le site officiel du groupe. L'offre se clôture dès que le quota est atteint — candidatez au plus vite.",
-          "conditions": [
-            "Nationalité marocaine",
-            "Expérience professionnelle de 3 ans dans le domaine",
-            "Mobilité géographique requise"
-          ],
-          "diploma": "Bac+4/5 en ressources humaines (3 ans d'expérience) — Bac+3 en achats (3 ans d'expérience)",
-          "docs": [
-            "CV",
-            "Copie du diplôme",
-            "Décision d'équivalence le cas échéant",
-            "Lettre de motivation et attestations de travail"
-          ],
-          "org": "Groupe Al Omrane",
-          "region": "Casablanca — Région Casablanca-Settat",
-          "stages": [
-            "Étude des dossiers",
-            "Entretiens"
-          ],
-          "title": "Cadre RH + cadre achats — 2 postes"
-        }
-      },
-      "id": "alomrane-2026-rh-achats",
-      "maxAge": null,
-      "org": "مجموعة العمران",
-      "posts": 2,
-      "region": "الدار البيضاء — جهة الدار البيضاء سطات",
-      "sector": "مؤسسات عمومية",
-      "stages": [
-        "دراسة الملفات",
-        "مقابلات"
-      ],
-      "title": "إطار موارد بشرية + إطار مشتريات — منصبان",
       "type": "public"
     },
     {
@@ -6696,8 +6459,870 @@
       "stages": [],
       "title": "مستشارون تجاريون (مبتدئون وذوو خبرة) — الدار البيضاء",
       "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "عقد CDI بدوام ليلي؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/konecta-tanger-atencion-al-cliente-cdi-tanger-salario-hasta-5-500-dh-netos-mes-turno-nocturno-169509",
+      "conditions": [
+        "مستوى عالٍ في الإسبانية والإنجليزية (شفوياً وكتابة)",
+        "الانضباط والنشاط في العمل",
+        "إلمام بالمعلوميات",
+        "الاستعداد للدوام الليلي"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/konecta-tanger-atencion-al-cliente-cdi-tanger-salario-hasta-5-500-dh-netos-mes-turno-nocturno-169509",
+      "diploma": "لم يُذكر دبلوم محدد في العرض (الإسبانية والإنجليزية هما الأساس)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Permanent contract, night shift; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "High level of Spanish and English (spoken and written)",
+            "Punctuality and proactivity at work",
+            "Computer literacy",
+            "Availability for the night shift"
+          ],
+          "diploma": "No diploma specified in the offer (Spanish and English are key)",
+          "org": "Konecta (Tanger Site 1)",
+          "region": "Tangier",
+          "salary": "MAD 4,500 + bonuses / up to MAD 5,500 net (as stated in the offer)",
+          "sector": "Call centers",
+          "title": "Spanish & English customer service (inbound) — Tangier"
+        },
+        "fr": {
+          "applyNote": "Contrat CDI, horaires de nuit ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Très bon niveau en espagnol et en anglais (oral et écrit)",
+            "Ponctualité et proactivité au travail",
+            "Niveau utilisateur en informatique",
+            "Disponibilité pour le turno nocturno"
+          ],
+          "diploma": "Aucun diplôme précisé dans l'offre (l'espagnol et l'anglais sont essentiels)",
+          "org": "Konecta (site 1 Tanger)",
+          "region": "Tanger",
+          "salary": "4 500 DH + primes / jusqu'à 5 500 DH nets (annoncé dans l'offre)",
+          "sector": "Centres d'appels",
+          "title": "Service client en espagnol et en anglais (réception) — Tanger"
+        }
+      },
+      "id": "konecta-tanger-atencion-cliente-2026",
+      "maxAge": null,
+      "org": "كونكتا (Konecta) — الموقع 1 بطنجة",
+      "posts": null,
+      "region": "طنجة",
+      "salary": "4500 درهم + منح / حتى 5500 درهم صافي (مصرح به في العرض)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "خدمة الزبناء بالإسبانية والإنجليزية (استقبال) — طنجة",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-31",
+      "applyNote": "تعاقد مباشر مع الشركة الإسبانية (دون وسيط) مع الضمان الاجتماعي CNSS؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/alpha-global-connection-compania-espanola-para-citas-167939",
+      "conditions": [
+        "إسبانية متقدمة",
+        "تجربة في الإصدار مرغوبة",
+        "الدوام الاثنين–الجمعة، 44 ساعة أسبوعياً",
+        "عطلة نهاية الأسبوع",
+        "التصريح لدى الضمان الاجتماعي CNSS"
+      ],
+      "deadline": "2026-11-30",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/alpha-global-connection-compania-espanola-para-citas-167939",
+      "diploma": "لم يُذكر دبلوم محدد في العرض (الإسبانية المتقدمة شرط أساسي)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Direct contract with the Spanish company (no intermediary) with CNSS social security; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Advanced Spanish",
+            "Outbound experience valued",
+            "Monday–Friday, 44 hours per week",
+            "Weekends off",
+            "CNSS social security registration"
+          ],
+          "diploma": "No diploma specified in the offer (advanced Spanish is required)",
+          "org": "Alpha Global Connection (Spanish company)",
+          "region": "Tangier",
+          "salary": "MAD 5,000 net + bonuses (up to MAD 9,500) (as stated in the offer)",
+          "sector": "Call centers",
+          "title": "Appointment-setting teleoperator (outbound) — Tangier"
+        },
+        "fr": {
+          "applyNote": "Contrat direct avec l'entreprise espagnole (sans intermédiaire) avec immatriculation à la CNSS ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Espagnol avancé",
+            "Expérience en émission valorisée",
+            "Lundi–vendredi, 44 h par semaine",
+            "Week-ends libres",
+            "Immatriculation à la CNSS"
+          ],
+          "diploma": "Aucun diplôme précisé dans l'offre (l'espagnol avancé est requis)",
+          "org": "Alpha Global Connection (entreprise espagnole)",
+          "region": "Tanger",
+          "salary": "5 000 DH nets + primes (jusqu'à 9 500 DH) (annoncé dans l'offre)",
+          "sector": "Centres d'appels",
+          "title": "Téléopérateur/trice de prise de rendez-vous (émission) — Tanger"
+        }
+      },
+      "id": "alpha-global-connection-citas-tanger-2026",
+      "maxAge": null,
+      "org": "ألفا غلوبال كونيكشن (Alpha Global Connection)",
+      "posts": null,
+      "region": "طنجة",
+      "salary": "5000 درهم صافي + منح (حتى 9500 درهم) (مصرح به في العرض)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "موظف(ة) تركيب المواعيد (إصدار) — طنجة",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-31",
+      "applyNote": "عقد CDI؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/belocum-conseiller-e-service-client-senior-bilingue-fr-en-156800",
+      "conditions": [
+        "3 سنوات خبرة في خدمة الزبناء على الأقل",
+        "إتقان تام للفرنسية والإنجليزية",
+        "العمل حضورياً بطنجة",
+        "يوما راحة أسبوعياً"
+      ],
+      "deadline": "2026-11-30",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/belocum-conseiller-e-service-client-senior-bilingue-fr-en-156800",
+      "diploma": "باك+2 على الأقل",
+      "diplomaRank": 2,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Permanent contract; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "At least 3 years of customer-service experience",
+            "Perfect command of French and English",
+            "On-site work in Tangier",
+            "2 days off per week"
+          ],
+          "diploma": "Bac+2 minimum",
+          "org": "BeLOCUM (digital health, Canadian)",
+          "region": "Tangier",
+          "salary": "From MAD 6,000 per month (as stated in the offer)",
+          "sector": "Call centers",
+          "title": "Senior bilingual (French/English) customer advisor — Tangier"
+        },
+        "fr": {
+          "applyNote": "Contrat CDI ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "3 ans d'expérience minimum en service client",
+            "Bilingue français/anglais parfait",
+            "Travail sur site à Tanger",
+            "2 jours de repos par semaine"
+          ],
+          "diploma": "Bac+2 minimum",
+          "org": "BeLOCUM (santé digitale, canadienne)",
+          "region": "Tanger",
+          "salary": "À partir de 6 000 DH par mois (annoncé dans l'offre)",
+          "sector": "Centres d'appels",
+          "title": "Conseiller/ère service client senior bilingue (fr/en) — Tanger"
+        }
+      },
+      "id": "belocum-senior-bilingue-tanger-2026",
+      "maxAge": null,
+      "org": "بيلوكوم (BeLOCUM) — الصحة الرقمية",
+      "posts": null,
+      "region": "طنجة",
+      "salary": "ابتداءً من 6000 درهم شهرياً (مصرح به في العرض)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "مستشار(ة) خدمة زبناء متمرس(ة) ثنائي(ة) اللغة (فرنسية/إنجليزية) — طنجة",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "عقد CDI؛ النقل مؤمّن ومطعم الشركة؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/myopla-televendeur-se-acquisition-energie-appels-entrants-cdi-salaire-fixe-primes-illimitees-159323",
+      "conditions": [
+        "فرنسية ممتازة شفوياً وكتابة",
+        "تجربة في قطاع الطاقة مرغوبة",
+        "روح تجارية",
+        "مناوبات دورية",
+        "النقل مؤمّن",
+        "مطعم الشركة"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/myopla-televendeur-se-acquisition-energie-appels-entrants-cdi-salaire-fixe-primes-illimitees-159323",
+      "diploma": "لم يُذكر دبلوم محدد في العرض (الفرنسية الممتازة شرط أساسي)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Permanent contract; transport provided and company canteen; apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Excellent French, spoken and written",
+            "Energy-sector experience preferred",
+            "Sales drive",
+            "Rotating shifts",
+            "Transport provided",
+            "Company canteen"
+          ],
+          "diploma": "No diploma specified in the offer (excellent French is required)",
+          "org": "MyOpla",
+          "region": "Tetouan",
+          "salary": "Fixed net salary + uncapped bonuses (as stated in the offer, no figure given)",
+          "sector": "Call centers",
+          "title": "Energy telesales (inbound calls) — Tetouan"
+        },
+        "fr": {
+          "applyNote": "Contrat CDI ; transport pris en charge et cantine d'entreprise ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Excellent français oral et écrit",
+            "Expérience en énergie souhaitée",
+            "Fibre commerciale",
+            "Shifts rotatifs",
+            "Transport pris en charge",
+            "Cantine d'entreprise"
+          ],
+          "diploma": "Aucun diplôme précisé dans l'offre (l'excellent français est requis)",
+          "org": "MyOpla",
+          "region": "Tétouan",
+          "salary": "Salaire net fixe + primes non plafonnées (annoncé dans l'offre, montant non chiffré)",
+          "sector": "Centres d'appels",
+          "title": "Télévendeur/se énergie (appels entrants) — Tétouan"
+        }
+      },
+      "id": "myopla-tetouan-televente-energie-2026",
+      "maxAge": null,
+      "org": "مايوبلا (MyOpla)",
+      "posts": null,
+      "region": "تطوان",
+      "salary": "راتب صافي ثابت + منح غير محدودة (مصرح به في العرض دون رقم)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "بائع(ة) عبر الهاتف في الطاقة (استقبال مكالمات) — تطوان",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-31",
+      "applyNote": "الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/micc-experimentes-b-ton-b-micc-marrakech-recrute-6000-dh-fixe-primes-et-challenges-169460",
+      "conditions": [
+        "خبرة مؤكدة في البيع B2B",
+        "الدوام الاثنين–الجمعة",
+        "عطلة نهاية الأسبوع"
+      ],
+      "deadline": "2026-11-30",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/micc-experimentes-b-ton-b-micc-marrakech-recrute-6000-dh-fixe-primes-et-challenges-169460",
+      "diploma": "خبرة مؤكدة في البيع B2B (الفرنسية هي الأساس)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Proven B2B sales experience",
+            "Monday–Friday schedule",
+            "Weekends off"
+          ],
+          "diploma": "Proven B2B sales experience (French is key)",
+          "org": "MICC",
+          "region": "Marrakech",
+          "salary": "MAD 6,000 fixed + uncapped bonuses and challenges (as stated in the offer)",
+          "sector": "Call centers",
+          "title": "Experienced B2B teleprospectors — Marrakech"
+        },
+        "fr": {
+          "applyNote": "Postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Expérience confirmée en B to B",
+            "Horaires lundi–vendredi",
+            "Week-ends OFF"
+          ],
+          "diploma": "Expérience confirmée en B to B (le français est essentiel)",
+          "org": "MICC",
+          "region": "Marrakech",
+          "salary": "6 000 DH fixes + primes et challenges non plafonnés (annoncé dans l'offre)",
+          "sector": "Centres d'appels",
+          "title": "Téléprospecteurs B to B expérimentés — Marrakech"
+        }
+      },
+      "id": "micc-marrakech-b2b-2026",
+      "maxAge": null,
+      "org": "MICC",
+      "posts": null,
+      "region": "مراكش",
+      "salary": "6000 درهم ثابت + منح وتحديات غير محدودة (مصرح به في العرض)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "بائعون عبر الهاتف B2B ذوو خبرة — مراكش",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-31",
+      "applyNote": "الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/meleine-succursale-meleine-vous-voulez-devenir-expert-en-assurance-auto-postulez-ici-165005",
+      "conditions": [
+        "خبرة في البيع عبر الهاتف سنة واحدة على الأقل",
+        "فرنسية شفوية وكتابية",
+        "الدوام 08:30–18:00"
+      ],
+      "deadline": "2026-11-30",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/meleine-succursale-meleine-vous-voulez-devenir-expert-en-assurance-auto-postulez-ici-165005",
+      "diploma": "لم يُذكر دبلوم محدد في العرض (تجربة البيع عبر الهاتف شرط أساسي)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "At least 1 year of telesales experience",
+            "Spoken and written French",
+            "Hours 08:30–18:00"
+          ],
+          "diploma": "No diploma specified in the offer (telesales experience is required)",
+          "org": "Méléine Succursale",
+          "region": "Rabat",
+          "salary": "Attractive salary + uncapped bonuses (as stated in the offer, no figure given)",
+          "sector": "Call centers",
+          "title": "Car insurance expert (telesales) — Rabat"
+        },
+        "fr": {
+          "applyNote": "Postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Expérience en télévente d'1 an minimum",
+            "Français oral et écrit",
+            "Horaires 08h30–18h00"
+          ],
+          "diploma": "Aucun diplôme précisé dans l'offre (l'expérience en télévente est requise)",
+          "org": "Méléine Succursale",
+          "region": "Rabat",
+          "salary": "Salaire attractif + primes déplafonnées (annoncé dans l'offre, montant non chiffré)",
+          "sector": "Centres d'appels",
+          "title": "Expert en assurance auto (télévente) — Rabat"
+        }
+      },
+      "id": "meleine-rabat-assurance-auto-2026",
+      "maxAge": null,
+      "org": "ميليين (Méléine Succursale)",
+      "posts": null,
+      "region": "الرباط",
+      "salary": "راتب مغرٍ + منح غير محدودة (مصرح به في العرض دون رقم)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "خبير(ة) تأمين السيارات (بيع عبر الهاتف) — الرباط",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "عقد CDI (مشروع في طور الإطلاق)؛ الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/adm-value-rabat-vendeur-se-assurance-auto-amp-habitation-cdi-primes-deplafonnees-166296",
+      "conditions": [
+        "مهارة البيع والإقناع والإغلاق",
+        "قاعدة زبناء مؤهلة",
+        "البيع المتبادل لتأمين السكن"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/adm-value-rabat-vendeur-se-assurance-auto-amp-habitation-cdi-primes-deplafonnees-166296",
+      "diploma": "لم يُذكر دبلوم محدد في العرض (مهارة البيع شرط أساسي)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Permanent contract (project being launched); apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Selling, persuasion and closing skills",
+            "Qualified customer base",
+            "Cross-selling of home insurance"
+          ],
+          "diploma": "No diploma specified in the offer (sales skills are required)",
+          "org": "ADM Value",
+          "region": "Rabat",
+          "sector": "Call centers",
+          "title": "Car & home insurance salesperson (new project) — Rabat"
+        },
+        "fr": {
+          "applyNote": "Contrat CDI (projet en lancement) ; postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Savoir vendre, convaincre et conclure",
+            "Base de clients qualifiés",
+            "Rebond commercial en assurance habitation"
+          ],
+          "diploma": "Aucun diplôme précisé dans l'offre (le savoir-vendre est requis)",
+          "org": "ADM Value",
+          "region": "Rabat",
+          "sector": "Centres d'appels",
+          "title": "Vendeur/se assurance auto & habitation (projet en lancement) — Rabat"
+        }
+      },
+      "id": "adm-value-rabat-assurance-auto-hab-2026",
+      "maxAge": null,
+      "org": "ADM Value",
+      "posts": null,
+      "region": "الرباط",
+      "salary": null,
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "بائع(ة) تأمين السيارات والسكن (مشروع جديد) — الرباط",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/concentrix-conseiller-client-f-h-service-client-meknes-francais-154405",
+      "conditions": [
+        "فرنسية مثالية شفوياً وكتابة",
+        "حس التواصل"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/concentrix-conseiller-client-f-h-service-client-meknes-francais-154405",
+      "diploma": "لم يُذكر دبلوم محدد في العرض (الفرنسية المثالية شرط أساسي)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Perfect French, spoken and written",
+            "Communication skills"
+          ],
+          "diploma": "No diploma specified in the offer (perfect French is required)",
+          "org": "Concentrix",
+          "region": "Meknes",
+          "salary": "MAD 1,000 welcome bonus after 3 months; salary given on site (as stated in the offer)",
+          "sector": "Call centers",
+          "title": "Customer advisor (inbound) — Meknes"
+        },
+        "fr": {
+          "applyNote": "Postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Français parfait à l'oral et à l'écrit",
+            "Sens de la communication"
+          ],
+          "diploma": "Aucun diplôme précisé dans l'offre (le français parfait est requis)",
+          "org": "Concentrix",
+          "region": "Meknès",
+          "salary": "1 000 DH de prime de bienvenue après 3 mois ; salaire communiqué sur place (annoncé dans l'offre)",
+          "sector": "Centres d'appels",
+          "title": "Conseiller/ère client (réception) — Meknès"
+        }
+      },
+      "id": "concentrix-meknes-service-client-2026",
+      "maxAge": null,
+      "org": "كونسنتريكس (Concentrix)",
+      "posts": null,
+      "region": "مكناس",
+      "salary": "منحة ترحيب 1000 درهم بعد 3 أشهر؛ الراتب يُذكر في عين المكان (مصرح به في العرض)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "مستشار(ة) زبناء (استقبال) — مكناس",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/concentrix-conseiller-client-f-h-expert-televente-fai-agadir-francais-148935",
+      "conditions": [
+        "خبرة مؤكدة في البيع عبر الهاتف لخدمات الإنترنت سنة واحدة على الأقل (إلزامية)",
+        "فرنسية مثالية"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/concentrix-conseiller-client-f-h-expert-televente-fai-agadir-francais-148935",
+      "diploma": "خبرة مؤكدة في البيع عبر الهاتف لخدمات الإنترنت (الفرنسية هي الأساس)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Proven telesales experience for ISP services of at least 1 year (mandatory)",
+            "Perfect French"
+          ],
+          "diploma": "Proven telesales experience for ISP services (French is key)",
+          "org": "Concentrix",
+          "region": "Agadir",
+          "salary": "MAD 7,100 package from the first month for proven telesales experience + MAD 1,500 welcome bonus after 3 months (as stated in the offer)",
+          "sector": "Call centers",
+          "title": "ISP telesales expert — Agadir"
+        },
+        "fr": {
+          "applyNote": "Postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Expérience confirmée en télévente FAI d'1 an minimum (obligatoire)",
+            "Français parfait"
+          ],
+          "diploma": "Expérience confirmée en télévente FAI (le français est essentiel)",
+          "org": "Concentrix",
+          "region": "Agadir",
+          "salary": "Package de 7 100 DH dès le premier mois si expérience confirmée en télévente + 1 500 DH de prime de bienvenue après 3 mois (annoncé dans l'offre)",
+          "sector": "Centres d'appels",
+          "title": "Expert télévente FAI — Agadir"
+        }
+      },
+      "id": "concentrix-agadir-televente-fai-2026",
+      "maxAge": null,
+      "org": "كونسنتريكس (Concentrix)",
+      "posts": null,
+      "region": "أكادير",
+      "salary": "حزمة 7100 درهم منذ الشهر الأول لأصحاب الخبرة المؤكدة في البيع عبر الهاتف + منحة ترحيب 1500 درهم بعد 3 أشهر (مصرح به في العرض)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "مستشار(ة) زبناء — خبير(ة) البيع عبر الهاتف لخدمات الإنترنت — أكادير",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح عبر صفحة العرض على moncallcenter.ma؛ العرض يُغلق عند اكتمال العدد (الأجل مقدّر).",
+      "applyUrl": "https://www.moncallcenter.ma/offre-emploi/concentrix-conseiller-client-f-h-service-client-agadir-francais-anglais-169204",
+      "conditions": [
+        "فرنسية مثالية",
+        "مستوى جيد في الإنجليزية"
+      ],
+      "deadline": "2026-11-29",
+      "detailsUrl": "https://www.moncallcenter.ma/offre-emploi/concentrix-conseiller-client-f-h-service-client-agadir-francais-anglais-169204",
+      "diploma": "لم يُذكر دبلوم محدد في العرض (الفرنسية المثالية والإنجليزية شرطان أساسيان)",
+      "diplomaRank": 1,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Apply via the offer page on moncallcenter.ma; the offer closes when positions are filled (deadline estimated).",
+          "conditions": [
+            "Perfect French",
+            "Good level of English"
+          ],
+          "diploma": "No diploma specified in the offer (perfect French and English are required)",
+          "org": "Concentrix",
+          "region": "Agadir",
+          "salary": "Salary given on site (as stated in the offer)",
+          "sector": "Call centers",
+          "title": "Customer advisor (inbound) — French/English — Agadir"
+        },
+        "fr": {
+          "applyNote": "Postuler via la page de l'offre sur moncallcenter.ma ; l'offre se clôture à effectif complet (délai estimé).",
+          "conditions": [
+            "Français parfait",
+            "Bon niveau d'anglais"
+          ],
+          "diploma": "Aucun diplôme précisé dans l'offre (le français parfait et l'anglais sont requis)",
+          "org": "Concentrix",
+          "region": "Agadir",
+          "salary": "Salaire communiqué sur place (annoncé dans l'offre)",
+          "sector": "Centres d'appels",
+          "title": "Conseiller/ère client (réception) — français/anglais — Agadir"
+        }
+      },
+      "id": "concentrix-agadir-service-client-en-2026",
+      "maxAge": null,
+      "org": "كونسنتريكس (Concentrix)",
+      "posts": null,
+      "region": "أكادير",
+      "salary": "الراتب يُذكر في عين المكان (مصرح به في العرض)",
+      "sector": "مراكز النداء",
+      "stages": [],
+      "title": "مستشار(ة) زبناء (استقبال) — فرنسية وإنجليزية — أكادير",
+      "type": "private"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشح عبر قرار فتح المباراة على بوابة التشغيل العمومي؛ المباراة يوم 27 دجنبر 2026؛ توظيف نظامي.",
+      "applyUrl": "https://www.emploi-public.ma",
+      "conditions": [
+        "راجع قرار فتح المباراة للشروط والوثائق الكاملة"
+      ],
+      "deadline": "2026-11-20T16:30",
+      "detailsUrl": "https://www.manasseb.com/%d8%a5%d9%82%d9%84%d9%8a%d9%85-%d9%88%d8%b1%d8%b2%d8%a7%d8%b2%d8%a7%d8%aa-%d8%aa%d9%88%d9%86%d8%af%d9%88%d8%aa-%d9%85%d8%a8%d8%a7%d8%b1%d9%8a%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%88%d8%b8%d9%8a%d9%81/",
+      "diploma": "دبلوم تقني (باك+2) — تطوير المعلوميات والأنظمة المعلوماتية والشبكات، أو الصيانة والكهرباء",
+      "diplomaRank": 2,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Application via the competition opening decision on the public employment portal; tests on December 27, 2026; statutory recruitment.",
+          "conditions": [
+            "See the competition opening decision for the full conditions and documents"
+          ],
+          "diploma": "Technician diploma (Bac+2) — IT development, information systems and networks, or maintenance and electricity",
+          "org": "Ouarzazate Province – Toundout",
+          "region": "Ouarzazate — Drâa-Tafilalet",
+          "sector": "Communes and local development",
+          "title": "Fourth-grade technicians (IT development and networks, or maintenance and electricity) — 4 posts"
+        },
+        "fr": {
+          "applyNote": "Candidature via la décision d'ouverture du concours sur le portail de l'emploi public ; épreuves le 27 décembre 2026 ; recrutement statutaire.",
+          "conditions": [
+            "Voir la décision d'ouverture du concours pour les conditions et pièces complètes"
+          ],
+          "diploma": "Diplôme de technicien (Bac+2) — développement informatique, systèmes d'information et réseaux, ou maintenance et électricité",
+          "org": "Province de Ouarzazate – Toundout",
+          "region": "Ouarzazate — Drâa-Tafilalet",
+          "sector": "Communes et développement local",
+          "title": "Techniciens de 4e grade (développement informatique et réseaux, ou maintenance et électricité) — 4 postes"
+        }
+      },
+      "id": "ouarzazate-toundoute-2026-4",
+      "maxAge": null,
+      "org": "إقليم ورزازات – توندوت",
+      "posts": 4,
+      "region": "ورزازات — درعة تافيلالت",
+      "sector": "جماعات وتنمية محلية",
+      "stages": [],
+      "title": "تقنيون من الدرجة الرابعة (تطوير المعلوميات والشبكات أو الصيانة والكهرباء) — 4 مناصب",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "إيداع مزدوج: الملف الأول إلكترونياً عبر depot.emploi-public.ma والملف الثاني (الأطروحة وأعمال البحث) عبر النموذج المخصص؛ مع إرسال نسخة ورقية إلى مقر المدرسة (كلم 10 طريق الحاج قدور، ص.ب 40 مكناس).",
+      "applyUrl": "https://depot.emploi-public.ma",
+      "conditions": [
+        "الجنسية المغربية",
+        "الحصول على الدكتوراه ودبلوم مهندس (أو ما يعادلها)",
+        "45 سنة على الأكثر في فاتح يناير 2026 (لغير الموظفين)"
+      ],
+      "deadline": "2026-11-16T15:29",
+      "detailsUrl": "https://www.manasseb.com/%d8%a7%d9%84%d9%85%d8%af%d8%b1%d8%b3%d8%a9-%d8%a7%d9%84%d9%88%d8%b7%d9%86%d9%8a%d8%a9-%d9%84%d9%84%d9%81%d9%84%d8%a7%d8%ad%d8%a9-%d8%a8%d9%85%d9%83%d9%86%d8%a7%d8%b3-%d9%85%d8%a8%d8%a7%d8%b1%d9%8a-3/",
+      "diploma": "الدكتوراه + دبلوم مهندس (أو ما يعادلهما) — الإنتاج الحيواني أو تحسين المراعي",
+      "diplomaRank": 5,
+      "docs": [
+        "طلب خطي موجه إلى مدير المدرسة",
+        "سيرة ذاتية",
+        "نسخة من بطاقة التعريف الوطنية",
+        "نسخ من الشهادات (وقرار المعادلة عند الاقتضاء)",
+        "موافقة الإدارة بالنسبة للموظفين",
+        "نسخة إلكترونية من أطروحة الدكتوراه وأعمال البحث"
+      ],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Double submission: first file online via depot.emploi-public.ma and second file (thesis and research works) via the dedicated form; plus a paper copy to the school's address (km 10, Haj Kaddour road, P.O. Box 40, Meknes).",
+          "conditions": [
+            "Moroccan nationality",
+            "Doctorate and engineering diploma (or equivalent)",
+            "45 years old max on January 1, 2026 (for non-civil servants)"
+          ],
+          "diploma": "Doctorate + engineering diploma (or equivalent) — animal production or rangeland improvement",
+          "docs": [
+            "Written application addressed to the school director",
+            "CV",
+            "Copy of the national ID card",
+            "Copies of degrees (and equivalence decision where applicable)",
+            "Administration approval for civil servants",
+            "Electronic copy of the doctoral thesis and research works"
+          ],
+          "org": "National School of Agriculture of Meknes (ENAM)",
+          "region": "Meknes",
+          "sector": "Higher education",
+          "stages": [
+            "Diplomas and scientific works assessment",
+            "Presentation and discussion before the committee"
+          ],
+          "title": "Assistant professor, Grade A — agricultural sciences (animal production / rangeland improvement) — 1 post"
+        },
+        "fr": {
+          "applyNote": "Double dépôt : premier dossier en ligne via depot.emploi-public.ma et second dossier (thèse et travaux de recherche) via le formulaire dédié ; plus une copie papier au siège de l'école (km 10, route Haj Kaddour, B.P. 40, Meknès).",
+          "conditions": [
+            "Nationalité marocaine",
+            "Doctorat et diplôme d'ingénieur (ou équivalent)",
+            "45 ans au plus au 1er janvier 2026 (pour les non-fonctionnaires)"
+          ],
+          "diploma": "Doctorat + diplôme d'ingénieur (ou équivalents) — production animale ou amélioration des parcours",
+          "docs": [
+            "Demande écrite adressée au directeur de l'école",
+            "CV",
+            "Copie de la carte d'identité nationale",
+            "Copies des diplômes (et décision d'équivalence le cas échéant)",
+            "Accord de l'administration pour les fonctionnaires",
+            "Copie électronique de la thèse de doctorat et des travaux de recherche"
+          ],
+          "org": "École Nationale d'Agriculture de Meknès (ENAM)",
+          "region": "Meknès",
+          "sector": "Enseignement supérieur",
+          "stages": [
+            "Épreuve sur titres et travaux scientifiques",
+            "Exposé et discussion devant le jury"
+          ],
+          "title": "Professeur assistant de grade A — sciences agronomiques (production animale / amélioration des parcours) — 1 poste"
+        }
+      },
+      "id": "enam-2026-16nov-1",
+      "maxAge": 45,
+      "org": "المدرسة الوطنية للفلاحة بمكناس (ENAM)",
+      "posts": 1,
+      "region": "مكناس",
+      "sector": "تعليم عالٍ",
+      "stages": [
+        "اختبار الشهادات والأعمال العلمية",
+        "عرض ومناقشة أمام اللجنة"
+      ],
+      "title": "أستاذ محاضر من الدرجة أ — العلوم الزراعية (الإنتاج الحيواني / تحسين المراعي) — منصب واحد",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح إلكترونياً عبر recrutement.enssup.gov.ma؛ الشهادة والشروط والوثائق مفصلة في قرار فتح المباراة؛ المباراة يوم 21 نونبر 2026؛ توظيف نظامي.",
+      "applyUrl": "http://www.recrutement.enssup.gov.ma",
+      "conditions": [
+        "راجع قرار فتح المباراة للشروط والوثائق الكاملة"
+      ],
+      "deadline": "2026-11-16T16:30",
+      "detailsUrl": "https://www.manasseb.com/%d8%ac%d8%a7%d9%85%d8%b9%d8%a9-%d8%a7%d9%84%d8%ad%d8%b3%d9%86-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a-%d8%a7%d9%84%d8%af%d8%a7%d8%b1%d8%a7%d9%84%d8%a8%d9%8a%d8%b6%d8%a7%d8%a1-%d9%85%d8%a8%d8%a7%d8%b1-5/",
+      "diploma": "حسب قرار فتح المباراة (منصب أستاذ محاضر — كلية الطب والصيدلة)",
+      "diplomaRank": 5,
+      "docs": [],
+      "exam": "2026-11-21",
+      "i18n": {
+        "en": {
+          "applyNote": "Online application via recrutement.enssup.gov.ma; diploma, conditions and documents detailed in the competition opening decision; tests on November 21, 2026; statutory recruitment.",
+          "conditions": [
+            "See the competition opening decision for the full conditions and documents"
+          ],
+          "diploma": "As per the competition opening decision (assistant professor post — Faculty of Medicine and Pharmacy)",
+          "org": "Hassan II University — Casablanca (Faculty of Medicine and Pharmacy)",
+          "region": "Casablanca",
+          "sector": "Higher education",
+          "title": "Assistant professor for the Faculty of Medicine and Pharmacy — 1 post"
+        },
+        "fr": {
+          "applyNote": "Candidature en ligne via recrutement.enssup.gov.ma ; diplôme, conditions et pièces détaillés dans la décision d'ouverture du concours ; épreuves le 21 novembre 2026 ; recrutement statutaire.",
+          "conditions": [
+            "Voir la décision d'ouverture du concours pour les conditions et pièces complètes"
+          ],
+          "diploma": "Selon la décision d'ouverture du concours (poste de professeur assistant — Faculté de Médecine et de Pharmacie)",
+          "org": "Université Hassan II — Casablanca (Faculté de Médecine et de Pharmacie)",
+          "region": "Casablanca",
+          "sector": "Enseignement supérieur",
+          "title": "Professeur assistant pour la Faculté de Médecine et de Pharmacie — 1 poste"
+        }
+      },
+      "id": "uh2-2026-pa-fmp-1",
+      "maxAge": null,
+      "org": "جامعة الحسن الثاني — الدار البيضاء (كلية الطب والصيدلة)",
+      "posts": 1,
+      "region": "الدار البيضاء",
+      "sector": "تعليم عالٍ",
+      "stages": [],
+      "title": "أستاذ محاضر لفائدة كلية الطب والصيدلة — منصب واحد",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "الترشيح إلكترونياً عبر بوابة التوظيف الخاصة بصندوق الإيداع والتدبير (مرجع العرض 255)؛ توظيف بموجب عقد.",
+      "applyUrl": "https://recrutement.cdg.ma/Agirhcv/PartageOffre?Id_Offre=255",
+      "conditions": [
+        "راجع قرار فتح المباراة للشروط والوثائق الكاملة"
+      ],
+      "deadline": "2026-11-14",
+      "detailsUrl": "https://www.manasseb.com/%d8%b5%d9%86%d8%af%d9%88%d9%82-%d8%a7%d9%84%d8%a5%d9%8a%d8%af%d8%a7%d8%b9-%d9%88%d8%a7%d9%84%d8%aa%d8%af%d8%a8%d9%8a%d8%b1-%d9%85%d8%a8%d8%a7%d8%b1%d9%8a%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d9%88%d8%b8-3/",
+      "diploma": "حسب قرار فتح المباراة (مكلف بتطوير الموارد البشرية)",
+      "diplomaRank": 4,
+      "docs": [],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Online application via the Caisse de Dépôt et de Gestion recruitment portal (offer reference 255); contract-based recruitment.",
+          "conditions": [
+            "See the competition opening decision for the full conditions and documents"
+          ],
+          "diploma": "As per the competition opening decision (HR development officer)",
+          "org": "Caisse de Dépôt et de Gestion (CDG)",
+          "region": "Rabat",
+          "sector": "Public institutions",
+          "title": "HR development officer — 1 post"
+        },
+        "fr": {
+          "applyNote": "Candidature en ligne via le portail de recrutement de la Caisse de Dépôt et de Gestion (référence de l'offre 255) ; recrutement sous contrat.",
+          "conditions": [
+            "Voir la décision d'ouverture du concours pour les conditions et pièces complètes"
+          ],
+          "diploma": "Selon la décision d'ouverture du concours (chargé de développement RH)",
+          "org": "Caisse de Dépôt et de Gestion (CDG)",
+          "region": "Rabat",
+          "sector": "Établissements publics",
+          "title": "Chargé de développement RH — 1 poste"
+        }
+      },
+      "id": "cdg-2026-rh-dev-1",
+      "maxAge": null,
+      "org": "صندوق الإيداع والتدبير (CDG)",
+      "posts": 1,
+      "region": "الرباط",
+      "sector": "مؤسسات عمومية",
+      "stages": [],
+      "title": "مكلف بتطوير الموارد البشرية — منصب واحد",
+      "type": "public"
+    },
+    {
+      "announced": "2026-10-30",
+      "applyNote": "المرجع TEE/2026/PF/02 (الإعلان حُرر بالرباط في 30/10/2026)؛ الترشيح عبر صفحة التوظيف على موقع الشركة الملكية لتشجيع الفرس.",
+      "applyUrl": "https://sorec.ma/offres-emploi/",
+      "conditions": [
+        "خبرة 2–3 سنوات (مفضلة في وظيفة مماثلة)",
+        "معرفة بالتلقيح الاصطناعي وتغذية الخيول وعلم سلوك الحيوان"
+      ],
+      "deadline": "2026-11-13",
+      "detailsUrl": "https://alwadifa-club.com/emploi-public/الشركة-الملكية-لتشجيع-الفرس-مباراة-توظ-13/105180/",
+      "diploma": "باك+2/3 في تقنيات تربية الخيول",
+      "diplomaRank": 2,
+      "docs": [
+        "سيرة ذاتية",
+        "رسالة تحفيز",
+        "استمارة الترشيح على بوابة التشغيل العمومي"
+      ],
+      "exam": null,
+      "i18n": {
+        "en": {
+          "applyNote": "Reference TEE/2026/PF/02 (announcement issued in Rabat on 30/10/2026); applications via the recruitment page on the Royal Society for the Encouragement of the Horse website.",
+          "conditions": [
+            "2–3 years of experience (preferred in a similar role)",
+            "Knowledge of artificial insemination, horse nutrition and animal behavior science"
+          ],
+          "diploma": "Bac+2/3 in horse-breeding techniques",
+          "docs": [
+            "CV",
+            "Cover letter",
+            "Application form on the public employment portal"
+          ],
+          "org": "Royal Society for the Encouragement of the Horse (SOREC)",
+          "region": "Bouskoura/El Jadida",
+          "sector": "Public institutions",
+          "title": "Horse-breeding technician (National Studs Directorate) — 2 posts"
+        },
+        "fr": {
+          "applyNote": "Référence TEE/2026/PF/02 (annonce établie à Rabat le 30/10/2026) ; candidature via la page de recrutement sur le site de la Société Royale d'Encouragement du Cheval.",
+          "conditions": [
+            "2–3 ans d'expérience (souhaitée dans un poste similaire)",
+            "Connaissance de l'insémination artificielle, de l'alimentation des chevaux et de l'éthologie"
+          ],
+          "diploma": "Bac+2/3 en techniques d'élevage équin",
+          "docs": [
+            "CV",
+            "Lettre de motivation",
+            "Formulaire de candidature sur le portail de l'emploi public"
+          ],
+          "org": "Société Royale d'Encouragement du Cheval (SOREC)",
+          "region": "Bouskoura/El Jadida",
+          "sector": "Établissements publics",
+          "title": "Technicien élevage équin (Direction des Haras Nationaux) — 2 postes"
+        }
+      },
+      "id": "sorec-2026-2",
+      "maxAge": null,
+      "org": "الشركة الملكية لتشجيع الفرس (SOREC)",
+      "posts": 2,
+      "region": "بوزنيقة/الجديدة",
+      "sector": "مؤسسات عمومية",
+      "stages": [],
+      "title": "تقني تربية الخيول (مديرية الإسطبلات الوطنية) — منصبان",
+      "type": "public"
     }
   ],
   "source": "بوابة التشغيل العمومي emploi-public.ma وإعلانات الجهات المنظمة ومنصات التوظيف الخاصة (moncallcenter.ma، jobhub.ma)",
-  "updatedAt": "2026-10-31"
+  "updatedAt": "2026-11-01"
 }
